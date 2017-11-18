@@ -47,6 +47,7 @@
             this.button1.Text = "Graj";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseHover += new System.EventHandler(this.play_sound_graj);
             // 
             // button2
             // 
@@ -61,6 +62,7 @@
             this.button2.Text = "Wyjdź";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.MouseHover += new System.EventHandler(this.play_sound_wyjdz);
             // 
             // label1
             // 
