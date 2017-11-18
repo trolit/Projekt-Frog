@@ -121,5 +121,8 @@
   <ItemGroup>
     <None Include="Resources\frog_effect_2.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frog_effect_3.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
