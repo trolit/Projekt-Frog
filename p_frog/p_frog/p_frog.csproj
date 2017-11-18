@@ -73,6 +73,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -86,6 +87,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\frog_stand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\frog_down.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\frog_left.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\frog_right.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\frog_up.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\frog_down_stand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\frog_left_stand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\frog_right_stand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\frog_up_stand.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
