@@ -78,7 +78,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 16);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Wersja: 1.5";
+            this.label1.Text = "Wersja: 1.9";
             // 
             // button3
             // 
