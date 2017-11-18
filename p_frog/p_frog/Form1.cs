@@ -63,8 +63,20 @@ namespace p_frog
             Form3 ustawienia = new Form3();
             ustawienia.Show();
         }
+
         #endregion
+        #region Instrukcja(pokaz na ekran, ukryj z ekranu i odtworz dzwiek)
+        private void see_help_on(object sender, EventArgs e)
+        {
+            help.Visible = true;
+            SoundPlayer snd = new SoundPlayer(Properties.Resources.frog_effect_4);
+            snd.Play();
+        }
 
-
+        private void see_help_off(object sender, EventArgs e)
+        {
+            help.Visible = false;
+        }
+        #endregion
     }
 }
