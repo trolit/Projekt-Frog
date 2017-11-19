@@ -178,6 +178,7 @@
             this.background_box.Size = new System.Drawing.Size(842, 481);
             this.background_box.TabIndex = 5;
             this.background_box.TabStop = false;
+            this.background_box.Click += new System.EventHandler(this.background_box_Click);
             // 
             // timer3
             // 

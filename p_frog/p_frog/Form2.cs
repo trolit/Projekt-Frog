@@ -60,7 +60,6 @@ namespace p_frog
             int x = frog.Location.X;
             int y = frog.Location.Y;
             timer3.Start();
-            timer2.Stop(); // zatrzymanie czasu aby został dopiero włączony gdy energia(fatigue) spadnie do 0
 
             if (e.KeyCode == Keys.Right)
             {
@@ -233,7 +232,7 @@ namespace p_frog
         {
             count_timer2++;
 
-            if (count_timer2 == 9)
+            if (count_timer2 == 8)
             {
                 fatigue.Value = 100;
                 count_timer2 = 0;
@@ -311,6 +310,11 @@ namespace p_frog
             t += 6;
             truck_car.Location = new Point(t, 384);
             Check_truck_car();
+        }
+
+        private void background_box_Click(object sender, EventArgs e)
+        {
+
         }
         #endregion
 
