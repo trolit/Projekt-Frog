@@ -29,6 +29,7 @@ namespace p_frog
             
         }
 
+        #region 1. Sprawdzenie gdy frog wyjdzie za ekran
         private void Wykryj_kolizje_froga()
         {
             if (frog.Location.Y < -4 || frog.Location.Y > 450)
@@ -40,16 +41,15 @@ namespace p_frog
                 frog.Location = new Point(392, 428);
             }
         }
-
-        #region Dzwiek skoku froga - metoda
+        #endregion
+        #region 2. Dźwiek skoku przy ruchu froga
         private void Wywolaj_dzwiek_skoku()
         {
             SoundPlayer skok = new SoundPlayer(Properties.Resources.frog_jump);
             skok.Play();
         }
         #endregion
-
-        #region Frog_Movement_Core
+        #region 3. Rdzeń ruchu bohatera - froga
         void Form2_KeyDown(object sender, KeyEventArgs e)
         {
             int x = frog.Location.X;
@@ -163,7 +163,7 @@ namespace p_frog
             Wykryj_kolizje_froga();
         }
 #endregion
-        #region Timer1(odpowiedzialny za wywolanie odpowiednich obrazkow froga)
+        #region 4. Timer1(odpowiedzialny za wywolanie odpowiednich obrazkow froga w danym momencie ruchu)
         private void timer1_Tick(object sender, EventArgs e)  
         {
             count_timer1++;
@@ -217,7 +217,7 @@ namespace p_frog
             }
         }
         #endregion
-        #region Timer2(odpowiedzialny za odnowienie energii froga, pozbawienie mozliwosci ruchu, ukrycie labelkow)
+        #region 5. Timer2(odpowiedzialny za odnowienie energii froga gdy spadnie do 0, pozbawienie go mozliwosci ruchu, ukrycie labelkow informujacych)
         private void timer2_Tick(object sender, EventArgs e)
         {
             count_timer2++;
