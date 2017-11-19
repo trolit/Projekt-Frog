@@ -25,11 +25,11 @@ namespace p_frog
         public Form2()
         {
             InitializeComponent();
-            KeyDown += new KeyEventHandler(Form2_KeyDown);      // ruch żaby
-            transparency_repair();                              // z punktu numer 6
+            KeyDown += new KeyEventHandler(Form2_KeyDown);      // wywołanie punktu numer 3 - ruch żaby
+            transparency_repair();                              // wywołanie punktu numer 6 - naprawa przezroczystości
         }
 
-        // gdy wyjdzie za ekran cofa go do początku
+        // gdy frog wyjdzie za ekran cofa go do początku
         #region 1. Metoda sprawdzająca kolizję gdy frog wyjdzie za ekran
         private void Wykryj_kolizje_froga()
         {
@@ -43,6 +43,8 @@ namespace p_frog
             }
         }
         #endregion
+
+        // metoda, że gdy frog się ruszy to odtworzy się frog_jump
         #region 2. Dźwiek skoku przy ruchu froga
         private void Wywolaj_dzwiek_skoku()
         {
@@ -50,12 +52,15 @@ namespace p_frog
             skok.Play();
         }
         #endregion
+
+        // tu jest opis ruchu froga i animacje odpalające się przy konkretnym ruchu
         #region 3. Rdzeń ruchu bohatera - froga
         void Form2_KeyDown(object sender, KeyEventArgs e)
         {
             int x = frog.Location.X;
             int y = frog.Location.Y;
             timer3.Start();
+            timer2.Stop(); // zatrzymanie czasu aby został dopiero włączony gdy energia(fatigue) spadnie do 0
 
             if (e.KeyCode == Keys.Right)
             {
@@ -165,6 +170,8 @@ namespace p_frog
             Wykryj_kolizje_froga();
         }
 #endregion
+
+        // czasomierz sterujący przestaniem wykonania animacji ruchu
         #region 4. Timer1(odpowiedzialny za wywolanie odpowiednich obrazkow froga w danym momencie ruchu)
         private void timer1_Tick(object sender, EventArgs e)  
         {
@@ -219,6 +226,8 @@ namespace p_frog
             }
         }
         #endregion
+
+        // czasomierz sterujący uzupełnieniem energii froga
         #region 5. Timer2(odpowiedzialny za odnowienie energii froga gdy spadnie do 0, pozbawienie go mozliwosci ruchu, ukrycie labelkow informujacych)
         private void timer2_Tick(object sender, EventArgs e)
         {
@@ -237,7 +246,7 @@ namespace p_frog
         }
         #endregion
        
-        // bez tego picturebox na picturebox nie będzie przezroczysty!
+        // bez tego picturebox na picturebox nie będzie przezroczysty!! 
         #region 6. Metoda naprawiająca problem przezroczystości pictureboxow
         private void transparency_repair()
         {
@@ -256,7 +265,7 @@ namespace p_frog
 
         #endregion
 
-        // kontrola gdzie znajdują się pojazdy
+        // kontrola gdzie w obecnej chwili znajdują się pojazdy
         #region 7. Metody które zapętlają ruch pojazdów
         private void Check_police_car()
         {
@@ -283,7 +292,7 @@ namespace p_frog
         }
         #endregion
 
-        // ruch pojazdami
+        // ruch pojazdami, żyją!!!
         #region 8. Timer3(odpowiedzialny za przesuwanie pictureboxow pojazdow)
         private void timer3_Tick(object sender, EventArgs e)
         {
@@ -304,6 +313,8 @@ namespace p_frog
             Check_truck_car();
         }
         #endregion
+
+        // kolizja froga z pojazdami
     }
 
 }
