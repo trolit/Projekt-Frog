@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,12 +20,34 @@ namespace p_frog
         bool up;
         bool down;
         bool can_move = true;  // flaga sprawdzajaca czy frog moze chodzic, na start ustawiamy na true
+        
 
         public Form2()
         {
             InitializeComponent();
             KeyDown += new KeyEventHandler(Form2_KeyDown);      // ruch zaby
+            
         }
+
+        private void Wykryj_kolizje_froga()
+        {
+            if (frog.Location.Y < -4 || frog.Location.Y > 450)
+            {
+                frog.Location = new Point(392, 428);
+            }
+            else if (frog.Location.X < -4 || frog.Location.X > 815)
+            {
+                frog.Location = new Point(392, 428);
+            }
+        }
+
+        #region Dzwiek skoku froga - metoda
+        private void Wywolaj_dzwiek_skoku()
+        {
+            SoundPlayer skok = new SoundPlayer(Properties.Resources.frog_jump);
+            skok.Play();
+        }
+        #endregion
 
         #region Frog_Movement_Core
         void Form2_KeyDown(object sender, KeyEventArgs e)
@@ -41,7 +64,8 @@ namespace p_frog
                         timer1.Start();
                         right = true;
                         frog.Image = Image.FromFile("frog_right.gif");
-                        x += 10;
+                        x += 15;
+                        Wywolaj_dzwiek_skoku();
                         fatigue.Value -= 4;
                     }
                     else
@@ -64,7 +88,8 @@ namespace p_frog
                     {
                         left = true;
                         frog.Image = Image.FromFile("frog_left.gif");
-                        x -= 10;
+                        x -= 15;
+                        Wywolaj_dzwiek_skoku();
                         fatigue.Value -= 4;
                     }
                     else
@@ -89,7 +114,8 @@ namespace p_frog
                     {
                         up = true;
                         frog.Image = Image.FromFile("frog_up.gif");
-                        y -= 10;
+                        y -= 15;
+                        Wywolaj_dzwiek_skoku();
                         fatigue.Value -= 5;
                     }
                     else
@@ -113,7 +139,8 @@ namespace p_frog
                     {
                         down = true;
                         frog.Image = Image.FromFile("frog_down.gif");
-                        y += 10;
+                        y += 15;
+                        Wywolaj_dzwiek_skoku();
                         fatigue.Value -= 5;
                     }
                     else
@@ -126,7 +153,14 @@ namespace p_frog
                 }
             }
 
+            // odzyskiwanie kondycji
+            if (fatigue.Value <= 98)
+            {
+                fatigue.Value += 2;
+            }
+
             frog.Location = new Point(x, y);
+            Wykryj_kolizje_froga();
         }
 #endregion
         #region Timer1(odpowiedzialny za wywolanie odpowiednich obrazkow froga)
@@ -190,7 +224,7 @@ namespace p_frog
 
             if (count_timer2 == 9)
             {
-                fatigue.Value = 85;
+                fatigue.Value = 93;
                 count_timer2 = 0;
                 can_move = true;
                 warning1.Visible = false;
@@ -199,6 +233,7 @@ namespace p_frog
             }
 
         }
-#endregion
+        #endregion
+
     }
 }

@@ -35,9 +35,9 @@
             this.warning1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.fatigue = new System.Windows.Forms.ProgressBar();
+            this.frog = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.frog = new System.Windows.Forms.PictureBox();
             this.screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frog)).BeginInit();
             this.SuspendLayout();
@@ -97,6 +97,17 @@
             this.fatigue.TabIndex = 1;
             this.fatigue.Value = 100;
             // 
+            // frog
+            // 
+            this.frog.BackColor = System.Drawing.Color.Transparent;
+            this.frog.Image = global::p_frog.Properties.Resources.frog_up_stand;
+            this.frog.Location = new System.Drawing.Point(413, 431);
+            this.frog.Name = "frog";
+            this.frog.Size = new System.Drawing.Size(30, 50);
+            this.frog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.frog.TabIndex = 0;
+            this.frog.TabStop = false;
+            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -108,16 +119,6 @@
             this.timer2.Enabled = true;
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // frog
-            // 
-            this.frog.BackColor = System.Drawing.Color.Transparent;
-            this.frog.Image = global::p_frog.Properties.Resources.frog_up_stand;
-            this.frog.Location = new System.Drawing.Point(401, 310);
-            this.frog.Name = "frog";
-            this.frog.Size = new System.Drawing.Size(50, 50);
-            this.frog.TabIndex = 0;
-            this.frog.TabStop = false;
             // 
             // Form2
             // 
