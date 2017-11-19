@@ -25,7 +25,7 @@ namespace p_frog
         {
             InitializeComponent();
             KeyDown += new KeyEventHandler(Form2_KeyDown);      // ruch żaby
-
+            transparency_repair();
         }
 
         #region 1. Metoda sprawdzająca kolizję gdy frog wyjdzie za ekran
@@ -233,6 +233,15 @@ namespace p_frog
 
         }
         #endregion
-
+        #region 6. Metoda naprawiajaca problem przezroczystosci pictureboxow
+        private void transparency_repair()
+        {
+            frog.Parent = background_box;
+            label1.Parent = background_box;
+            label1.BackColor = Color.Transparent;
+            frog.BackColor = Color.Transparent;
+            frog.Location = new Point(392, 428);
+        }
+        #endregion
     }
 }

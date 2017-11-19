@@ -38,8 +38,10 @@
             this.warning2 = new System.Windows.Forms.Label();
             this.frog = new System.Windows.Forms.PictureBox();
             this.screen = new System.Windows.Forms.Panel();
+            this.background_box = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.frog)).BeginInit();
             this.screen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.background_box)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -123,12 +125,22 @@
             this.screen.Controls.Add(this.warning1);
             this.screen.Controls.Add(this.label1);
             this.screen.Controls.Add(this.fatigue);
+            this.screen.Controls.Add(this.background_box);
             this.screen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.screen.ForeColor = System.Drawing.Color.DarkBlue;
             this.screen.Location = new System.Drawing.Point(0, 0);
             this.screen.Name = "screen";
             this.screen.Size = new System.Drawing.Size(842, 481);
             this.screen.TabIndex = 0;
+            // 
+            // background_box
+            // 
+            this.background_box.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("background_box.BackgroundImage")));
+            this.background_box.Location = new System.Drawing.Point(0, 0);
+            this.background_box.Name = "background_box";
+            this.background_box.Size = new System.Drawing.Size(842, 481);
+            this.background_box.TabIndex = 5;
+            this.background_box.TabStop = false;
             // 
             // Form2
             // 
@@ -142,6 +154,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.frog)).EndInit();
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.background_box)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -155,5 +168,6 @@
         private System.Windows.Forms.Label warning2;
         private System.Windows.Forms.PictureBox frog;
         private System.Windows.Forms.Panel screen;
+        private System.Windows.Forms.PictureBox background_box;
     }
 }
