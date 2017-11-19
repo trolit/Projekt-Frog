@@ -100,11 +100,11 @@
             // 
             this.warning2.AutoSize = true;
             this.warning2.BackColor = System.Drawing.Color.Yellow;
-            this.warning2.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.warning2.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.warning2.ForeColor = System.Drawing.Color.Black;
-            this.warning2.Location = new System.Drawing.Point(390, 155);
+            this.warning2.Location = new System.Drawing.Point(383, 155);
             this.warning2.Name = "warning2";
-            this.warning2.Size = new System.Drawing.Size(75, 11);
+            this.warning2.Size = new System.Drawing.Size(85, 11);
             this.warning2.TabIndex = 4;
             this.warning2.Text = "Odpocznij!";
             this.warning2.Visible = false;
@@ -146,27 +146,27 @@
             // truck_car
             // 
             this.truck_car.Image = ((System.Drawing.Image)(resources.GetObject("truck_car.Image")));
-            this.truck_car.Location = new System.Drawing.Point(-9, 358);
+            this.truck_car.Location = new System.Drawing.Point(-269, 374);
             this.truck_car.Name = "truck_car";
-            this.truck_car.Size = new System.Drawing.Size(444, 74);
+            this.truck_car.Size = new System.Drawing.Size(299, 49);
             this.truck_car.TabIndex = 8;
             this.truck_car.TabStop = false;
             // 
             // car_column
             // 
             this.car_column.Image = ((System.Drawing.Image)(resources.GetObject("car_column.Image")));
-            this.car_column.Location = new System.Drawing.Point(-9, 281);
+            this.car_column.Location = new System.Drawing.Point(-269, 297);
             this.car_column.Name = "car_column";
-            this.car_column.Size = new System.Drawing.Size(401, 71);
+            this.car_column.Size = new System.Drawing.Size(275, 53);
             this.car_column.TabIndex = 7;
             this.car_column.TabStop = false;
             // 
             // police_car
             // 
             this.police_car.Image = ((System.Drawing.Image)(resources.GetObject("police_car.Image")));
-            this.police_car.Location = new System.Drawing.Point(699, 206);
+            this.police_car.Location = new System.Drawing.Point(823, 220);
             this.police_car.Name = "police_car";
-            this.police_car.Size = new System.Drawing.Size(143, 69);
+            this.police_car.Size = new System.Drawing.Size(107, 52);
             this.police_car.TabIndex = 6;
             this.police_car.TabStop = false;
             // 
@@ -182,6 +182,7 @@
             // timer3
             // 
             this.timer3.Enabled = true;
+            this.timer3.Interval = 50;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // Form2

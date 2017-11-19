@@ -29,6 +29,7 @@ namespace p_frog
             transparency_repair();                              // z punktu numer 6
         }
 
+        // gdy wyjdzie za ekran cofa go do początku
         #region 1. Metoda sprawdzająca kolizję gdy frog wyjdzie za ekran
         private void Wykryj_kolizje_froga()
         {
@@ -225,7 +226,7 @@ namespace p_frog
 
             if (count_timer2 == 9)
             {
-                fatigue.Value = 93;
+                fatigue.Value = 100;
                 count_timer2 = 0;
                 can_move = true;
                 warning1.Visible = false;
@@ -235,6 +236,8 @@ namespace p_frog
 
         }
         #endregion
+       
+        // bez tego picturebox na picturebox nie będzie przezroczysty!
         #region 6. Metoda naprawiająca problem przezroczystości pictureboxow
         private void transparency_repair()
         {
@@ -253,23 +256,54 @@ namespace p_frog
 
         #endregion
 
+        // kontrola gdzie znajdują się pojazdy
+        #region 7. Metody które zapętlają ruch pojazdów
+        private void Check_police_car()
+        {
+            if (police_car.Location.X < -107)
+            {
+                police_car.Location = new Point(823, 220);
+            }
+        }
+        
+        private void Check_truck_car()
+        {
+            if (truck_car.Location.X > 897)
+            {
+                truck_car.Location = new Point(-269, 384);
+            }
+        }
+
+        private void Check_car_column()
+        {
+            if (car_column.Location.X > 1000)
+            {
+                car_column.Location = new Point(-269, 297);
+            }
+        }
+        #endregion
+
         // ruch pojazdami
+        #region 8. Timer3(odpowiedzialny za przesuwanie pictureboxow pojazdow)
         private void timer3_Tick(object sender, EventArgs e)
         {
             int p = police_car.Location.X; // lokalizacja radiowozu
             int c = car_column.Location.X; // lokalizacja kolumny samochodow
             int t = truck_car.Location.X;  // lokalizacja ciezarkowki
 
-            p -= 5;
-            police_car.Location = new Point(p, 205);
+            p -= 10;
+            police_car.Location = new Point(p, 222);
+            Check_police_car();
 
-            c += 5;
-            car_column.Location = new Point(c, 281);
+            c += 9;
+            car_column.Location = new Point(c, 297);
+            Check_car_column();
 
-            t += 5;
-            truck_car.Location = new Point(t, 358);
-
+            t += 6;
+            truck_car.Location = new Point(t, 384);
+            Check_truck_car();
         }
+        #endregion
     }
 
 }
