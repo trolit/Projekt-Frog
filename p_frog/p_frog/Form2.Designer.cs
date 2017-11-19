@@ -38,9 +38,15 @@
             this.warning2 = new System.Windows.Forms.Label();
             this.frog = new System.Windows.Forms.PictureBox();
             this.screen = new System.Windows.Forms.Panel();
+            this.truck_car = new System.Windows.Forms.PictureBox();
+            this.car_column = new System.Windows.Forms.PictureBox();
+            this.police_car = new System.Windows.Forms.PictureBox();
             this.background_box = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.frog)).BeginInit();
             this.screen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.truck_car)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.car_column)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.police_car)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +76,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(9, 8);
+            this.label1.Location = new System.Drawing.Point(12, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 13);
             this.label1.TabIndex = 2;
@@ -79,12 +85,12 @@
             // warning1
             // 
             this.warning1.AutoSize = true;
-            this.warning1.BackColor = System.Drawing.Color.Fuchsia;
-            this.warning1.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.warning1.BackColor = System.Drawing.Color.Yellow;
+            this.warning1.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.warning1.ForeColor = System.Drawing.Color.Black;
-            this.warning1.Location = new System.Drawing.Point(376, 143);
+            this.warning1.Location = new System.Drawing.Point(367, 143);
             this.warning1.Name = "warning1";
-            this.warning1.Size = new System.Drawing.Size(103, 12);
+            this.warning1.Size = new System.Drawing.Size(117, 12);
             this.warning1.TabIndex = 3;
             this.warning1.Text = "Zmęczyłeś się!";
             this.warning1.Visible = false;
@@ -92,7 +98,7 @@
             // warning2
             // 
             this.warning2.AutoSize = true;
-            this.warning2.BackColor = System.Drawing.Color.Fuchsia;
+            this.warning2.BackColor = System.Drawing.Color.Yellow;
             this.warning2.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.warning2.ForeColor = System.Drawing.Color.Black;
             this.warning2.Location = new System.Drawing.Point(390, 155);
@@ -120,6 +126,9 @@
             // screen
             // 
             this.screen.BackColor = System.Drawing.Color.Transparent;
+            this.screen.Controls.Add(this.truck_car);
+            this.screen.Controls.Add(this.car_column);
+            this.screen.Controls.Add(this.police_car);
             this.screen.Controls.Add(this.frog);
             this.screen.Controls.Add(this.warning2);
             this.screen.Controls.Add(this.warning1);
@@ -133,10 +142,37 @@
             this.screen.Size = new System.Drawing.Size(842, 481);
             this.screen.TabIndex = 0;
             // 
+            // truck_car
+            // 
+            this.truck_car.Image = ((System.Drawing.Image)(resources.GetObject("truck_car.Image")));
+            this.truck_car.Location = new System.Drawing.Point(-9, 358);
+            this.truck_car.Name = "truck_car";
+            this.truck_car.Size = new System.Drawing.Size(444, 74);
+            this.truck_car.TabIndex = 8;
+            this.truck_car.TabStop = false;
+            // 
+            // car_column
+            // 
+            this.car_column.Image = ((System.Drawing.Image)(resources.GetObject("car_column.Image")));
+            this.car_column.Location = new System.Drawing.Point(-9, 281);
+            this.car_column.Name = "car_column";
+            this.car_column.Size = new System.Drawing.Size(401, 71);
+            this.car_column.TabIndex = 7;
+            this.car_column.TabStop = false;
+            // 
+            // police_car
+            // 
+            this.police_car.Image = ((System.Drawing.Image)(resources.GetObject("police_car.Image")));
+            this.police_car.Location = new System.Drawing.Point(699, 205);
+            this.police_car.Name = "police_car";
+            this.police_car.Size = new System.Drawing.Size(143, 70);
+            this.police_car.TabIndex = 6;
+            this.police_car.TabStop = false;
+            // 
             // background_box
             // 
             this.background_box.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("background_box.BackgroundImage")));
-            this.background_box.Location = new System.Drawing.Point(0, 0);
+            this.background_box.Location = new System.Drawing.Point(-3, 0);
             this.background_box.Name = "background_box";
             this.background_box.Size = new System.Drawing.Size(842, 481);
             this.background_box.TabIndex = 5;
@@ -154,6 +190,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.frog)).EndInit();
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.truck_car)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.car_column)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.police_car)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).EndInit();
             this.ResumeLayout(false);
 
@@ -169,5 +208,8 @@
         private System.Windows.Forms.PictureBox frog;
         private System.Windows.Forms.Panel screen;
         private System.Windows.Forms.PictureBox background_box;
+        private System.Windows.Forms.PictureBox car_column;
+        private System.Windows.Forms.PictureBox truck_car;
+        public System.Windows.Forms.PictureBox police_car;
     }
 }

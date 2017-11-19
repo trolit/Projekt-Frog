@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace p_frog
 {
+
     public partial class Form2 : Form
     {
         private int count_timer1 = 0;  
@@ -233,15 +234,22 @@ namespace p_frog
 
         }
         #endregion
-        #region 6. Metoda naprawiajaca problem przezroczystosci pictureboxow
+        #region 6. Metoda naprawiająca problem przezroczystości pictureboxow
         private void transparency_repair()
         {
             frog.Parent = background_box;
             label1.Parent = background_box;
+            police_car.Parent = background_box;
+            car_column.Parent = background_box;
+            truck_car.Parent = background_box;
+            truck_car.BackColor = Color.Transparent;
             label1.BackColor = Color.Transparent;
+            car_column.BackColor = Color.Transparent;
+            police_car.BackColor = Color.Transparent;
             frog.BackColor = Color.Transparent;
             frog.Location = new Point(392, 428);
         }
         #endregion
     }
+
 }
