@@ -26,7 +26,7 @@ namespace p_frog
         {
             InitializeComponent();
             KeyDown += new KeyEventHandler(Form2_KeyDown);      // ruch żaby
-            transparency_repair();
+            transparency_repair();                              // z punktu numer 6
         }
 
         #region 1. Metoda sprawdzająca kolizję gdy frog wyjdzie za ekran
@@ -54,6 +54,7 @@ namespace p_frog
         {
             int x = frog.Location.X;
             int y = frog.Location.Y;
+            timer3.Start();
 
             if (e.KeyCode == Keys.Right)
             {
@@ -249,7 +250,26 @@ namespace p_frog
             frog.BackColor = Color.Transparent;
             frog.Location = new Point(392, 428);
         }
+
         #endregion
+
+        // ruch pojazdami
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            int p = police_car.Location.X; // lokalizacja radiowozu
+            int c = car_column.Location.X; // lokalizacja kolumny samochodow
+            int t = truck_car.Location.X;  // lokalizacja ciezarkowki
+
+            p -= 5;
+            police_car.Location = new Point(p, 205);
+
+            c += 5;
+            car_column.Location = new Point(c, 281);
+
+            t += 5;
+            truck_car.Location = new Point(t, 358);
+
+        }
     }
 
 }

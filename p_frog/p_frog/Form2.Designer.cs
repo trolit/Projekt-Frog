@@ -42,6 +42,7 @@
             this.car_column = new System.Windows.Forms.PictureBox();
             this.police_car = new System.Windows.Forms.PictureBox();
             this.background_box = new System.Windows.Forms.PictureBox();
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.frog)).BeginInit();
             this.screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.truck_car)).BeginInit();
@@ -163,9 +164,9 @@
             // police_car
             // 
             this.police_car.Image = ((System.Drawing.Image)(resources.GetObject("police_car.Image")));
-            this.police_car.Location = new System.Drawing.Point(699, 205);
+            this.police_car.Location = new System.Drawing.Point(699, 206);
             this.police_car.Name = "police_car";
-            this.police_car.Size = new System.Drawing.Size(143, 70);
+            this.police_car.Size = new System.Drawing.Size(143, 69);
             this.police_car.TabIndex = 6;
             this.police_car.TabStop = false;
             // 
@@ -177,6 +178,11 @@
             this.background_box.Size = new System.Drawing.Size(842, 481);
             this.background_box.TabIndex = 5;
             this.background_box.TabStop = false;
+            // 
+            // timer3
+            // 
+            this.timer3.Enabled = true;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // Form2
             // 
@@ -211,5 +217,6 @@
         private System.Windows.Forms.PictureBox car_column;
         private System.Windows.Forms.PictureBox truck_car;
         public System.Windows.Forms.PictureBox police_car;
+        private System.Windows.Forms.Timer timer3;
     }
 }
