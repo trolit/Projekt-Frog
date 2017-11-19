@@ -15,11 +15,11 @@ namespace p_frog
     {
         private int count_timer1 = 0;  
         private int count_timer2 = 0;
-        bool right;
+        bool right; 
         bool left;
         bool up;
         bool down;
-        bool can_move = true;  // flaga sprawdzajaca czy frog moze chodzic, na start ustawiamy na true
+        bool can_move = true;  // flaga sprawdzajaca czy frog moze chodzic, na start ustawiamy na true!
         
 
         public Form2()
@@ -29,7 +29,7 @@ namespace p_frog
             
         }
 
-        #region 1. Sprawdzenie gdy frog wyjdzie za ekran
+        #region 1. Metoda sprawdzająca kolizję gdy frog wyjdzie za ekran
         private void Wykryj_kolizje_froga()
         {
             if (frog.Location.Y < -4 || frog.Location.Y > 450)
