@@ -21,12 +21,11 @@ namespace p_frog
         bool down;
         bool can_move = true;  // flaga sprawdzajaca czy frog moze chodzic, na start ustawiamy na true!
         
-
         public Form2()
         {
             InitializeComponent();
-            KeyDown += new KeyEventHandler(Form2_KeyDown);      // ruch zaby
-            
+            KeyDown += new KeyEventHandler(Form2_KeyDown);      // ruch żaby
+
         }
 
         #region 1. Metoda sprawdzająca kolizję gdy frog wyjdzie za ekran
