@@ -11,7 +11,6 @@ using System.Windows.Forms;
 
 namespace p_frog
 {
-
     public partial class Form2 : Form
     {
         private int count_timer1 = 0;  
@@ -319,6 +318,9 @@ namespace p_frog
         #endregion
 
         // kolizja froga z pojazdami
+        // liczba zyc froga
+        // koniec gry
+        // picturebox gdzie ma sie dostac zaba i metoda zaliczajaca wejscie na druga strone 
+        // woda i ruszajace galezie po wodzie
     }
-
 }

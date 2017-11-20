@@ -6,7 +6,7 @@
 
 
 
-* Przy tworzeniu projektu wykorzystałem:
+### Przy tworzeniu projektu wykorzystałem:
 
 
 - **grafiki** do projektu z następującej strony:

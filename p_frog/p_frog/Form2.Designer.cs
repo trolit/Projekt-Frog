@@ -207,18 +207,18 @@
         }
 
         #endregion
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.ProgressBar fatigue;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label warning1;
-        private System.Windows.Forms.Label warning2;
-        private System.Windows.Forms.PictureBox frog;
         private System.Windows.Forms.Panel screen;
-        private System.Windows.Forms.PictureBox background_box;
-        private System.Windows.Forms.PictureBox car_column;
-        private System.Windows.Forms.PictureBox truck_car;
         public System.Windows.Forms.PictureBox police_car;
-        private System.Windows.Forms.Timer timer3;
+        protected System.Windows.Forms.PictureBox frog;
+        protected System.Windows.Forms.Timer timer1;
+        protected System.Windows.Forms.Timer timer2;
+        protected System.Windows.Forms.Timer timer3;
+        protected System.Windows.Forms.ProgressBar fatigue;
+        protected System.Windows.Forms.Label label1;
+        protected System.Windows.Forms.Label warning1;
+        protected System.Windows.Forms.Label warning2;
+        protected System.Windows.Forms.PictureBox background_box;
+        protected System.Windows.Forms.PictureBox car_column;
+        protected System.Windows.Forms.PictureBox truck_car;
     }
 }
