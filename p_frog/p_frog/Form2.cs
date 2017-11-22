@@ -15,6 +15,7 @@ namespace p_frog
     {
         private int count_timer1 = 0;  
         private int count_timer2 = 0;
+        int life = 3;
         bool right; 
         bool left;
         bool up;
@@ -25,7 +26,8 @@ namespace p_frog
         {
             InitializeComponent();
             KeyDown += new KeyEventHandler(Form2_KeyDown);      // wywołanie punktu numer 3 - ruch żaby
-            transparency_repair();                              // wywołanie punktu numer 6 - naprawa przezroczystości
+            transparency_repair();                              // wywołanie punktu numer 6 - naprawa przezroczystości  
+            Vehicle_Collision();
         }
 
         // gdy frog wyjdzie za ekran cofa go do początku
@@ -253,6 +255,12 @@ namespace p_frog
             police_car.Parent = background_box;
             car_column.Parent = background_box;
             truck_car.Parent = background_box;
+            frog_life_1.Parent = background_box;
+            frog_life_2.Parent = background_box;
+            frog_life_3.Parent = background_box;
+            frog_life_1.BackColor = Color.Transparent;
+            frog_life_2.BackColor = Color.Transparent;
+            frog_life_3.BackColor = Color.Transparent;
             truck_car.BackColor = Color.Transparent;
             label1.BackColor = Color.Transparent;
             car_column.BackColor = Color.Transparent;
@@ -307,19 +315,75 @@ namespace p_frog
             Check_car_column();
 
             t += 6;
-            truck_car.Location = new Point(t, 384);
+            truck_car.Location = new Point(t, 375);
             Check_truck_car();
-        }
 
-        private void background_box_Click(object sender, EventArgs e)
-        {
-
+            Vehicle_Collision();
         }
         #endregion
 
         // kolizja froga z pojazdami
+        private void Vehicle_Collision()
+        {
+            if (frog.Bounds.IntersectsWith(police_car.Bounds)) // wykrywa przeciecie dwoch pictureboxow
+            {
+                Frog_Life();
+                timer3.Stop();
+            }
+            else if (frog.Bounds.IntersectsWith(car_column.Bounds))
+            {
+                Frog_Life();
+                timer3.Stop();
+            }
+            else if (frog.Bounds.IntersectsWith(truck_car.Bounds))
+            {
+                Frog_Life();
+                timer3.Stop();
+            }
+        }
+
         // liczba zyc froga
-        // koniec gry
+
+        private void Frog_Life()
+        {
+            if(life == 3)
+            {
+                frog.Location = new Point(392, 428);
+                frog_life_3.Visible = false;
+                life = 2;
+            }
+            else if(life == 2)
+            {
+                frog.Location = new Point(392, 428);
+                frog_life_2.Visible = false;
+                life = 1;
+            }
+            else if(life == 1)
+            {
+                frog.Location = new Point(392, 428);
+                frog_life_1.Visible = false;
+                life = 0;
+            }
+            else if (life == 0)
+            {
+                End_Game();
+            }
+        }
+        // koniec gry (do dokonczenia)
+        
+        private void End_Game()
+        {
+            timer1.Stop();
+            timer2.Stop();
+            timer3.Stop();
+            can_move = false;
+           
+            this.Close();
+            Form1 main_menu = new Form1();
+            main_menu.Show();
+        }
+
+
         // picturebox gdzie ma sie dostac zaba i metoda zaliczajaca wejscie na druga strone 
         // woda i ruszajace galezie po wodzie
     }

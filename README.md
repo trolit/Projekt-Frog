@@ -52,3 +52,11 @@
 - **projekt** tła wykonany przy pomocy programu photoshopo'podobnego pixlr, link:
 
 > http://tinyurl.com/6pbyskv
+
+
+
+- **rozwiazanie problemu** kolizji z pojazdami tutaj znalazłem:
+
+> http://tinyurl.com/y99booh9
+
+

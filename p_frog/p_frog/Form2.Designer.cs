@@ -43,12 +43,18 @@
             this.police_car = new System.Windows.Forms.PictureBox();
             this.background_box = new System.Windows.Forms.PictureBox();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.frog_life_1 = new System.Windows.Forms.PictureBox();
+            this.frog_life_2 = new System.Windows.Forms.PictureBox();
+            this.frog_life_3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.frog)).BeginInit();
             this.screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.truck_car)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frog_life_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frog_life_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frog_life_3)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -75,11 +81,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(12, 8);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 13);
+            this.label1.Size = new System.Drawing.Size(125, 12);
             this.label1.TabIndex = 2;
             this.label1.Text = "Poziom energii:";
             // 
@@ -116,7 +122,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.frog.BackColor = System.Drawing.Color.Transparent;
             this.frog.Image = global::p_frog.Properties.Resources.frog_up_stand;
-            this.frog.Location = new System.Drawing.Point(418, 431);
+            this.frog.Location = new System.Drawing.Point(423, 431);
             this.frog.Name = "frog";
             this.frog.Size = new System.Drawing.Size(30, 50);
             this.frog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -127,6 +133,9 @@
             // screen
             // 
             this.screen.BackColor = System.Drawing.Color.Transparent;
+            this.screen.Controls.Add(this.frog_life_3);
+            this.screen.Controls.Add(this.frog_life_2);
+            this.screen.Controls.Add(this.frog_life_1);
             this.screen.Controls.Add(this.truck_car);
             this.screen.Controls.Add(this.car_column);
             this.screen.Controls.Add(this.police_car);
@@ -146,18 +155,18 @@
             // truck_car
             // 
             this.truck_car.Image = ((System.Drawing.Image)(resources.GetObject("truck_car.Image")));
-            this.truck_car.Location = new System.Drawing.Point(-269, 374);
+            this.truck_car.Location = new System.Drawing.Point(-281, 375);
             this.truck_car.Name = "truck_car";
-            this.truck_car.Size = new System.Drawing.Size(299, 49);
+            this.truck_car.Size = new System.Drawing.Size(286, 49);
             this.truck_car.TabIndex = 8;
             this.truck_car.TabStop = false;
             // 
             // car_column
             // 
             this.car_column.Image = ((System.Drawing.Image)(resources.GetObject("car_column.Image")));
-            this.car_column.Location = new System.Drawing.Point(-269, 297);
+            this.car_column.Location = new System.Drawing.Point(-259, 297);
             this.car_column.Name = "car_column";
-            this.car_column.Size = new System.Drawing.Size(275, 53);
+            this.car_column.Size = new System.Drawing.Size(264, 53);
             this.car_column.TabIndex = 7;
             this.car_column.TabStop = false;
             // 
@@ -175,16 +184,42 @@
             this.background_box.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("background_box.BackgroundImage")));
             this.background_box.Location = new System.Drawing.Point(-3, 0);
             this.background_box.Name = "background_box";
-            this.background_box.Size = new System.Drawing.Size(842, 481);
+            this.background_box.Size = new System.Drawing.Size(845, 481);
             this.background_box.TabIndex = 5;
             this.background_box.TabStop = false;
-            this.background_box.Click += new System.EventHandler(this.background_box_Click);
             // 
             // timer3
             // 
             this.timer3.Enabled = true;
             this.timer3.Interval = 50;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
+            // frog_life_1
+            // 
+            this.frog_life_1.Image = ((System.Drawing.Image)(resources.GetObject("frog_life_1.Image")));
+            this.frog_life_1.Location = new System.Drawing.Point(793, 3);
+            this.frog_life_1.Name = "frog_life_1";
+            this.frog_life_1.Size = new System.Drawing.Size(46, 46);
+            this.frog_life_1.TabIndex = 9;
+            this.frog_life_1.TabStop = false;
+            // 
+            // frog_life_2
+            // 
+            this.frog_life_2.Image = ((System.Drawing.Image)(resources.GetObject("frog_life_2.Image")));
+            this.frog_life_2.Location = new System.Drawing.Point(741, 3);
+            this.frog_life_2.Name = "frog_life_2";
+            this.frog_life_2.Size = new System.Drawing.Size(46, 46);
+            this.frog_life_2.TabIndex = 10;
+            this.frog_life_2.TabStop = false;
+            // 
+            // frog_life_3
+            // 
+            this.frog_life_3.Image = ((System.Drawing.Image)(resources.GetObject("frog_life_3.Image")));
+            this.frog_life_3.Location = new System.Drawing.Point(689, 3);
+            this.frog_life_3.Name = "frog_life_3";
+            this.frog_life_3.Size = new System.Drawing.Size(46, 46);
+            this.frog_life_3.TabIndex = 11;
+            this.frog_life_3.TabStop = false;
             // 
             // Form2
             // 
@@ -202,6 +237,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frog_life_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frog_life_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frog_life_3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -220,5 +258,8 @@
         protected System.Windows.Forms.PictureBox background_box;
         protected System.Windows.Forms.PictureBox car_column;
         protected System.Windows.Forms.PictureBox truck_car;
+        protected System.Windows.Forms.PictureBox frog_life_1;
+        protected System.Windows.Forms.PictureBox frog_life_3;
+        protected System.Windows.Forms.PictureBox frog_life_2;
     }
 }
