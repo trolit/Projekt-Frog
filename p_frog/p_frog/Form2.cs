@@ -261,6 +261,14 @@ namespace p_frog
             frog_life_1.BackColor = Color.Transparent;
             frog_life_2.BackColor = Color.Transparent;
             frog_life_3.BackColor = Color.Transparent;
+            tree_1.Parent = background_box;
+            tree_2.Parent = background_box;
+            tree_3.Parent = background_box;
+            tree_4.Parent = background_box;
+            tree_1.BackColor = Color.Transparent;
+            tree_2.BackColor = Color.Transparent;
+            tree_3.BackColor = Color.Transparent;
+            tree_4.BackColor = Color.Transparent;
             truck_car.BackColor = Color.Transparent;
             label1.BackColor = Color.Transparent;
             car_column.BackColor = Color.Transparent;
@@ -298,8 +306,8 @@ namespace p_frog
         }
         #endregion
 
-        // ruch pojazdami, żyją!!!
-        #region 8. Timer3(odpowiedzialny za przesuwanie pictureboxow pojazdow)
+        // ruch otoczeniem
+        #region 8. Timer3(odpowiedzialny za przesuwanie pictureboxow)
         private void timer3_Tick(object sender, EventArgs e)
         {
             int p = police_car.Location.X; // lokalizacja radiowozu

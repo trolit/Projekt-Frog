@@ -38,23 +38,31 @@
             this.warning2 = new System.Windows.Forms.Label();
             this.frog = new System.Windows.Forms.PictureBox();
             this.screen = new System.Windows.Forms.Panel();
+            this.tree_1 = new System.Windows.Forms.PictureBox();
+            this.frog_life_3 = new System.Windows.Forms.PictureBox();
+            this.frog_life_2 = new System.Windows.Forms.PictureBox();
+            this.frog_life_1 = new System.Windows.Forms.PictureBox();
             this.truck_car = new System.Windows.Forms.PictureBox();
             this.car_column = new System.Windows.Forms.PictureBox();
             this.police_car = new System.Windows.Forms.PictureBox();
             this.background_box = new System.Windows.Forms.PictureBox();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.frog_life_1 = new System.Windows.Forms.PictureBox();
-            this.frog_life_2 = new System.Windows.Forms.PictureBox();
-            this.frog_life_3 = new System.Windows.Forms.PictureBox();
+            this.tree_2 = new System.Windows.Forms.PictureBox();
+            this.tree_3 = new System.Windows.Forms.PictureBox();
+            this.tree_4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.frog)).BeginInit();
             this.screen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tree_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frog_life_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frog_life_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frog_life_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.truck_car)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frog_life_1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frog_life_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frog_life_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tree_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tree_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tree_4)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -133,6 +141,10 @@
             // screen
             // 
             this.screen.BackColor = System.Drawing.Color.Transparent;
+            this.screen.Controls.Add(this.tree_4);
+            this.screen.Controls.Add(this.tree_3);
+            this.screen.Controls.Add(this.tree_2);
+            this.screen.Controls.Add(this.tree_1);
             this.screen.Controls.Add(this.frog_life_3);
             this.screen.Controls.Add(this.frog_life_2);
             this.screen.Controls.Add(this.frog_life_1);
@@ -151,6 +163,42 @@
             this.screen.Name = "screen";
             this.screen.Size = new System.Drawing.Size(842, 481);
             this.screen.TabIndex = 0;
+            // 
+            // tree_1
+            // 
+            this.tree_1.Image = ((System.Drawing.Image)(resources.GetObject("tree_1.Image")));
+            this.tree_1.Location = new System.Drawing.Point(717, 135);
+            this.tree_1.Name = "tree_1";
+            this.tree_1.Size = new System.Drawing.Size(125, 42);
+            this.tree_1.TabIndex = 12;
+            this.tree_1.TabStop = false;
+            // 
+            // frog_life_3
+            // 
+            this.frog_life_3.Image = ((System.Drawing.Image)(resources.GetObject("frog_life_3.Image")));
+            this.frog_life_3.Location = new System.Drawing.Point(689, 3);
+            this.frog_life_3.Name = "frog_life_3";
+            this.frog_life_3.Size = new System.Drawing.Size(46, 46);
+            this.frog_life_3.TabIndex = 11;
+            this.frog_life_3.TabStop = false;
+            // 
+            // frog_life_2
+            // 
+            this.frog_life_2.Image = ((System.Drawing.Image)(resources.GetObject("frog_life_2.Image")));
+            this.frog_life_2.Location = new System.Drawing.Point(741, 3);
+            this.frog_life_2.Name = "frog_life_2";
+            this.frog_life_2.Size = new System.Drawing.Size(46, 46);
+            this.frog_life_2.TabIndex = 10;
+            this.frog_life_2.TabStop = false;
+            // 
+            // frog_life_1
+            // 
+            this.frog_life_1.Image = ((System.Drawing.Image)(resources.GetObject("frog_life_1.Image")));
+            this.frog_life_1.Location = new System.Drawing.Point(793, 3);
+            this.frog_life_1.Name = "frog_life_1";
+            this.frog_life_1.Size = new System.Drawing.Size(46, 46);
+            this.frog_life_1.TabIndex = 9;
+            this.frog_life_1.TabStop = false;
             // 
             // truck_car
             // 
@@ -194,32 +242,32 @@
             this.timer3.Interval = 50;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
-            // frog_life_1
+            // tree_2
             // 
-            this.frog_life_1.Image = ((System.Drawing.Image)(resources.GetObject("frog_life_1.Image")));
-            this.frog_life_1.Location = new System.Drawing.Point(793, 3);
-            this.frog_life_1.Name = "frog_life_1";
-            this.frog_life_1.Size = new System.Drawing.Size(46, 46);
-            this.frog_life_1.TabIndex = 9;
-            this.frog_life_1.TabStop = false;
+            this.tree_2.Image = ((System.Drawing.Image)(resources.GetObject("tree_2.Image")));
+            this.tree_2.Location = new System.Drawing.Point(717, 89);
+            this.tree_2.Name = "tree_2";
+            this.tree_2.Size = new System.Drawing.Size(205, 53);
+            this.tree_2.TabIndex = 13;
+            this.tree_2.TabStop = false;
             // 
-            // frog_life_2
+            // tree_3
             // 
-            this.frog_life_2.Image = ((System.Drawing.Image)(resources.GetObject("frog_life_2.Image")));
-            this.frog_life_2.Location = new System.Drawing.Point(741, 3);
-            this.frog_life_2.Name = "frog_life_2";
-            this.frog_life_2.Size = new System.Drawing.Size(46, 46);
-            this.frog_life_2.TabIndex = 10;
-            this.frog_life_2.TabStop = false;
+            this.tree_3.Image = ((System.Drawing.Image)(resources.GetObject("tree_3.Image")));
+            this.tree_3.Location = new System.Drawing.Point(717, 67);
+            this.tree_3.Name = "tree_3";
+            this.tree_3.Size = new System.Drawing.Size(125, 34);
+            this.tree_3.TabIndex = 14;
+            this.tree_3.TabStop = false;
             // 
-            // frog_life_3
+            // tree_4
             // 
-            this.frog_life_3.Image = ((System.Drawing.Image)(resources.GetObject("frog_life_3.Image")));
-            this.frog_life_3.Location = new System.Drawing.Point(689, 3);
-            this.frog_life_3.Name = "frog_life_3";
-            this.frog_life_3.Size = new System.Drawing.Size(46, 46);
-            this.frog_life_3.TabIndex = 11;
-            this.frog_life_3.TabStop = false;
+            this.tree_4.Image = ((System.Drawing.Image)(resources.GetObject("tree_4.Image")));
+            this.tree_4.Location = new System.Drawing.Point(717, 45);
+            this.tree_4.Name = "tree_4";
+            this.tree_4.Size = new System.Drawing.Size(125, 29);
+            this.tree_4.TabIndex = 15;
+            this.tree_4.TabStop = false;
             // 
             // Form2
             // 
@@ -233,13 +281,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.frog)).EndInit();
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tree_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frog_life_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frog_life_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frog_life_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.truck_car)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frog_life_1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frog_life_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frog_life_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tree_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tree_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tree_4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -261,5 +313,9 @@
         protected System.Windows.Forms.PictureBox frog_life_1;
         protected System.Windows.Forms.PictureBox frog_life_3;
         protected System.Windows.Forms.PictureBox frog_life_2;
+        protected System.Windows.Forms.PictureBox tree_1;
+        protected System.Windows.Forms.PictureBox tree_2;
+        protected System.Windows.Forms.PictureBox tree_4;
+        protected System.Windows.Forms.PictureBox tree_3;
     }
 }
