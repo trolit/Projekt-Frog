@@ -306,6 +306,26 @@ namespace p_frog
         }
         #endregion
 
+        // kontrola ruchu drzew
+        private void Check_tree_move()
+        {
+            if(tree_1.Location.X < -120)
+            {
+                tree_1.Location = new Point(823, 133);
+            }
+            else if(tree_2.Location.X < -200)
+            {
+                tree_2.Location = new Point(823, 90);
+            }
+            else if(tree_3.Location.X < -108)
+            {
+                tree_3.Location = new Point(823, 64);
+            }
+            else if(tree_4.Location.X < -119)
+            {
+                tree_4.Location = new Point(823, 45);
+            }
+        }
         // ruch otoczeniem
         #region 8. Timer3(odpowiedzialny za przesuwanie pictureboxow)
         private void timer3_Tick(object sender, EventArgs e)
@@ -313,6 +333,10 @@ namespace p_frog
             int p = police_car.Location.X; // lokalizacja radiowozu
             int c = car_column.Location.X; // lokalizacja kolumny samochodow
             int t = truck_car.Location.X;  // lokalizacja ciezarkowki
+            int tre1 = tree_1.Location.X;  // lokalizacja kłód
+            int tre2 = tree_2.Location.X;
+            int tre3 = tree_3.Location.X;
+            int tre4 = tree_4.Location.X;
 
             p -= 10;
             police_car.Location = new Point(p, 222);
@@ -326,6 +350,15 @@ namespace p_frog
             truck_car.Location = new Point(t, 375);
             Check_truck_car();
 
+            tre1 -= 10;
+            tre2 -= 10;
+            tre3 -= 10;
+            tre4 -= 10;
+            tree_1.Location = new Point(tre1, 135);
+            tree_2.Location = new Point(tre2, 89);
+            tree_3.Location = new Point(tre3, 67);
+            tree_4.Location = new Point(tre4, 45);
+            Check_tree_move();
             Vehicle_Collision();
         }
         #endregion

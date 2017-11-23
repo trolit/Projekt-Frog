@@ -167,7 +167,7 @@
             // tree_1
             // 
             this.tree_1.Image = ((System.Drawing.Image)(resources.GetObject("tree_1.Image")));
-            this.tree_1.Location = new System.Drawing.Point(717, 135);
+            this.tree_1.Location = new System.Drawing.Point(823, 133);
             this.tree_1.Name = "tree_1";
             this.tree_1.Size = new System.Drawing.Size(125, 42);
             this.tree_1.TabIndex = 12;
@@ -245,7 +245,7 @@
             // tree_2
             // 
             this.tree_2.Image = ((System.Drawing.Image)(resources.GetObject("tree_2.Image")));
-            this.tree_2.Location = new System.Drawing.Point(717, 89);
+            this.tree_2.Location = new System.Drawing.Point(823, 90);
             this.tree_2.Name = "tree_2";
             this.tree_2.Size = new System.Drawing.Size(205, 53);
             this.tree_2.TabIndex = 13;
@@ -254,7 +254,7 @@
             // tree_3
             // 
             this.tree_3.Image = ((System.Drawing.Image)(resources.GetObject("tree_3.Image")));
-            this.tree_3.Location = new System.Drawing.Point(717, 67);
+            this.tree_3.Location = new System.Drawing.Point(823, 64);
             this.tree_3.Name = "tree_3";
             this.tree_3.Size = new System.Drawing.Size(125, 34);
             this.tree_3.TabIndex = 14;
@@ -263,7 +263,7 @@
             // tree_4
             // 
             this.tree_4.Image = ((System.Drawing.Image)(resources.GetObject("tree_4.Image")));
-            this.tree_4.Location = new System.Drawing.Point(717, 45);
+            this.tree_4.Location = new System.Drawing.Point(823, 45);
             this.tree_4.Name = "tree_4";
             this.tree_4.Size = new System.Drawing.Size(125, 29);
             this.tree_4.TabIndex = 15;
