@@ -24,6 +24,7 @@ namespace p_frog
         bool hide_out_1 = false;
         bool hide_out_2 = false;
         bool hide_out_3 = false;
+        bool is_on_tree = false;
 
         bool can_move_right = true; // do krzaków zmienne
         bool can_move_left = true;
@@ -351,9 +352,14 @@ namespace p_frog
 
             if (frog.Bounds.IntersectsWith(tree_1.Bounds) || frog.Bounds.IntersectsWith(tree_2.Bounds) || frog.Bounds.IntersectsWith(tree_3.Bounds) || frog.Bounds.IntersectsWith(tree_4.Bounds))
             {
+                is_on_tree = true;
                 c -= 10;
                 frog.Location = new Point(c,d);
                 Wykryj_kolizje_froga();
+            }
+            else
+            {
+                is_on_tree = false;
             }
         }
         // ruch otoczeniem
@@ -393,6 +399,7 @@ namespace p_frog
             Check_tree_move();
             Vehicle_Collision();
             Confirm_hideout();
+            Frog_water_Collision();
         }
         #endregion
 
@@ -531,6 +538,17 @@ namespace p_frog
             {
                 can_move_right = true;
                 can_move_left = true;
+            }
+        }
+
+        // wykrywanie kolizji froga z woda
+
+        private void Frog_water_Collision()
+        {
+            if (frog.Bounds.IntersectsWith(water_area.Bounds) && is_on_tree == false)
+            {
+                Frog_Life();
+                timer3.Stop();
             }
         }
     }
