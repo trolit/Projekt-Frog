@@ -57,7 +57,7 @@ namespace p_frog
         #endregion
 
         // gdy najedzie na instrukcję, pokazują się informacje + dźwięk
-        #region 7. Instrukcja(pokaz na ekran, ukryj z ekranu i odtwórz dzwiek)
+        #region 5. Instrukcja(pokaz na ekran, ukryj z ekranu i odtwórz dzwiek)
         private void see_help_on(object sender, EventArgs e)
         {
             help.Visible = true;
