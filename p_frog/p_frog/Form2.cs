@@ -41,7 +41,7 @@ namespace p_frog
         #region 1. Metoda sprawdzająca kolizję gdy frog wyjdzie za ekran
         private void Wykryj_kolizje_froga()
         {
-            if (frog.Location.Y < -4 || frog.Location.Y > 450)
+            if (frog.Location.Y < -20 || frog.Location.Y > 450)
             {
                 frog.Location = new Point(392, 428);
             }
@@ -272,6 +272,15 @@ namespace p_frog
             tree_2.Parent = background_box;
             tree_3.Parent = background_box;
             tree_4.Parent = background_box;
+            tree_5.Parent = background_box;
+            tree_6.Parent = background_box;
+            tree_8.Parent = background_box;
+            tree_9.Parent = background_box;
+            tree_10.Parent = background_box;
+            tree_11.Parent = background_box;
+            tree_12.Parent = background_box;
+            tree_13.Parent = background_box;
+            tree_14.Parent = background_box;
             frog_hideout_1.Parent = background_box;
             frog_hideout_1.BackColor = Color.Transparent;
             frog_hideout_2.Parent = background_box;
@@ -282,6 +291,15 @@ namespace p_frog
             tree_2.BackColor = Color.Transparent;
             tree_3.BackColor = Color.Transparent;
             tree_4.BackColor = Color.Transparent;
+            tree_5.BackColor = Color.Transparent;
+            tree_6.BackColor = Color.Transparent;
+            tree_8.BackColor = Color.Transparent;
+            tree_9.BackColor = Color.Transparent;
+            tree_10.BackColor = Color.Transparent;
+            tree_11.BackColor = Color.Transparent;
+            tree_12.BackColor = Color.Transparent;
+            tree_13.BackColor = Color.Transparent;
+            tree_14.BackColor = Color.Transparent;
             plant_block1.Parent = background_box;
             plant_block1.BackColor = Color.Transparent;
             plant_block2.Parent = background_box;
@@ -324,6 +342,7 @@ namespace p_frog
         #endregion
 
         // kontrola ruchu drzew
+        #region 8.  Ruch drzew
         private void Check_tree_move()
         {
             if(tree_1.Location.X < -120)
@@ -342,15 +361,53 @@ namespace p_frog
             {
                 tree_4.Location = new Point(823, 55);
             }
+            else if (tree_5.Location.X < -119)
+            {
+                tree_5.Location = new Point(823, 115);
+            }
+            else if (tree_6.Location.X < -119)
+            {
+                tree_6.Location = new Point(823, 115);
+            }
+            else if (tree_8.Location.X < -119)
+            {
+                tree_8.Location = new Point(823, 82);
+            }
+            else if (tree_9.Location.X < -119)
+            {
+                tree_9.Location = new Point(823, 82);
+            }
+            else if (tree_10.Location.X < -119)
+            {
+                tree_10.Location = new Point(823, 143);
+            }
+            else if (tree_11.Location.X < -119)
+            {
+                tree_11.Location = new Point(823, 143);
+            }
+            else if (tree_12.Location.X < -119)
+            {
+                tree_12.Location = new Point(823, 143);
+            }
+            else if (tree_13.Location.X < -119)
+            {
+                tree_13.Location = new Point(823, 82);
+            }
+            else if (tree_14.Location.X < -119)
+            {
+                tree_14.Location = new Point(823, 55);
+            }
         }
+        #endregion
 
         // kontrola czy Frog jest na klodzie
+        #region 9. Frog check if on tree
         private void Check_if_frog_on_tree()
         {
             int c = frog.Location.X;
             int d = frog.Location.Y;
 
-            if (frog.Bounds.IntersectsWith(tree_1.Bounds) || frog.Bounds.IntersectsWith(tree_2.Bounds) || frog.Bounds.IntersectsWith(tree_3.Bounds) || frog.Bounds.IntersectsWith(tree_4.Bounds))
+            if (frog.Bounds.IntersectsWith(tree_1.Bounds) || frog.Bounds.IntersectsWith(tree_2.Bounds) || frog.Bounds.IntersectsWith(tree_3.Bounds) || frog.Bounds.IntersectsWith(tree_4.Bounds) || frog.Bounds.IntersectsWith(tree_5.Bounds) || frog.Bounds.IntersectsWith(tree_6.Bounds) || frog.Bounds.IntersectsWith(tree_8.Bounds) || frog.Bounds.IntersectsWith(tree_9.Bounds) || frog.Bounds.IntersectsWith(tree_10.Bounds) || frog.Bounds.IntersectsWith(tree_11.Bounds) || frog.Bounds.IntersectsWith(tree_12.Bounds) || frog.Bounds.IntersectsWith(tree_13.Bounds))
             {
                 is_on_tree = true;
                 c -= 10;
@@ -362,8 +419,10 @@ namespace p_frog
                 is_on_tree = false;
             }
         }
+#endregion
+
         // ruch otoczeniem
-        #region 8. Timer3(odpowiedzialny za przesuwanie pictureboxow)
+        #region 10. Timer3(odpowiedzialny za przesuwanie pictureboxow)
         private void timer3_Tick(object sender, EventArgs e)
         {
             int p = police_car.Location.X; // lokalizacja radiowozu
@@ -373,6 +432,15 @@ namespace p_frog
             int tre2 = tree_2.Location.X;
             int tre3 = tree_3.Location.X;
             int tre4 = tree_4.Location.X;
+            int tre5 = tree_5.Location.X;
+            int tre6 = tree_6.Location.X;
+            int tre8 = tree_8.Location.X;
+            int tre9 = tree_9.Location.X;
+            int tre10 = tree_10.Location.X;
+            int tre11 = tree_11.Location.X;
+            int tre12 = tree_12.Location.X;
+            int tre13 = tree_13.Location.X;
+            int tre14 = tree_14.Location.X;
 
             p -= 10;
             police_car.Location = new Point(p, 222);
@@ -386,14 +454,32 @@ namespace p_frog
             truck_car.Location = new Point(t, 375);
             Check_truck_car();
 
-            tre1 -= 10;
-            tre2 -= 10;
-            tre3 -= 10;
-            tre4 -= 10;
+            tre1 -= 12;
+            tre2 -= 13;
+            tre3 -= 11;
+            tre4 -= 11;
+            tre5 -= 13;
+            tre6 -= 13;
+            tre8 -= 11;
+            tre9 -= 11;
+            tre10 -= 12;
+            tre11 -= 12;
+            tre12 -= 12;
+            tre13 -= 11;
+            tre14 -= 11;
             tree_1.Location = new Point(tre1, 135);
             tree_2.Location = new Point(tre2, 89);
             tree_3.Location = new Point(tre3, 67);
             tree_4.Location = new Point(tre4, 45);
+            tree_5.Location = new Point(tre5, 115);
+            tree_6.Location = new Point(tre6, 115);
+            tree_8.Location = new Point(tre8, 82);
+            tree_9.Location = new Point(tre9, 82);
+            tree_10.Location = new Point(tre10, 143);
+            tree_11.Location = new Point(tre11, 143);
+            tree_12.Location = new Point(tre12, 143);
+            tree_13.Location = new Point(tre13, 82);
+            tree_14.Location = new Point(tre14, 55);
             Check_if_frog_on_tree();
             Frog_plant_Collision();
             Check_tree_move();
@@ -404,6 +490,7 @@ namespace p_frog
         #endregion
 
         // kolizja froga z pojazdami
+        #region 11. Vehicle Collision
         private void Vehicle_Collision()
         {
             SoundPlayer car_hit = new SoundPlayer(Properties.Resources.frog_car_hit);
@@ -426,9 +513,10 @@ namespace p_frog
                 timer3.Stop();
             }
         }
+        #endregion
 
         // liczba zyc froga
-
+        #region 12. Frog Life
         private void Frog_Life()
         {
             if(life == 3)
@@ -454,8 +542,10 @@ namespace p_frog
                 End_Game();
             }
         }
-        // koniec gry (do dokonczenia)
-        
+        #endregion
+
+        // koniec gry (przegrana)
+        #region 13. EndGame
         private void End_Game()
         {
             timer1.Stop();
@@ -476,7 +566,10 @@ namespace p_frog
             win_box.Visible = true;
             bckg_lose.Visible = true;
         }
+        #endregion
 
+        // koniec gry (wygrana)
+        #region 14. WinGame
         private void Wins_Game()
         {
             timer1.Stop();
@@ -484,16 +577,18 @@ namespace p_frog
             timer3.Stop();
             can_move = false;
 
-            SoundPlayer frog_win = new SoundPlayer(Properties.Resources.win_sound);
-            frog_win.Play();
+            SoundPlayer win_sound = new SoundPlayer(Properties.Resources.win_sound);
+            win_sound.Play();
             win_text.Visible = true;
             win_text_2.Visible = true;
             win_yes.Visible = true;
             win_no.Visible = true;
             win_box.Visible = true;
         }
+        #endregion
 
-        // picturebox gdzie ma sie dostac zaba i metoda zaliczajaca wejscie na druga strone 
+        // metoda zaliczajaca wejscie na druga strone 
+        #region 15. Confirm hideout
         private void Confirm_hideout()
         {
             SoundPlayer frog_capture_point = new SoundPlayer(Properties.Resources.frog_saved_sound);
@@ -525,6 +620,7 @@ namespace p_frog
                 Wins_Game();
             }
         }
+#endregion
 
         // przycisk powrotu do menu
         private void win_yes_Click(object sender, EventArgs e)
