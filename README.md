@@ -1,9 +1,17 @@
-# Projekt-Frog
-## 'Projekt gry w stylu żaby.'
+###########################################################################
 
+
+# Projekt Frog
+## 'Projekt gry w stylu żaby wykonany w WinForms.'
+
+
+###########################################################################
 * Data rozpoczęcia: 18.11.17
 * Instrukcja w grze.
+* Wykorzystany język: C#
 
+
+###########################################################################
 
 
 ### Przy tworzeniu projektu wykorzystałem:
@@ -60,3 +68,5 @@
 > http://tinyurl.com/y99booh9
 
 
+
+###########################################################################

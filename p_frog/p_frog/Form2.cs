@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace p_frog
 {
+
     public partial class Form2 : Form
     {
         private int count_timer1 = 0;  
