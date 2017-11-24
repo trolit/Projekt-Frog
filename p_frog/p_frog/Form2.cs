@@ -442,15 +442,15 @@ namespace p_frog
             int tre13 = tree_13.Location.X;
             int tre14 = tree_14.Location.X;
 
-            p -= 10;
+            p -= 15;
             police_car.Location = new Point(p, 222);
             Check_police_car();
 
-            c += 9;
+            c += 12;
             car_column.Location = new Point(c, 297);
             Check_car_column();
 
-            t += 6;
+            t += 16;
             truck_car.Location = new Point(t, 375);
             Check_truck_car();
 
