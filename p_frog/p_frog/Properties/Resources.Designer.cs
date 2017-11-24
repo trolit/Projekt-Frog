@@ -61,6 +61,15 @@ namespace p_frog.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream frog_car_hit {
+            get {
+                return ResourceManager.GetStream("frog_car_hit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap frog_down {
@@ -192,6 +201,15 @@ namespace p_frog.Properties {
             get {
                 object obj = ResourceManager.GetObject("frog_right1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream frog_splash_water {
+            get {
+                return ResourceManager.GetStream("frog_splash_water", resourceCulture);
             }
         }
         

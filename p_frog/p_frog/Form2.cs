@@ -406,18 +406,22 @@ namespace p_frog
         // kolizja froga z pojazdami
         private void Vehicle_Collision()
         {
+            SoundPlayer car_hit = new SoundPlayer(Properties.Resources.frog_car_hit);
             if (frog.Bounds.IntersectsWith(police_car.Bounds)) // wykrywa przeciecie dwoch pictureboxow
             {
+                car_hit.Play();
                 Frog_Life();
                 timer3.Stop();
             }
             else if (frog.Bounds.IntersectsWith(car_column.Bounds))
             {
+                car_hit.Play();
                 Frog_Life();
                 timer3.Stop();
             }
             else if (frog.Bounds.IntersectsWith(truck_car.Bounds))
             {
+                car_hit.Play();
                 Frog_Life();
                 timer3.Stop();
             }
@@ -547,6 +551,8 @@ namespace p_frog
         {
             if (frog.Bounds.IntersectsWith(water_area.Bounds) && is_on_tree == false)
             {
+                SoundPlayer splash = new SoundPlayer(Properties.Resources.frog_splash_water);
+                splash.Play();
                 Frog_Life();
                 timer3.Stop();
             }
