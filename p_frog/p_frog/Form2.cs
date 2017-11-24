@@ -463,11 +463,18 @@ namespace p_frog
             timer3.Stop();
             can_move = false;
 
+            SoundPlayer frog_lose = new SoundPlayer(Properties.Resources.lose_sound_fxd);
+            frog_lose.Play();
+
+            
+            frog_coffin.Visible = true;
+            frog_dead.Visible = true;
             lose_text.Visible = true;
             win_text_2.Visible = true;
             win_yes.Visible = true;
             win_no.Visible = true;
             win_box.Visible = true;
+            bckg_lose.Visible = true;
         }
 
         private void Wins_Game()
@@ -477,6 +484,8 @@ namespace p_frog
             timer3.Stop();
             can_move = false;
 
+            SoundPlayer frog_win = new SoundPlayer(Properties.Resources.win_sound);
+            frog_win.Play();
             win_text.Visible = true;
             win_text_2.Visible = true;
             win_yes.Visible = true;
@@ -487,22 +496,27 @@ namespace p_frog
         // picturebox gdzie ma sie dostac zaba i metoda zaliczajaca wejscie na druga strone 
         private void Confirm_hideout()
         {
+            SoundPlayer frog_capture_point = new SoundPlayer(Properties.Resources.frog_saved_sound);
+
             if (frog.Bounds.IntersectsWith(frog_hideout_1.Bounds))
             {
                 frog_hideout_1.Visible = false;
                 hide_out_1 = true;
+                frog_capture_point.Play();
                 frog.Location = new Point(392, 428);
             }
             else if (frog.Bounds.IntersectsWith(frog_hideout_2.Bounds))
             {
                 frog_hideout_2.Visible = false;
                 hide_out_2 = true;
+                frog_capture_point.Play();
                 frog.Location = new Point(392, 428);
             }
             else if (frog.Bounds.IntersectsWith(frog_hideout_3.Bounds))
             {
                 frog_hideout_3.Visible = false;
                 hide_out_3 = true;
+                frog_capture_point.Play();
                 frog.Location = new Point(392, 428);
             }
 

@@ -144,6 +144,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="frog_icon.ico" />
+    <None Include="Resources\lose_sound_fxd.wav" />
+    <None Include="Resources\win_sound.wav" />
+    <None Include="Resources\lose_sound.wav" />
+    <None Include="Resources\frog_saved_sound.wav" />
     <None Include="Resources\frog_car_hit.wav" />
     <None Include="Resources\frog_splash_water.wav" />
   </ItemGroup>

@@ -207,6 +207,15 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream frog_saved_sound {
+            get {
+                return ResourceManager.GetStream("frog_saved_sound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream frog_splash_water {
             get {
                 return ResourceManager.GetStream("frog_splash_water", resourceCulture);
@@ -260,6 +269,24 @@ namespace p_frog.Properties {
             get {
                 object obj = ResourceManager.GetObject("frog_up1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream lose_sound_fxd {
+            get {
+                return ResourceManager.GetStream("lose_sound_fxd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream win_sound {
+            get {
+                return ResourceManager.GetStream("win_sound", resourceCulture);
             }
         }
     }

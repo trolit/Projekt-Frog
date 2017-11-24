@@ -178,7 +178,16 @@
   <data name="frog_car_hit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frog_car_hit.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="frog_saved_sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frog_saved_sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="frog_splash_water" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frog_splash_water.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lose_sound_fxd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lose_sound_fxd.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="win_sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win_sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
