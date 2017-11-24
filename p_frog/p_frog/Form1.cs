@@ -56,27 +56,6 @@ namespace p_frog
         }
         #endregion
 
-        // gdy najedzie myszką na przycisk ustawień
-        #region 5. Odtwórz_dźwiek(dla ustawień)
-        private void play_sound_ustawienia(object sender, EventArgs e)
-        {
-            SoundPlayer ustawienia = new SoundPlayer(Properties.Resources.frog_effect_3);
-            ustawienia.Play();
-        }
-        #endregion
-
-        // gdy wybierze opcję Ustawienia
-        #region 6. Przycisk ustawienia(przechodzi do okna ustawień)
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-
-            Form3 ustawienia = new Form3();
-            ustawienia.Show();
-        }
-
-        #endregion
-
         // gdy najedzie na instrukcję, pokazują się informacje + dźwięk
         #region 7. Instrukcja(pokaz na ekran, ukryj z ekranu i odtwórz dzwiek)
         private void see_help_on(object sender, EventArgs e)

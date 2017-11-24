@@ -59,6 +59,8 @@
             this.background_box = new System.Windows.Forms.PictureBox();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.lose_text = new System.Windows.Forms.Label();
+            this.plant_block1 = new System.Windows.Forms.PictureBox();
+            this.plant_block2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.frog)).BeginInit();
             this.screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.win_box)).BeginInit();
@@ -76,6 +78,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plant_block1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plant_block2)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -143,7 +147,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.frog.BackColor = System.Drawing.Color.Transparent;
             this.frog.Image = global::p_frog.Properties.Resources.frog_up_stand;
-            this.frog.Location = new System.Drawing.Point(423, 431);
+            this.frog.Location = new System.Drawing.Point(414, 431);
             this.frog.Name = "frog";
             this.frog.Size = new System.Drawing.Size(30, 50);
             this.frog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -154,6 +158,8 @@
             // screen
             // 
             this.screen.BackColor = System.Drawing.Color.Transparent;
+            this.screen.Controls.Add(this.plant_block2);
+            this.screen.Controls.Add(this.plant_block1);
             this.screen.Controls.Add(this.lose_text);
             this.screen.Controls.Add(this.win_no);
             this.screen.Controls.Add(this.win_yes);
@@ -244,7 +250,7 @@
             // frog_hideout_3
             // 
             this.frog_hideout_3.Image = ((System.Drawing.Image)(resources.GetObject("frog_hideout_3.Image")));
-            this.frog_hideout_3.Location = new System.Drawing.Point(559, -12);
+            this.frog_hideout_3.Location = new System.Drawing.Point(558, -12);
             this.frog_hideout_3.Name = "frog_hideout_3";
             this.frog_hideout_3.Size = new System.Drawing.Size(59, 50);
             this.frog_hideout_3.TabIndex = 18;
@@ -272,7 +278,7 @@
             // 
             this.tree_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.tree_4.Image = ((System.Drawing.Image)(resources.GetObject("tree_4.Image")));
-            this.tree_4.Location = new System.Drawing.Point(823, 45);
+            this.tree_4.Location = new System.Drawing.Point(705, 55);
             this.tree_4.Name = "tree_4";
             this.tree_4.Size = new System.Drawing.Size(125, 29);
             this.tree_4.TabIndex = 15;
@@ -385,6 +391,24 @@
             this.lose_text.Text = "PRZEGRAŁEŚ :( ";
             this.lose_text.Visible = false;
             // 
+            // plant_block1
+            // 
+            this.plant_block1.Image = ((System.Drawing.Image)(resources.GetObject("plant_block1.Image")));
+            this.plant_block1.Location = new System.Drawing.Point(291, -23);
+            this.plant_block1.Name = "plant_block1";
+            this.plant_block1.Size = new System.Drawing.Size(58, 72);
+            this.plant_block1.TabIndex = 25;
+            this.plant_block1.TabStop = false;
+            // 
+            // plant_block2
+            // 
+            this.plant_block2.Image = ((System.Drawing.Image)(resources.GetObject("plant_block2.Image")));
+            this.plant_block2.Location = new System.Drawing.Point(471, -21);
+            this.plant_block2.Name = "plant_block2";
+            this.plant_block2.Size = new System.Drawing.Size(58, 70);
+            this.plant_block2.TabIndex = 26;
+            this.plant_block2.TabStop = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -412,6 +436,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plant_block1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plant_block2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -446,5 +472,7 @@
         private System.Windows.Forms.Button win_yes;
         private System.Windows.Forms.Label win_text_2;
         private System.Windows.Forms.Label lose_text;
+        protected System.Windows.Forms.PictureBox plant_block2;
+        protected System.Windows.Forms.PictureBox plant_block1;
     }
 }

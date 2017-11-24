@@ -24,6 +24,9 @@ namespace p_frog
         bool hide_out_1 = false;
         bool hide_out_2 = false;
         bool hide_out_3 = false;
+
+        bool can_move_right = true; // do krzaków zmienne
+        bool can_move_left = true;
         
         public Form2()
         {
@@ -67,7 +70,7 @@ namespace p_frog
 
             if (e.KeyCode == Keys.Right)
             {
-                if (can_move == true)
+                if (can_move == true && can_move_right == true)
                 {
                     if (fatigue.Value >= 4)
                     {
@@ -90,7 +93,7 @@ namespace p_frog
 
             else if (e.KeyCode == Keys.Left)
             {
-                if (can_move == true)
+                if (can_move == true && can_move_left == true)
                 {
                     timer1.Start();
 
@@ -225,7 +228,7 @@ namespace p_frog
                 else
                 {
                     count_timer1 = 0;   // rozwiazanie problemu ciaglego chodzenia froga
-                }
+                }   
             }
         }
         #endregion
@@ -278,6 +281,10 @@ namespace p_frog
             tree_2.BackColor = Color.Transparent;
             tree_3.BackColor = Color.Transparent;
             tree_4.BackColor = Color.Transparent;
+            plant_block1.Parent = background_box;
+            plant_block1.BackColor = Color.Transparent;
+            plant_block2.Parent = background_box;
+            plant_block2.BackColor = Color.Transparent;
             truck_car.BackColor = Color.Transparent;
             label1.BackColor = Color.Transparent;
             car_column.BackColor = Color.Transparent;
@@ -332,7 +339,7 @@ namespace p_frog
             }
             else if(tree_4.Location.X < -119)
             {
-                tree_4.Location = new Point(823, 45);
+                tree_4.Location = new Point(823, 55);
             }
         }
 
@@ -382,6 +389,7 @@ namespace p_frog
             tree_3.Location = new Point(tre3, 67);
             tree_4.Location = new Point(tre4, 45);
             Check_if_frog_on_tree();
+            Frog_plant_Collision();
             Check_tree_move();
             Vehicle_Collision();
             Confirm_hideout();
@@ -466,23 +474,25 @@ namespace p_frog
         }
 
         // picturebox gdzie ma sie dostac zaba i metoda zaliczajaca wejscie na druga strone 
-
         private void Confirm_hideout()
         {
             if (frog.Bounds.IntersectsWith(frog_hideout_1.Bounds))
             {
                 frog_hideout_1.Visible = false;
                 hide_out_1 = true;
+                frog.Location = new Point(392, 428);
             }
             else if (frog.Bounds.IntersectsWith(frog_hideout_2.Bounds))
             {
                 frog_hideout_2.Visible = false;
                 hide_out_2 = true;
+                frog.Location = new Point(392, 428);
             }
             else if (frog.Bounds.IntersectsWith(frog_hideout_3.Bounds))
             {
                 frog_hideout_3.Visible = false;
                 hide_out_3 = true;
+                frog.Location = new Point(392, 428);
             }
 
             if (hide_out_1 == true && hide_out_2 == true && hide_out_3 == true)
@@ -491,6 +501,7 @@ namespace p_frog
             }
         }
 
+        // przycisk powrotu do menu
         private void win_yes_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -498,9 +509,29 @@ namespace p_frog
             main_menu.Show();
         }
 
+        // przycisk zakonczenia dzialania aplikacji
         private void win_no_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        // wykrywanie kolizji froga z krzakami
+
+        private void Frog_plant_Collision()
+        {
+            if (frog.Bounds.IntersectsWith(plant_block1.Bounds) && frog.Location.X < 291 || frog.Bounds.IntersectsWith(plant_block2.Bounds) && frog.Location.X < 471) 
+            {
+                can_move_right = false;
+            }
+            else if (frog.Bounds.IntersectsWith(plant_block1.Bounds) && frog.Location.X > 291 || frog.Bounds.IntersectsWith(plant_block2.Bounds) && frog.Location.X > 471)
+            {
+                can_move_left = false;
+            }
+            else
+            {
+                can_move_right = true;
+                can_move_left = true;
+            }
         }
     }
 }
