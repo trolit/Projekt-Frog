@@ -38,6 +38,17 @@
             this.warning2 = new System.Windows.Forms.Label();
             this.frog = new System.Windows.Forms.PictureBox();
             this.screen = new System.Windows.Forms.Panel();
+            this.win_no = new System.Windows.Forms.Button();
+            this.win_yes = new System.Windows.Forms.Button();
+            this.win_text_2 = new System.Windows.Forms.Label();
+            this.win_text = new System.Windows.Forms.Label();
+            this.win_box = new System.Windows.Forms.PictureBox();
+            this.frog_hideout_3 = new System.Windows.Forms.PictureBox();
+            this.frog_hideout_2 = new System.Windows.Forms.PictureBox();
+            this.frog_hideout_1 = new System.Windows.Forms.PictureBox();
+            this.tree_4 = new System.Windows.Forms.PictureBox();
+            this.tree_3 = new System.Windows.Forms.PictureBox();
+            this.tree_2 = new System.Windows.Forms.PictureBox();
             this.tree_1 = new System.Windows.Forms.PictureBox();
             this.frog_life_3 = new System.Windows.Forms.PictureBox();
             this.frog_life_2 = new System.Windows.Forms.PictureBox();
@@ -47,11 +58,16 @@
             this.police_car = new System.Windows.Forms.PictureBox();
             this.background_box = new System.Windows.Forms.PictureBox();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.tree_2 = new System.Windows.Forms.PictureBox();
-            this.tree_3 = new System.Windows.Forms.PictureBox();
-            this.tree_4 = new System.Windows.Forms.PictureBox();
+            this.lose_text = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.frog)).BeginInit();
             this.screen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.win_box)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frog_hideout_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frog_hideout_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frog_hideout_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tree_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tree_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tree_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_life_3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_life_2)).BeginInit();
@@ -60,9 +76,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tree_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tree_3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tree_4)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -141,6 +154,15 @@
             // screen
             // 
             this.screen.BackColor = System.Drawing.Color.Transparent;
+            this.screen.Controls.Add(this.lose_text);
+            this.screen.Controls.Add(this.win_no);
+            this.screen.Controls.Add(this.win_yes);
+            this.screen.Controls.Add(this.win_text_2);
+            this.screen.Controls.Add(this.win_text);
+            this.screen.Controls.Add(this.win_box);
+            this.screen.Controls.Add(this.frog_hideout_3);
+            this.screen.Controls.Add(this.frog_hideout_2);
+            this.screen.Controls.Add(this.frog_hideout_1);
             this.screen.Controls.Add(this.tree_4);
             this.screen.Controls.Add(this.tree_3);
             this.screen.Controls.Add(this.tree_2);
@@ -163,6 +185,116 @@
             this.screen.Name = "screen";
             this.screen.Size = new System.Drawing.Size(842, 481);
             this.screen.TabIndex = 0;
+            // 
+            // win_no
+            // 
+            this.win_no.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.win_no.Location = new System.Drawing.Point(423, 264);
+            this.win_no.Name = "win_no";
+            this.win_no.Size = new System.Drawing.Size(85, 40);
+            this.win_no.TabIndex = 23;
+            this.win_no.Text = "NIE :( ";
+            this.win_no.UseVisualStyleBackColor = true;
+            this.win_no.Visible = false;
+            this.win_no.Click += new System.EventHandler(this.win_no_Click);
+            // 
+            // win_yes
+            // 
+            this.win_yes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.win_yes.Location = new System.Drawing.Point(325, 264);
+            this.win_yes.Name = "win_yes";
+            this.win_yes.Size = new System.Drawing.Size(85, 40);
+            this.win_yes.TabIndex = 22;
+            this.win_yes.Text = "TAK :)";
+            this.win_yes.UseVisualStyleBackColor = true;
+            this.win_yes.Visible = false;
+            this.win_yes.Click += new System.EventHandler(this.win_yes_Click);
+            // 
+            // win_text_2
+            // 
+            this.win_text_2.AutoSize = true;
+            this.win_text_2.Location = new System.Drawing.Point(322, 228);
+            this.win_text_2.Name = "win_text_2";
+            this.win_text_2.Size = new System.Drawing.Size(196, 13);
+            this.win_text_2.TabIndex = 21;
+            this.win_text_2.Text = "Czy chcesz wrócić do menu głównego?";
+            this.win_text_2.Visible = false;
+            // 
+            // win_text
+            // 
+            this.win_text.AutoSize = true;
+            this.win_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.win_text.Location = new System.Drawing.Point(358, 204);
+            this.win_text.Name = "win_text";
+            this.win_text.Size = new System.Drawing.Size(126, 24);
+            this.win_text.TabIndex = 20;
+            this.win_text.Text = "WYGRANA !";
+            this.win_text.Visible = false;
+            // 
+            // win_box
+            // 
+            this.win_box.BackColor = System.Drawing.Color.Transparent;
+            this.win_box.Location = new System.Drawing.Point(291, 192);
+            this.win_box.Name = "win_box";
+            this.win_box.Size = new System.Drawing.Size(252, 127);
+            this.win_box.TabIndex = 19;
+            this.win_box.TabStop = false;
+            this.win_box.Visible = false;
+            // 
+            // frog_hideout_3
+            // 
+            this.frog_hideout_3.Image = ((System.Drawing.Image)(resources.GetObject("frog_hideout_3.Image")));
+            this.frog_hideout_3.Location = new System.Drawing.Point(559, -12);
+            this.frog_hideout_3.Name = "frog_hideout_3";
+            this.frog_hideout_3.Size = new System.Drawing.Size(59, 50);
+            this.frog_hideout_3.TabIndex = 18;
+            this.frog_hideout_3.TabStop = false;
+            // 
+            // frog_hideout_2
+            // 
+            this.frog_hideout_2.Image = ((System.Drawing.Image)(resources.GetObject("frog_hideout_2.Image")));
+            this.frog_hideout_2.Location = new System.Drawing.Point(385, -12);
+            this.frog_hideout_2.Name = "frog_hideout_2";
+            this.frog_hideout_2.Size = new System.Drawing.Size(59, 50);
+            this.frog_hideout_2.TabIndex = 17;
+            this.frog_hideout_2.TabStop = false;
+            // 
+            // frog_hideout_1
+            // 
+            this.frog_hideout_1.Image = ((System.Drawing.Image)(resources.GetObject("frog_hideout_1.Image")));
+            this.frog_hideout_1.Location = new System.Drawing.Point(197, -12);
+            this.frog_hideout_1.Name = "frog_hideout_1";
+            this.frog_hideout_1.Size = new System.Drawing.Size(58, 50);
+            this.frog_hideout_1.TabIndex = 16;
+            this.frog_hideout_1.TabStop = false;
+            // 
+            // tree_4
+            // 
+            this.tree_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tree_4.Image = ((System.Drawing.Image)(resources.GetObject("tree_4.Image")));
+            this.tree_4.Location = new System.Drawing.Point(823, 45);
+            this.tree_4.Name = "tree_4";
+            this.tree_4.Size = new System.Drawing.Size(125, 29);
+            this.tree_4.TabIndex = 15;
+            this.tree_4.TabStop = false;
+            // 
+            // tree_3
+            // 
+            this.tree_3.Image = ((System.Drawing.Image)(resources.GetObject("tree_3.Image")));
+            this.tree_3.Location = new System.Drawing.Point(823, 64);
+            this.tree_3.Name = "tree_3";
+            this.tree_3.Size = new System.Drawing.Size(125, 34);
+            this.tree_3.TabIndex = 14;
+            this.tree_3.TabStop = false;
+            // 
+            // tree_2
+            // 
+            this.tree_2.Image = ((System.Drawing.Image)(resources.GetObject("tree_2.Image")));
+            this.tree_2.Location = new System.Drawing.Point(823, 90);
+            this.tree_2.Name = "tree_2";
+            this.tree_2.Size = new System.Drawing.Size(205, 53);
+            this.tree_2.TabIndex = 13;
+            this.tree_2.TabStop = false;
             // 
             // tree_1
             // 
@@ -242,32 +374,16 @@
             this.timer3.Interval = 50;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
-            // tree_2
+            // lose_text
             // 
-            this.tree_2.Image = ((System.Drawing.Image)(resources.GetObject("tree_2.Image")));
-            this.tree_2.Location = new System.Drawing.Point(823, 90);
-            this.tree_2.Name = "tree_2";
-            this.tree_2.Size = new System.Drawing.Size(205, 53);
-            this.tree_2.TabIndex = 13;
-            this.tree_2.TabStop = false;
-            // 
-            // tree_3
-            // 
-            this.tree_3.Image = ((System.Drawing.Image)(resources.GetObject("tree_3.Image")));
-            this.tree_3.Location = new System.Drawing.Point(823, 64);
-            this.tree_3.Name = "tree_3";
-            this.tree_3.Size = new System.Drawing.Size(125, 34);
-            this.tree_3.TabIndex = 14;
-            this.tree_3.TabStop = false;
-            // 
-            // tree_4
-            // 
-            this.tree_4.Image = ((System.Drawing.Image)(resources.GetObject("tree_4.Image")));
-            this.tree_4.Location = new System.Drawing.Point(823, 45);
-            this.tree_4.Name = "tree_4";
-            this.tree_4.Size = new System.Drawing.Size(125, 29);
-            this.tree_4.TabIndex = 15;
-            this.tree_4.TabStop = false;
+            this.lose_text.AutoSize = true;
+            this.lose_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lose_text.Location = new System.Drawing.Point(338, 204);
+            this.lose_text.Name = "lose_text";
+            this.lose_text.Size = new System.Drawing.Size(170, 24);
+            this.lose_text.TabIndex = 24;
+            this.lose_text.Text = "PRZEGRAŁEŚ :( ";
+            this.lose_text.Visible = false;
             // 
             // Form2
             // 
@@ -281,6 +397,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.frog)).EndInit();
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.win_box)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frog_hideout_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frog_hideout_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frog_hideout_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tree_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tree_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tree_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_life_3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_life_2)).EndInit();
@@ -289,9 +412,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tree_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tree_3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tree_4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -317,5 +437,14 @@
         protected System.Windows.Forms.PictureBox tree_2;
         protected System.Windows.Forms.PictureBox tree_4;
         protected System.Windows.Forms.PictureBox tree_3;
+        private System.Windows.Forms.PictureBox frog_hideout_1;
+        private System.Windows.Forms.PictureBox frog_hideout_3;
+        private System.Windows.Forms.PictureBox frog_hideout_2;
+        private System.Windows.Forms.PictureBox win_box;
+        private System.Windows.Forms.Label win_text;
+        private System.Windows.Forms.Button win_no;
+        private System.Windows.Forms.Button win_yes;
+        private System.Windows.Forms.Label win_text_2;
+        private System.Windows.Forms.Label lose_text;
     }
 }

@@ -21,6 +21,9 @@ namespace p_frog
         bool up;
         bool down;
         bool can_move = true;  // flaga sprawdzajaca czy frog moze chodzic, na start ustawiamy na true!
+        bool hide_out_1 = false;
+        bool hide_out_2 = false;
+        bool hide_out_3 = false;
         
         public Form2()
         {
@@ -265,6 +268,12 @@ namespace p_frog
             tree_2.Parent = background_box;
             tree_3.Parent = background_box;
             tree_4.Parent = background_box;
+            frog_hideout_1.Parent = background_box;
+            frog_hideout_1.BackColor = Color.Transparent;
+            frog_hideout_2.Parent = background_box;
+            frog_hideout_2.BackColor = Color.Transparent;
+            frog_hideout_3.Parent = background_box;
+            frog_hideout_3.BackColor = Color.Transparent;
             tree_1.BackColor = Color.Transparent;
             tree_2.BackColor = Color.Transparent;
             tree_3.BackColor = Color.Transparent;
@@ -274,7 +283,7 @@ namespace p_frog
             car_column.BackColor = Color.Transparent;
             police_car.BackColor = Color.Transparent;
             frog.BackColor = Color.Transparent;
-            frog.Location = new Point(392, 428);
+            frog.Location = new Point(392, 428); // tu zaba zaczyna
         }
 
         #endregion
@@ -326,6 +335,20 @@ namespace p_frog
                 tree_4.Location = new Point(823, 45);
             }
         }
+
+        // kontrola czy Frog jest na klodzie
+        private void Check_if_frog_on_tree()
+        {
+            int c = frog.Location.X;
+            int d = frog.Location.Y;
+
+            if (frog.Bounds.IntersectsWith(tree_1.Bounds) || frog.Bounds.IntersectsWith(tree_2.Bounds) || frog.Bounds.IntersectsWith(tree_3.Bounds) || frog.Bounds.IntersectsWith(tree_4.Bounds))
+            {
+                c -= 10;
+                frog.Location = new Point(c,d);
+                Wykryj_kolizje_froga();
+            }
+        }
         // ruch otoczeniem
         #region 8. Timer3(odpowiedzialny za przesuwanie pictureboxow)
         private void timer3_Tick(object sender, EventArgs e)
@@ -333,7 +356,7 @@ namespace p_frog
             int p = police_car.Location.X; // lokalizacja radiowozu
             int c = car_column.Location.X; // lokalizacja kolumny samochodow
             int t = truck_car.Location.X;  // lokalizacja ciezarkowki
-            int tre1 = tree_1.Location.X;  // lokalizacja kłód
+            int tre1 = tree_1.Location.X;  // lokalizacja kłód, najnizsza
             int tre2 = tree_2.Location.X;
             int tre3 = tree_3.Location.X;
             int tre4 = tree_4.Location.X;
@@ -358,8 +381,10 @@ namespace p_frog
             tree_2.Location = new Point(tre2, 89);
             tree_3.Location = new Point(tre3, 67);
             tree_4.Location = new Point(tre4, 45);
+            Check_if_frog_on_tree();
             Check_tree_move();
             Vehicle_Collision();
+            Confirm_hideout();
         }
         #endregion
 
@@ -418,14 +443,64 @@ namespace p_frog
             timer2.Stop();
             timer3.Stop();
             can_move = false;
-           
+
+            lose_text.Visible = true;
+            win_text_2.Visible = true;
+            win_yes.Visible = true;
+            win_no.Visible = true;
+            win_box.Visible = true;
+        }
+
+        private void Wins_Game()
+        {
+            timer1.Stop();
+            timer2.Stop();
+            timer3.Stop();
+            can_move = false;
+
+            win_text.Visible = true;
+            win_text_2.Visible = true;
+            win_yes.Visible = true;
+            win_no.Visible = true;
+            win_box.Visible = true;
+        }
+
+        // picturebox gdzie ma sie dostac zaba i metoda zaliczajaca wejscie na druga strone 
+
+        private void Confirm_hideout()
+        {
+            if (frog.Bounds.IntersectsWith(frog_hideout_1.Bounds))
+            {
+                frog_hideout_1.Visible = false;
+                hide_out_1 = true;
+            }
+            else if (frog.Bounds.IntersectsWith(frog_hideout_2.Bounds))
+            {
+                frog_hideout_2.Visible = false;
+                hide_out_2 = true;
+            }
+            else if (frog.Bounds.IntersectsWith(frog_hideout_3.Bounds))
+            {
+                frog_hideout_3.Visible = false;
+                hide_out_3 = true;
+            }
+
+            if (hide_out_1 == true && hide_out_2 == true && hide_out_3 == true)
+            {
+                Wins_Game();
+            }
+        }
+
+        private void win_yes_Click(object sender, EventArgs e)
+        {
             this.Close();
             Form1 main_menu = new Form1();
             main_menu.Show();
         }
 
-
-        // picturebox gdzie ma sie dostac zaba i metoda zaliczajaca wejscie na druga strone 
-        // woda i ruszajace galezie po wodzie
+        private void win_no_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
