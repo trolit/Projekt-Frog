@@ -15,28 +15,19 @@
 Podsumowanie:
 
 Niestety dopiero pod koniec projektu, to znaczy podczas procesu tworzenia kłód, które
-
 będą pływały po wodzie zauważyłem, że timery renderują moje pictureboxy strasznie
-
-wolno i gra ciut muli.. ku mojemu rozczarowaniu.. Naczytałem sobie o tym na 
-
+wolno i gra ciut muli.. ku mojemu **rozczarowaniu**.. Naczytałem sobie o tym na 
 stackoverflow i okazało się, że WInForms to nie jest dobra opcja do tego aby
-
 tworzyć grę.... No ale cóż... przed poruszaniem kłodami samochody jeździły
-
 idealnie.... Nie przewidziałem tego... no ale cóż... Na następny raz
-
-będę wiedział aby nie zabierać się do gry w WinForms (w szczególności do takiej bardziej rozbudowanej).
+będę wiedział aby nie zabierać się do gry w WinForms...
+(w szczególności do takiej bardziej rozbudowanej).
 
 
 Pozostał jeszcze problem, który rzucał mi się w oczy:
-
 W momencie gdy gracz przytrzyma przycisk ruchu, wszystkie pozostałe 
-
 pictureboxy zatrzymują się, to znaczy np. żaba może przenikać przez 
-
 samochody bez utraty życia itd... :(
-
 
 
 ###########################################################################
