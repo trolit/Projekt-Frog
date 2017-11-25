@@ -273,11 +273,9 @@ namespace p_frog
             tree_2.Parent = background_box;
             tree_3.Parent = background_box;
             tree_4.Parent = background_box;
-            tree_5.Parent = background_box;
             tree_6.Parent = background_box;
             tree_8.Parent = background_box;
             tree_9.Parent = background_box;
-            tree_10.Parent = background_box;
             tree_11.Parent = background_box;
             tree_12.Parent = background_box;
             tree_13.Parent = background_box;
@@ -292,11 +290,9 @@ namespace p_frog
             tree_2.BackColor = Color.Transparent;
             tree_3.BackColor = Color.Transparent;
             tree_4.BackColor = Color.Transparent;
-            tree_5.BackColor = Color.Transparent;
             tree_6.BackColor = Color.Transparent;
             tree_8.BackColor = Color.Transparent;
             tree_9.BackColor = Color.Transparent;
-            tree_10.BackColor = Color.Transparent;
             tree_11.BackColor = Color.Transparent;
             tree_12.BackColor = Color.Transparent;
             tree_13.BackColor = Color.Transparent;
@@ -362,10 +358,6 @@ namespace p_frog
             {
                 tree_4.Location = new Point(823, 55);
             }
-            else if (tree_5.Location.X < -119)
-            {
-                tree_5.Location = new Point(823, 115);
-            }
             else if (tree_6.Location.X < -119)
             {
                 tree_6.Location = new Point(823, 115);
@@ -377,10 +369,6 @@ namespace p_frog
             else if (tree_9.Location.X < -119)
             {
                 tree_9.Location = new Point(823, 82);
-            }
-            else if (tree_10.Location.X < -119)
-            {
-                tree_10.Location = new Point(823, 143);
             }
             else if (tree_11.Location.X < -119)
             {
@@ -408,7 +396,7 @@ namespace p_frog
             int c = frog.Location.X;
             int d = frog.Location.Y;
 
-            if (frog.Bounds.IntersectsWith(tree_1.Bounds) || frog.Bounds.IntersectsWith(tree_2.Bounds) || frog.Bounds.IntersectsWith(tree_3.Bounds) || frog.Bounds.IntersectsWith(tree_4.Bounds) || frog.Bounds.IntersectsWith(tree_5.Bounds) || frog.Bounds.IntersectsWith(tree_6.Bounds) || frog.Bounds.IntersectsWith(tree_8.Bounds) || frog.Bounds.IntersectsWith(tree_9.Bounds) || frog.Bounds.IntersectsWith(tree_10.Bounds) || frog.Bounds.IntersectsWith(tree_11.Bounds) || frog.Bounds.IntersectsWith(tree_12.Bounds) || frog.Bounds.IntersectsWith(tree_13.Bounds) || frog.Bounds.IntersectsWith(tree_14.Bounds))
+            if (frog.Bounds.IntersectsWith(tree_1.Bounds) || frog.Bounds.IntersectsWith(tree_2.Bounds) || frog.Bounds.IntersectsWith(tree_3.Bounds) || frog.Bounds.IntersectsWith(tree_4.Bounds) || frog.Bounds.IntersectsWith(tree_6.Bounds) || frog.Bounds.IntersectsWith(tree_8.Bounds) || frog.Bounds.IntersectsWith(tree_9.Bounds) || frog.Bounds.IntersectsWith(tree_11.Bounds) || frog.Bounds.IntersectsWith(tree_12.Bounds) || frog.Bounds.IntersectsWith(tree_13.Bounds) || frog.Bounds.IntersectsWith(tree_14.Bounds))
             {
                 is_on_tree = true;
                 c -= 10;
@@ -423,27 +411,14 @@ namespace p_frog
 #endregion
 
         // ruch otoczeniem
-        #region 10. Timer3(odpowiedzialny za przesuwanie pictureboxow)
+        #region 10. Timer3(odpowiedzialny za ruch samochodow
         private void timer3_Tick(object sender, EventArgs e)
         {
             int p = police_car.Location.X; // lokalizacja radiowozu
             int c = car_column.Location.X; // lokalizacja kolumny samochodow
             int t = truck_car.Location.X;  // lokalizacja ciezarkowki
-            int tre1 = tree_1.Location.X;  // lokalizacja kłód, najnizsza
-            int tre2 = tree_2.Location.X;
-            int tre3 = tree_3.Location.X;
-            int tre4 = tree_4.Location.X;
-            int tre5 = tree_5.Location.X;
-            int tre6 = tree_6.Location.X;
-            int tre8 = tree_8.Location.X;
-            int tre9 = tree_9.Location.X;
-            int tre10 = tree_10.Location.X;
-            int tre11 = tree_11.Location.X;
-            int tre12 = tree_12.Location.X;
-            int tre13 = tree_13.Location.X;
-            int tre14 = tree_14.Location.X;
 
-            p -= 15;
+            p -= 10;
             police_car.Location = new Point(p, 222);
             Check_police_car();
 
@@ -451,36 +426,10 @@ namespace p_frog
             car_column.Location = new Point(c, 297);
             Check_car_column();
 
-            t += 16;
+            t += 9;
             truck_car.Location = new Point(t, 375);
             Check_truck_car();
 
-            tre1 -= 12;
-            tre2 -= 13;
-            tre3 -= 11;
-            tre4 -= 11;
-            tre5 -= 13;
-            tre6 -= 13;
-            tre8 -= 11;
-            tre9 -= 11;
-            tre10 -= 12;
-            tre11 -= 12;
-            tre12 -= 12;
-            tre13 -= 11;
-            tre14 -= 11;
-            tree_1.Location = new Point(tre1, 135);
-            tree_2.Location = new Point(tre2, 89);
-            tree_3.Location = new Point(tre3, 67);
-            tree_4.Location = new Point(tre4, 45);
-            tree_5.Location = new Point(tre5, 115);
-            tree_6.Location = new Point(tre6, 115);
-            tree_8.Location = new Point(tre8, 82);
-            tree_9.Location = new Point(tre9, 82);
-            tree_10.Location = new Point(tre10, 143);
-            tree_11.Location = new Point(tre11, 143);
-            tree_12.Location = new Point(tre12, 143);
-            tree_13.Location = new Point(tre13, 82);
-            tree_14.Location = new Point(tre14, 55);
             Check_if_frog_on_tree();
             Frog_plant_Collision();
             Check_tree_move();
@@ -489,6 +438,9 @@ namespace p_frog
             Frog_water_Collision();
         }
         #endregion
+
+        // metoda test 
+        
 
         // kolizja froga z pojazdami
         #region 11. Vehicle Collision
@@ -557,7 +509,6 @@ namespace p_frog
             SoundPlayer frog_lose = new SoundPlayer(Properties.Resources.lose_sound_fxd);
             frog_lose.Play();
 
-            
             frog_coffin.Visible = true;
             frog_dead.Visible = true;
             lose_text.Visible = true;
@@ -667,6 +618,46 @@ namespace p_frog
                 Frog_Life();
                 timer3.Stop();
             }
+        }
+
+        private void timer4_Tick(object sender, EventArgs e)
+        {
+            /*
+            int tre1 = tree_1.Location.X;  // lokalizacja kłód, najnizsza
+            int tre2 = tree_2.Location.X;
+            int tre3 = tree_3.Location.X;
+            int tre4 = tree_4.Location.X;
+            int tre6 = tree_6.Location.X;
+            int tre8 = tree_8.Location.X;
+            int tre9 = tree_9.Location.X;
+            int tre11 = tree_11.Location.X;
+            int tre12 = tree_12.Location.X;
+            int tre13 = tree_13.Location.X;
+            int tre14 = tree_14.Location.X;
+
+            tre1 -= 12;
+            tre2 -= 13;
+            tre3 -= 11;
+            tre4 -= 11;
+            tre6 -= 13;
+            tre8 -= 11;
+            tre9 -= 11;
+            tre11 -= 12;
+            tre12 -= 12;
+            tre13 -= 11;
+            tre14 -= 11;
+            tree_1.Location = new Point(tre1, 135);
+            tree_2.Location = new Point(tre2, 89);
+            tree_3.Location = new Point(tre3, 67);
+            tree_4.Location = new Point(tre4, 45);
+            tree_6.Location = new Point(tre6, 115);
+            tree_8.Location = new Point(tre8, 82);
+            tree_9.Location = new Point(tre9, 82);
+            tree_11.Location = new Point(tre11, 143);
+            tree_12.Location = new Point(tre12, 143);
+            tree_13.Location = new Point(tre13, 82);
+            tree_14.Location = new Point(tre14, 55);
+            */
         }
     }
 }

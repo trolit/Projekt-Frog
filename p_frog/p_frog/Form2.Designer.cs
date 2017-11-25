@@ -41,11 +41,9 @@
             this.tree_13 = new System.Windows.Forms.PictureBox();
             this.tree_12 = new System.Windows.Forms.PictureBox();
             this.tree_11 = new System.Windows.Forms.PictureBox();
-            this.tree_10 = new System.Windows.Forms.PictureBox();
             this.tree_9 = new System.Windows.Forms.PictureBox();
             this.tree_8 = new System.Windows.Forms.PictureBox();
             this.tree_6 = new System.Windows.Forms.PictureBox();
-            this.tree_5 = new System.Windows.Forms.PictureBox();
             this.frog_dead = new System.Windows.Forms.PictureBox();
             this.lose_text = new System.Windows.Forms.Label();
             this.win_no = new System.Windows.Forms.Button();
@@ -74,16 +72,15 @@
             this.frog = new System.Windows.Forms.PictureBox();
             this.background_box = new System.Windows.Forms.PictureBox();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tree_14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tree_10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tree_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_dead)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.win_box)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_coffin)).BeginInit();
@@ -111,7 +108,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 7;
+            this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // timer2
@@ -173,11 +170,9 @@
             this.screen.Controls.Add(this.tree_13);
             this.screen.Controls.Add(this.tree_12);
             this.screen.Controls.Add(this.tree_11);
-            this.screen.Controls.Add(this.tree_10);
             this.screen.Controls.Add(this.tree_9);
             this.screen.Controls.Add(this.tree_8);
             this.screen.Controls.Add(this.tree_6);
-            this.screen.Controls.Add(this.tree_5);
             this.screen.Controls.Add(this.frog_dead);
             this.screen.Controls.Add(this.lose_text);
             this.screen.Controls.Add(this.win_no);
@@ -252,15 +247,6 @@
             this.tree_11.TabIndex = 40;
             this.tree_11.TabStop = false;
             // 
-            // tree_10
-            // 
-            this.tree_10.Image = ((System.Drawing.Image)(resources.GetObject("tree_10.Image")));
-            this.tree_10.Location = new System.Drawing.Point(551, 143);
-            this.tree_10.Name = "tree_10";
-            this.tree_10.Size = new System.Drawing.Size(127, 31);
-            this.tree_10.TabIndex = 39;
-            this.tree_10.TabStop = false;
-            // 
             // tree_9
             // 
             this.tree_9.Image = ((System.Drawing.Image)(resources.GetObject("tree_9.Image")));
@@ -287,15 +273,6 @@
             this.tree_6.Size = new System.Drawing.Size(79, 31);
             this.tree_6.TabIndex = 36;
             this.tree_6.TabStop = false;
-            // 
-            // tree_5
-            // 
-            this.tree_5.Image = ((System.Drawing.Image)(resources.GetObject("tree_5.Image")));
-            this.tree_5.Location = new System.Drawing.Point(485, 115);
-            this.tree_5.Name = "tree_5";
-            this.tree_5.Size = new System.Drawing.Size(79, 31);
-            this.tree_5.TabIndex = 35;
-            this.tree_5.TabStop = false;
             // 
             // frog_dead
             // 
@@ -566,8 +543,14 @@
             // timer3
             // 
             this.timer3.Enabled = true;
-            this.timer3.Interval = 50;
+            this.timer3.Interval = 1;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
+            // timer4
+            // 
+            this.timer4.Enabled = true;
+            this.timer4.Interval = 50;
+            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
             // Form2
             // 
@@ -584,11 +567,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.tree_13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tree_10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tree_5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_dead)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.win_box)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_coffin)).EndInit();
@@ -621,7 +602,6 @@
         protected System.Windows.Forms.PictureBox frog;
         protected System.Windows.Forms.Timer timer1;
         protected System.Windows.Forms.Timer timer2;
-        protected System.Windows.Forms.Timer timer3;
         protected System.Windows.Forms.ProgressBar fatigue;
         protected System.Windows.Forms.Label label1;
         protected System.Windows.Forms.Label warning1;
@@ -651,14 +631,14 @@
         private System.Windows.Forms.PictureBox frog_dead;
         private System.Windows.Forms.PictureBox bckg_lose;
         private System.Windows.Forms.PictureBox tree_2;
-        protected System.Windows.Forms.PictureBox tree_5;
         protected System.Windows.Forms.PictureBox tree_6;
         private System.Windows.Forms.PictureBox tree_8;
         private System.Windows.Forms.PictureBox tree_9;
-        private System.Windows.Forms.PictureBox tree_10;
         private System.Windows.Forms.PictureBox tree_11;
         protected System.Windows.Forms.PictureBox tree_13;
         protected System.Windows.Forms.PictureBox tree_12;
         private System.Windows.Forms.PictureBox tree_14;
+        private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.Timer timer4;
     }
 }
