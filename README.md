@@ -1,27 +1,29 @@
 ###########################################################################
 
 
-# Projekt Frog
-## Projekt gry w stylu żaby.
+# Projekt F.R.O.G
+## Projekt w stylu klasycznej, arcade'owej gry -> 'Frogger'.
 
 
 ###########################################################################
 * Data rozpoczęcia: 18.11.17
-* Instrukcja w grze.
+* Data zakończenia(mechanika): 25.11.17 
+* Instrukcja zamieszczona w grze.
 * Wykorzystany język: C#
-* Wykonanie w: WinForms
+* Wykonanie w: WinForms, Visual Studio 2017 
 
 
-Podsumowanie:
+Podsumowanie po skończeniu całej mechaniki:
 
-Niestety dopiero pod koniec projektu, to znaczy **podczas procesu tworzenia kłód**, które
-będą pływały po wodzie zauważyłem, że timery renderują moje pictureboxy strasznie
-wolno i gra ciut muli.. ku mojemu **rozczarowaniu**.. Naczytałem sobie o tym na 
-stackoverflow i okazało się, że WInForms to **nie jest dobra opcja do tego aby
+Na moje nieszcżęście dopiero pod koniec projektu, to znaczy **podczas procesu tworzenia kłód**, które
+będą pływały po wodzie zauważyłem..., że timery(czasomierze) renderują moje pictureboxy troszkę
+wolno i kłody i pojazdy dość wolno "lecą"... Ku mojemu **rozczarowaniu**.. Naczytałem sobie o tej kwestii na 
+stackoverflow i okazało się, że WinForms to **nie jest dobra opcja do tego aby
 tworzyć grę**.... No ale cóż... przed poruszaniem kłodami samochody jeździły
-idealnie.... Nie przewidziałem tego... no ale cóż... Na następny raz
-będę wiedział aby nie zabierać się do gry w WinForms...
-(w szczególności do takiej bardziej rozbudowanej w stylu RPG).
+*i-d-e-a-l-n-i-e*!!.... Nie wziąłem pod uwagę opcji, że większa ilość pictureboxów do 
+renderowania spowolni tempo działania tych obiektów, które zmieniają swoje położenie... 
+no ale cóż... Na następny raz będę wiedział aby nie zabierać się do gry w WinForms...
+(w szczególności do takiej bardziej rozbudowanej w stylu RPG czy coś).
 
 No i oczywiście gdy zakomentuje ruch kłód to pojazdy pięknie jeżdzą....
 Zastanawiałem się nad tym czy ich nie usunąć i nie dać kolejnego pasa
@@ -38,6 +40,7 @@ samochody bez utraty życia itd... :(
 
 Poniżej umieszczam linki z których korzystałem podczas tworzenia projektu. 
 Pewnie do nich sam zajrzę jak zapomnę co jak zrobić w C#(albo wpisze do google...).
+Polecam te liniki, dzięki nim szybko pojąłem jak co zrobić, np. taki ruch pictureboxa itd..
 
 ###########################################################################
 
@@ -77,7 +80,7 @@ Pewnie do nich sam zajrzę jak zapomnę co jak zrobić w C#(albo wpisze do googl
 
 - **rozwiązanie problemu** pictureboxów, które nie były przezroczyste(mimo, że były w png i nie miały tła) po dodaniu do projektu i ustawienia tła na przezroczyste.. a dzięki tej opcji poniżej działają jak trzeba.
 
-> https://stackoverflow.com/questions/5522337/c-sharp-picturebox-transparent-background-doesnt-seem-to-work
+> https://tinyurl.com/y7d9fskb
 
 
 
