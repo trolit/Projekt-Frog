@@ -545,7 +545,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.frog.BackColor = System.Drawing.Color.Transparent;
-            this.frog.Image = ((System.Drawing.Image)(resources.GetObject("frog.Image")));
+            this.frog.Image = global::p_frog.Properties.Resources.frog_up_stand;
             this.frog.Location = new System.Drawing.Point(414, 431);
             this.frog.Name = "frog";
             this.frog.Size = new System.Drawing.Size(30, 50);
