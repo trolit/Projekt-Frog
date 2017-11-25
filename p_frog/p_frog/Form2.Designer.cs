@@ -214,18 +214,20 @@
             // tree_14
             // 
             this.tree_14.Image = ((System.Drawing.Image)(resources.GetObject("tree_14.Image")));
-            this.tree_14.Location = new System.Drawing.Point(423, 55);
+            this.tree_14.Location = new System.Drawing.Point(256, 65);
             this.tree_14.Name = "tree_14";
             this.tree_14.Size = new System.Drawing.Size(127, 31);
+            this.tree_14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tree_14.TabIndex = 43;
             this.tree_14.TabStop = false;
             // 
             // tree_13
             // 
             this.tree_13.Image = ((System.Drawing.Image)(resources.GetObject("tree_13.Image")));
-            this.tree_13.Location = new System.Drawing.Point(583, 82);
+            this.tree_13.Location = new System.Drawing.Point(385, 109);
             this.tree_13.Name = "tree_13";
             this.tree_13.Size = new System.Drawing.Size(79, 31);
+            this.tree_13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tree_13.TabIndex = 42;
             this.tree_13.TabStop = false;
             // 
@@ -235,24 +237,27 @@
             this.tree_12.Location = new System.Drawing.Point(119, 143);
             this.tree_12.Name = "tree_12";
             this.tree_12.Size = new System.Drawing.Size(79, 31);
+            this.tree_12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tree_12.TabIndex = 41;
             this.tree_12.TabStop = false;
             // 
             // tree_11
             // 
             this.tree_11.Image = ((System.Drawing.Image)(resources.GetObject("tree_11.Image")));
-            this.tree_11.Location = new System.Drawing.Point(317, 143);
+            this.tree_11.Location = new System.Drawing.Point(326, 135);
             this.tree_11.Name = "tree_11";
             this.tree_11.Size = new System.Drawing.Size(127, 31);
+            this.tree_11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tree_11.TabIndex = 40;
             this.tree_11.TabStop = false;
             // 
             // tree_9
             // 
             this.tree_9.Image = ((System.Drawing.Image)(resources.GetObject("tree_9.Image")));
-            this.tree_9.Location = new System.Drawing.Point(141, 82);
+            this.tree_9.Location = new System.Drawing.Point(139, 90);
             this.tree_9.Name = "tree_9";
             this.tree_9.Size = new System.Drawing.Size(127, 31);
+            this.tree_9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tree_9.TabIndex = 38;
             this.tree_9.TabStop = false;
             // 
@@ -262,15 +267,17 @@
             this.tree_8.Location = new System.Drawing.Point(369, 82);
             this.tree_8.Name = "tree_8";
             this.tree_8.Size = new System.Drawing.Size(127, 31);
+            this.tree_8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tree_8.TabIndex = 37;
             this.tree_8.TabStop = false;
             // 
             // tree_6
             // 
             this.tree_6.Image = ((System.Drawing.Image)(resources.GetObject("tree_6.Image")));
-            this.tree_6.Location = new System.Drawing.Point(219, 115);
+            this.tree_6.Location = new System.Drawing.Point(155, 115);
             this.tree_6.Name = "tree_6";
             this.tree_6.Size = new System.Drawing.Size(79, 31);
+            this.tree_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tree_6.TabIndex = 36;
             this.tree_6.TabStop = false;
             // 
@@ -367,6 +374,7 @@
             this.tree_1.Location = new System.Drawing.Point(729, 143);
             this.tree_1.Name = "tree_1";
             this.tree_1.Size = new System.Drawing.Size(127, 31);
+            this.tree_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tree_1.TabIndex = 27;
             this.tree_1.TabStop = false;
             // 
@@ -376,6 +384,7 @@
             this.tree_2.Location = new System.Drawing.Point(729, 115);
             this.tree_2.Name = "tree_2";
             this.tree_2.Size = new System.Drawing.Size(79, 31);
+            this.tree_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tree_2.TabIndex = 28;
             this.tree_2.TabStop = false;
             // 
@@ -385,6 +394,7 @@
             this.tree_3.Location = new System.Drawing.Point(729, 82);
             this.tree_3.Name = "tree_3";
             this.tree_3.Size = new System.Drawing.Size(127, 39);
+            this.tree_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tree_3.TabIndex = 29;
             this.tree_3.TabStop = false;
             // 
@@ -393,7 +403,8 @@
             this.tree_4.Image = ((System.Drawing.Image)(resources.GetObject("tree_4.Image")));
             this.tree_4.Location = new System.Drawing.Point(729, 55);
             this.tree_4.Name = "tree_4";
-            this.tree_4.Size = new System.Drawing.Size(127, 31);
+            this.tree_4.Size = new System.Drawing.Size(127, 30);
+            this.tree_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tree_4.TabIndex = 30;
             this.tree_4.TabStop = false;
             // 

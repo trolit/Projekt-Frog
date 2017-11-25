@@ -11,7 +11,6 @@ using System.Windows.Forms;
 
 namespace p_frog
 {
-
     public partial class Form2 : Form
     {
         private int count_timer1 = 0;  
@@ -399,7 +398,8 @@ namespace p_frog
             if (frog.Bounds.IntersectsWith(tree_1.Bounds) || frog.Bounds.IntersectsWith(tree_2.Bounds) || frog.Bounds.IntersectsWith(tree_3.Bounds) || frog.Bounds.IntersectsWith(tree_4.Bounds) || frog.Bounds.IntersectsWith(tree_6.Bounds) || frog.Bounds.IntersectsWith(tree_8.Bounds) || frog.Bounds.IntersectsWith(tree_9.Bounds) || frog.Bounds.IntersectsWith(tree_11.Bounds) || frog.Bounds.IntersectsWith(tree_12.Bounds) || frog.Bounds.IntersectsWith(tree_13.Bounds) || frog.Bounds.IntersectsWith(tree_14.Bounds))
             {
                 is_on_tree = true;
-                c -= 10;
+                //  c -= 10;  gdy drzewa plyna
+                    c -= 3;
                 frog.Location = new Point(c,d);
                 Wykryj_kolizje_froga();
             }
@@ -622,7 +622,6 @@ namespace p_frog
 
         private void timer4_Tick(object sender, EventArgs e)
         {
-            /*
             int tre1 = tree_1.Location.X;  // lokalizacja kłód, najnizsza
             int tre2 = tree_2.Location.X;
             int tre3 = tree_3.Location.X;
@@ -635,17 +634,17 @@ namespace p_frog
             int tre13 = tree_13.Location.X;
             int tre14 = tree_14.Location.X;
 
-            tre1 -= 12;
-            tre2 -= 13;
-            tre3 -= 11;
-            tre4 -= 11;
-            tre6 -= 13;
-            tre8 -= 11;
-            tre9 -= 11;
-            tre11 -= 12;
-            tre12 -= 12;
-            tre13 -= 11;
-            tre14 -= 11;
+            tre1 -= 3;
+            tre2 -= 3;
+            tre3 -= 3;
+            tre4 -= 3;
+            tre6 -= 3;
+            tre8 -= 3;
+            tre9 -= 3;
+            tre11 -= 3;
+            tre12 -= 3;
+            tre13 -= 3;
+            tre14 -= 3;
             tree_1.Location = new Point(tre1, 135);
             tree_2.Location = new Point(tre2, 89);
             tree_3.Location = new Point(tre3, 67);
@@ -657,7 +656,6 @@ namespace p_frog
             tree_12.Location = new Point(tre12, 143);
             tree_13.Location = new Point(tre13, 82);
             tree_14.Location = new Point(tre14, 55);
-            */
         }
     }
 }
