@@ -2,7 +2,7 @@
 
 
 # Projekt Frog
-## 'Projekt gry w stylu żaby wykonany w WinForms.'
+## Projekt gry w stylu żaby wykonany w WinForms.
 
 
 ###########################################################################

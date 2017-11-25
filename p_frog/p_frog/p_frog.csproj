@@ -101,9 +101,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\frog_stand.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="bin\Debug\frog_down.gif" />
   </ItemGroup>
   <ItemGroup>
