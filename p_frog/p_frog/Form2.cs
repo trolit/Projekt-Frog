@@ -13,28 +13,28 @@ namespace p_frog
 {
     public partial class Form2 : Form
     {
-        private int count_timer1 = 0;  
-        private int count_timer2 = 0;
-        int life = 3;
-        bool right; 
+        private int count_timer1 = 0;           // licznik dla timer1
+        private int count_timer2 = 0;           // licznik dla timer2
+        int life = 3;                           // liczba zyc froga
+        bool right;                             // zmienne boolowskie do kontrolowania animacji         
         bool left;
         bool up;
         bool down;
-        bool can_move = true;  // flaga sprawdzajaca czy frog moze chodzic, na start ustawiamy na true!
-        bool hide_out_1 = false;
+        bool can_move = true;                   // flaga sprawdzajaca czy frog moze chodzic, na start ustawiamy na true!
+        bool hide_out_1 = false;                // skrytka pierwsza, druga i trzecia boolowska
         bool hide_out_2 = false;
         bool hide_out_3 = false;
-        bool is_on_tree = false;
+        bool is_on_tree = false;                // flaga sprawdzajaca czy frog jest na kłodzie
 
-        bool can_move_right = true; // do krzaków zmienne
+        bool can_move_right = true;             // do krzaków zmienne boolowskie
         bool can_move_left = true;
         
         public Form2()
         {
             InitializeComponent();
-            KeyDown += new KeyEventHandler(Form2_KeyDown);      // wywołanie punktu numer 3 - ruch żaby
-            transparency_repair();                              // wywołanie punktu numer 6 - naprawa przezroczystości  
-            Vehicle_Collision();
+            KeyDown += new KeyEventHandler(Form2_KeyDown);      // wywołanie ruchu zaby
+            transparency_repair();                              // naprawa przezroczystości  
+            Vehicle_Collision();                                
         }
 
         // gdy frog wyjdzie za ekran cofa go do początku
@@ -398,7 +398,7 @@ namespace p_frog
             if (frog.Bounds.IntersectsWith(tree_1.Bounds) || frog.Bounds.IntersectsWith(tree_2.Bounds) || frog.Bounds.IntersectsWith(tree_3.Bounds) || frog.Bounds.IntersectsWith(tree_4.Bounds) || frog.Bounds.IntersectsWith(tree_6.Bounds) || frog.Bounds.IntersectsWith(tree_8.Bounds) || frog.Bounds.IntersectsWith(tree_9.Bounds) || frog.Bounds.IntersectsWith(tree_11.Bounds) || frog.Bounds.IntersectsWith(tree_12.Bounds) || frog.Bounds.IntersectsWith(tree_13.Bounds) || frog.Bounds.IntersectsWith(tree_14.Bounds))
             {
                 is_on_tree = true;
-                //  c -= 10;  gdy drzewa plyna
+                //  c -= 10;  gdy drzewa plywaly, ale animacje wolniejsze
                     c -= 3;
                 frog.Location = new Point(c,d);
                 Wykryj_kolizje_froga();
@@ -438,9 +438,6 @@ namespace p_frog
             Frog_water_Collision();
         }
         #endregion
-
-        // metoda test 
-        
 
         // kolizja froga z pojazdami
         #region 11. Vehicle Collision
@@ -589,7 +586,7 @@ namespace p_frog
         }
 
         // wykrywanie kolizji froga z krzakami
-
+        #region 16. Collision Frog plant check
         private void Frog_plant_Collision()
         {
             if (frog.Bounds.IntersectsWith(plant_block1.Bounds) && frog.Location.X < 291 || frog.Bounds.IntersectsWith(plant_block2.Bounds) && frog.Location.X < 471) 
@@ -606,9 +603,10 @@ namespace p_frog
                 can_move_left = true;
             }
         }
+        #endregion
 
         // wykrywanie kolizji froga z woda
-
+        #region 17. Collision Frog water check
         private void Frog_water_Collision()
         {
             if (frog.Bounds.IntersectsWith(water_area.Bounds) && is_on_tree == false)
@@ -619,7 +617,10 @@ namespace p_frog
                 timer3.Stop();
             }
         }
+        #endregion
 
+        // ruch klodami timer4
+        #region 18. Tree move timer
         private void timer4_Tick(object sender, EventArgs e)
         {
             int tre1 = tree_1.Location.X;  // lokalizacja kłód, najnizsza
@@ -657,5 +658,6 @@ namespace p_frog
             tree_13.Location = new Point(tre13, 82);
             tree_14.Location = new Point(tre14, 55);
         }
+#endregion
     }
 }
