@@ -235,7 +235,7 @@ namespace p_frog
         {
             count_timer2++;
 
-            if (count_timer2 == 8)
+            if (count_timer2 == 9)
             {
                 fatigue.Value = 100;
                 count_timer2 = 0;

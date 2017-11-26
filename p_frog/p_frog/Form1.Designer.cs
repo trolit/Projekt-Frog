@@ -58,7 +58,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(24, 400);
+            this.button2.Location = new System.Drawing.Point(24, 348);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(305, 58);
             this.button2.TabIndex = 1;
@@ -85,7 +85,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.button4.Location = new System.Drawing.Point(24, 297);
+            this.button4.Location = new System.Drawing.Point(24, 271);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(305, 58);
             this.button4.TabIndex = 4;
