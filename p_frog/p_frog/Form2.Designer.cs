@@ -613,7 +613,6 @@
         protected System.Windows.Forms.PictureBox frog;
         protected System.Windows.Forms.Timer timer1;
         protected System.Windows.Forms.Timer timer2;
-        protected System.Windows.Forms.ProgressBar fatigue;
         protected System.Windows.Forms.Label label1;
         protected System.Windows.Forms.Label warning1;
         protected System.Windows.Forms.Label warning2;
@@ -651,5 +650,6 @@
         private System.Windows.Forms.PictureBox tree_14;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Timer timer4;
+        public System.Windows.Forms.ProgressBar fatigue;
     }
 }
