@@ -33,8 +33,7 @@ namespace p_frog
         {
             InitializeComponent();
             KeyDown += new KeyEventHandler(Form2_KeyDown);      // wywołanie ruchu zaby
-            transparency_repair();                              // naprawa przezroczystości  
-            Vehicle_Collision();                                
+            transparency_repair();                              // naprawa przezroczystości                     
         }
 
         // gdy frog wyjdzie za ekran cofa go do początku
@@ -436,6 +435,7 @@ namespace p_frog
             Vehicle_Collision();
             Confirm_hideout();
             Frog_water_Collision();
+            Vehicle_Collision();
         }
         #endregion
 
@@ -501,6 +501,7 @@ namespace p_frog
             timer1.Stop();
             timer2.Stop();
             timer3.Stop();
+            timer4.Stop();
             can_move = false;
 
             SoundPlayer frog_lose = new SoundPlayer(Properties.Resources.lose_sound_fxd);

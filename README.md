@@ -84,7 +84,8 @@ Polecam te liniki, dzięki nim szybko pojąłem jak co zrobić, np. taki ruch pi
 
 
 
-- **animacja żaby*, znaleziona w google grafice, nie mogłem znaleźć linka.
+- **animacja żaby*, znaleziona w google grafice...., nie mogłem znaleźć linka :( .
+
 
 
 
