@@ -278,6 +278,7 @@ namespace p_frog
         #region 4. Timer4(odpowiedzialny za ruch drzew)
         private void timer4_Tick(object sender, EventArgs e)
         {
+            // zakomentuj ciało żeby zobaczyć jak płynnie poruszają się samochody
             int tre1 = tree_1.Location.X;  // lokalizacja kłód, najnizsza
             int tre2 = tree_2.Location.X;
             int tre3 = tree_3.Location.X;

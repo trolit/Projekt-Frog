@@ -18,8 +18,7 @@ namespace p_frog
             InitializeComponent();
         }
 
-        // gdy wybierze opcję Graj
-        #region 1. Przycisk_graj(przechodzi do okna gry)
+        #region 1. PRZYCISK GRAJ
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -29,35 +28,27 @@ namespace p_frog
 
         }
         #endregion
-
-        // gdy wybierze opcje Wyjdź
-        #region 2. Przycisk wyjście(kończy działanie aplikacji)
+        #region 2. PRZYCISK WYJSCIE
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
         #endregion
-
-        // gdy najedzie myszką na przycisk wyjścia (mouse hover effect)
-        #region 3. Odtwórz_dźwiek(dla wyjścia)
+        #region 3. DZWIEK DLA WYJSCIA
         private void play_sound_wyjdz(object sender, EventArgs e)
         {
             SoundPlayer wyjdz = new SoundPlayer(Properties.Resources.frog_effect_2);
             wyjdz.Play();
         }
         #endregion
-
-        // gdy najedzie myszką na przycisk graj
-        #region 4. Odtwórz_dźwiek(dla graj)
+        #region 4. DZWIEK DLA GRAJ
         private void play_sound_graj(object sender, EventArgs e)
         {
             SoundPlayer graj = new SoundPlayer(Properties.Resources.frog_effect_1);
             graj.Play();
         }
         #endregion
-
-        // gdy najedzie na instrukcję, pokazują się informacje + dźwięk
-        #region 5. Instrukcja(pokaz na ekran, ukryj z ekranu i odtwórz dzwiek)
+        #region 5. INSTRUKCJA
         private void see_help_on(object sender, EventArgs e)
         {
             help.Visible = true;
