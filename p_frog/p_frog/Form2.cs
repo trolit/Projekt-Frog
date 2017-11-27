@@ -279,7 +279,7 @@ namespace p_frog
         private void timer4_Tick(object sender, EventArgs e)
         {
             // zakomentuj ciało żeby zobaczyć jak płynnie poruszają się samochody
-            int tre1 = tree_1.Location.X;  // lokalizacja kłód, najnizsza
+            int tre1 = tree_1.Location.X;  
             int tre2 = tree_2.Location.X;
             int tre3 = tree_3.Location.X;
             int tre4 = tree_4.Location.X;

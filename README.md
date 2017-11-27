@@ -12,6 +12,10 @@
 * Wykorzystany język: C#
 * Wykonanie w: WinForms, Visual Studio 2017 
 
+#Wpis dodatkowy z 27.11.17
+Nie mam zielonego pojęcia co się dzisiaj stało... jest tak późno, że jutro dopiero to opiszę pewnie, ale
+nie wierzę... 
+
 
 Podsumowanie po skończeniu całej mechaniki:
 

@@ -56,7 +56,6 @@
             this.tree_2 = new System.Windows.Forms.PictureBox();
             this.tree_3 = new System.Windows.Forms.PictureBox();
             this.tree_4 = new System.Windows.Forms.PictureBox();
-            this.water_area = new System.Windows.Forms.PictureBox();
             this.plant_block2 = new System.Windows.Forms.PictureBox();
             this.plant_block1 = new System.Windows.Forms.PictureBox();
             this.win_text = new System.Windows.Forms.Label();
@@ -71,6 +70,7 @@
             this.police_car = new System.Windows.Forms.PictureBox();
             this.frog = new System.Windows.Forms.PictureBox();
             this.background_box = new System.Windows.Forms.PictureBox();
+            this.water_area = new System.Windows.Forms.PictureBox();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.screen.SuspendLayout();
@@ -89,7 +89,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tree_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.water_area)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plant_block2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plant_block1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_hideout_3)).BeginInit();
@@ -103,6 +102,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.water_area)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -165,6 +165,7 @@
             // screen
             // 
             this.screen.BackColor = System.Drawing.Color.Transparent;
+            this.screen.Controls.Add(this.tree_4);
             this.screen.Controls.Add(this.tree_14);
             this.screen.Controls.Add(this.tree_13);
             this.screen.Controls.Add(this.tree_12);
@@ -172,6 +173,10 @@
             this.screen.Controls.Add(this.tree_9);
             this.screen.Controls.Add(this.tree_8);
             this.screen.Controls.Add(this.tree_6);
+            this.screen.Controls.Add(this.tree_1);
+            this.screen.Controls.Add(this.tree_2);
+            this.screen.Controls.Add(this.tree_3);
+            this.screen.Controls.Add(this.water_area);
             this.screen.Controls.Add(this.frog_dead);
             this.screen.Controls.Add(this.lose_text);
             this.screen.Controls.Add(this.win_no);
@@ -180,11 +185,6 @@
             this.screen.Controls.Add(this.win_box);
             this.screen.Controls.Add(this.frog_coffin);
             this.screen.Controls.Add(this.bckg_lose);
-            this.screen.Controls.Add(this.tree_1);
-            this.screen.Controls.Add(this.tree_2);
-            this.screen.Controls.Add(this.tree_3);
-            this.screen.Controls.Add(this.tree_4);
-            this.screen.Controls.Add(this.water_area);
             this.screen.Controls.Add(this.plant_block2);
             this.screen.Controls.Add(this.plant_block1);
             this.screen.Controls.Add(this.win_text);
@@ -283,7 +283,7 @@
             // frog_dead
             // 
             this.frog_dead.BackColor = System.Drawing.Color.Wheat;
-            this.frog_dead.Image = ((System.Drawing.Image)(resources.GetObject("frog_dead.Image")));
+            this.frog_dead.Image = global::p_frog.Properties.Resources.frog_dead;
             this.frog_dead.Location = new System.Drawing.Point(621, 210);
             this.frog_dead.Name = "frog_dead";
             this.frog_dead.Size = new System.Drawing.Size(114, 94);
@@ -349,7 +349,7 @@
             // frog_coffin
             // 
             this.frog_coffin.BackColor = System.Drawing.Color.Wheat;
-            this.frog_coffin.Image = ((System.Drawing.Image)(resources.GetObject("frog_coffin.Image")));
+            this.frog_coffin.Image = global::p_frog.Properties.Resources.coffin_frog;
             this.frog_coffin.Location = new System.Drawing.Point(12, 172);
             this.frog_coffin.Name = "frog_coffin";
             this.frog_coffin.Size = new System.Drawing.Size(254, 226);
@@ -369,7 +369,7 @@
             // 
             // tree_1
             // 
-            this.tree_1.Image = ((System.Drawing.Image)(resources.GetObject("tree_1.Image")));
+            this.tree_1.Image = global::p_frog.Properties.Resources.tree_medium1;
             this.tree_1.Location = new System.Drawing.Point(729, 143);
             this.tree_1.Name = "tree_1";
             this.tree_1.Size = new System.Drawing.Size(127, 31);
@@ -406,15 +406,6 @@
             this.tree_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tree_4.TabIndex = 30;
             this.tree_4.TabStop = false;
-            // 
-            // water_area
-            // 
-            this.water_area.Location = new System.Drawing.Point(-3, 65);
-            this.water_area.Name = "water_area";
-            this.water_area.Size = new System.Drawing.Size(845, 101);
-            this.water_area.TabIndex = 31;
-            this.water_area.TabStop = false;
-            this.water_area.Visible = false;
             // 
             // plant_block2
             // 
@@ -477,7 +468,7 @@
             this.frog_life_3.Image = ((System.Drawing.Image)(resources.GetObject("frog_life_3.Image")));
             this.frog_life_3.Location = new System.Drawing.Point(689, 3);
             this.frog_life_3.Name = "frog_life_3";
-            this.frog_life_3.Size = new System.Drawing.Size(46, 46);
+            this.frog_life_3.Size = new System.Drawing.Size(45, 45);
             this.frog_life_3.TabIndex = 11;
             this.frog_life_3.TabStop = false;
             // 
@@ -486,7 +477,7 @@
             this.frog_life_2.Image = ((System.Drawing.Image)(resources.GetObject("frog_life_2.Image")));
             this.frog_life_2.Location = new System.Drawing.Point(741, 3);
             this.frog_life_2.Name = "frog_life_2";
-            this.frog_life_2.Size = new System.Drawing.Size(46, 46);
+            this.frog_life_2.Size = new System.Drawing.Size(45, 45);
             this.frog_life_2.TabIndex = 10;
             this.frog_life_2.TabStop = false;
             // 
@@ -495,13 +486,13 @@
             this.frog_life_1.Image = ((System.Drawing.Image)(resources.GetObject("frog_life_1.Image")));
             this.frog_life_1.Location = new System.Drawing.Point(793, 3);
             this.frog_life_1.Name = "frog_life_1";
-            this.frog_life_1.Size = new System.Drawing.Size(46, 46);
+            this.frog_life_1.Size = new System.Drawing.Size(45, 45);
             this.frog_life_1.TabIndex = 9;
             this.frog_life_1.TabStop = false;
             // 
             // truck_car
             // 
-            this.truck_car.Image = ((System.Drawing.Image)(resources.GetObject("truck_car.Image")));
+            this.truck_car.Image = global::p_frog.Properties.Resources.car_2_fxd;
             this.truck_car.Location = new System.Drawing.Point(-281, 375);
             this.truck_car.Name = "truck_car";
             this.truck_car.Size = new System.Drawing.Size(286, 49);
@@ -510,7 +501,7 @@
             // 
             // car_column
             // 
-            this.car_column.Image = ((System.Drawing.Image)(resources.GetObject("car_column.Image")));
+            this.car_column.Image = global::p_frog.Properties.Resources.car_1_fxd;
             this.car_column.Location = new System.Drawing.Point(-259, 297);
             this.car_column.Name = "car_column";
             this.car_column.Size = new System.Drawing.Size(264, 53);
@@ -519,7 +510,7 @@
             // 
             // police_car
             // 
-            this.police_car.Image = ((System.Drawing.Image)(resources.GetObject("police_car.Image")));
+            this.police_car.Image = global::p_frog.Properties.Resources.car_3_fxd;
             this.police_car.Location = new System.Drawing.Point(823, 220);
             this.police_car.Name = "police_car";
             this.police_car.Size = new System.Drawing.Size(107, 52);
@@ -543,23 +534,32 @@
             // 
             // background_box
             // 
-            this.background_box.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("background_box.BackgroundImage")));
+            this.background_box.Image = global::p_frog.Properties.Resources.frog_play_background;
             this.background_box.Location = new System.Drawing.Point(-3, 0);
             this.background_box.Name = "background_box";
             this.background_box.Size = new System.Drawing.Size(845, 481);
             this.background_box.TabIndex = 5;
             this.background_box.TabStop = false;
             // 
+            // water_area
+            // 
+            this.water_area.Location = new System.Drawing.Point(-3, 65);
+            this.water_area.Name = "water_area";
+            this.water_area.Size = new System.Drawing.Size(845, 101);
+            this.water_area.TabIndex = 31;
+            this.water_area.TabStop = false;
+            this.water_area.Visible = false;
+            // 
             // timer3
             // 
             this.timer3.Enabled = true;
-            this.timer3.Interval = 1;
+            this.timer3.Interval = 70;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // timer4
             // 
             this.timer4.Enabled = true;
-            this.timer4.Interval = 50;
+            this.timer4.Interval = 70;
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
             // Form2
@@ -568,7 +568,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(842, 481);
             this.Controls.Add(this.screen);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
             this.Text = "Projekt Frog";
             this.screen.ResumeLayout(false);
@@ -588,7 +587,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tree_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.water_area)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.plant_block2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.plant_block1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_hideout_3)).EndInit();
@@ -602,6 +600,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.water_area)).EndInit();
             this.ResumeLayout(false);
 
         }

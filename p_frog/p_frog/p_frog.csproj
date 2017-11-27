@@ -70,18 +70,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -132,6 +132,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="frog_icon.ico" />
+    <None Include="Resources\tree_small.png" />
+    <None Include="Resources\tree_long.png" />
+    <None Include="Resources\tree_medium.png" />
+    <None Include="Resources\plant.png" />
+    <None Include="Resources\car_2_fxd.png" />
+    <None Include="Resources\car_1_fxd.png" />
+    <None Include="Resources\car_3_fxd.png" />
+    <None Include="Resources\frog_escape.png" />
+    <None Include="Resources\frog_play_background.png" />
+    <None Include="Resources\frog_life_fxd2.png" />
+    <None Include="Resources\frog_dead.png" />
+    <None Include="Resources\coffin_frog.png" />
     <None Include="Resources\lose_sound_fxd.wav" />
     <None Include="Resources\win_sound.wav" />
     <None Include="Resources\lose_sound.wav" />
