@@ -13,7 +13,10 @@
 * Wykonanie w: WinForms, Visual Studio 2017 
 
 
-25.11.17 - Problematyczne kwestie
+
+
+
+> 25.11.17 - Problematyczne kwestie
 
 Na moje nieszcżęście dopiero pod koniec projektu, to znaczy **podczas procesu tworzenia kłód**, które
 będą pływały po wodzie zauważyłem..., że timery(czasomierze) renderują moje pictureboxy troszkę
@@ -40,18 +43,20 @@ samochody bez utraty życia itd... :(
 
 
 
-27.11.17 - *Nie wiem co się właśnie wydarzyło....*
+
+
+> 27.11.17 - **Nie wiem co się właśnie wydarzyło....**
 
 Nie mam zielonego pojęcia co się dzisiaj stało... jest tak późno, że jutro dopiero to opiszę pewnie, ale
-nie wierzę... [kontynuacja] Pomyślałem, że włącze sobe projekt, żeby zerknąć czy wszystko jest okej. Potem zdecydowałem
+nie wierzę... **[kontynuacja]** Pomyślałem, że włącze sobe projekt, żeby zerknąć czy wszystko jest okej. Potem zdecydowałem
 się zerknąć na temat wątków w internecie.. Gdy przełączyłem na okno gry - przestraszyłem się... Nagle wszystkie obrazki mi zniknęły...
 Przypomniało mi to, że zapomniałem wstawić obraz krzaków i budy do której musi uciec żaba ale to nie zmienia faktu, że wszystko
 było białe.... Zacząłem wiec wstawiać wszystkie obrazki od nowa - niby nic... Ale w pewnym momencie, usunąłem
 tree_medium1(miałem tree_medium więc po co mi tree_medium1...) i błąd. Szukanie w internecie 15 minut i znalezienie
 solucji... Następnie coś mi krzyczał z namespacem... (Muszę dodać, że kilka dni wcześniej jak nigdy dotąd w ekranie
 formularza - przed skompilowaniem! obiekty, które nie poruszały się, nagle ożyły...). W momencie gdy udało mi się 
-usunąć wszystkie błędy, ponownie wrzuciłem zdjęcia obiektów, skompilowałem program i.... wszystko płynnie się 
-porusza.... Nie wiem jak to możliwe.... I teraz na dodatek "program" sam naprawił jakoś bug o, którym pisałem 
+usunąć wszystkie błędy, ponownie wrzuciłem zdjęcia obiektów, skompilowałem program i.... **wszystko płynnie się 
+porusza**.... Nie wiem jak to możliwe.... I teraz na dodatek "program" sam naprawił jakoś bug o którym pisałem 
 wyżej, że jak się przytrzyma przycisk ruchu (lewo, góra, dół, prawo - obojętnie) to obiekty, które się poruszają
 nie przestają się poruszać! Nie wiem co się stało.... Szczerze.
 
