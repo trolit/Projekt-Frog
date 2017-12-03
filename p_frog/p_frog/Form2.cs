@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace p_frog
 {
     interface IFrog_Collisions
@@ -19,6 +20,8 @@ namespace p_frog
         void Frog_plant_Collision();
         void Frog_water_Collision();
     }
+
+
 
     public partial class Form2 : Form, IFrog_Collisions
     {
@@ -41,7 +44,7 @@ namespace p_frog
         public Form2()
         {
             InitializeComponent();
-            KeyDown += new KeyEventHandler(Form2_KeyDown);      // wywołanie ruchu zaby
+            KeyDown += new KeyEventHandler(Frog_Movement);      // wywołanie ruchu zaby
             transparency_repair();                              // naprawa przezroczystości                     
         }
 
@@ -421,7 +424,7 @@ namespace p_frog
         }
         #endregion
         #region 2. Frog - Poruszanie
-        void Form2_KeyDown(object sender, KeyEventArgs e)
+        void Frog_Movement(object sender, KeyEventArgs e)
         {
             int x = frog.Location.X;
             int y = frog.Location.Y;
@@ -581,6 +584,7 @@ namespace p_frog
         private void transparency_repair()
         {
             frog.Parent = background_box;
+            frog.BackColor = Color.Transparent;
             label1.Parent = background_box;
             police_car.Parent = background_box;
             car_column.Parent = background_box;
@@ -627,7 +631,6 @@ namespace p_frog
             label1.BackColor = Color.Transparent;
             car_column.BackColor = Color.Transparent;
             police_car.BackColor = Color.Transparent;
-            frog.BackColor = Color.Transparent;
             frog.Location = new Point(392, 428); // tu zaba zaczyna
         }
 
