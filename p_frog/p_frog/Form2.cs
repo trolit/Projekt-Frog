@@ -21,8 +21,6 @@ namespace p_frog
         void Frog_water_Collision();
     }
 
-
-
     public partial class Form2 : Form, IFrog_Collisions
     {
         private int count_timer1 = 0;           // licznik dla timer1
@@ -319,7 +317,7 @@ namespace p_frog
         }
         #endregion
 
-        // KONTROLOWANIE LOKALIZACJI PICTUREBOXOW
+        // KONTROLOWANIE LOKALIZACJI PICTUREBOXOW(zapętlanie)
         #region 1. Sprawdź lokalizacje pojazdów
         private void Check_police_car()
         {
@@ -396,7 +394,7 @@ namespace p_frog
         #endregion
 
         // KONTROLOWANIE ZADANIA, LICZBY ZYC, RUCHU FROGA
-        #region 1. Frog - Stan żyć
+        #region 1. Frog - Obecny stan żyć
         private void Frog_Life()
         {
             if (life == 3)
@@ -423,7 +421,7 @@ namespace p_frog
             }
         }
         #endregion
-        #region 2. Frog - Poruszanie
+        #region 2. Frog - Poruszanie klawiszologią
         void Frog_Movement(object sender, KeyEventArgs e)
         {
             int x = frog.Location.X;
@@ -538,7 +536,7 @@ namespace p_frog
             Wykryj_kolizje_froga();
         }
         #endregion
-        #region 3. Frog - stan zadania
+        #region 3. Frog - Zadanie do wykonania
         private void Confirm_hideout()
         {
             SoundPlayer frog_capture_point = new SoundPlayer(Properties.Resources.frog_saved_sound);
@@ -572,15 +570,15 @@ namespace p_frog
         }
         #endregion
 
-        // POZOSTAŁE
-        #region 1. Dźwiek skoku przy ruchu froga
+        // POZOSTAŁE METODY
+        #region 1. Uruchamia dźwiek skoku przy ruchu froga
         private void Wywolaj_dzwiek_skoku()
         {
             SoundPlayer skok = new SoundPlayer(Properties.Resources.frog_jump);
             skok.Play();
         }
         #endregion
-        #region 2. Metoda naprawiająca problem faktycznej przezroczystości pictureboxow
+        #region 2. Naprawia problem przezroczystości pictureboxów
         private void transparency_repair()
         {
             frog.Parent = background_box;
@@ -635,7 +633,7 @@ namespace p_frog
         }
 
         #endregion
-        #region 3. Przycisk powrotu do menu
+        #region 3. Powrót do menu(przycisk)
         private void win_yes_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -643,7 +641,7 @@ namespace p_frog
             main_menu.Show();
         }
         #endregion
-        #region 4. Przycisk wyjscia z gry
+        #region 4. Wyjscie z gry(przycisk)
         private void win_no_Click(object sender, EventArgs e)
         {
             Application.Exit();
