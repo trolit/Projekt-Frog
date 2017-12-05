@@ -42,9 +42,9 @@ namespace p_frog
         public Form2()
         {
             InitializeComponent();
-            KeyDown += new KeyEventHandler(Frog_Movement);      // wywołanie ruchu zaby
-            KeyDown += new KeyEventHandler(Escape_event_open);  // aktywacja metody escape event
-            transparency_repair();                              // naprawa przezroczystości                     
+            KeyDown += new KeyEventHandler(Frog_Movement);       // wywołanie ruchu zaby
+            KeyDown += new KeyEventHandler(Escape_event_open);   // aktywacja metody escape event
+            transparency_repair();                               // naprawa przezroczystości                     
         }
 
         // KOLIZJE FROGA Z OTOCZENIEM
@@ -571,7 +571,7 @@ namespace p_frog
         }
         #endregion
 
-        // POZOSTAŁE METODY
+        // POZOSTAŁE METODY WE FROGU
         #region 1. Uruchamia dźwiek skoku przy ruchu froga
         private void Wywolaj_dzwiek_skoku()
         {

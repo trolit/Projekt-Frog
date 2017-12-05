@@ -114,6 +114,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(842, 481);
+            this.ControlBox = false;
             this.Controls.Add(this.help);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label1);
