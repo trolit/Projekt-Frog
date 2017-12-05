@@ -120,4 +120,16 @@ nie przestają się poruszać! Nie wiem co się stało.... Szczerze.
 
 
 
+- jak sprawić żeby okienka nie można było **skalować**:
+
+> https://tinyurl.com/yb5vjevo
+
+
+
+- co zrobić żeby po uruchomieniu gry za pomocą **pliku .exe** proces kończył działanie po kliknięciu w prawym górnym rogu krzyżyka(czyli zamknięcia aplikacji)
+
+> https://tinyurl.com/yawgggve
+
+
+
 ###########################################################################
