@@ -14,27 +14,27 @@ namespace p_frog
 {
     interface IFrog_Collisions
     {
-        void Wykryj_kolizje_froga();
-        void Check_if_frog_on_tree();
-        void Vehicle_Collision();
+        void Frog_screen_Collision();
+        void Frog_vehicle_Collision();
         void Frog_plant_Collision();
         void Frog_water_Collision();
+        void Check_if_frog_on_tree();
     }
 
     public partial class Form2 : Form, IFrog_Collisions
     {
-        private int count_timer1 = 0;           // licznik dla timer1
-        private int count_timer2 = 0;           // licznik dla timer2
-        int life = 3;                           // liczba zyc froga
+        private int count_timer1 = 0;           // licznik czasu dla timer1
+        private int count_timer2 = 0;           // licznik czasu dla timer2
+        int life = 3;                           // liczba żyć froga
         bool right;                             // zmienne boolowskie do kontrolowania animacji         
         bool left;
         bool up;
         bool down;
         bool can_move = true;                   // flaga sprawdzajaca czy frog moze chodzic, na start ustawiamy na true!
-        bool hide_out_1 = false;                // skrytka pierwsza, druga i trzecia boolowska
+        bool hide_out_1 = false;                // wyście pierwsze, drugie, trzecie boolowskie
         bool hide_out_2 = false;
         bool hide_out_3 = false;
-        bool is_on_tree = false;                // flaga sprawdzajaca czy frog jest na kłodzie
+        bool is_on_tree = false;                // flaga sprawdzajaca czy frog jest na 'kłodzie'
 
         bool can_move_right = true;             // do krzaków zmienne boolowskie
         bool can_move_left = true;
@@ -48,7 +48,7 @@ namespace p_frog
 
         // KOLIZJE FROGA Z OTOCZENIEM
         #region 1. Frog - Screen Collision
-        public void Wykryj_kolizje_froga()
+        public void Frog_screen_Collision()
         {
             if (frog.Location.Y < -20 || frog.Location.Y > 450)
             {
@@ -61,7 +61,7 @@ namespace p_frog
         }
         #endregion
         #region 2. Frog - Vehicle Collision
-        public void Vehicle_Collision()
+        public void Frog_vehicle_Collision()
         {
             SoundPlayer car_hit = new SoundPlayer(Properties.Resources.frog_car_hit);
             if (frog.Bounds.IntersectsWith(police_car.Bounds)) // wykrywa przeciecie dwoch pictureboxow
@@ -126,7 +126,7 @@ namespace p_frog
                 //  c -= 10;  gdy drzewa plywaly, ale animacje wolniejsze
                 c -= 3;
                 frog.Location = new Point(c, d);
-                Wykryj_kolizje_froga();
+                Frog_screen_Collision();
             }
             else
             {
@@ -270,10 +270,9 @@ namespace p_frog
             Check_if_frog_on_tree();
             Frog_plant_Collision();
             Check_tree_move();
-            Vehicle_Collision();
+            Frog_vehicle_Collision();
             Confirm_hideout();
             Frog_water_Collision();
-            Vehicle_Collision();
         }
         #endregion
         #region 4. Timer4(odpowiedzialny za ruch drzew)
@@ -533,7 +532,7 @@ namespace p_frog
             }
 
             frog.Location = new Point(x, y);
-            Wykryj_kolizje_froga();
+            Frog_screen_Collision();
         }
         #endregion
         #region 3. Frog - Zadanie do wykonania

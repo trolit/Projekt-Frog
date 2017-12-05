@@ -37,6 +37,8 @@
             this.warning1 = new System.Windows.Forms.Label();
             this.warning2 = new System.Windows.Forms.Label();
             this.screen = new System.Windows.Forms.Panel();
+            this.frog = new System.Windows.Forms.PictureBox();
+            this.tree_1 = new System.Windows.Forms.PictureBox();
             this.tree_4 = new System.Windows.Forms.PictureBox();
             this.tree_14 = new System.Windows.Forms.PictureBox();
             this.tree_13 = new System.Windows.Forms.PictureBox();
@@ -45,7 +47,6 @@
             this.tree_9 = new System.Windows.Forms.PictureBox();
             this.tree_8 = new System.Windows.Forms.PictureBox();
             this.tree_6 = new System.Windows.Forms.PictureBox();
-            this.tree_1 = new System.Windows.Forms.PictureBox();
             this.tree_2 = new System.Windows.Forms.PictureBox();
             this.tree_3 = new System.Windows.Forms.PictureBox();
             this.water_area = new System.Windows.Forms.PictureBox();
@@ -69,11 +70,12 @@
             this.truck_car = new System.Windows.Forms.PictureBox();
             this.car_column = new System.Windows.Forms.PictureBox();
             this.police_car = new System.Windows.Forms.PictureBox();
-            this.frog = new System.Windows.Forms.PictureBox();
             this.background_box = new System.Windows.Forms.PictureBox();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.screen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.frog)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tree_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_13)).BeginInit();
@@ -82,7 +84,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tree_9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tree_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.water_area)).BeginInit();
@@ -101,7 +102,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.truck_car)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).BeginInit();
             this.SuspendLayout();
             // 
@@ -210,6 +210,31 @@
             this.screen.Size = new System.Drawing.Size(842, 481);
             this.screen.TabIndex = 0;
             // 
+            // frog
+            // 
+            this.frog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.frog.BackColor = System.Drawing.Color.Transparent;
+            this.frog.Image = global::p_frog.Properties.Resources.frog_up_stand;
+            this.frog.Location = new System.Drawing.Point(414, 431);
+            this.frog.Name = "frog";
+            this.frog.Size = new System.Drawing.Size(30, 50);
+            this.frog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.frog.TabIndex = 0;
+            this.frog.TabStop = false;
+            this.frog.WaitOnLoad = true;
+            // 
+            // tree_1
+            // 
+            this.tree_1.Image = global::p_frog.Properties.Resources.tree_medium1;
+            this.tree_1.Location = new System.Drawing.Point(729, 143);
+            this.tree_1.Name = "tree_1";
+            this.tree_1.Size = new System.Drawing.Size(127, 31);
+            this.tree_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.tree_1.TabIndex = 27;
+            this.tree_1.TabStop = false;
+            // 
             // tree_4
             // 
             this.tree_4.Image = ((System.Drawing.Image)(resources.GetObject("tree_4.Image")));
@@ -289,16 +314,6 @@
             this.tree_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tree_6.TabIndex = 36;
             this.tree_6.TabStop = false;
-            // 
-            // tree_1
-            // 
-            this.tree_1.Image = global::p_frog.Properties.Resources.tree_medium1;
-            this.tree_1.Location = new System.Drawing.Point(729, 143);
-            this.tree_1.Name = "tree_1";
-            this.tree_1.Size = new System.Drawing.Size(127, 31);
-            this.tree_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.tree_1.TabIndex = 27;
-            this.tree_1.TabStop = false;
             // 
             // tree_2
             // 
@@ -526,21 +541,6 @@
             this.police_car.TabIndex = 6;
             this.police_car.TabStop = false;
             // 
-            // frog
-            // 
-            this.frog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.frog.BackColor = System.Drawing.Color.Transparent;
-            this.frog.Image = global::p_frog.Properties.Resources.frog_up_stand;
-            this.frog.Location = new System.Drawing.Point(414, 431);
-            this.frog.Name = "frog";
-            this.frog.Size = new System.Drawing.Size(30, 50);
-            this.frog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.frog.TabIndex = 0;
-            this.frog.TabStop = false;
-            this.frog.WaitOnLoad = true;
-            // 
             // background_box
             // 
             this.background_box.BackColor = System.Drawing.Color.Transparent;
@@ -569,10 +569,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(842, 481);
             this.Controls.Add(this.screen);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Projekt Frog";
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.frog)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tree_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_13)).EndInit();
@@ -581,7 +587,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tree_9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tree_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.water_area)).EndInit();
@@ -600,7 +605,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.truck_car)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).EndInit();
             this.ResumeLayout(false);
 
