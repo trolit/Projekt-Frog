@@ -37,6 +37,7 @@
             this.warning1 = new System.Windows.Forms.Label();
             this.warning2 = new System.Windows.Forms.Label();
             this.screen = new System.Windows.Forms.Panel();
+            this.escape_menu = new System.Windows.Forms.PictureBox();
             this.frog = new System.Windows.Forms.PictureBox();
             this.tree_1 = new System.Windows.Forms.PictureBox();
             this.tree_4 = new System.Windows.Forms.PictureBox();
@@ -73,7 +74,13 @@
             this.background_box = new System.Windows.Forms.PictureBox();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.escape_text1 = new System.Windows.Forms.Label();
+            this.escape_text2 = new System.Windows.Forms.Label();
+            this.escape_restart = new System.Windows.Forms.Button();
+            this.escape_title = new System.Windows.Forms.Button();
+            this.escape_quit = new System.Windows.Forms.Button();
             this.screen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.escape_menu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_4)).BeginInit();
@@ -165,6 +172,12 @@
             // screen
             // 
             this.screen.BackColor = System.Drawing.Color.Transparent;
+            this.screen.Controls.Add(this.escape_text2);
+            this.screen.Controls.Add(this.escape_text1);
+            this.screen.Controls.Add(this.escape_quit);
+            this.screen.Controls.Add(this.escape_title);
+            this.screen.Controls.Add(this.escape_restart);
+            this.screen.Controls.Add(this.escape_menu);
             this.screen.Controls.Add(this.frog);
             this.screen.Controls.Add(this.tree_1);
             this.screen.Controls.Add(this.tree_4);
@@ -209,6 +222,18 @@
             this.screen.Name = "screen";
             this.screen.Size = new System.Drawing.Size(842, 481);
             this.screen.TabIndex = 0;
+            // 
+            // escape_menu
+            // 
+            this.escape_menu.BackColor = System.Drawing.Color.Indigo;
+            this.escape_menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.escape_menu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.escape_menu.Location = new System.Drawing.Point(272, 44);
+            this.escape_menu.Name = "escape_menu";
+            this.escape_menu.Size = new System.Drawing.Size(327, 380);
+            this.escape_menu.TabIndex = 44;
+            this.escape_menu.TabStop = false;
+            this.escape_menu.Visible = false;
             // 
             // frog
             // 
@@ -563,6 +588,80 @@
             this.timer4.Interval = 70;
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
+            // escape_text1
+            // 
+            this.escape_text1.AutoSize = true;
+            this.escape_text1.BackColor = System.Drawing.Color.Indigo;
+            this.escape_text1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.escape_text1.ForeColor = System.Drawing.Color.Crimson;
+            this.escape_text1.Location = new System.Drawing.Point(308, 55);
+            this.escape_text1.Name = "escape_text1";
+            this.escape_text1.Size = new System.Drawing.Size(255, 33);
+            this.escape_text1.TabIndex = 45;
+            this.escape_text1.Text = "Co chcesz zrobić?";
+            this.escape_text1.Visible = false;
+            // 
+            // escape_text2
+            // 
+            this.escape_text2.AutoSize = true;
+            this.escape_text2.BackColor = System.Drawing.Color.Indigo;
+            this.escape_text2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.escape_text2.ForeColor = System.Drawing.Color.Crimson;
+            this.escape_text2.Location = new System.Drawing.Point(283, 401);
+            this.escape_text2.Name = "escape_text2";
+            this.escape_text2.Size = new System.Drawing.Size(304, 18);
+            this.escape_text2.TabIndex = 46;
+            this.escape_text2.Text = "Naciśnij dowolny klawisz aby wrócić do gry...";
+            this.escape_text2.Visible = false;
+            // 
+            // escape_restart
+            // 
+            this.escape_restart.BackColor = System.Drawing.Color.DarkRed;
+            this.escape_restart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.escape_restart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.escape_restart.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.escape_restart.ForeColor = System.Drawing.Color.Crimson;
+            this.escape_restart.Location = new System.Drawing.Point(357, 118);
+            this.escape_restart.Name = "escape_restart";
+            this.escape_restart.Size = new System.Drawing.Size(157, 66);
+            this.escape_restart.TabIndex = 47;
+            this.escape_restart.Text = "Zrestartuj poziom";
+            this.escape_restart.UseVisualStyleBackColor = false;
+            this.escape_restart.Visible = false;
+            this.escape_restart.Click += new System.EventHandler(this.escape_restart_Click);
+            // 
+            // escape_title
+            // 
+            this.escape_title.BackColor = System.Drawing.Color.DarkRed;
+            this.escape_title.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.escape_title.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.escape_title.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.escape_title.ForeColor = System.Drawing.Color.Crimson;
+            this.escape_title.Location = new System.Drawing.Point(357, 214);
+            this.escape_title.Name = "escape_title";
+            this.escape_title.Size = new System.Drawing.Size(157, 66);
+            this.escape_title.TabIndex = 48;
+            this.escape_title.Text = "Wróc do menu";
+            this.escape_title.UseVisualStyleBackColor = false;
+            this.escape_title.Visible = false;
+            this.escape_title.Click += new System.EventHandler(this.escape_title_Click);
+            // 
+            // escape_quit
+            // 
+            this.escape_quit.BackColor = System.Drawing.Color.DarkRed;
+            this.escape_quit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.escape_quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.escape_quit.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.escape_quit.ForeColor = System.Drawing.Color.Crimson;
+            this.escape_quit.Location = new System.Drawing.Point(357, 310);
+            this.escape_quit.Name = "escape_quit";
+            this.escape_quit.Size = new System.Drawing.Size(157, 68);
+            this.escape_quit.TabIndex = 49;
+            this.escape_quit.Text = "Wyjdź z gry";
+            this.escape_quit.UseVisualStyleBackColor = false;
+            this.escape_quit.Visible = false;
+            this.escape_quit.Click += new System.EventHandler(this.escape_quit_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -578,6 +677,7 @@
             this.Text = "Projekt Frog";
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.escape_menu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_4)).EndInit();
@@ -655,5 +755,11 @@
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Timer timer4;
         public System.Windows.Forms.ProgressBar fatigue;
+        private System.Windows.Forms.PictureBox escape_menu;
+        private System.Windows.Forms.Label escape_text1;
+        private System.Windows.Forms.Label escape_text2;
+        private System.Windows.Forms.Button escape_quit;
+        private System.Windows.Forms.Button escape_title;
+        private System.Windows.Forms.Button escape_restart;
     }
 }

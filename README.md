@@ -126,7 +126,7 @@ nie przestają się poruszać! Nie wiem co się stało.... Szczerze.
 
 
 
-- co zrobić żeby po uruchomieniu gry za pomocą **pliku .exe** proces kończył działanie po kliknięciu w prawym górnym rogu krzyżyka(czyli zamknięcia aplikacji)
+- jak usunąć przycisk zamknięcia aplikacji
 
 > https://tinyurl.com/yawgggve
 

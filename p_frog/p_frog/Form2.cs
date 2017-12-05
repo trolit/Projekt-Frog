@@ -43,6 +43,7 @@ namespace p_frog
         {
             InitializeComponent();
             KeyDown += new KeyEventHandler(Frog_Movement);      // wywołanie ruchu zaby
+            KeyDown += new KeyEventHandler(Escape_event_open);  // aktywacja metody escape event
             transparency_repair();                              // naprawa przezroczystości                     
         }
 
@@ -267,6 +268,7 @@ namespace p_frog
             truck_car.Location = new Point(t, 375);
             Check_truck_car();
 
+            timer4.Start();
             Check_if_frog_on_tree();
             Frog_plant_Collision();
             Check_tree_move();
@@ -523,7 +525,7 @@ namespace p_frog
                         timer2.Start();
                     }
                 }
-            }
+            } 
 
             // odzyskiwanie kondycji
             if (fatigue.Value <= 98)
@@ -645,6 +647,58 @@ namespace p_frog
         {
             Application.Exit();
         }
-#endregion
+        #endregion
+        #region 5. Menu pod klawiszem funkcyjnym(escape)
+        private void Escape_event_open(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                escape_text1.Visible = true;
+                escape_text2.Visible = true;
+                escape_restart.Visible = true;
+                escape_quit.Visible = true;
+                escape_title.Visible = true;
+                escape_menu.Visible = true;
+                escape_text1.BringToFront();
+                escape_text2.BringToFront();
+                can_move = false;    // stopujemy froga                                        
+                timer3.Stop();       // zatrzymujemy pojazdy
+                timer4.Stop();       // zatrzymujemy klody
+            }
+            else
+            { 
+                escape_text1.Visible = false;
+                escape_text2.Visible = false;
+                escape_restart.Visible = false;
+                escape_quit.Visible = false;
+                escape_title.Visible = false;
+                escape_menu.Visible = false;
+
+                can_move = true;                                           
+            }
+        }
+
+        // gdy wybierze opcje wyjście
+        private void escape_quit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        // gdy wybierze opcje powrót do menu
+        private void escape_title_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form1 main_menu = new Form1();
+            main_menu.Show();
+        }
+
+        // gdy wybierze opcje restartu
+        private void escape_restart_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form2 graj = new Form2();
+            graj.Show();
+        }
     }
+    #endregion
 }
