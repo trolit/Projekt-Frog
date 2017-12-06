@@ -36,6 +36,8 @@
             this.help = new System.Windows.Forms.PictureBox();
             this.singlefrog = new System.Windows.Forms.CheckBox();
             this.doublefrog = new System.Windows.Forms.CheckBox();
+            this.too_much_warn = new System.Windows.Forms.Label();
+            this.no_choice_warn = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.help)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,6 +140,32 @@
             this.doublefrog.Text = "Tryb dwóch graczy";
             this.doublefrog.UseVisualStyleBackColor = false;
             // 
+            // too_much_warn
+            // 
+            this.too_much_warn.AutoSize = true;
+            this.too_much_warn.BackColor = System.Drawing.Color.Transparent;
+            this.too_much_warn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.too_much_warn.ForeColor = System.Drawing.Color.Yellow;
+            this.too_much_warn.Location = new System.Drawing.Point(208, 423);
+            this.too_much_warn.Name = "too_much_warn";
+            this.too_much_warn.Size = new System.Drawing.Size(169, 15);
+            this.too_much_warn.TabIndex = 8;
+            this.too_much_warn.Text = "! Wybierz tylko jeden tryb.";
+            this.too_much_warn.Visible = false;
+            // 
+            // no_choice_warn
+            // 
+            this.no_choice_warn.AutoSize = true;
+            this.no_choice_warn.BackColor = System.Drawing.Color.Transparent;
+            this.no_choice_warn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.no_choice_warn.ForeColor = System.Drawing.Color.Yellow;
+            this.no_choice_warn.Location = new System.Drawing.Point(208, 449);
+            this.no_choice_warn.Name = "no_choice_warn";
+            this.no_choice_warn.Size = new System.Drawing.Size(195, 15);
+            this.no_choice_warn.TabIndex = 9;
+            this.no_choice_warn.Text = "! Nie wybrałeś żadnego trybu!";
+            this.no_choice_warn.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -145,6 +173,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(842, 481);
             this.ControlBox = false;
+            this.Controls.Add(this.no_choice_warn);
+            this.Controls.Add(this.too_much_warn);
             this.Controls.Add(this.doublefrog);
             this.Controls.Add(this.singlefrog);
             this.Controls.Add(this.help);
@@ -173,6 +203,8 @@
         private System.Windows.Forms.PictureBox help;
         private System.Windows.Forms.CheckBox singlefrog;
         private System.Windows.Forms.CheckBox doublefrog;
+        private System.Windows.Forms.Label too_much_warn;
+        private System.Windows.Forms.Label no_choice_warn;
     }
 }
 

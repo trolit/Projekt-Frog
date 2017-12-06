@@ -35,9 +35,15 @@ namespace p_frog
                 Form3 graj_dubla = new Form3();
                 graj_dubla.Show();
             }
-            else
+            else if (!doublefrog.Checked && !singlefrog.Checked)
             {
-
+                no_choice_warn.Visible = true;
+                too_much_warn.Visible = false;
+            }
+            else if (doublefrog.Checked && singlefrog.Checked)
+            {
+                no_choice_warn.Visible = false;
+                too_much_warn.Visible = true;
             }
         }
         #endregion
