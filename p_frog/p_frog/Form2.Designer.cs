@@ -37,6 +37,18 @@
             this.warning1 = new System.Windows.Forms.Label();
             this.warning2 = new System.Windows.Forms.Label();
             this.screen = new System.Windows.Forms.Panel();
+            this.escape_text2 = new System.Windows.Forms.Label();
+            this.escape_text1 = new System.Windows.Forms.Label();
+            this.escape_quit = new System.Windows.Forms.Button();
+            this.escape_title = new System.Windows.Forms.Button();
+            this.escape_restart = new System.Windows.Forms.Button();
+            this.lose_text = new System.Windows.Forms.Label();
+            this.win_no = new System.Windows.Forms.Button();
+            this.win_yes = new System.Windows.Forms.Button();
+            this.win_text_2 = new System.Windows.Forms.Label();
+            this.win_text = new System.Windows.Forms.Label();
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.escape_menu = new System.Windows.Forms.PictureBox();
             this.frog = new System.Windows.Forms.PictureBox();
             this.tree_1 = new System.Windows.Forms.PictureBox();
@@ -52,16 +64,11 @@
             this.tree_3 = new System.Windows.Forms.PictureBox();
             this.water_area = new System.Windows.Forms.PictureBox();
             this.frog_dead = new System.Windows.Forms.PictureBox();
-            this.lose_text = new System.Windows.Forms.Label();
-            this.win_no = new System.Windows.Forms.Button();
-            this.win_yes = new System.Windows.Forms.Button();
-            this.win_text_2 = new System.Windows.Forms.Label();
             this.win_box = new System.Windows.Forms.PictureBox();
             this.frog_coffin = new System.Windows.Forms.PictureBox();
             this.bckg_lose = new System.Windows.Forms.PictureBox();
             this.plant_block2 = new System.Windows.Forms.PictureBox();
             this.plant_block1 = new System.Windows.Forms.PictureBox();
-            this.win_text = new System.Windows.Forms.Label();
             this.frog_hideout_3 = new System.Windows.Forms.PictureBox();
             this.frog_hideout_2 = new System.Windows.Forms.PictureBox();
             this.frog_hideout_1 = new System.Windows.Forms.PictureBox();
@@ -72,13 +79,6 @@
             this.car_column = new System.Windows.Forms.PictureBox();
             this.police_car = new System.Windows.Forms.PictureBox();
             this.background_box = new System.Windows.Forms.PictureBox();
-            this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.timer4 = new System.Windows.Forms.Timer(this.components);
-            this.escape_text1 = new System.Windows.Forms.Label();
-            this.escape_text2 = new System.Windows.Forms.Label();
-            this.escape_restart = new System.Windows.Forms.Button();
-            this.escape_title = new System.Windows.Forms.Button();
-            this.escape_quit = new System.Windows.Forms.Button();
             this.screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.escape_menu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog)).BeginInit();
@@ -222,6 +222,148 @@
             this.screen.Name = "screen";
             this.screen.Size = new System.Drawing.Size(842, 481);
             this.screen.TabIndex = 0;
+            // 
+            // escape_text2
+            // 
+            this.escape_text2.AutoSize = true;
+            this.escape_text2.BackColor = System.Drawing.Color.Indigo;
+            this.escape_text2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.escape_text2.ForeColor = System.Drawing.Color.Crimson;
+            this.escape_text2.Location = new System.Drawing.Point(283, 401);
+            this.escape_text2.Name = "escape_text2";
+            this.escape_text2.Size = new System.Drawing.Size(304, 18);
+            this.escape_text2.TabIndex = 46;
+            this.escape_text2.Text = "Naciśnij dowolny klawisz aby wrócić do gry...";
+            this.escape_text2.Visible = false;
+            // 
+            // escape_text1
+            // 
+            this.escape_text1.AutoSize = true;
+            this.escape_text1.BackColor = System.Drawing.Color.Indigo;
+            this.escape_text1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.escape_text1.ForeColor = System.Drawing.Color.Crimson;
+            this.escape_text1.Location = new System.Drawing.Point(308, 55);
+            this.escape_text1.Name = "escape_text1";
+            this.escape_text1.Size = new System.Drawing.Size(255, 33);
+            this.escape_text1.TabIndex = 45;
+            this.escape_text1.Text = "Co chcesz zrobić?";
+            this.escape_text1.Visible = false;
+            // 
+            // escape_quit
+            // 
+            this.escape_quit.BackColor = System.Drawing.Color.DarkRed;
+            this.escape_quit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.escape_quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.escape_quit.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.escape_quit.ForeColor = System.Drawing.Color.Crimson;
+            this.escape_quit.Location = new System.Drawing.Point(357, 310);
+            this.escape_quit.Name = "escape_quit";
+            this.escape_quit.Size = new System.Drawing.Size(157, 68);
+            this.escape_quit.TabIndex = 49;
+            this.escape_quit.Text = "Wyjdź z gry";
+            this.escape_quit.UseVisualStyleBackColor = false;
+            this.escape_quit.Visible = false;
+            this.escape_quit.Click += new System.EventHandler(this.escape_quit_Click);
+            // 
+            // escape_title
+            // 
+            this.escape_title.BackColor = System.Drawing.Color.DarkRed;
+            this.escape_title.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.escape_title.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.escape_title.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.escape_title.ForeColor = System.Drawing.Color.Crimson;
+            this.escape_title.Location = new System.Drawing.Point(357, 214);
+            this.escape_title.Name = "escape_title";
+            this.escape_title.Size = new System.Drawing.Size(157, 66);
+            this.escape_title.TabIndex = 48;
+            this.escape_title.Text = "Wróc do menu";
+            this.escape_title.UseVisualStyleBackColor = false;
+            this.escape_title.Visible = false;
+            this.escape_title.Click += new System.EventHandler(this.escape_title_Click);
+            // 
+            // escape_restart
+            // 
+            this.escape_restart.BackColor = System.Drawing.Color.DarkRed;
+            this.escape_restart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.escape_restart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.escape_restart.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.escape_restart.ForeColor = System.Drawing.Color.Crimson;
+            this.escape_restart.Location = new System.Drawing.Point(357, 118);
+            this.escape_restart.Name = "escape_restart";
+            this.escape_restart.Size = new System.Drawing.Size(157, 66);
+            this.escape_restart.TabIndex = 47;
+            this.escape_restart.Text = "Zrestartuj poziom";
+            this.escape_restart.UseVisualStyleBackColor = false;
+            this.escape_restart.Visible = false;
+            this.escape_restart.Click += new System.EventHandler(this.escape_restart_Click);
+            // 
+            // lose_text
+            // 
+            this.lose_text.AutoSize = true;
+            this.lose_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lose_text.Location = new System.Drawing.Point(359, 204);
+            this.lose_text.Name = "lose_text";
+            this.lose_text.Size = new System.Drawing.Size(170, 24);
+            this.lose_text.TabIndex = 24;
+            this.lose_text.Text = "PRZEGRAŁEŚ :( ";
+            this.lose_text.Visible = false;
+            // 
+            // win_no
+            // 
+            this.win_no.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.win_no.Location = new System.Drawing.Point(444, 264);
+            this.win_no.Name = "win_no";
+            this.win_no.Size = new System.Drawing.Size(85, 40);
+            this.win_no.TabIndex = 23;
+            this.win_no.Text = "NIE :( ";
+            this.win_no.UseVisualStyleBackColor = true;
+            this.win_no.Visible = false;
+            this.win_no.Click += new System.EventHandler(this.win_no_Click);
+            // 
+            // win_yes
+            // 
+            this.win_yes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.win_yes.Location = new System.Drawing.Point(349, 264);
+            this.win_yes.Name = "win_yes";
+            this.win_yes.Size = new System.Drawing.Size(85, 40);
+            this.win_yes.TabIndex = 22;
+            this.win_yes.Text = "TAK :)";
+            this.win_yes.UseVisualStyleBackColor = true;
+            this.win_yes.Visible = false;
+            this.win_yes.Click += new System.EventHandler(this.win_yes_Click);
+            // 
+            // win_text_2
+            // 
+            this.win_text_2.AutoSize = true;
+            this.win_text_2.Location = new System.Drawing.Point(346, 228);
+            this.win_text_2.Name = "win_text_2";
+            this.win_text_2.Size = new System.Drawing.Size(196, 13);
+            this.win_text_2.TabIndex = 21;
+            this.win_text_2.Text = "Czy chcesz wrócić do menu głównego?";
+            this.win_text_2.Visible = false;
+            // 
+            // win_text
+            // 
+            this.win_text.AutoSize = true;
+            this.win_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.win_text.Location = new System.Drawing.Point(358, 204);
+            this.win_text.Name = "win_text";
+            this.win_text.Size = new System.Drawing.Size(126, 24);
+            this.win_text.TabIndex = 20;
+            this.win_text.Text = "WYGRANA !";
+            this.win_text.Visible = false;
+            // 
+            // timer3
+            // 
+            this.timer3.Enabled = true;
+            this.timer3.Interval = 70;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
+            // timer4
+            // 
+            this.timer4.Enabled = true;
+            this.timer4.Interval = 70;
+            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
             // escape_menu
             // 
@@ -380,51 +522,6 @@
             this.frog_dead.TabStop = false;
             this.frog_dead.Visible = false;
             // 
-            // lose_text
-            // 
-            this.lose_text.AutoSize = true;
-            this.lose_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lose_text.Location = new System.Drawing.Point(359, 204);
-            this.lose_text.Name = "lose_text";
-            this.lose_text.Size = new System.Drawing.Size(170, 24);
-            this.lose_text.TabIndex = 24;
-            this.lose_text.Text = "PRZEGRAŁEŚ :( ";
-            this.lose_text.Visible = false;
-            // 
-            // win_no
-            // 
-            this.win_no.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.win_no.Location = new System.Drawing.Point(444, 264);
-            this.win_no.Name = "win_no";
-            this.win_no.Size = new System.Drawing.Size(85, 40);
-            this.win_no.TabIndex = 23;
-            this.win_no.Text = "NIE :( ";
-            this.win_no.UseVisualStyleBackColor = true;
-            this.win_no.Visible = false;
-            this.win_no.Click += new System.EventHandler(this.win_no_Click);
-            // 
-            // win_yes
-            // 
-            this.win_yes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.win_yes.Location = new System.Drawing.Point(349, 264);
-            this.win_yes.Name = "win_yes";
-            this.win_yes.Size = new System.Drawing.Size(85, 40);
-            this.win_yes.TabIndex = 22;
-            this.win_yes.Text = "TAK :)";
-            this.win_yes.UseVisualStyleBackColor = true;
-            this.win_yes.Visible = false;
-            this.win_yes.Click += new System.EventHandler(this.win_yes_Click);
-            // 
-            // win_text_2
-            // 
-            this.win_text_2.AutoSize = true;
-            this.win_text_2.Location = new System.Drawing.Point(346, 228);
-            this.win_text_2.Name = "win_text_2";
-            this.win_text_2.Size = new System.Drawing.Size(196, 13);
-            this.win_text_2.TabIndex = 21;
-            this.win_text_2.Text = "Czy chcesz wrócić do menu głównego?";
-            this.win_text_2.Visible = false;
-            // 
             // win_box
             // 
             this.win_box.BackColor = System.Drawing.Color.Transparent;
@@ -473,17 +570,6 @@
             this.plant_block1.Size = new System.Drawing.Size(58, 72);
             this.plant_block1.TabIndex = 25;
             this.plant_block1.TabStop = false;
-            // 
-            // win_text
-            // 
-            this.win_text.AutoSize = true;
-            this.win_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.win_text.Location = new System.Drawing.Point(358, 204);
-            this.win_text.Name = "win_text";
-            this.win_text.Size = new System.Drawing.Size(126, 24);
-            this.win_text.TabIndex = 20;
-            this.win_text.Text = "WYGRANA !";
-            this.win_text.Visible = false;
             // 
             // frog_hideout_3
             // 
@@ -575,92 +661,6 @@
             this.background_box.Size = new System.Drawing.Size(845, 481);
             this.background_box.TabIndex = 5;
             this.background_box.TabStop = false;
-            // 
-            // timer3
-            // 
-            this.timer3.Enabled = true;
-            this.timer3.Interval = 70;
-            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
-            // 
-            // timer4
-            // 
-            this.timer4.Enabled = true;
-            this.timer4.Interval = 70;
-            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
-            // 
-            // escape_text1
-            // 
-            this.escape_text1.AutoSize = true;
-            this.escape_text1.BackColor = System.Drawing.Color.Indigo;
-            this.escape_text1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.escape_text1.ForeColor = System.Drawing.Color.Crimson;
-            this.escape_text1.Location = new System.Drawing.Point(308, 55);
-            this.escape_text1.Name = "escape_text1";
-            this.escape_text1.Size = new System.Drawing.Size(255, 33);
-            this.escape_text1.TabIndex = 45;
-            this.escape_text1.Text = "Co chcesz zrobić?";
-            this.escape_text1.Visible = false;
-            // 
-            // escape_text2
-            // 
-            this.escape_text2.AutoSize = true;
-            this.escape_text2.BackColor = System.Drawing.Color.Indigo;
-            this.escape_text2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.escape_text2.ForeColor = System.Drawing.Color.Crimson;
-            this.escape_text2.Location = new System.Drawing.Point(283, 401);
-            this.escape_text2.Name = "escape_text2";
-            this.escape_text2.Size = new System.Drawing.Size(304, 18);
-            this.escape_text2.TabIndex = 46;
-            this.escape_text2.Text = "Naciśnij dowolny klawisz aby wrócić do gry...";
-            this.escape_text2.Visible = false;
-            // 
-            // escape_restart
-            // 
-            this.escape_restart.BackColor = System.Drawing.Color.DarkRed;
-            this.escape_restart.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.escape_restart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.escape_restart.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.escape_restart.ForeColor = System.Drawing.Color.Crimson;
-            this.escape_restart.Location = new System.Drawing.Point(357, 118);
-            this.escape_restart.Name = "escape_restart";
-            this.escape_restart.Size = new System.Drawing.Size(157, 66);
-            this.escape_restart.TabIndex = 47;
-            this.escape_restart.Text = "Zrestartuj poziom";
-            this.escape_restart.UseVisualStyleBackColor = false;
-            this.escape_restart.Visible = false;
-            this.escape_restart.Click += new System.EventHandler(this.escape_restart_Click);
-            // 
-            // escape_title
-            // 
-            this.escape_title.BackColor = System.Drawing.Color.DarkRed;
-            this.escape_title.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.escape_title.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.escape_title.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.escape_title.ForeColor = System.Drawing.Color.Crimson;
-            this.escape_title.Location = new System.Drawing.Point(357, 214);
-            this.escape_title.Name = "escape_title";
-            this.escape_title.Size = new System.Drawing.Size(157, 66);
-            this.escape_title.TabIndex = 48;
-            this.escape_title.Text = "Wróc do menu";
-            this.escape_title.UseVisualStyleBackColor = false;
-            this.escape_title.Visible = false;
-            this.escape_title.Click += new System.EventHandler(this.escape_title_Click);
-            // 
-            // escape_quit
-            // 
-            this.escape_quit.BackColor = System.Drawing.Color.DarkRed;
-            this.escape_quit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.escape_quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.escape_quit.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.escape_quit.ForeColor = System.Drawing.Color.Crimson;
-            this.escape_quit.Location = new System.Drawing.Point(357, 310);
-            this.escape_quit.Name = "escape_quit";
-            this.escape_quit.Size = new System.Drawing.Size(157, 68);
-            this.escape_quit.TabIndex = 49;
-            this.escape_quit.Text = "Wyjdź z gry";
-            this.escape_quit.UseVisualStyleBackColor = false;
-            this.escape_quit.Visible = false;
-            this.escape_quit.Click += new System.EventHandler(this.escape_quit_Click);
             // 
             // Form2
             // 

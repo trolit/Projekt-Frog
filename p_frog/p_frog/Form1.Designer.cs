@@ -34,6 +34,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.help = new System.Windows.Forms.PictureBox();
+            this.singlefrog = new System.Windows.Forms.CheckBox();
+            this.doublefrog = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.help)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,6 +110,34 @@
             this.help.TabStop = false;
             this.help.Visible = false;
             // 
+            // singlefrog
+            // 
+            this.singlefrog.AutoSize = true;
+            this.singlefrog.BackColor = System.Drawing.Color.Chartreuse;
+            this.singlefrog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.singlefrog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.singlefrog.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.singlefrog.Location = new System.Drawing.Point(24, 421);
+            this.singlefrog.Name = "singlefrog";
+            this.singlefrog.Size = new System.Drawing.Size(168, 20);
+            this.singlefrog.TabIndex = 6;
+            this.singlefrog.Text = "Tryb jednego gracza";
+            this.singlefrog.UseVisualStyleBackColor = false;
+            // 
+            // doublefrog
+            // 
+            this.doublefrog.AutoSize = true;
+            this.doublefrog.BackColor = System.Drawing.Color.Chartreuse;
+            this.doublefrog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.doublefrog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.doublefrog.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.doublefrog.Location = new System.Drawing.Point(24, 449);
+            this.doublefrog.Name = "doublefrog";
+            this.doublefrog.Size = new System.Drawing.Size(154, 20);
+            this.doublefrog.TabIndex = 7;
+            this.doublefrog.Text = "Tryb dwóch graczy";
+            this.doublefrog.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,6 +145,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(842, 481);
             this.ControlBox = false;
+            this.Controls.Add(this.doublefrog);
+            this.Controls.Add(this.singlefrog);
             this.Controls.Add(this.help);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label1);
@@ -139,6 +171,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox help;
+        private System.Windows.Forms.CheckBox singlefrog;
+        private System.Windows.Forms.CheckBox doublefrog;
     }
 }
 

@@ -21,11 +21,24 @@ namespace p_frog
         #region 1. PRZYCISK GRAJ
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            if (singlefrog.Checked && !doublefrog.Checked)
+            {
+                this.Hide();
 
-            Form2 graj = new Form2();
-            graj.Show();
+                Form2 graj_solo = new Form2();
+                graj_solo.Show();
+            }
+            else if (doublefrog.Checked && !singlefrog.Checked)
+            {
+                this.Hide();
 
+                Form3 graj_dubla = new Form3();
+                graj_dubla.Show();
+            }
+            else
+            {
+
+            }
         }
         #endregion
         #region 2. PRZYCISK WYJSCIE

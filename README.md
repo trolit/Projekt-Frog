@@ -132,4 +132,9 @@ nie przestają się poruszać! Nie wiem co się stało.... Szczerze.
 
 
 
+- jak skopiować formę?
+
+> https://stackoverflow.com/questions/37048489/copy-a-form-to-use-in-the-same-project
+
+
 ###########################################################################
