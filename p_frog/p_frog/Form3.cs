@@ -16,13 +16,23 @@ namespace p_frog
     public partial class Form3 : Form, IFrog_Collisions
     {
         private int count_timer1 = 0;           // licznik czasu dla timer1
-        private int count_timer2 = 0;           // licznik czasu dla timer2
+        private int count_timer6 = 0;           // licznik czasu dla timer6 (frog_bro)
+        private int count_timer2 = 0;           // licznik czasu dla timer2 (regenracja kondycji froga)
+        private int count_timer5 = 0;           // licznik czasu dla timer5 (regeneracja kondycji bro_froga)
         int life = 3;                           // liczba żyć froga
+
         bool right;                             // zmienne boolowskie do kontrolowania animacji         
         bool left;
         bool up;
         bool down;
+
+        bool right_bro;
+        bool left_bro;
+        bool up_bro;
+        bool down_bro;
+
         bool can_move = true;                   // flaga sprawdzajaca czy frog moze chodzic, na start ustawiamy na true!
+        bool can_move_bro = true;               // flaga sprawdzajaca czy frog_bro moze chodzic
         bool hide_out_1 = false;                // wyście pierwsze, drugie, trzecie boolowskie
         bool hide_out_2 = false;
         bool hide_out_3 = false;
@@ -34,7 +44,8 @@ namespace p_frog
         public Form3()
         {
             InitializeComponent();
-            KeyDown += new KeyEventHandler(Frog_Movement);       // wywołanie ruchu zaby
+            KeyDown += new KeyEventHandler(Frog_Movement);       // wywołanie ruchu froga
+            KeyDown += new KeyEventHandler(Frogbro_Movement);
             KeyDown += new KeyEventHandler(Escape_event_open);   // aktywacja metody escape event
             transparency_repair();                               // naprawa przezroczystości                     
         }
@@ -50,6 +61,14 @@ namespace p_frog
             else if (frog.Location.X < -4 || frog.Location.X > 815)
             {
                 frog.Location = new Point(392, 428);
+            }
+            else if (frog_bro.Location.X < -4 || frog_bro.Location.X > 815)
+            {
+                frog_bro.Location = new Point(369, 431);
+            }
+            else if (frog_bro.Location.Y < -20 || frog_bro.Location.Y > 450)
+            {
+                frog_bro.Location = new Point(392, 428);
             }
         }
         #endregion
@@ -309,6 +328,22 @@ namespace p_frog
             tree_14.Location = new Point(tre14, 55);
         }
         #endregion
+        #region 5. Timer5(odpowiedzialny za odnowienie enrgii bro froga)
+        private void timer5_Tick(object sender, EventArgs e)
+        {
+            count_timer5++;
+
+            if (count_timer5 == 9)
+            {
+                fatigue.Value = 100;
+                count_timer5 = 0;
+                can_move = true;
+                warning1.Visible = false;
+                warning2.Visible = false;
+                timer5.Stop();
+            }
+        }
+        #endregion
 
         // KONTROLOWANIE LOKALIZACJI PICTUREBOXOW(zapętlanie)
         #region 1. Sprawdź lokalizacje pojazdów
@@ -529,6 +564,127 @@ namespace p_frog
             Frog_screen_Collision();
         }
         #endregion
+
+        #region Frog Bro - Poruszanie klawiszologią
+        void Frogbro_Movement(object sender, KeyEventArgs e)
+        {
+            int s = frog_bro.Location.X;
+            int o = frog_bro.Location.Y;
+            timer3.Start();
+
+            if (e.KeyCode == Keys.D)
+            {
+                if (can_move_bro == true && can_move_right == true)
+                {
+                    if (fatigue_bro.Value >= 4)
+                    {
+                        timer6.Start();
+                        right_bro = true;
+                        frog_bro.Image = Image.FromFile("frog_bro_right.gif");
+                        s += 15;
+                        Wywolaj_dzwiek_skoku();
+                        fatigue_bro.Value -= 4;
+                    }
+                    else
+                    {
+                        warning1.Visible = true;
+                        warning2.Visible = true;
+                        can_move_bro = false;
+                        timer2.Start();
+                    }
+                }
+            }
+
+            else if (e.KeyCode == Keys.A)
+            {
+                if (can_move_bro == true && can_move_left == true)
+                {
+                    timer6.Start();
+
+                    if (fatigue_bro.Value >= 4)
+                    {
+                        left_bro = true;
+                        frog_bro.Image = Image.FromFile("frog_bro_left.gif");
+                        s -= 15;
+                        Wywolaj_dzwiek_skoku();
+                        fatigue_bro.Value -= 4;
+                    }
+                    else
+                    {
+                        warning1.Visible = true;
+                        warning2.Visible = true;
+                        can_move_bro = false;
+                        timer2.Start();
+                    }
+                }
+
+            }
+
+            else if (e.KeyCode == Keys.W)
+            {
+                if (can_move_bro == true)
+                {
+                    timer6.Start();
+
+                    // jesli zmeczenie jeszcze wieksze rowne 5 to moge isc do gory
+                    if (fatigue_bro.Value >= 5)
+                    {
+                        up_bro = true;
+                        frog_bro.Image = Image.FromFile("frog_bro_up.gif");
+                        o -= 15;
+                        Wywolaj_dzwiek_skoku();
+                        fatigue_bro.Value -= 5;
+                    }
+                    else
+                    {
+                        warning1.Visible = true;
+                        warning2.Visible = true;
+                        can_move_bro = false;
+                        timer2.Start();
+                    }
+                }
+
+            }
+
+            else if (e.KeyCode == Keys.S)
+            {
+                if (can_move_bro == true)
+                {
+                    timer6.Start();
+
+                    if (fatigue_bro.Value >= 5)
+                    {
+                        down_bro = true;
+                        frog_bro.Image = Image.FromFile("frog_bro_down.gif");
+                        o += 15;
+                        Wywolaj_dzwiek_skoku();
+                        fatigue_bro.Value -= 5;
+                    }
+                    else
+                    {
+                        warning1.Visible = true;
+                        warning2.Visible = true;
+                        can_move_bro = false;
+                        timer2.Start();
+                    }
+                }
+            }
+
+            // odzyskiwanie kondycji
+            if (fatigue.Value <= 98)
+            {
+                fatigue.Value += 2;
+            }
+            if (fatigue_bro.Value <= 98)
+            {
+                fatigue_bro.Value += 2;
+            }
+
+            frog_bro.Location = new Point(s, o);
+            Frog_screen_Collision();
+        }
+        #endregion
+
         #region 3. Frog - Zadanie do wykonania
         private void Confirm_hideout()
         {
@@ -694,5 +850,59 @@ namespace p_frog
             graj.Show();
         }
         #endregion
+
+        // animacje bro froga
+        private void timer6_Tick(object sender, EventArgs e)
+        {
+            count_timer6++;
+            // 1 sekunda = 1000 milisekund, timer ustawiamy w milisekundach
+            if (count_timer6 == 1)
+            {
+                if (down_bro == true)
+                {
+                    frog_bro.Image = Image.FromFile("frog_bro_down_stand.png");
+                    count_timer6 = 0;
+                    down_bro = false;   // resetowanie kontrolek
+                    up_bro = false;
+                    left_bro = false;
+                    right_bro = false;
+                }
+
+                else if (up_bro == true)
+                {
+                    frog_bro.Image = Image.FromFile("frog_bro_up_stand.png");
+                    count_timer6 = 0;
+                    down_bro = false;
+                    up_bro = false;
+                    left_bro = false;
+                    right_bro = false;
+                }
+
+                else if (left_bro == true)
+                {
+                    frog_bro.Image = Image.FromFile("frog_bro_left_stand.png");
+                    count_timer6 = 0;
+                    down_bro = false;
+                    up_bro = false;
+                    left_bro = false;
+                    right_bro = false;
+                }
+
+                else if (right_bro == true)
+                {
+                    frog_bro.Image = Image.FromFile("frog_bro_right_stand.png");
+                    count_timer6 = 0;
+                    down_bro = false;
+                    up_bro = false;
+                    left_bro = false;
+                    right_bro = false;
+                }
+
+                else
+                {
+                    count_timer6 = 0;   // rozwiazanie problemu ciaglego chodzenia froga
+                }
+            }
+        }
     }
 }

@@ -141,6 +141,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="frog_icon.ico" />
+    <None Include="Resources\frog_bro_up_stand1.png" />
+    <None Include="Resources\frog_bro_up.gif" />
+    <None Include="Resources\frog_bro_right_stand.png" />
+    <None Include="Resources\frog_bro_right.gif" />
+    <None Include="Resources\frog_bro_left_stand.png" />
+    <None Include="Resources\frog_bro_left.gif" />
+    <None Include="Resources\frog_bro_down_stand.png" />
+    <None Include="Resources\frog_bro_down.gif" />
+    <None Include="Resources\frog_bro_up_stand.png" />
     <None Include="Resources\tree_small.png" />
     <None Include="Resources\tree_long.png" />
     <None Include="Resources\tree_medium.png" />
