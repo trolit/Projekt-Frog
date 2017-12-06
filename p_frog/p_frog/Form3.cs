@@ -15,9 +15,9 @@ namespace p_frog
 
     public partial class Form3 : Form, IFrog_Collisions
     {
-        private int count_timer1 = 0;           // licznik czasu dla timer1
+        private int count_timer1 = 0;           // licznik czasu dla timer1 (frog)
         private int count_timer6 = 0;           // licznik czasu dla timer6 (frog_bro)
-        private int count_timer2 = 0;           // licznik czasu dla timer2 (regenracja kondycji froga)
+        private int count_timer2 = 0;           // licznik czasu dla timer2 (regeneracja kondycji froga)
         private int count_timer5 = 0;           // licznik czasu dla timer5 (regeneracja kondycji bro_froga)
         int life = 3;                           // liczba żyć froga
 
@@ -31,6 +31,8 @@ namespace p_frog
         bool up_bro;
         bool down_bro;
 
+        bool is_on_tree_bro = false;
+
         bool can_move = true;                   // flaga sprawdzajaca czy frog moze chodzic, na start ustawiamy na true!
         bool can_move_bro = true;               // flaga sprawdzajaca czy frog_bro moze chodzic
         bool hide_out_1 = false;                // wyście pierwsze, drugie, trzecie boolowskie
@@ -40,6 +42,9 @@ namespace p_frog
 
         bool can_move_right = true;             // do krzaków zmienne boolowskie
         bool can_move_left = true;
+
+        bool can_move_right_bro = true;
+        bool can_move_left_bro = true;
 
         public Form3()
         {
@@ -147,6 +152,83 @@ namespace p_frog
         }
         #endregion
 
+        // ODSEPAROWANE KOLIZJE BRO FROGA Z OTOCZENIEM
+        #region 1. Frog Bro - Vehicle Collision
+        public void Frog_bro_vehicle_Collision()
+        {
+            SoundPlayer car_hit = new SoundPlayer(Properties.Resources.frog_car_hit);
+
+            if (frog_bro.Bounds.IntersectsWith(police_car.Bounds)) // wykrywa przeciecie dwoch pictureboxow
+            {
+                car_hit.Play();
+                Frog_bro_Life();
+                timer3.Stop();
+            }
+            else if (frog_bro.Bounds.IntersectsWith(car_column.Bounds))
+            {
+                car_hit.Play();
+                Frog_bro_Life();
+                timer3.Stop();
+            }
+            else if (frog_bro.Bounds.IntersectsWith(truck_car.Bounds))
+            {
+                car_hit.Play();
+                Frog_bro_Life();
+                timer3.Stop();
+            }
+        }
+        #endregion
+        #region 2. Frog Bro - Plant Collision
+        public void Frog_bro_plant_Collision()
+        {
+            if (frog_bro.Bounds.IntersectsWith(plant_block1.Bounds) && frog_bro.Location.X < 291 || frog_bro.Bounds.IntersectsWith(plant_block2.Bounds) && frog_bro.Location.X < 471)
+            {
+                can_move_right_bro = false;
+            }
+            else if (frog_bro.Bounds.IntersectsWith(plant_block1.Bounds) && frog_bro.Location.X > 291 || frog_bro.Bounds.IntersectsWith(plant_block2.Bounds) && frog_bro.Location.X > 471)
+            {
+                can_move_left_bro = false;
+            }
+            else
+            {
+                can_move_right_bro = true;
+                can_move_left_bro = true;
+            }
+        }
+        #endregion
+        #region 3. Frog Bro - Water Collision
+        public void Frog_bro_water_Collision()
+        {
+            if (frog_bro.Bounds.IntersectsWith(water_area.Bounds) && is_on_tree_bro == false)
+            {
+                SoundPlayer splash = new SoundPlayer(Properties.Resources.frog_splash_water);
+                splash.Play();
+                Frog_bro_Life();
+                timer3.Stop();
+            }
+        }
+        #endregion
+        #region 4. Frog Bro - Tree Collision
+        public void Check_if_frog_bro_on_tree()
+        {
+            int n = frog_bro.Location.X;
+            int m = frog_bro.Location.Y;
+
+            if (frog_bro.Bounds.IntersectsWith(tree_1.Bounds) || frog_bro.Bounds.IntersectsWith(tree_2.Bounds) || frog_bro.Bounds.IntersectsWith(tree_3.Bounds) || frog_bro.Bounds.IntersectsWith(tree_4.Bounds) || frog_bro.Bounds.IntersectsWith(tree_6.Bounds) || frog_bro.Bounds.IntersectsWith(tree_8.Bounds) || frog_bro.Bounds.IntersectsWith(tree_9.Bounds) || frog_bro.Bounds.IntersectsWith(tree_11.Bounds) || frog_bro.Bounds.IntersectsWith(tree_12.Bounds) || frog_bro.Bounds.IntersectsWith(tree_13.Bounds) || frog_bro.Bounds.IntersectsWith(tree_14.Bounds))
+            {
+                is_on_tree_bro = true;
+                //  c -= 10;  gdy drzewa plywaly, ale animacje wolniejsze
+                n -= 3;
+                frog_bro.Location = new Point(n, m);
+                Frog_screen_Collision();
+            }
+            else
+            {
+                is_on_tree_bro = false;
+            }
+        }
+        #endregion
+
         // ZAKONCZENIA GIER 
         #region 1. Gdy przegrana
         private void End_Game()
@@ -155,7 +237,10 @@ namespace p_frog
             timer2.Stop();
             timer3.Stop();
             timer4.Stop();
+            timer5.Stop();
+            timer6.Stop();
             can_move = false;
+            can_move_bro = false;
 
             SoundPlayer frog_lose = new SoundPlayer(Properties.Resources.lose_sound_fxd);
             frog_lose.Play();
@@ -176,7 +261,11 @@ namespace p_frog
             timer1.Stop();
             timer2.Stop();
             timer3.Stop();
+            timer4.Stop();
+            timer5.Stop();
+            timer6.Stop();
             can_move = false;
+            can_move_bro = false;
 
             SoundPlayer win_sound = new SoundPlayer(Properties.Resources.win_sound);
             win_sound.Play();
@@ -286,6 +375,11 @@ namespace p_frog
             Frog_vehicle_Collision();
             Confirm_hideout();
             Frog_water_Collision();
+            Frog_bro_vehicle_Collision();
+            Frog_bro_plant_Collision();
+            Frog_bro_water_Collision();
+            Check_if_frog_bro_on_tree();
+            Confirm_bro_hideout();
         }
         #endregion
         #region 4. Timer4(odpowiedzialny za ruch drzew)
@@ -337,7 +431,7 @@ namespace p_frog
             {
                 fatigue.Value = 100;
                 count_timer5 = 0;
-                can_move = true;
+                can_move_bro = true;
                 warning1.Visible = false;
                 warning2.Visible = false;
                 timer5.Stop();
@@ -422,7 +516,34 @@ namespace p_frog
         #endregion
 
         // KONTROLOWANIE ZADANIA, LICZBY ZYC, RUCHU FROGA
-        #region 1. Frog - Obecny stan żyć
+        #region 1. Frog Bro - Stan żyć
+        private void Frog_bro_Life()
+        {
+            if (life == 3)
+            {
+                frog_bro.Location = new Point(392, 428);
+                frog_life_3.Visible = false;
+                life = 2;
+            }
+            else if (life == 2)
+            {
+                frog_bro.Location = new Point(392, 428);
+                frog_life_2.Visible = false;
+                life = 1;
+            }
+            else if (life == 1)
+            {
+                frog_bro.Location = new Point(392, 428);
+                frog_life_1.Visible = false;
+                life = 0;
+            }
+            else if (life == 0)
+            {
+                End_Game();
+            }
+        }
+        #endregion
+        #region 1. Frog - Stan żyć
         private void Frog_Life()
         {
             if (life == 3)
@@ -574,7 +695,7 @@ namespace p_frog
 
             if (e.KeyCode == Keys.D)
             {
-                if (can_move_bro == true && can_move_right == true)
+                if (can_move_bro == true && can_move_right_bro == true)
                 {
                     if (fatigue_bro.Value >= 4)
                     {
@@ -590,14 +711,14 @@ namespace p_frog
                         warning1.Visible = true;
                         warning2.Visible = true;
                         can_move_bro = false;
-                        timer2.Start();
+                        timer5.Start();
                     }
                 }
             }
 
             else if (e.KeyCode == Keys.A)
             {
-                if (can_move_bro == true && can_move_left == true)
+                if (can_move_bro == true && can_move_left_bro == true)
                 {
                     timer6.Start();
 
@@ -614,7 +735,7 @@ namespace p_frog
                         warning1.Visible = true;
                         warning2.Visible = true;
                         can_move_bro = false;
-                        timer2.Start();
+                        timer5.Start();
                     }
                 }
 
@@ -640,7 +761,7 @@ namespace p_frog
                         warning1.Visible = true;
                         warning2.Visible = true;
                         can_move_bro = false;
-                        timer2.Start();
+                        timer5.Start();
                     }
                 }
 
@@ -665,7 +786,7 @@ namespace p_frog
                         warning1.Visible = true;
                         warning2.Visible = true;
                         can_move_bro = false;
-                        timer2.Start();
+                        timer5.Start();
                     }
                 }
             }
@@ -710,6 +831,39 @@ namespace p_frog
                 hide_out_3 = true;
                 frog_capture_point.Play();
                 frog.Location = new Point(392, 428);
+            }
+
+            if (hide_out_1 == true && hide_out_2 == true && hide_out_3 == true)
+            {
+                Wins_Game();
+            }
+        }
+        #endregion
+        #region 4. Frog Bro - Zadanie do wykonania
+        private void Confirm_bro_hideout()
+        {
+            SoundPlayer frog_capture_point = new SoundPlayer(Properties.Resources.frog_saved_sound);
+
+            if (frog_bro.Bounds.IntersectsWith(frog_hideout_1.Bounds))
+            {
+                frog_hideout_1.Visible = false;
+                hide_out_1 = true;
+                frog_capture_point.Play();
+                frog_bro.Location = new Point(392, 428);
+            }
+            else if (frog_bro.Bounds.IntersectsWith(frog_hideout_2.Bounds))
+            {
+                frog_hideout_2.Visible = false;
+                hide_out_2 = true;
+                frog_capture_point.Play();
+                frog_bro.Location = new Point(392, 428);
+            }
+            else if (frog_bro.Bounds.IntersectsWith(frog_hideout_3.Bounds))
+            {
+                frog_hideout_3.Visible = false;
+                hide_out_3 = true;
+                frog_capture_point.Play();
+                frog_bro.Location = new Point(392, 428);
             }
 
             if (hide_out_1 == true && hide_out_2 == true && hide_out_3 == true)
