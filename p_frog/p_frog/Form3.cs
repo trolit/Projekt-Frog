@@ -9,22 +9,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace p_frog
 {
 
     public partial class Form3 : Form, IFrog_Collisions
     {
-        // zmienne wspólne dla obu frogów
+        // zmienne wspólne
         int life = 3;                           // liczba żyć frogów
         bool hide_out_1 = false;                // wyjście pierwsze, drugie, trzecie boolowskie
         bool hide_out_2 = false;
         bool hide_out_3 = false;
 
-        // zmienne froga(zielona postac)
+        // zmienne froga(zielona postać)
         private int count_timer1 = 0;           // licznik czasu dla timer1 (animacje froga)
         private int count_timer2 = 0;           // licznik czasu dla timer2 (regeneracja kondycji froga)
-        bool right;                             // zmienne boolowskie do kontrolowania animacji         
+        bool right;                             // zmienne boolowskie do kontrolowania animacji froga         
         bool left;
         bool up;
         bool down;
@@ -33,22 +32,22 @@ namespace p_frog
         bool can_move_right = true;             // do krzaków zmienne boolowskie
         bool can_move_left = true;
 
-        // zmienne bro froga(fioletowa postac)
+        // zmienne bro froga(fioletowa postać)
         private int count_timer5 = 0;           // licznik czasu dla timer5 (regeneracja kondycji bro froga)
         private int count_timer6 = 0;           // licznik czasu dla timer6 (animacje bro froga)
         bool right_bro;                         // zmienne boolowskie do kontrolowania animacji
         bool left_bro;
         bool up_bro;
         bool down_bro;
-        bool is_on_tree_bro = false;
+        bool is_on_tree_bro = false;            // flaga sprawdzająca czy frog jest na kłodzie
         bool can_move_bro = true;               // flaga sprawdzajaca czy frog_bro moze chodzic
-        bool can_move_right_bro = true;
+        bool can_move_right_bro = true;         // zmienne boolowskie krzaków
         bool can_move_left_bro = true;
 
         public Form3()
         {
             InitializeComponent();
-            KeyDown += new KeyEventHandler(Frog_Movement);       // fuch froga
+            KeyDown += new KeyEventHandler(Frog_Movement);       // ruch froga
             KeyDown += new KeyEventHandler(Frogbro_Movement);    // ruch bro froga
             KeyDown += new KeyEventHandler(Escape_event_open);   // aktywacja metody escape event
             transparency_repair();                               // naprawa przezroczystości pictureboxów                   
@@ -746,6 +745,7 @@ namespace p_frog
             }
         }
         #endregion
+
         #region 2. Frog - Stan żyć
         private void Frog_Life()
         {

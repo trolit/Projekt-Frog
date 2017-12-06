@@ -38,6 +38,7 @@
             this.doublefrog = new System.Windows.Forms.CheckBox();
             this.too_much_warn = new System.Windows.Forms.Label();
             this.no_choice_warn = new System.Windows.Forms.Label();
+            this.button_info = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.help)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,7 +82,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 16);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Wersja: 1.9";
+            this.label1.Text = "Wersja: 2.5";
             // 
             // button4
             // 
@@ -147,9 +148,9 @@
             this.too_much_warn.ForeColor = System.Drawing.Color.Yellow;
             this.too_much_warn.Location = new System.Drawing.Point(208, 423);
             this.too_much_warn.Name = "too_much_warn";
-            this.too_much_warn.Size = new System.Drawing.Size(169, 15);
+            this.too_much_warn.Size = new System.Drawing.Size(213, 15);
             this.too_much_warn.TabIndex = 8;
-            this.too_much_warn.Text = "! Wybierz tylko jeden tryb.";
+            this.too_much_warn.Text = "Uwaga: Wybierz tylko jeden tryb.";
             this.too_much_warn.Visible = false;
             // 
             // no_choice_warn
@@ -160,10 +161,28 @@
             this.no_choice_warn.ForeColor = System.Drawing.Color.Yellow;
             this.no_choice_warn.Location = new System.Drawing.Point(208, 449);
             this.no_choice_warn.Name = "no_choice_warn";
-            this.no_choice_warn.Size = new System.Drawing.Size(195, 15);
+            this.no_choice_warn.Size = new System.Drawing.Size(239, 15);
             this.no_choice_warn.TabIndex = 9;
-            this.no_choice_warn.Text = "! Nie wybrałeś żadnego trybu!";
+            this.no_choice_warn.Text = "Uwaga: Nie wybrałeś żadnego trybu!";
             this.no_choice_warn.Visible = false;
+            // 
+            // button_info
+            // 
+            this.button_info.BackColor = System.Drawing.Color.Chartreuse;
+            this.button_info.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button_info.CausesValidation = false;
+            this.button_info.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.button_info.FlatAppearance.BorderSize = 2;
+            this.button_info.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.button_info.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Peru;
+            this.button_info.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_info.Location = new System.Drawing.Point(335, 271);
+            this.button_info.Name = "button_info";
+            this.button_info.Size = new System.Drawing.Size(75, 58);
+            this.button_info.TabIndex = 10;
+            this.button_info.Text = "INFO";
+            this.button_info.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -172,6 +191,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(842, 481);
             this.ControlBox = false;
+            this.Controls.Add(this.button_info);
             this.Controls.Add(this.no_choice_warn);
             this.Controls.Add(this.too_much_warn);
             this.Controls.Add(this.doublefrog);
@@ -204,6 +224,7 @@
         private System.Windows.Forms.CheckBox doublefrog;
         private System.Windows.Forms.Label too_much_warn;
         private System.Windows.Forms.Label no_choice_warn;
+        private System.Windows.Forms.Button button_info;
     }
 }
 
