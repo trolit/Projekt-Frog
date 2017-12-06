@@ -101,12 +101,11 @@
             // help
             // 
             this.help.BackColor = System.Drawing.Color.Cyan;
-            this.help.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.help.Cursor = System.Windows.Forms.Cursors.No;
             this.help.Image = ((System.Drawing.Image)(resources.GetObject("help.Image")));
             this.help.Location = new System.Drawing.Point(420, 12);
             this.help.Name = "help";
-            this.help.Size = new System.Drawing.Size(410, 222);
+            this.help.Size = new System.Drawing.Size(408, 220);
             this.help.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.help.TabIndex = 5;
             this.help.TabStop = false;

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.fatigue = new System.Windows.Forms.ProgressBar();
@@ -49,6 +49,7 @@
             this.win_text = new System.Windows.Forms.Label();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.frog_bro = new System.Windows.Forms.PictureBox();
             this.escape_menu = new System.Windows.Forms.PictureBox();
             this.frog = new System.Windows.Forms.PictureBox();
             this.tree_1 = new System.Windows.Forms.PictureBox();
@@ -80,6 +81,7 @@
             this.police_car = new System.Windows.Forms.PictureBox();
             this.background_box = new System.Windows.Forms.PictureBox();
             this.screen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.frog_bro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.escape_menu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_1)).BeginInit();
@@ -172,6 +174,7 @@
             // screen
             // 
             this.screen.BackColor = System.Drawing.Color.Transparent;
+            this.screen.Controls.Add(this.frog_bro);
             this.screen.Controls.Add(this.escape_text2);
             this.screen.Controls.Add(this.escape_text1);
             this.screen.Controls.Add(this.escape_quit);
@@ -364,6 +367,21 @@
             this.timer4.Enabled = true;
             this.timer4.Interval = 70;
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
+            // 
+            // frog_bro
+            // 
+            this.frog_bro.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.frog_bro.BackColor = System.Drawing.Color.Transparent;
+            this.frog_bro.Image = global::p_frog.Properties.Resources.frog_bro_up_stand;
+            this.frog_bro.Location = new System.Drawing.Point(369, 431);
+            this.frog_bro.Name = "frog_bro";
+            this.frog_bro.Size = new System.Drawing.Size(30, 50);
+            this.frog_bro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.frog_bro.TabIndex = 50;
+            this.frog_bro.TabStop = false;
+            this.frog_bro.WaitOnLoad = true;
             // 
             // escape_menu
             // 
@@ -662,7 +680,7 @@
             this.background_box.TabIndex = 5;
             this.background_box.TabStop = false;
             // 
-            // Form2
+            // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -672,11 +690,12 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form2";
+            this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Projekt Frog";
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.frog_bro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.escape_menu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_1)).EndInit();
@@ -761,5 +780,6 @@
         private System.Windows.Forms.Button escape_quit;
         private System.Windows.Forms.Button escape_title;
         private System.Windows.Forms.Button escape_restart;
+        protected System.Windows.Forms.PictureBox frog_bro;
     }
 }

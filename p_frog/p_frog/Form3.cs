@@ -30,7 +30,7 @@ namespace p_frog
 
         bool can_move_right = true;             // do krzaków zmienne boolowskie
         bool can_move_left = true;
-        
+
         public Form3()
         {
             InitializeComponent();
@@ -273,7 +273,7 @@ namespace p_frog
         private void timer4_Tick(object sender, EventArgs e)
         {
             // zakomentuj ciało żeby zobaczyć jak płynnie poruszają się samochody
-            int tre1 = tree_1.Location.X;  
+            int tre1 = tree_1.Location.X;
             int tre2 = tree_2.Location.X;
             int tre3 = tree_3.Location.X;
             int tre4 = tree_4.Location.X;
@@ -517,7 +517,7 @@ namespace p_frog
                         timer2.Start();
                     }
                 }
-            } 
+            }
 
             // odzyskiwanie kondycji
             if (fatigue.Value <= 98)
@@ -574,6 +574,8 @@ namespace p_frog
         #region 2. Naprawia problem przezroczystości pictureboxów
         private void transparency_repair()
         {
+            frog_bro.Parent = background_box;
+            frog_bro.BackColor = Color.Transparent;
             frog.Parent = background_box;
             frog.BackColor = Color.Transparent;
             label1.Parent = background_box;
@@ -658,7 +660,7 @@ namespace p_frog
                 timer4.Stop();       // zatrzymujemy klody
             }
             else
-            { 
+            {
                 escape_text1.Visible = false;
                 escape_text2.Visible = false;
                 escape_restart.Visible = false;
@@ -666,7 +668,7 @@ namespace p_frog
                 escape_title.Visible = false;
                 escape_menu.Visible = false;
 
-                can_move = true;                                           
+                can_move = true;
             }
         }
 
@@ -691,6 +693,6 @@ namespace p_frog
             Form2 graj = new Form2();
             graj.Show();
         }
+        #endregion
     }
-    #endregion
 }
