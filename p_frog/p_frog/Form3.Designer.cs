@@ -83,6 +83,8 @@
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timer5 = new System.Windows.Forms.Timer(this.components);
             this.timer6 = new System.Windows.Forms.Timer(this.components);
+            this.frog_border = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frog_bro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.escape_menu)).BeginInit();
@@ -115,12 +117,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frog_border)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 1;
+            this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // timer2
@@ -131,7 +135,7 @@
             // fatigue
             // 
             this.fatigue.BackColor = System.Drawing.Color.Crimson;
-            this.fatigue.Location = new System.Drawing.Point(12, 24);
+            this.fatigue.Location = new System.Drawing.Point(7, 18);
             this.fatigue.Name = "fatigue";
             this.fatigue.Size = new System.Drawing.Size(72, 23);
             this.fatigue.TabIndex = 1;
@@ -167,6 +171,9 @@
             // 
             this.screen.BackColor = System.Drawing.Color.Transparent;
             this.screen.Controls.Add(this.fatigue_bro);
+            this.screen.Controls.Add(this.pictureBox1);
+            this.screen.Controls.Add(this.fatigue);
+            this.screen.Controls.Add(this.frog_border);
             this.screen.Controls.Add(this.frog_bro);
             this.screen.Controls.Add(this.escape_text2);
             this.screen.Controls.Add(this.escape_text1);
@@ -210,7 +217,6 @@
             this.screen.Controls.Add(this.warning2);
             this.screen.Controls.Add(this.warning1);
             this.screen.Controls.Add(this.label1);
-            this.screen.Controls.Add(this.fatigue);
             this.screen.Controls.Add(this.background_box);
             this.screen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.screen.ForeColor = System.Drawing.Color.DarkBlue;
@@ -222,7 +228,7 @@
             // fatigue_bro
             // 
             this.fatigue_bro.BackColor = System.Drawing.Color.Crimson;
-            this.fatigue_bro.Location = new System.Drawing.Point(90, 24);
+            this.fatigue_bro.Location = new System.Drawing.Point(90, 18);
             this.fatigue_bro.Name = "fatigue_bro";
             this.fatigue_bro.Size = new System.Drawing.Size(72, 23);
             this.fatigue_bro.TabIndex = 51;
@@ -665,7 +671,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(25, 1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 12);
             this.label1.TabIndex = 2;
@@ -702,8 +708,26 @@
             // timer6
             // 
             this.timer6.Enabled = true;
-            this.timer6.Interval = 1;
+            this.timer6.Interval = 10;
             this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
+            // 
+            // frog_border
+            // 
+            this.frog_border.BackColor = System.Drawing.Color.Chartreuse;
+            this.frog_border.Location = new System.Drawing.Point(5, 12);
+            this.frog_border.Name = "frog_border";
+            this.frog_border.Size = new System.Drawing.Size(77, 35);
+            this.frog_border.TabIndex = 53;
+            this.frog_border.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Purple;
+            this.pictureBox1.Location = new System.Drawing.Point(88, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(77, 35);
+            this.pictureBox1.TabIndex = 54;
+            this.pictureBox1.TabStop = false;
             // 
             // Form3
             // 
@@ -751,6 +775,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frog_border)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -809,5 +835,7 @@
         protected System.Windows.Forms.Label label1;
         protected System.Windows.Forms.Timer timer5;
         protected System.Windows.Forms.Timer timer6;
+        private System.Windows.Forms.PictureBox frog_border;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
