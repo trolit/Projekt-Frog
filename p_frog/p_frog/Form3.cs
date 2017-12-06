@@ -15,44 +15,43 @@ namespace p_frog
 
     public partial class Form3 : Form, IFrog_Collisions
     {
-        private int count_timer1 = 0;           // licznik czasu dla timer1 (frog)
-        private int count_timer6 = 0;           // licznik czasu dla timer6 (frog_bro)
-        private int count_timer2 = 0;           // licznik czasu dla timer2 (regeneracja kondycji froga)
-        private int count_timer5 = 0;           // licznik czasu dla timer5 (regeneracja kondycji bro_froga)
-        int life = 3;                           // liczba żyć froga
+        // zmienne wspólne
+        int life = 3;                           // liczba żyć frogów
+        bool hide_out_1 = false;                // wyjście pierwsze, drugie, trzecie boolowskie
+        bool hide_out_2 = false;
+        bool hide_out_3 = false;
 
+        // zmienne froga(zielona postac)
+        private int count_timer1 = 0;           // licznik czasu dla timer1 (animacje froga)
+        private int count_timer2 = 0;           // licznik czasu dla timer2 (regeneracja kondycji froga)
         bool right;                             // zmienne boolowskie do kontrolowania animacji         
         bool left;
         bool up;
         bool down;
-
-        bool right_bro;
-        bool left_bro;
-        bool up_bro;
-        bool down_bro;
-
-        bool is_on_tree_bro = false;
-
-        bool can_move = true;                   // flaga sprawdzajaca czy frog moze chodzic, na start ustawiamy na true!
-        bool can_move_bro = true;               // flaga sprawdzajaca czy frog_bro moze chodzic
-        bool hide_out_1 = false;                // wyście pierwsze, drugie, trzecie boolowskie
-        bool hide_out_2 = false;
-        bool hide_out_3 = false;
         bool is_on_tree = false;                // flaga sprawdzajaca czy frog jest na 'kłodzie'
-
+        bool can_move = true;                   // flaga sprawdzajaca czy frog moze chodzic, na start ustawiamy na true!
         bool can_move_right = true;             // do krzaków zmienne boolowskie
         bool can_move_left = true;
 
+        // zmienne bro froga(fioletowa postac)
+        private int count_timer5 = 0;           // licznik czasu dla timer5 (regeneracja kondycji bro froga)
+        private int count_timer6 = 0;           // licznik czasu dla timer6 (animacje bro froga)
+        bool right_bro;                         // zmienne boolowskie do kontrolowania animacji
+        bool left_bro;
+        bool up_bro;
+        bool down_bro;
+        bool is_on_tree_bro = false;
+        bool can_move_bro = true;               // flaga sprawdzajaca czy frog_bro moze chodzic
         bool can_move_right_bro = true;
         bool can_move_left_bro = true;
 
         public Form3()
         {
             InitializeComponent();
-            KeyDown += new KeyEventHandler(Frog_Movement);       // wywołanie ruchu froga
-            KeyDown += new KeyEventHandler(Frogbro_Movement);
+            KeyDown += new KeyEventHandler(Frog_Movement);       // fuch froga
+            KeyDown += new KeyEventHandler(Frogbro_Movement);    // ruch bro froga
             KeyDown += new KeyEventHandler(Escape_event_open);   // aktywacja metody escape event
-            transparency_repair();                               // naprawa przezroczystości                     
+            transparency_repair();                               // naprawa przezroczystości pictureboxów                   
         }
 
         // KOLIZJE FROGA Z OTOCZENIEM
@@ -128,6 +127,7 @@ namespace p_frog
                 splash.Play();
                 Frog_Life();
                 timer3.Stop();
+                timer4.Stop();
             }
         }
         #endregion
@@ -205,6 +205,7 @@ namespace p_frog
                 splash.Play();
                 Frog_bro_Life();
                 timer3.Stop();
+                timer4.Stop();
             }
         }
         #endregion
@@ -370,6 +371,7 @@ namespace p_frog
 
             timer4.Start();
             Check_if_frog_on_tree();
+            Check_if_frog_bro_on_tree();
             Frog_plant_Collision();
             Check_tree_move();
             Frog_vehicle_Collision();
@@ -378,7 +380,6 @@ namespace p_frog
             Frog_bro_vehicle_Collision();
             Frog_bro_plant_Collision();
             Frog_bro_water_Collision();
-            Check_if_frog_bro_on_tree();
             Confirm_bro_hideout();
         }
         #endregion
@@ -685,7 +686,6 @@ namespace p_frog
             Frog_screen_Collision();
         }
         #endregion
-
         #region Frog Bro - Poruszanie klawiszologią
         void Frogbro_Movement(object sender, KeyEventArgs e)
         {
@@ -805,7 +805,6 @@ namespace p_frog
             Frog_screen_Collision();
         }
         #endregion
-
         #region 3. Frog - Zadanie do wykonania
         private void Confirm_hideout()
         {
