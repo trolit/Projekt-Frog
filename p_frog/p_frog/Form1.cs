@@ -80,5 +80,18 @@ namespace p_frog
             help.Visible = false;
         }
         #endregion
+        #region 6. INFOBOX
+        private void show_on(object sender, EventArgs e)
+        {
+            help_key.Visible = true;
+            SoundPlayer pomoc = new SoundPlayer(Properties.Resources.frog_effect_4);
+            pomoc.Play();
+        }
+
+        private void show_off(object sender, EventArgs e)
+        {
+            help_key.Visible = false;
+        }
+        #endregion
     }
 }
