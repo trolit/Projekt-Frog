@@ -53,21 +53,21 @@ namespace p_frog
             Application.Exit();
         }
         #endregion
-        #region 3. DZWIEK DLA WYJSCIA
+        #region 3. ODTWÓRZ DZWIEK DLA WYJSCIA
         private void play_sound_wyjdz(object sender, EventArgs e)
         {
             SoundPlayer wyjdz = new SoundPlayer(Properties.Resources.frog_effect_2);
             wyjdz.Play();
         }
         #endregion
-        #region 4. DZWIEK DLA GRAJ
+        #region 4. ODTWÓRZ DZWIEK DLA GRAJ
         private void play_sound_graj(object sender, EventArgs e)
         {
             SoundPlayer graj = new SoundPlayer(Properties.Resources.frog_effect_1);
             graj.Play();
         }
         #endregion
-        #region 5. INSTRUKCJA
+        #region 5. INSTRUKCJA(mechanika gry)
         private void see_help_on(object sender, EventArgs e)
         {
             help.Visible = true;
@@ -80,7 +80,7 @@ namespace p_frog
             help.Visible = false;
         }
         #endregion
-        #region 6. INFOBOX
+        #region 6. INFOBOX(klawiszologia)
         private void show_on(object sender, EventArgs e)
         {
             help_key.Visible = true;

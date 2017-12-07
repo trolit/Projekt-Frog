@@ -54,7 +54,7 @@ namespace p_frog
         }
 
         // KOLIZJE FROGA Z OTOCZENIEM
-        #region 1. Frog - Screen Collision
+        #region 1. Frog/BroFrog - Screen Collision
         public void Frog_screen_Collision()
         {
             if (frog.Location.Y < -20 || frog.Location.Y > 450)
@@ -151,7 +151,7 @@ namespace p_frog
         }
         #endregion
 
-        // KOLIZJE BRO FROGA
+        // KOLIZJE BRO FROGA Z OTOCZENIEM
         #region 1. Frog Bro - Vehicle Collision
         public void Frog_bro_vehicle_Collision()
         {
