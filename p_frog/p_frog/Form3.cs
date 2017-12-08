@@ -883,7 +883,7 @@ namespace p_frog
             {
                 fatigue.Value += 2;
             }
-
+            
             frog.Location = new Point(x, y);
             Frog_screen_Collision();
         }

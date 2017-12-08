@@ -17,7 +17,6 @@ namespace p_frog
         {
             InitializeComponent();
         }
-
         #region 1. PRZYCISK GRAJ
         private void button1_Click(object sender, EventArgs e)
         {

@@ -1,0 +1,12 @@
+D:\Git\bin\Projekt-Frog\p_frog\p_frog\obj\Debug\p_frog.csprojResolveAssemblyReference.cache
+D:\Git\bin\Projekt-Frog\p_frog\p_frog\obj\Debug\p_frog.Form1.resources
+D:\Git\bin\Projekt-Frog\p_frog\p_frog\obj\Debug\p_frog.csproj.GenerateResource.Cache
+D:\Git\bin\Projekt-Frog\p_frog\p_frog\bin\Debug\p_frog.exe.config
+D:\Git\bin\Projekt-Frog\p_frog\p_frog\bin\Debug\p_frog.exe
+D:\Git\bin\Projekt-Frog\p_frog\p_frog\bin\Debug\p_frog.pdb
+D:\Git\bin\Projekt-Frog\p_frog\p_frog\obj\Debug\p_frog.Properties.Resources.resources
+D:\Git\bin\Projekt-Frog\p_frog\p_frog\obj\Debug\p_frog.csproj.CoreCompileInputs.cache
+D:\Git\bin\Projekt-Frog\p_frog\p_frog\obj\Debug\p_frog.exe
+D:\Git\bin\Projekt-Frog\p_frog\p_frog\obj\Debug\p_frog.pdb
+D:\Git\bin\Projekt-Frog\p_frog\p_frog\obj\Debug\p_frog.Form2.resources
+D:\Git\bin\Projekt-Frog\p_frog\p_frog\obj\Debug\p_frog.Form3.resources
