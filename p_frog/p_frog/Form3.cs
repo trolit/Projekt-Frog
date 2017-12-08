@@ -1049,7 +1049,7 @@ namespace p_frog
         private void escape_restart_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form2 graj = new Form2();
+            Form3 graj = new Form3();
             graj.Show();
         }
         #endregion
