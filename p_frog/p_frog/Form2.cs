@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace p_frog
 {
     interface IFrog_Collisions
@@ -23,6 +22,7 @@ namespace p_frog
 
     public partial class Form2 : Form, IFrog_Collisions
     {
+        #region Zmienne froga
         private int count_timer1 = 0;           // licznik czasu dla timer1
         private int count_timer2 = 0;           // licznik czasu dla timer2
         int life = 3;                           // liczba żyć froga
@@ -38,11 +38,12 @@ namespace p_frog
 
         bool can_move_right = true;             // do krzaków zmienne boolowskie
         bool can_move_left = true;
-        
+        #endregion
+
         public Form2()
         {
             InitializeComponent();
-            KeyDown += new KeyEventHandler(Frog_Movement);       // wywołanie ruchu zaby
+            KeyDown += new KeyEventHandler(Frog_Movement);       // wywołanie ruchu żaby
             KeyDown += new KeyEventHandler(Escape_event_open);   // aktywacja metody escape event
             transparency_repair();                               // naprawa przezroczystości                     
         }
@@ -136,18 +137,18 @@ namespace p_frog
         }
         #endregion
 
-        // ZAKONCZENIA GIER 
+        // ZAKOŃCZENIA GIER 
         #region 1. Gdy przegrana
         private void End_Game()
         {
-            timer1.Stop();
+            timer1.Stop();     // zatrzymanie wszystkiego
             timer2.Stop();
             timer3.Stop();
             timer4.Stop();
             can_move = false;
 
-            SoundPlayer frog_lose = new SoundPlayer(Properties.Resources.lose_sound_fxd);
-            frog_lose.Play();
+            SoundPlayer frog_lose = new SoundPlayer(Properties.Resources.lose_sound_fxd);   
+            frog_lose.Play();  // odtwarza dźwięk
 
             frog_coffin.Visible = true;
             frog_dead.Visible = true;
@@ -177,8 +178,18 @@ namespace p_frog
         }
         #endregion
 
-        // CZASOMIERZE
+        // CZASOMIERZE 
         #region 1. Timer1(odpowiedzialny za wywolanie odpowiednich obrazkow froga w danym momencie ruchu)
+
+        /*
+         * Testy Timera1:
+         * gdy wartość: 1000 - animacje za długo
+         * gdy wartość: 1    - nie widać animacji
+         * gdy wartość: 700  - animacje się gubią jeszcze?
+         * gdy wartość: 600  - ....
+         * gdy wartość: 450  - chyba git
+        */
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             count_timer1++;
@@ -318,7 +329,7 @@ namespace p_frog
         }
         #endregion
 
-        // KONTROLOWANIE LOKALIZACJI PICTUREBOXOW(zapętlanie)
+        // KONTROLOWANIE LOKALIZACJI PICTUREBOXOW(zapętlanie ruchu)
         #region 1. Sprawdź lokalizacje pojazdów
         private void Check_police_car()
         {
@@ -394,7 +405,7 @@ namespace p_frog
         }
         #endregion
 
-        // KONTROLOWANIE ZADANIA, LICZBY ZYC, RUCHU FROGA
+        // KONTROLOWANIE POSTĘPU ZADANIA, LICZBY ŻYĆ, RUCHU FROGA
         #region 1. Frog - Obecny stan żyć
         private void Frog_Life()
         {
@@ -572,7 +583,7 @@ namespace p_frog
         #endregion
 
         // POZOSTAŁE METODY WE FROGU
-        #region 1. Uruchamia dźwiek skoku przy ruchu froga
+        #region 1. Dźwięk skoku przy ruchu froga
         private void Wywolaj_dzwiek_skoku()
         {
             SoundPlayer skok = new SoundPlayer(Properties.Resources.frog_jump);

@@ -124,7 +124,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 10;
+            this.timer1.Interval = 450;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // timer2
@@ -567,9 +567,9 @@
             // bckg_lose
             // 
             this.bckg_lose.BackColor = System.Drawing.Color.Wheat;
-            this.bckg_lose.Location = new System.Drawing.Point(0, 172);
+            this.bckg_lose.Location = new System.Drawing.Point(0, 0);
             this.bckg_lose.Name = "bckg_lose";
-            this.bckg_lose.Size = new System.Drawing.Size(845, 226);
+            this.bckg_lose.Size = new System.Drawing.Size(845, 481);
             this.bckg_lose.TabIndex = 34;
             this.bckg_lose.TabStop = false;
             this.bckg_lose.Visible = false;
@@ -726,7 +726,7 @@
             // timer6
             // 
             this.timer6.Enabled = true;
-            this.timer6.Interval = 10;
+            this.timer6.Interval = 450;
             this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
             // 
             // Form3

@@ -11,15 +11,15 @@ using System.Windows.Forms;
 
 namespace p_frog
 {
-
     public partial class Form3 : Form, IFrog_Collisions
     {
-        // zmienne wspólne
+        #region 1. Zmienne wspólne
         int life = 3;                           // liczba żyć frogów
         bool hide_out_1 = false;                // wyjście pierwsze, drugie, trzecie boolowskie
         bool hide_out_2 = false;
         bool hide_out_3 = false;
-
+        #endregion
+        #region 2. Zmienne froga(zielona postać)
         // zmienne froga(zielona postać)
         private int count_timer1 = 0;           // licznik czasu dla timer1 (animacje froga)
         private int count_timer2 = 0;           // licznik czasu dla timer2 (regeneracja kondycji froga)
@@ -31,8 +31,8 @@ namespace p_frog
         bool can_move = true;                   // flaga sprawdzajaca czy frog moze chodzic, na start ustawiamy na true!
         bool can_move_right = true;             // do krzaków zmienne boolowskie
         bool can_move_left = true;
-
-        // zmienne bro froga(fioletowa postać)
+        #endregion
+        #region 3. Zmienne brofroga(fioletowa postać)
         private int count_timer5 = 0;           // licznik czasu dla timer5 (regeneracja kondycji bro froga)
         private int count_timer6 = 0;           // licznik czasu dla timer6 (animacje bro froga)
         bool right_bro;                         // zmienne boolowskie do kontrolowania animacji
@@ -43,17 +43,18 @@ namespace p_frog
         bool can_move_bro = true;               // flaga sprawdzajaca czy frog_bro moze chodzic
         bool can_move_right_bro = true;         // zmienne boolowskie krzaków
         bool can_move_left_bro = true;
+        #endregion
 
         public Form3()
         {
             InitializeComponent();
             KeyDown += new KeyEventHandler(Frog_Movement);       // ruch froga
             KeyDown += new KeyEventHandler(Frogbro_Movement);    // ruch bro froga
-            KeyDown += new KeyEventHandler(Escape_event_open);   // aktywacja metody escape event
+            KeyDown += new KeyEventHandler(Escape_event_open);   // menu wyjścia
             transparency_repair();                               // naprawa przezroczystości pictureboxów                   
         }
 
-        // KOLIZJE FROGA Z OTOCZENIEM
+        // KOLIZJE, ZESTAW FROGA
         #region 1. Frog/BroFrog - Screen Collision
         public void Frog_screen_Collision()
         {
@@ -151,7 +152,7 @@ namespace p_frog
         }
         #endregion
 
-        // KOLIZJE BRO FROGA Z OTOCZENIEM
+        // KOLIZJE, ZESTAW BRO FROGA
         #region 1. Frog Bro - Vehicle Collision
         public void Frog_bro_vehicle_Collision()
         {
@@ -229,7 +230,7 @@ namespace p_frog
         }
         #endregion
 
-        // ZAKONCZENIA GIER 
+        // ZAKOŃCZENIA GIER 
         #region 1. Gdy przegrana
         private void End_Game()
         {
@@ -497,7 +498,7 @@ namespace p_frog
         #region 1. Sprawdź lokalizacje pojazdów
         private void Check_police_car()
         {
-            if (police_car.Location.X < -107)
+            if (police_car.Location.X < -107)               // jeśli samochód przejdzie poniżej -107, wraca na początek
             {
                 police_car.Location = new Point(823, 220);
             }
@@ -569,8 +570,8 @@ namespace p_frog
         }
         #endregion
 
-        // ZADANIA, STAN ŻYĆ, PORUSZANIE
-        #region 1. Frog Bro - Stan żyć
+        // ZADANIE DO WYKONANIA, STAN ŻYĆ ŻAB, PORUSZANIE ŻAB
+        #region 1.0 Frog Bro - Stan żyć
         private void Frog_bro_Life()
         {
             if (life == 3)
@@ -614,7 +615,7 @@ namespace p_frog
                         right_bro = true;
                         frog_bro.Image = Image.FromFile("frog_bro_right.gif");
                         s += 15;
-                        Wywolaj_dzwiek_skoku();
+                        Wywolaj_dzwiek_skoku_bro();
                         fatigue_bro.Value -= 4;
                     }
                     else
@@ -638,7 +639,7 @@ namespace p_frog
                         left_bro = true;
                         frog_bro.Image = Image.FromFile("frog_bro_left.gif");
                         s -= 15;
-                        Wywolaj_dzwiek_skoku();
+                        Wywolaj_dzwiek_skoku_bro();
                         fatigue_bro.Value -= 4;
                     }
                     else
@@ -664,7 +665,7 @@ namespace p_frog
                         up_bro = true;
                         frog_bro.Image = Image.FromFile("frog_bro_up.gif");
                         o -= 15;
-                        Wywolaj_dzwiek_skoku();
+                        Wywolaj_dzwiek_skoku_bro();
                         fatigue_bro.Value -= 5;
                     }
                     else
@@ -689,7 +690,7 @@ namespace p_frog
                         down_bro = true;
                         frog_bro.Image = Image.FromFile("frog_bro_down.gif");
                         o += 15;
-                        Wywolaj_dzwiek_skoku();
+                        Wywolaj_dzwiek_skoku_bro();
                         fatigue_bro.Value -= 5;
                     }
                     else
@@ -746,7 +747,7 @@ namespace p_frog
         }
         #endregion
 
-        #region 2. Frog - Stan żyć
+        #region 2.0 Frog - Stan żyć
         private void Frog_Life()
         {
             if (life == 3)
@@ -922,19 +923,19 @@ namespace p_frog
         }
         #endregion
 
-        // POZOSTAŁE METODY WE FROGU
-        #region 1. Uruchamia dźwiek skoku przy ruchu froga
+        // POZOSTAŁE UŻYTECZNE RZECZY DO FROGA
+        #region 1. Dźwięk skoku przy ruchu froga
         private void Wywolaj_dzwiek_skoku()
         {
-            SoundPlayer skok = new SoundPlayer(Properties.Resources.frog_jump);
+            SoundPlayer skok = new SoundPlayer(Properties.Resources.frog_jump); // stworzenie obiektu skok
             skok.Play();
         }
         #endregion
         #region 2. Naprawia problem przezroczystości pictureboxów
         private void transparency_repair()
         {
-            frog_bro.Parent = background_box;
-            frog_bro.BackColor = Color.Transparent;
+            frog_bro.Parent = background_box;                // rodzic froga to tło
+            frog_bro.BackColor = Color.Transparent;          // tło froga przezroczyste
             frog.Parent = background_box;
             frog.BackColor = Color.Transparent;
             label1.Parent = background_box;
@@ -987,26 +988,26 @@ namespace p_frog
         }
 
         #endregion
-        #region 3. Powrót do menu(przycisk)
+        #region 3. Przycisk powrotu do menu
         private void win_yes_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Form1 main_menu = new Form1();
-            main_menu.Show();
+            this.Close();                        // zamykamy okno
+            Form1 main_menu = new Form1();       // obiekt menu główne
+            main_menu.Show();                    // pokazujemy główne menu
         }
         #endregion
-        #region 4. Wyjscie z gry(przycisk)
+        #region 4. Przycisk wyjścia z gry
         private void win_no_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Exit();     // kończy działanie programu(włącznie z usunięciem z procesu)
         }
         #endregion
         #region 5. Menu pod klawiszem funkcyjnym(escape)
         private void Escape_event_open(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Escape)
+            if (e.KeyCode == Keys.Escape)       
             {
-                escape_text1.Visible = true;
+                escape_text1.Visible = true;        // pokazanie odpowiednich okienek
                 escape_text2.Visible = true;
                 escape_restart.Visible = true;
                 escape_quit.Visible = true;
@@ -1014,20 +1015,20 @@ namespace p_frog
                 escape_menu.Visible = true;
                 escape_text1.BringToFront();
                 escape_text2.BringToFront();
-                can_move = false;    // stopujemy froga                                        
-                timer3.Stop();       // zatrzymujemy pojazdy
-                timer4.Stop();       // zatrzymujemy klody
+                can_move = false;                   // stopujemy froga                                        
+                timer3.Stop();                      // zatrzymujemy pojazdy
+                timer4.Stop();                      // zatrzymujemy klody
             }
             else
             {
-                escape_text1.Visible = false;
+                escape_text1.Visible = false;       // ukrycie okienek 
                 escape_text2.Visible = false;
                 escape_restart.Visible = false;
                 escape_quit.Visible = false;
                 escape_title.Visible = false;
                 escape_menu.Visible = false;
 
-                can_move = true;
+                can_move = true;                    // frog może znowu się ruszać, pojazdy i kłody znowu się poruszają...
             }
         }
 
@@ -1051,6 +1052,13 @@ namespace p_frog
             this.Close();
             Form3 graj = new Form3();
             graj.Show();
+        }
+        #endregion
+        #region 6. Dźwięk skoku przy ruchu brofroga
+        private void Wywolaj_dzwiek_skoku_bro()
+        {
+            SoundPlayer skok_br = new SoundPlayer(Properties.Resources.frogbro_jump);       // stworzenie obiektu skok_br
+            skok_br.Play();
         }
         #endregion
     }
