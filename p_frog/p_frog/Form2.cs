@@ -187,7 +187,7 @@ namespace p_frog
          * gdy wartość: 1    - nie widać animacji
          * gdy wartość: 700  - animacje się gubią jeszcze?
          * gdy wartość: 600  - ....
-         * gdy wartość: 450  - chyba git
+         * gdy wartość: 450  - chyba git..
         */
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -198,14 +198,13 @@ namespace p_frog
             {
                 if (down == true)
                 {
-                    frog.Image = Image.FromFile("frog_down_stand.png");
-                    count_timer1 = 0;
-                    down = false;   // resetowanie kontrolek
+                    frog.Image = Image.FromFile("frog_down_stand.png");     
+                    count_timer1 = 0;                                       // wyzerowanie licznika
+                    down = false;                                           // resetowanie kontrolek
                     up = false;
                     left = false;
                     right = false;
                 }
-
                 else if (up == true)
                 {
                     frog.Image = Image.FromFile("frog_up_stand.png");
@@ -215,7 +214,6 @@ namespace p_frog
                     left = false;
                     right = false;
                 }
-
                 else if (left == true)
                 {
                     frog.Image = Image.FromFile("frog_left_stand.png");
@@ -225,7 +223,6 @@ namespace p_frog
                     left = false;
                     right = false;
                 }
-
                 else if (right == true)
                 {
                     frog.Image = Image.FromFile("frog_right_stand.png");
@@ -235,7 +232,6 @@ namespace p_frog
                     left = false;
                     right = false;
                 }
-
                 else
                 {
                     count_timer1 = 0;   // rozwiazanie problemu ciaglego chodzenia froga
@@ -248,14 +244,14 @@ namespace p_frog
         {
             count_timer2++;
 
-            if (count_timer2 == 9)
+            if (count_timer2 == 10)
             {
-                fatigue.Value = 100;
-                count_timer2 = 0;
-                can_move = true;
+                fatigue.Value = 100;           // odzyskanie energii
+                count_timer2 = 0;              // zresetowanie licznika
+                can_move = true;               // mogę chodzić
                 warning1.Visible = false;
                 warning2.Visible = false;
-                timer2.Stop();
+                timer2.Stop();                 // zatrzymanie licznika
             }
 
         }
@@ -279,7 +275,7 @@ namespace p_frog
             truck_car.Location = new Point(t, 375);
             Check_truck_car();
 
-            timer4.Start();
+            timer4.Start();                             // rozpoczecie ruchu kłód
             Check_if_frog_on_tree();
             Frog_plant_Collision();
             Check_tree_move();
@@ -304,7 +300,7 @@ namespace p_frog
             int tre13 = tree_13.Location.X;
             int tre14 = tree_14.Location.X;
 
-            tre1 -= 3;
+            tre1 -= 3;                      // prędkość przesuwania kłód
             tre2 -= 3;
             tre3 -= 3;
             tre4 -= 3;
@@ -433,21 +429,30 @@ namespace p_frog
             }
         }
         #endregion
+        /*
+         * Problem do rozwiązania #1:
+         * gdy Frog się zmęczy to nadal chodzi???
+         * wynikło gdy stworzyłem tryb dla 2 graczy... :( 
+         * 
+         * Sposoby przetestowane i bez rezultatów:
+         * - rysowanie nowego punktu obiektu tylko gdy wykona się ruch(czyli if fatigue.. itd..)
+         * - gdy can_move jest na false to else can_move nadal false
+        */
         #region 2. Frog - Poruszanie klawiszologią
         void Frog_Movement(object sender, KeyEventArgs e)
         {
             int x = frog.Location.X;
             int y = frog.Location.Y;
-            timer3.Start();
+            timer3.Start();                                             // samochody rozpoczynają jazdę
 
             if (e.KeyCode == Keys.Right)
             {
                 if (can_move == true && can_move_right == true)
                 {
-                    if (fatigue.Value >= 4)
+                    if (fatigue.Value >= 4 && can_move == true)
                     {
-                        timer1.Start();
                         right = true;
+                        timer1.Start();                                 // czasomierz animacji
                         frog.Image = Image.FromFile("frog_right.gif");
                         x += 15;
                         Wywolaj_dzwiek_skoku();
@@ -467,11 +472,10 @@ namespace p_frog
             {
                 if (can_move == true && can_move_left == true)
                 {
-                    timer1.Start();
-
-                    if (fatigue.Value >= 4)
+                    if (fatigue.Value >= 4 && can_move == true)
                     {
                         left = true;
+                        timer1.Start();
                         frog.Image = Image.FromFile("frog_left.gif");
                         x -= 15;
                         Wywolaj_dzwiek_skoku();
@@ -485,19 +489,17 @@ namespace p_frog
                         timer2.Start();
                     }
                 }
-
             }
 
             else if (e.KeyCode == Keys.Up)
             {
                 if (can_move == true)
                 {
-                    timer1.Start();
-
                     // jesli zmeczenie jeszcze wieksze rowne 5 to moge isc do gory
-                    if (fatigue.Value >= 5)
+                    if (fatigue.Value >= 5 && can_move == true)
                     {
                         up = true;
+                        timer1.Start();
                         frog.Image = Image.FromFile("frog_up.gif");
                         y -= 15;
                         Wywolaj_dzwiek_skoku();
@@ -511,18 +513,16 @@ namespace p_frog
                         timer2.Start();
                     }
                 }
-
             }
 
             else if (e.KeyCode == Keys.Down)
             {
                 if (can_move == true)
                 {
-                    timer1.Start();
-
-                    if (fatigue.Value >= 5)
+                    if (fatigue.Value >= 5 && can_move == true)
                     {
-                        down = true;
+                        down = true;        // flaga na true
+                        timer1.Start();
                         frog.Image = Image.FromFile("frog_down.gif");
                         y += 15;
                         Wywolaj_dzwiek_skoku();
