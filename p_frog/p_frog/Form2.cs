@@ -246,7 +246,7 @@ namespace p_frog
 
             if (count_timer2 == 10)
             {
-                fatigue.Value = 100;           // odzyskanie energii
+                fatigue_solo.Value = 100;           // odzyskanie energii
                 count_timer2 = 0;              // zresetowanie licznika
                 can_move = true;               // mogę chodzić
                 warning1.Visible = false;
@@ -429,15 +429,27 @@ namespace p_frog
             }
         }
         #endregion
-        /*
+
+        #region Problem #1 (rozwiązany)
+        /* * * * * * * * * * * * * * * * * * * * * * * * * * * * 
          * Problem do rozwiązania #1:
          * gdy Frog się zmęczy to nadal chodzi???
-         * wynikło gdy stworzyłem tryb dla 2 graczy... :( 
-         * 
+         * wynikło gdy dołożyłem tryb dla 2 graczy... :( 
+         * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
          * Sposoby przetestowane i bez rezultatów:
          * - rysowanie nowego punktu obiektu tylko gdy wykona się ruch(czyli if fatigue.. itd..)
          * - gdy can_move jest na false to else can_move nadal false
+         * - progress bary na private
+         * - zmiana nazwy progress bara
+         * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+         * Problem odnaleziony:
+         *  metoda, ktora przy wcisnieciu klawisza escape wyswietla menu buguje froga!
+         * Rozwiazanie:
+         *  menu funkcyjne nie moze byc wylaczane dowolnym klawiszem... (przynajmniej nie tymi ktorymi porusza sie frog)
+         *  
         */
+        #endregion
+
         #region 2. Frog - Poruszanie klawiszologią
         void Frog_Movement(object sender, KeyEventArgs e)
         {
@@ -449,14 +461,14 @@ namespace p_frog
             {
                 if (can_move == true && can_move_right == true)
                 {
-                    if (fatigue.Value >= 4 && can_move == true)
+                    if (fatigue_solo.Value >= 4 && can_move == true)
                     {
                         right = true;
                         timer1.Start();                                 // czasomierz animacji
                         frog.Image = Image.FromFile("frog_right.gif");
                         x += 15;
                         Wywolaj_dzwiek_skoku();
-                        fatigue.Value -= 4;
+                        fatigue_solo.Value -= 4;
                     }
                     else
                     {
@@ -472,14 +484,14 @@ namespace p_frog
             {
                 if (can_move == true && can_move_left == true)
                 {
-                    if (fatigue.Value >= 4 && can_move == true)
+                    if (fatigue_solo.Value >= 4 && can_move == true)
                     {
                         left = true;
                         timer1.Start();
                         frog.Image = Image.FromFile("frog_left.gif");
                         x -= 15;
                         Wywolaj_dzwiek_skoku();
-                        fatigue.Value -= 4;
+                        fatigue_solo.Value -= 4;
                     }
                     else
                     {
@@ -496,14 +508,14 @@ namespace p_frog
                 if (can_move == true)
                 {
                     // jesli zmeczenie jeszcze wieksze rowne 5 to moge isc do gory
-                    if (fatigue.Value >= 5 && can_move == true)
+                    if (fatigue_solo.Value >= 5 && can_move == true)
                     {
                         up = true;
                         timer1.Start();
                         frog.Image = Image.FromFile("frog_up.gif");
                         y -= 15;
                         Wywolaj_dzwiek_skoku();
-                        fatigue.Value -= 5;
+                        fatigue_solo.Value -= 5;
                     }
                     else
                     {
@@ -519,14 +531,14 @@ namespace p_frog
             {
                 if (can_move == true)
                 {
-                    if (fatigue.Value >= 5 && can_move == true)
+                    if (fatigue_solo.Value >= 5 && can_move == true)
                     {
                         down = true;        // flaga na true
                         timer1.Start();
                         frog.Image = Image.FromFile("frog_down.gif");
                         y += 15;
                         Wywolaj_dzwiek_skoku();
-                        fatigue.Value -= 5;
+                        fatigue_solo.Value -= 5;
                     }
                     else
                     {
@@ -539,9 +551,9 @@ namespace p_frog
             } 
 
             // odzyskiwanie kondycji
-            if (fatigue.Value <= 98)
+            if (fatigue_solo.Value <= 98)
             {
-                fatigue.Value += 2;
+                fatigue_solo.Value += 2;
             }
 
             frog.Location = new Point(x, y);
@@ -670,13 +682,18 @@ namespace p_frog
                 escape_quit.Visible = true;
                 escape_title.Visible = true;
                 escape_menu.Visible = true;
+                escape_menu.BringToFront();     // dzieki temu nie widac info o zmeczeniu jesli frog sie zmeczy..
                 escape_text1.BringToFront();
                 escape_text2.BringToFront();
-                can_move = false;    // stopujemy froga                                        
+                escape_restart.BringToFront();
+                escape_quit.BringToFront();
+                escape_title.BringToFront();
+                can_move = false;    // stopujemy froga      
+                timer2.Stop();       // zatrzymujemy licznik kondycji
                 timer3.Stop();       // zatrzymujemy pojazdy
                 timer4.Stop();       // zatrzymujemy klody
             }
-            else
+            else if(e.KeyCode == Keys.Space)
             { 
                 escape_text1.Visible = false;
                 escape_text2.Visible = false;

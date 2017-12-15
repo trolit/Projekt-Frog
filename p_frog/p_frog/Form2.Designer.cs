@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.fatigue = new System.Windows.Forms.ProgressBar();
+            this.fatigue_solo = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
             this.warning1 = new System.Windows.Forms.Label();
             this.warning2 = new System.Windows.Forms.Label();
@@ -123,14 +123,14 @@
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // fatigue
+            // fatigue_solo
             // 
-            this.fatigue.BackColor = System.Drawing.Color.Crimson;
-            this.fatigue.Location = new System.Drawing.Point(12, 24);
-            this.fatigue.Name = "fatigue";
-            this.fatigue.Size = new System.Drawing.Size(136, 23);
-            this.fatigue.TabIndex = 1;
-            this.fatigue.Value = 100;
+            this.fatigue_solo.BackColor = System.Drawing.Color.Crimson;
+            this.fatigue_solo.Location = new System.Drawing.Point(12, 24);
+            this.fatigue_solo.Name = "fatigue_solo";
+            this.fatigue_solo.Size = new System.Drawing.Size(136, 23);
+            this.fatigue_solo.TabIndex = 1;
+            this.fatigue_solo.Value = 100;
             // 
             // label1
             // 
@@ -214,7 +214,7 @@
             this.screen.Controls.Add(this.warning2);
             this.screen.Controls.Add(this.warning1);
             this.screen.Controls.Add(this.label1);
-            this.screen.Controls.Add(this.fatigue);
+            this.screen.Controls.Add(this.fatigue_solo);
             this.screen.Controls.Add(this.background_box);
             this.screen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.screen.ForeColor = System.Drawing.Color.DarkBlue;
@@ -229,11 +229,11 @@
             this.escape_text2.BackColor = System.Drawing.Color.Indigo;
             this.escape_text2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.escape_text2.ForeColor = System.Drawing.Color.Crimson;
-            this.escape_text2.Location = new System.Drawing.Point(283, 401);
+            this.escape_text2.Location = new System.Drawing.Point(316, 401);
             this.escape_text2.Name = "escape_text2";
-            this.escape_text2.Size = new System.Drawing.Size(304, 18);
+            this.escape_text2.Size = new System.Drawing.Size(239, 18);
             this.escape_text2.TabIndex = 46;
-            this.escape_text2.Text = "Naciśnij dowolny klawisz aby wrócić do gry...";
+            this.escape_text2.Text = "Naciśnij spacje aby wrócić do gry...";
             this.escape_text2.Visible = false;
             // 
             // escape_text1
@@ -754,12 +754,12 @@
         private System.Windows.Forms.PictureBox tree_14;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Timer timer4;
-        public System.Windows.Forms.ProgressBar fatigue;
         private System.Windows.Forms.PictureBox escape_menu;
         private System.Windows.Forms.Label escape_text1;
         private System.Windows.Forms.Label escape_text2;
         private System.Windows.Forms.Button escape_quit;
         private System.Windows.Forms.Button escape_title;
         private System.Windows.Forms.Button escape_restart;
+        private System.Windows.Forms.ProgressBar fatigue_solo;
     }
 }

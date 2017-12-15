@@ -574,7 +574,7 @@ namespace p_frog
         /*
         * Problem do rozwiązania #2:
         * gdy Frog straci energie a BroFrog przytrzyma przycisk ruchu, to
-        * szybciej mu sie przywraca energia
+        * szybciej mu sie przywraca energia...
         * 
         * Problem do rozwiązania #3:
         * gdy BroFrog nie może chodzić i Frog nie moze chodzić to Frog
@@ -1022,13 +1022,19 @@ namespace p_frog
                 escape_quit.Visible = true;
                 escape_title.Visible = true;
                 escape_menu.Visible = true;
+                escape_menu.BringToFront();         // dzieki temu nie widac info o zmeczeniu jesli frog sie zmeczy..
                 escape_text1.BringToFront();
                 escape_text2.BringToFront();
-                can_move = false;                   // stopujemy froga                                        
+                escape_restart.BringToFront();
+                escape_quit.BringToFront();
+                escape_title.BringToFront();
+                can_move = false;                   // stopujemy froga
+                timer2.Stop();                      // stopujemy odnawianie energii zab
+                timer5.Stop();                      
                 timer3.Stop();                      // zatrzymujemy pojazdy
                 timer4.Stop();                      // zatrzymujemy klody
             }
-            else
+            else if(e.KeyCode == Keys.Space)
             {
                 escape_text1.Visible = false;       // ukrycie okienek 
                 escape_text2.Visible = false;

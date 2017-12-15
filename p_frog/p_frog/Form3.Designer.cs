@@ -273,11 +273,11 @@
             this.escape_text2.BackColor = System.Drawing.Color.Indigo;
             this.escape_text2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.escape_text2.ForeColor = System.Drawing.Color.Crimson;
-            this.escape_text2.Location = new System.Drawing.Point(283, 401);
+            this.escape_text2.Location = new System.Drawing.Point(316, 401);
             this.escape_text2.Name = "escape_text2";
-            this.escape_text2.Size = new System.Drawing.Size(304, 18);
+            this.escape_text2.Size = new System.Drawing.Size(239, 18);
             this.escape_text2.TabIndex = 46;
-            this.escape_text2.Text = "Naciśnij dowolny klawisz aby wrócić do gry...";
+            this.escape_text2.Text = "Naciśnij spacje aby wrócić do gry...";
             this.escape_text2.Visible = false;
             // 
             // escape_text1
@@ -823,7 +823,6 @@
         private System.Windows.Forms.PictureBox tree_14;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Timer timer4;
-        public System.Windows.Forms.ProgressBar fatigue;
         private System.Windows.Forms.PictureBox escape_menu;
         private System.Windows.Forms.Label escape_text1;
         private System.Windows.Forms.Label escape_text2;
@@ -831,11 +830,12 @@
         private System.Windows.Forms.Button escape_title;
         private System.Windows.Forms.Button escape_restart;
         protected System.Windows.Forms.PictureBox frog_bro;
-        public System.Windows.Forms.ProgressBar fatigue_bro;
         protected System.Windows.Forms.Label label1;
         protected System.Windows.Forms.Timer timer5;
         protected System.Windows.Forms.Timer timer6;
         private System.Windows.Forms.PictureBox frog_border;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ProgressBar fatigue;
+        private System.Windows.Forms.ProgressBar fatigue_bro;
     }
 }
