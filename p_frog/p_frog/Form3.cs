@@ -571,15 +571,21 @@ namespace p_frog
         #endregion
 
         // ZADANIE DO WYKONANIA, STAN ŻYĆ ŻAB, PORUSZANIE ŻAB
-        /*
+
+        #region Bugi..? 
+        /* 
+        * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
         * Problem do rozwiązania #2:
         * gdy Frog straci energie a BroFrog przytrzyma przycisk ruchu, to
-        * szybciej mu sie przywraca energia...
-        * 
+        * szybciej mu sie przywraca energia... 
+        * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
         * Problem do rozwiązania #3:
         * gdy BroFrog nie może chodzić i Frog nie moze chodzić to Frog
-        * może sobie swobodnie iść...
+        * może sobie swobodnie iść... (rozwiazane -> patrz problem #1)
+        * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
         */
+        #endregion
+
         #region 1.0 Frog Bro - Stan żyć
         private void Frog_bro_Life()
         {
