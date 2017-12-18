@@ -571,7 +571,6 @@ namespace p_frog
         #endregion
 
         // ZADANIE DO WYKONANIA, STAN ŻYĆ ŻAB, PORUSZANIE ŻAB
-
         #region Bugi..? 
         /* 
         * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -635,6 +634,8 @@ namespace p_frog
                     }
                     else
                     {
+                        warning1.BackColor = Color.Violet;
+                        warning2.BackColor = Color.Violet;
                         warning1.Visible = true;
                         warning2.Visible = true;
                         can_move_bro = false;
@@ -659,6 +660,8 @@ namespace p_frog
                     }
                     else
                     {
+                        warning1.BackColor = Color.Violet;
+                        warning2.BackColor = Color.Violet;
                         warning1.Visible = true;
                         warning2.Visible = true;
                         can_move_bro = false;
@@ -685,6 +688,8 @@ namespace p_frog
                     }
                     else
                     {
+                        warning1.BackColor = Color.Violet;
+                        warning2.BackColor = Color.Violet;
                         warning1.Visible = true;
                         warning2.Visible = true;
                         can_move_bro = false;
@@ -710,6 +715,8 @@ namespace p_frog
                     }
                     else
                     {
+                        warning1.BackColor = Color.Violet;
+                        warning2.BackColor = Color.Violet;
                         warning1.Visible = true;
                         warning2.Visible = true;
                         can_move_bro = false;
@@ -811,6 +818,8 @@ namespace p_frog
                     }
                     else
                     {
+                        warning1.BackColor = Color.LightGreen;
+                        warning2.BackColor = Color.LightGreen;
                         warning1.Visible = true;
                         warning2.Visible = true;
                         can_move = false;
@@ -835,6 +844,8 @@ namespace p_frog
                     }
                     else
                     {
+                        warning1.BackColor = Color.LightGreen;
+                        warning2.BackColor = Color.LightGreen;
                         warning1.Visible = true;
                         warning2.Visible = true;
                         can_move = false;
@@ -861,6 +872,8 @@ namespace p_frog
                     }
                     else
                     {
+                        warning1.BackColor = Color.LightGreen;
+                        warning2.BackColor = Color.LightGreen;
                         warning1.Visible = true;
                         warning2.Visible = true;
                         can_move = false;
@@ -886,6 +899,8 @@ namespace p_frog
                     }
                     else
                     {
+                        warning1.BackColor = Color.LightGreen;
+                        warning2.BackColor = Color.LightGreen;
                         warning1.Visible = true;
                         warning2.Visible = true;
                         can_move = false;
@@ -1035,6 +1050,7 @@ namespace p_frog
                 escape_quit.BringToFront();
                 escape_title.BringToFront();
                 can_move = false;                   // stopujemy froga
+                can_move_bro = false;
                 timer2.Stop();                      // stopujemy odnawianie energii zab
                 timer5.Stop();                      
                 timer3.Stop();                      // zatrzymujemy pojazdy
@@ -1048,8 +1064,8 @@ namespace p_frog
                 escape_quit.Visible = false;
                 escape_title.Visible = false;
                 escape_menu.Visible = false;
-
-                can_move = true;                    // frog może znowu się ruszać, pojazdy i kłody znowu się poruszają...
+                can_move_bro = true;
+                can_move = true;                    // frog może znowu się ruszać
             }
         }
 
