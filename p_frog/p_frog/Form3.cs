@@ -50,7 +50,7 @@ namespace p_frog
             InitializeComponent();
             KeyDown += new KeyEventHandler(Frog_Movement);       // ruch froga
             KeyDown += new KeyEventHandler(Frogbro_Movement);    // ruch bro froga
-            KeyDown += new KeyEventHandler(Escape_event_open);   // menu wyjścia
+            KeyDown += new KeyEventHandler(Escape_event_open);   // menu
             transparency_repair();                               // naprawa przezroczystości pictureboxów                   
         }
 

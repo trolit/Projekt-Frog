@@ -61,6 +61,21 @@ wyżej, że jak się przytrzyma przycisk ruchu (lewo, góra, dół, prawo - oboj
 nie przestają się poruszać! Nie wiem co się stało.... Szczerze.
 
 
+
+
+
+> 18.12.17 - Kod do poprawy/bugi itd....
+
+- Gdy żaby wchodzą na kłody, kłoda jest przezroczysta
+- Gdy przytrzyma się przycisk(dowolny) energia żaby szybciej się odnawia
+- Gdy aktywuje sie menu escape i kliknie co innego niz spacje, to timery wznawiaja dzialanie...
+- Doprecyzować/Stworzyć lepszy algorytm wykrywania czy żaba jest na kłodzie 
+- Gdy załącza się muzyka z przegranej to dopóki nie odpalimy innego dźwięku w menu to ta dalej gra
+
+
+kwestie nierozwiązane:
+- Jak wrzucić metodę, która ma KeyEvent do klasy? 
+- Gdzie stworzyć obiekt klasy? Nie do public form... bo wtedy error..
 ###########################################################################
 
 
