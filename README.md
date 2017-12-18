@@ -72,11 +72,10 @@ nie przestają się poruszać! Nie wiem co się stało.... Szczerze.
 - Doprecyzować/Stworzyć lepszy algorytm wykrywania czy żaba jest na kłodzie 
 - Gdy załącza się muzyka z przegranej to dopóki nie odpalimy innego dźwięku w menu to ta dalej gra
 
-
 kwestie nierozwiązane:
 - Jak wrzucić metodę, która ma KeyEvent do klasy? 
 - Gdzie stworzyć obiekt klasy? Nie do public form... bo wtedy error..
-###########################################################################
+- Jak odseparować dwa KeyDown'y aby działały niezależnie od siebie? (ale żeby ten drugi sprawdzał co do tego pierwszego trafia)
 
 
 ### Przy tworzeniu projektu wykorzystałem:
