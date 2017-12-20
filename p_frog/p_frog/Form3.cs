@@ -13,13 +13,14 @@ namespace p_frog
 {
     public partial class Form3 : Form, IFrog_Collisions
     {
-        #region 1. Zmienne wspólne
+
+        #region I. Zmienne wspólne dla obu postaci
         int life = 3;                           // liczba żyć frogów
         bool hide_out_1 = false;                // wyjście pierwsze, drugie, trzecie boolowskie
         bool hide_out_2 = false;
         bool hide_out_3 = false;
         #endregion
-        #region 2. Zmienne froga(zielona postać)
+        #region II. Zmienne froga(zielona postać)
         // zmienne froga(zielona postać)
         private int count_timer1 = 0;           // licznik czasu dla timer1 (animacje froga)
         private int count_timer2 = 0;           // licznik czasu dla timer2 (regeneracja kondycji froga)
@@ -32,7 +33,7 @@ namespace p_frog
         bool can_move_right = true;             // do krzaków zmienne boolowskie
         bool can_move_left = true;
         #endregion
-        #region 3. Zmienne brofroga(fioletowa postać)
+        #region III. Zmienne brofroga(fioletowa postać)
         private int count_timer5 = 0;           // licznik czasu dla timer5 (regeneracja kondycji bro froga)
         private int count_timer6 = 0;           // licznik czasu dla timer6 (animacje bro froga)
         bool right_bro;                         // zmienne boolowskie do kontrolowania animacji
@@ -49,13 +50,13 @@ namespace p_frog
         {
             InitializeComponent();
             KeyDown += new KeyEventHandler(Frog_Movement);       // ruch froga
-            KeyDown += new KeyEventHandler(Frogbro_Movement);    // ruch bro froga
+            KeyDown += new KeyEventHandler(Frogbro_Movement);    // ruch brofroga
             KeyDown += new KeyEventHandler(Escape_event_open);   // menu
             transparency_repair();                               // naprawa przezroczystości pictureboxów                   
         }
 
-        // KOLIZJE, ZESTAW FROGA
-        #region 1. Frog/BroFrog - Screen Collision
+        // FROG -> kolizje
+        #region I. Frog/BroFrog - Screen Collision
         public void Frog_screen_Collision()
         {
             if (frog.Location.Y < -20 || frog.Location.Y > 450)
@@ -76,7 +77,7 @@ namespace p_frog
             }
         }
         #endregion
-        #region 2. Frog - Vehicle Collision
+        #region II. Frog - Vehicle Collision
         public void Frog_vehicle_Collision()
         {
             SoundPlayer car_hit = new SoundPlayer(Properties.Resources.frog_car_hit);
@@ -100,7 +101,7 @@ namespace p_frog
             }
         }
         #endregion
-        #region 3. Frog - Plant Collision
+        #region III. Frog - Plant Collision
         public void Frog_plant_Collision()
         {
             if (frog.Bounds.IntersectsWith(plant_block1.Bounds) && frog.Location.X < 291 || frog.Bounds.IntersectsWith(plant_block2.Bounds) && frog.Location.X < 471)
@@ -118,7 +119,7 @@ namespace p_frog
             }
         }
         #endregion
-        #region 4. Frog - Water Collision
+        #region IV. Frog - Water Collision
         public void Frog_water_Collision()
         {
             if (frog.Bounds.IntersectsWith(water_area.Bounds) && is_on_tree == false)
@@ -131,7 +132,7 @@ namespace p_frog
             }
         }
         #endregion
-        #region 5. Frog - Tree Collision
+        #region V. Frog - Tree Collision
         public void Check_if_frog_on_tree()
         {
             int c = frog.Location.X;
@@ -152,8 +153,8 @@ namespace p_frog
         }
         #endregion
 
-        // KOLIZJE, ZESTAW BRO FROGA
-        #region 1. Frog Bro - Vehicle Collision
+        // BROFROG -> kolizje
+        #region I. Frog Bro - Vehicle Collision
         public void Frog_bro_vehicle_Collision()
         {
             SoundPlayer car_hit = new SoundPlayer(Properties.Resources.frog_car_hit);
@@ -178,7 +179,7 @@ namespace p_frog
             }
         }
         #endregion
-        #region 2. Frog Bro - Plant Collision
+        #region II. Frog Bro - Plant Collision
         public void Frog_bro_plant_Collision()
         {
             if (frog_bro.Bounds.IntersectsWith(plant_block1.Bounds) && frog_bro.Location.X < 291 || frog_bro.Bounds.IntersectsWith(plant_block2.Bounds) && frog_bro.Location.X < 471)
@@ -196,7 +197,7 @@ namespace p_frog
             }
         }
         #endregion
-        #region 3. Frog Bro - Water Collision
+        #region III. Frog Bro - Water Collision
         public void Frog_bro_water_Collision()
         {
             if (frog_bro.Bounds.IntersectsWith(water_area.Bounds) && is_on_tree_bro == false)
@@ -209,7 +210,7 @@ namespace p_frog
             }
         }
         #endregion
-        #region 4. Frog Bro - Tree Collision
+        #region IV. Frog Bro - Tree Collision
         public void Check_if_frog_bro_on_tree()
         {
             int n = frog_bro.Location.X;
@@ -231,7 +232,7 @@ namespace p_frog
         #endregion
 
         // ZAKOŃCZENIA GIER 
-        #region 1. Gdy przegrana
+        #region I. Przegrana
         private void End_Game()
         {
             timer1.Stop();
@@ -256,7 +257,7 @@ namespace p_frog
             bckg_lose.Visible = true;
         }
         #endregion
-        #region 2. Gdy wygrana
+        #region II. Wygrana
         private void Wins_Game()
         {
             timer1.Stop();
@@ -279,7 +280,7 @@ namespace p_frog
         #endregion
 
         // CZASOMIERZE
-        #region 1. Timer1(odpowiedzialny za wywołanie odpowiednich animacji froga w odpowiednim momencie)
+        #region I.  Timer1(wywołuje animacje froga w odpowiednim momencie)
         private void timer1_Tick(object sender, EventArgs e)
         {
             count_timer1++;
@@ -333,7 +334,7 @@ namespace p_frog
             }
         }
         #endregion
-        #region 2. Timer2(odpowiedzialny za odnowienie energii froga gdy spadnie do 0, pozbawienie go mozliwosci ruchu, ukrycie labelkow informujacych)
+        #region II. Timer2(odnawia energie froga gdy spadnie do 0)
         private void timer2_Tick(object sender, EventArgs e)
         {
             count_timer2++;
@@ -350,7 +351,7 @@ namespace p_frog
 
         }
         #endregion
-        #region 3. Timer3(odpowiedzialny za ruch samochodow i wywoływanie metod)
+        #region III.Timer3(ruch samochodow i wywoływanie metod)
         private void timer3_Tick(object sender, EventArgs e)
         {
             int p = police_car.Location.X; // lokalizacja radiowozu
@@ -370,7 +371,7 @@ namespace p_frog
             Check_truck_car();
 
             timer4.Start();
-            Check_if_frog_on_tree();
+            Check_if_frog_on_tree();            // w tym miejscu zachować odpowiednią kolejność metod, koniecznie!
             Check_if_frog_bro_on_tree();
             Frog_plant_Collision();
             Frog_bro_plant_Collision();
@@ -383,7 +384,7 @@ namespace p_frog
             Confirm_hideout();
         }
         #endregion
-        #region 4. Timer4(odpowiedzialny za ruch drzew)
+        #region IV. Timer4(ruch drzew)
         private void timer4_Tick(object sender, EventArgs e)
         {
             // zakomentuj ciało żeby zobaczyć jak płynnie poruszają się samochody
@@ -423,7 +424,7 @@ namespace p_frog
             tree_14.Location = new Point(tre14, 55);
         }
         #endregion
-        #region 5. Timer5(odpowiedzialny za odnowienie energii bro froga gdy ta spadnie do 0)
+        #region V.  Timer5(odnawia energie bro froga gdy ta spadnie do 0)
         private void timer5_Tick(object sender, EventArgs e)
         {
             count_timer5++;
@@ -439,7 +440,7 @@ namespace p_frog
             }
         }
         #endregion
-        #region 6. Timer6(odpowiedzialny za wywołanie odpowiednich animacji bro froga w odpowiednim momencie)
+        #region VI. Timer6(wywołuje animacje bro froga w odpowiednim momencie)
         private void timer6_Tick(object sender, EventArgs e)
         {
             count_timer6++;
@@ -494,8 +495,8 @@ namespace p_frog
         }
         #endregion
 
-        // KONTROLOWANIE LOKALIZACJI PICTUREBOXOW(zapętlanie)
-        #region 1. Sprawdź lokalizacje pojazdów
+        // ZAPĘTLANIE RUCHU OBIEKTÓW
+        #region I. Sprawdź lokalizacje pojazdów
         private void Check_police_car()
         {
             if (police_car.Location.X < -107)               // jeśli samochód przejdzie poniżej -107, wraca na początek
@@ -520,7 +521,7 @@ namespace p_frog
             }
         }
         #endregion
-        #region 2. Sprawdź lokalizacje drzew
+        #region II. Sprawdź lokalizacje drzew
         private void Check_tree_move()
         {
             if (tree_1.Location.X < -120)
@@ -570,22 +571,8 @@ namespace p_frog
         }
         #endregion
 
-        // ZADANIE DO WYKONANIA, STAN ŻYĆ ŻAB, PORUSZANIE ŻAB
-        #region Bugi..? 
-        /* 
-        * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-        * Problem do rozwiązania #2:
-        * gdy Frog straci energie a BroFrog przytrzyma przycisk ruchu, to
-        * szybciej mu sie przywraca energia... 
-        * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-        * Problem do rozwiązania #3:
-        * gdy BroFrog nie może chodzić i Frog nie moze chodzić to Frog
-        * może sobie swobodnie iść... (rozwiazane -> patrz problem #1)
-        * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-        */
-        #endregion
-
-        #region 1.0 Frog Bro - Stan żyć
+        // ...
+        #region I. Frog Bro - Stan żyć
         private void Frog_bro_Life()
         {
             if (life == 3)
@@ -612,7 +599,7 @@ namespace p_frog
             }
         }
         #endregion
-        #region 1.1 Frog Bro - Poruszanie klawiszologią
+        #region II. Frog Bro - Poruszanie klawiszologią
         void Frogbro_Movement(object sender, KeyEventArgs e)
         {
             int s = frog_bro.Location.X;
@@ -735,7 +722,7 @@ namespace p_frog
             Frog_screen_Collision();
         }
         #endregion
-        #region 1.2 Frog Bro - Zadanie do wykonania
+        #region III. Frog Bro - Zadanie do wykonania
         private void Confirm_bro_hideout()
         {
             SoundPlayer frog_capture_point = new SoundPlayer(Properties.Resources.frog_saved_sound);
@@ -769,7 +756,7 @@ namespace p_frog
         }
         #endregion
 
-        #region 2.0 Frog - Stan żyć
+        #region I. Frog - Stan żyć
         private void Frog_Life()
         {
             if (life == 3)
@@ -796,7 +783,7 @@ namespace p_frog
             }
         }
         #endregion
-        #region 2.1 Frog - Poruszanie klawiszologią
+        #region II. Frog - Poruszanie klawiszologią
         void Frog_Movement(object sender, KeyEventArgs e)
         {
             int x = frog.Location.X;
@@ -919,7 +906,7 @@ namespace p_frog
             Frog_screen_Collision();
         }
         #endregion
-        #region 2.2 Frog - Zadanie do wykonania
+        #region III. Frog - Zadanie do wykonania
         private void Confirm_hideout()
         {
             SoundPlayer frog_capture_point = new SoundPlayer(Properties.Resources.frog_saved_sound);
@@ -953,15 +940,15 @@ namespace p_frog
         }
         #endregion
 
-        // POZOSTAŁE UŻYTECZNE RZECZY DO FROGA
-        #region 1. Dźwięk skoku przy ruchu froga
+        // POZOSTAŁE ELEMENTY
+        #region I.  Dźwięk skoku przy ruchu froga
         private void Wywolaj_dzwiek_skoku()
         {
             SoundPlayer skok = new SoundPlayer(Properties.Resources.frog_jump); // stworzenie obiektu skok
             skok.Play();
         }
         #endregion
-        #region 2. Naprawia problem przezroczystości pictureboxów
+        #region II. Naprawia problem przezroczystości pictureboxów
         private void transparency_repair()
         {
             frog_bro.Parent = background_box;                // rodzic froga to tło
@@ -1018,7 +1005,7 @@ namespace p_frog
         }
 
         #endregion
-        #region 3. Przycisk powrotu do menu
+        #region III.Przycisk powrotu do menu
         private void win_yes_Click(object sender, EventArgs e)
         {
             this.Close();                        // zamykamy okno
@@ -1026,13 +1013,13 @@ namespace p_frog
             main_menu.Show();                    // pokazujemy główne menu
         }
         #endregion
-        #region 4. Przycisk wyjścia z gry
+        #region IV. Przycisk wyjścia z gry
         private void win_no_Click(object sender, EventArgs e)
         {
             Application.Exit();     // kończy działanie programu(włącznie z usunięciem z procesu)
         }
         #endregion
-        #region 5. Menu pod klawiszem funkcyjnym(escape)
+        #region V.  Menu pod klawiszem funkcyjnym(escape)
         private void Escape_event_open(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)       
@@ -1091,7 +1078,7 @@ namespace p_frog
             graj.Show();
         }
         #endregion
-        #region 6. Dźwięk skoku przy ruchu brofroga
+        #region VI. Dźwięk skoku przy ruchu brofroga
         private void Wywolaj_dzwiek_skoku_bro()
         {
             SoundPlayer skok_br = new SoundPlayer(Properties.Resources.frogbro_jump);       // stworzenie obiektu skok_br

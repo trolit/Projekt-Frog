@@ -77,6 +77,11 @@ kwestie nierozwiązane:
 - Gdzie stworzyć obiekt klasy? Nie do public form... bo wtedy error..
 - Jak odseparować dwa KeyDown'y aby działały niezależnie od siebie? (ale żeby ten drugi sprawdzał co do tego pierwszego trafia)
 
+możliwości rozwinięcia projektu:
+- Tryb online(jeden z graczy hostuje serwer)
+- Poziomy(etapy)
+- Wdrożenie elementów RPG do gry
+- Charakteryzacja swojej postaci(kilka modeli żab?)
 
 ### Przy tworzeniu projektu wykorzystałem:
 

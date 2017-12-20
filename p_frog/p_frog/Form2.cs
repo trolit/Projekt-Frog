@@ -429,27 +429,6 @@ namespace p_frog
             }
         }
         #endregion
-
-        #region Problem #1 (rozwiązany)
-        /* * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-         * Problem do rozwiązania #1:
-         * gdy Frog się zmęczy to nadal chodzi???
-         * wynikło gdy dołożyłem tryb dla 2 graczy... :( 
-         * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-         * Sposoby przetestowane i bez rezultatów:
-         * - rysowanie nowego punktu obiektu tylko gdy wykona się ruch(czyli if fatigue.. itd..)
-         * - gdy can_move jest na false to else can_move nadal false
-         * - progress bary na private
-         * - zmiana nazwy progress bara
-         * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-         * Problem odnaleziony:
-         *  metoda, ktora przy wcisnieciu klawisza escape wyswietla menu buguje froga!
-         * Rozwiazanie:
-         *  menu funkcyjne nie moze byc wylaczane dowolnym klawiszem... (przynajmniej nie tymi ktorymi porusza sie frog)
-         *  
-        */
-        #endregion
-
         #region 2. Frog - Poruszanie klawiszologią
         void Frog_Movement(object sender, KeyEventArgs e)
         {
