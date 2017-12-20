@@ -159,6 +159,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="frog_icon.ico" />
+    <Content Include="Resources\main_page_fixed.jpg" />
+    <Content Include="Resources\main_page_fixed_nt.jpg" />
+    <None Include="Resources\main_page_fixed_nt1.jpg" />
     <None Include="Resources\frogbro_jump.wav" />
     <None Include="Resources\frog_bro_up_stand1.png" />
     <None Include="Resources\frog_bro_up.gif" />

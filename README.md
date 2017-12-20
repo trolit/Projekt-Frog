@@ -82,7 +82,7 @@ możliwości rozwinięcia projektu:
 - Poziomy(etapy)
 - Wdrożenie elementów RPG do gry
 - Charakteryzacja swojej postaci(kilka modeli żab?)
-
+- mini-tryby typu nightmare(ucieczka z labiryntu(goni nas inna żaba?)
 ### Przy tworzeniu projektu wykorzystałem:
 
 
