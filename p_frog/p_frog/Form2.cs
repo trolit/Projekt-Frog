@@ -586,16 +586,6 @@ namespace p_frog
         {
             frog.Parent = background_box;
             frog.BackColor = Color.Transparent;
-            label1.Parent = background_box;
-            police_car.Parent = background_box;
-            car_column.Parent = background_box;
-            truck_car.Parent = background_box;
-            frog_life_1.Parent = background_box;
-            frog_life_2.Parent = background_box;
-            frog_life_3.Parent = background_box;
-            frog_life_1.BackColor = Color.Transparent;
-            frog_life_2.BackColor = Color.Transparent;
-            frog_life_3.BackColor = Color.Transparent;
             tree_1.Parent = background_box;
             tree_2.Parent = background_box;
             tree_3.Parent = background_box;
@@ -607,6 +597,17 @@ namespace p_frog
             tree_12.Parent = background_box;
             tree_13.Parent = background_box;
             tree_14.Parent = background_box;
+            label1.Parent = background_box;
+            police_car.Parent = background_box;
+            car_column.Parent = background_box;
+            truck_car.Parent = background_box;
+            frog_life_1.Parent = background_box;
+            frog_life_2.Parent = background_box;
+            frog_life_3.Parent = background_box;
+            frog_life_1.BackColor = Color.Transparent;
+            frog_life_2.BackColor = Color.Transparent;
+            frog_life_3.BackColor = Color.Transparent;
+
             frog_hideout_1.Parent = background_box;
             frog_hideout_1.BackColor = Color.Transparent;
             frog_hideout_2.Parent = background_box;

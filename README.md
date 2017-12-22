@@ -66,6 +66,7 @@ nie przestają się poruszać! Nie wiem co się stało.... Szczerze.
 
 > 18.12.17 - Kod do poprawy/bugi itd....
 
+- Pojazd policyjny zachacza o żabę - problem pictureboxa żaby
 - Gdy żaby wchodzą na kłody, kłoda jest przezroczysta
 - Gdy przytrzyma się przycisk(dowolny) energia żaby szybciej się odnawia
 - Gdy aktywuje sie menu escape i kliknie co innego niz spacje, to timery wznawiaja dzialanie...
@@ -73,16 +74,17 @@ nie przestają się poruszać! Nie wiem co się stało.... Szczerze.
 - Gdy załącza się muzyka z przegranej to dopóki nie odpalimy innego dźwięku w menu to ta dalej gra
 
 kwestie nierozwiązane:
-- Jak wrzucić metodę, która ma KeyEvent do klasy? 
-- Gdzie stworzyć obiekt klasy? Nie do public form... bo wtedy error..
+- ~~Jak wrzucić metodę, która ma KeyEvent do klasy?~~ 
+- Gdzie stworzyć obiekt klasy z metodą KeyEvent? (Nie do public form bo wtedy error..)
 - Jak odseparować dwa KeyDown'y aby działały niezależnie od siebie? (ale żeby ten drugi sprawdzał co do tego pierwszego trafia)
 
 możliwości rozwinięcia projektu:
 - Tryb online(jeden z graczy hostuje serwer)
 - Poziomy(etapy)
-- Wdrożenie elementów RPG do gry
+- Wdrożenie elementów RPG do gry(dłuższy skok, więcej żyć, nieśmiertelność na chwilę, umiejętność latania ...)
 - Charakteryzacja swojej postaci(kilka modeli żab?)
 - mini-tryby typu nightmare(ucieczka z labiryntu(goni nas inna żaba?)
+
 ### Przy tworzeniu projektu wykorzystałem:
 
 
