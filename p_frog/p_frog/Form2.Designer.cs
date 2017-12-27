@@ -409,71 +409,71 @@
             // 
             // tree_14
             // 
-            this.tree_14.Image = ((System.Drawing.Image)(resources.GetObject("tree_14.Image")));
-            this.tree_14.Location = new System.Drawing.Point(256, 65);
+            this.tree_14.Image = global::p_frog.Properties.Resources.tree_normal_fxd;
+            this.tree_14.Location = new System.Drawing.Point(339, 98);
             this.tree_14.Name = "tree_14";
-            this.tree_14.Size = new System.Drawing.Size(127, 31);
+            this.tree_14.Size = new System.Drawing.Size(95, 41);
             this.tree_14.TabIndex = 43;
             this.tree_14.TabStop = false;
             // 
             // tree_13
             // 
-            this.tree_13.Image = ((System.Drawing.Image)(resources.GetObject("tree_13.Image")));
-            this.tree_13.Location = new System.Drawing.Point(385, 109);
+            this.tree_13.Image = global::p_frog.Properties.Resources.tree_tiny_fxd;
+            this.tree_13.Location = new System.Drawing.Point(197, 55);
             this.tree_13.Name = "tree_13";
-            this.tree_13.Size = new System.Drawing.Size(79, 30);
+            this.tree_13.Size = new System.Drawing.Size(50, 24);
             this.tree_13.TabIndex = 42;
             this.tree_13.TabStop = false;
             // 
             // tree_12
             // 
-            this.tree_12.Image = ((System.Drawing.Image)(resources.GetObject("tree_12.Image")));
+            this.tree_12.Image = global::p_frog.Properties.Resources.tree_small_fxd;
             this.tree_12.Location = new System.Drawing.Point(119, 143);
             this.tree_12.Name = "tree_12";
-            this.tree_12.Size = new System.Drawing.Size(79, 30);
+            this.tree_12.Size = new System.Drawing.Size(70, 30);
             this.tree_12.TabIndex = 41;
             this.tree_12.TabStop = false;
             // 
             // tree_11
             // 
-            this.tree_11.Image = ((System.Drawing.Image)(resources.GetObject("tree_11.Image")));
-            this.tree_11.Location = new System.Drawing.Point(326, 135);
+            this.tree_11.Image = global::p_frog.Properties.Resources.tree_h_fxd;
+            this.tree_11.Location = new System.Drawing.Point(563, 137);
             this.tree_11.Name = "tree_11";
-            this.tree_11.Size = new System.Drawing.Size(127, 30);
+            this.tree_11.Size = new System.Drawing.Size(80, 37);
             this.tree_11.TabIndex = 40;
             this.tree_11.TabStop = false;
             // 
             // tree_9
             // 
-            this.tree_9.Image = ((System.Drawing.Image)(resources.GetObject("tree_9.Image")));
-            this.tree_9.Location = new System.Drawing.Point(139, 90);
+            this.tree_9.Image = global::p_frog.Properties.Resources.tree_h_fxd;
+            this.tree_9.Location = new System.Drawing.Point(139, 78);
             this.tree_9.Name = "tree_9";
-            this.tree_9.Size = new System.Drawing.Size(127, 30);
+            this.tree_9.Size = new System.Drawing.Size(84, 37);
             this.tree_9.TabIndex = 38;
             this.tree_9.TabStop = false;
             // 
             // tree_8
             // 
-            this.tree_8.Image = ((System.Drawing.Image)(resources.GetObject("tree_8.Image")));
-            this.tree_8.Location = new System.Drawing.Point(369, 82);
+            this.tree_8.Image = global::p_frog.Properties.Resources.tree_normal_fxd;
+            this.tree_8.Location = new System.Drawing.Point(548, 66);
             this.tree_8.Name = "tree_8";
-            this.tree_8.Size = new System.Drawing.Size(127, 30);
+            this.tree_8.Size = new System.Drawing.Size(95, 43);
             this.tree_8.TabIndex = 37;
             this.tree_8.TabStop = false;
             // 
             // tree_6
             // 
-            this.tree_6.Image = ((System.Drawing.Image)(resources.GetObject("tree_6.Image")));
+            this.tree_6.Image = global::p_frog.Properties.Resources.tree_small_fxd;
             this.tree_6.Location = new System.Drawing.Point(155, 115);
             this.tree_6.Name = "tree_6";
-            this.tree_6.Size = new System.Drawing.Size(79, 30);
+            this.tree_6.Size = new System.Drawing.Size(68, 30);
             this.tree_6.TabIndex = 36;
             this.tree_6.TabStop = false;
             // 
             // tree_2
             // 
             this.tree_2.Image = global::p_frog.Properties.Resources.tree_small_fxd;
-            this.tree_2.Location = new System.Drawing.Point(634, 125);
+            this.tree_2.Location = new System.Drawing.Point(744, 54);
             this.tree_2.Name = "tree_2";
             this.tree_2.Size = new System.Drawing.Size(68, 30);
             this.tree_2.TabIndex = 28;
@@ -482,7 +482,7 @@
             // tree_3
             // 
             this.tree_3.Image = global::p_frog.Properties.Resources.tree_small_fxd;
-            this.tree_3.Location = new System.Drawing.Point(544, 125);
+            this.tree_3.Location = new System.Drawing.Point(608, 109);
             this.tree_3.Name = "tree_3";
             this.tree_3.Size = new System.Drawing.Size(73, 30);
             this.tree_3.TabIndex = 29;

@@ -178,6 +178,7 @@
   <ItemGroup>
     <Content Include="frog_icon.ico" />
     <Content Include="Resources\main_page_fixed.jpg" />
+    <None Include="Resources\tree_h_fxd.png" />
     <None Include="Resources\tree_tiny_fxd.png" />
     <None Include="Resources\tree_small_fxd.png" />
     <None Include="Resources\tree_normal_fxd.png" />

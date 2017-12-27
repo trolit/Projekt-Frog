@@ -613,6 +613,16 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap tree_h_fxd {
+            get {
+                object obj = ResourceManager.GetObject("tree_h_fxd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tree_long {
             get {
                 object obj = ResourceManager.GetObject("tree_long", resourceCulture);
