@@ -94,7 +94,6 @@ namespace p_frog
             help_key.Visible = false;
         }
         #endregion
-
         #region 7. Przycisk etapy
         private void button_levels_Click(object sender, EventArgs e)
         {

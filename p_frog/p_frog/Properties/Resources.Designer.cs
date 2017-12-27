@@ -653,9 +653,39 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap tree_normal_fxd {
+            get {
+                object obj = ResourceManager.GetObject("tree_normal_fxd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tree_small {
             get {
                 object obj = ResourceManager.GetObject("tree_small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tree_small_fxd {
+            get {
+                object obj = ResourceManager.GetObject("tree_small_fxd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tree_tiny_fxd {
+            get {
+                object obj = ResourceManager.GetObject("tree_tiny_fxd", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
