@@ -359,11 +359,11 @@ namespace p_frog
             int t = truck_car.Location.X;  // lokalizacja ciezarkowki
 
             p -= 10;
-            police_car.Location = new Point(p, 222);
+            police_car.Location = new Point(p, 299);
             Check_police_car();
 
             c += 12;
-            car_column.Location = new Point(c, 297);
+            car_column.Location = new Point(c, 217);
             Check_car_column();
 
             t += 9;

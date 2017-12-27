@@ -37,6 +37,7 @@
             this.warning2 = new System.Windows.Forms.Label();
             this.screen = new System.Windows.Forms.Panel();
             this.fatigue_bro = new System.Windows.Forms.ProgressBar();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.frog_border = new System.Windows.Forms.PictureBox();
             this.frog_bro = new System.Windows.Forms.PictureBox();
             this.escape_text2 = new System.Windows.Forms.Label();
@@ -84,8 +85,8 @@
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timer5 = new System.Windows.Forms.Timer(this.components);
             this.timer6 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.screen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_border)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_bro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.escape_menu)).BeginInit();
@@ -118,7 +119,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -233,6 +233,15 @@
             this.fatigue_bro.Size = new System.Drawing.Size(72, 23);
             this.fatigue_bro.TabIndex = 51;
             this.fatigue_bro.Value = 100;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.DarkOrchid;
+            this.pictureBox1.Location = new System.Drawing.Point(86, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 29);
+            this.pictureBox1.TabIndex = 54;
+            this.pictureBox1.TabStop = false;
             // 
             // frog_border
             // 
@@ -624,7 +633,7 @@
             // frog_life_3
             // 
             this.frog_life_3.Image = ((System.Drawing.Image)(resources.GetObject("frog_life_3.Image")));
-            this.frog_life_3.Location = new System.Drawing.Point(689, 3);
+            this.frog_life_3.Location = new System.Drawing.Point(689, 1);
             this.frog_life_3.Name = "frog_life_3";
             this.frog_life_3.Size = new System.Drawing.Size(45, 45);
             this.frog_life_3.TabIndex = 11;
@@ -633,7 +642,7 @@
             // frog_life_2
             // 
             this.frog_life_2.Image = ((System.Drawing.Image)(resources.GetObject("frog_life_2.Image")));
-            this.frog_life_2.Location = new System.Drawing.Point(741, 3);
+            this.frog_life_2.Location = new System.Drawing.Point(741, 1);
             this.frog_life_2.Name = "frog_life_2";
             this.frog_life_2.Size = new System.Drawing.Size(45, 45);
             this.frog_life_2.TabIndex = 10;
@@ -642,7 +651,7 @@
             // frog_life_1
             // 
             this.frog_life_1.Image = ((System.Drawing.Image)(resources.GetObject("frog_life_1.Image")));
-            this.frog_life_1.Location = new System.Drawing.Point(793, 3);
+            this.frog_life_1.Location = new System.Drawing.Point(793, 1);
             this.frog_life_1.Name = "frog_life_1";
             this.frog_life_1.Size = new System.Drawing.Size(45, 45);
             this.frog_life_1.TabIndex = 9;
@@ -660,7 +669,7 @@
             // car_column
             // 
             this.car_column.Image = global::p_frog.Properties.Resources.car_1_fxd;
-            this.car_column.Location = new System.Drawing.Point(-259, 297);
+            this.car_column.Location = new System.Drawing.Point(-259, 217);
             this.car_column.Name = "car_column";
             this.car_column.Size = new System.Drawing.Size(264, 53);
             this.car_column.TabIndex = 7;
@@ -669,7 +678,7 @@
             // police_car
             // 
             this.police_car.Image = global::p_frog.Properties.Resources.car_3_fxd;
-            this.police_car.Location = new System.Drawing.Point(823, 220);
+            this.police_car.Location = new System.Drawing.Point(823, 299);
             this.police_car.Name = "police_car";
             this.police_car.Size = new System.Drawing.Size(107, 52);
             this.police_car.TabIndex = 6;
@@ -720,15 +729,6 @@
             this.timer6.Interval = 450;
             this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.DarkOrchid;
-            this.pictureBox1.Location = new System.Drawing.Point(86, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 29);
-            this.pictureBox1.TabIndex = 54;
-            this.pictureBox1.TabStop = false;
-            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -744,6 +744,7 @@
             this.Text = "Projekt Frog";
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_border)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_bro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.escape_menu)).EndInit();
@@ -776,7 +777,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -575,7 +575,7 @@
             // frog_life_3
             // 
             this.frog_life_3.Image = ((System.Drawing.Image)(resources.GetObject("frog_life_3.Image")));
-            this.frog_life_3.Location = new System.Drawing.Point(689, 3);
+            this.frog_life_3.Location = new System.Drawing.Point(689, 1);
             this.frog_life_3.Name = "frog_life_3";
             this.frog_life_3.Size = new System.Drawing.Size(45, 45);
             this.frog_life_3.TabIndex = 11;
@@ -584,7 +584,7 @@
             // frog_life_2
             // 
             this.frog_life_2.Image = ((System.Drawing.Image)(resources.GetObject("frog_life_2.Image")));
-            this.frog_life_2.Location = new System.Drawing.Point(741, 3);
+            this.frog_life_2.Location = new System.Drawing.Point(741, 1);
             this.frog_life_2.Name = "frog_life_2";
             this.frog_life_2.Size = new System.Drawing.Size(45, 45);
             this.frog_life_2.TabIndex = 10;
@@ -593,7 +593,7 @@
             // frog_life_1
             // 
             this.frog_life_1.Image = ((System.Drawing.Image)(resources.GetObject("frog_life_1.Image")));
-            this.frog_life_1.Location = new System.Drawing.Point(793, 3);
+            this.frog_life_1.Location = new System.Drawing.Point(793, 1);
             this.frog_life_1.Name = "frog_life_1";
             this.frog_life_1.Size = new System.Drawing.Size(45, 45);
             this.frog_life_1.TabIndex = 9;
