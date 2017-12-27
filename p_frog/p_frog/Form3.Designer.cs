@@ -37,7 +37,6 @@
             this.warning2 = new System.Windows.Forms.Label();
             this.screen = new System.Windows.Forms.Panel();
             this.fatigue_bro = new System.Windows.Forms.ProgressBar();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.frog_border = new System.Windows.Forms.PictureBox();
             this.frog_bro = new System.Windows.Forms.PictureBox();
             this.escape_text2 = new System.Windows.Forms.Label();
@@ -66,6 +65,7 @@
             this.win_text_2 = new System.Windows.Forms.Label();
             this.win_box = new System.Windows.Forms.PictureBox();
             this.frog_coffin = new System.Windows.Forms.PictureBox();
+            this.bckg_lose = new System.Windows.Forms.PictureBox();
             this.plant_block2 = new System.Windows.Forms.PictureBox();
             this.plant_block1 = new System.Windows.Forms.PictureBox();
             this.win_text = new System.Windows.Forms.Label();
@@ -84,9 +84,8 @@
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timer5 = new System.Windows.Forms.Timer(this.components);
             this.timer6 = new System.Windows.Forms.Timer(this.components);
-            this.bckg_lose = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.screen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_border)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_bro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.escape_menu)).BeginInit();
@@ -106,6 +105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.frog_dead)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.win_box)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_coffin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bckg_lose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plant_block2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plant_block1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_hideout_3)).BeginInit();
@@ -118,7 +118,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bckg_lose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -234,21 +234,12 @@
             this.fatigue_bro.TabIndex = 51;
             this.fatigue_bro.Value = 100;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Purple;
-            this.pictureBox1.Location = new System.Drawing.Point(88, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(77, 35);
-            this.pictureBox1.TabIndex = 54;
-            this.pictureBox1.TabStop = false;
-            // 
             // frog_border
             // 
             this.frog_border.BackColor = System.Drawing.Color.Chartreuse;
-            this.frog_border.Location = new System.Drawing.Point(5, 12);
+            this.frog_border.Location = new System.Drawing.Point(3, 15);
             this.frog_border.Name = "frog_border";
-            this.frog_border.Size = new System.Drawing.Size(77, 35);
+            this.frog_border.Size = new System.Drawing.Size(80, 29);
             this.frog_border.TabIndex = 53;
             this.frog_border.TabStop = false;
             // 
@@ -261,8 +252,8 @@
             this.frog_bro.Image = global::p_frog.Properties.Resources.frog_bro_up_stand;
             this.frog_bro.Location = new System.Drawing.Point(369, 431);
             this.frog_bro.Name = "frog_bro";
-            this.frog_bro.Size = new System.Drawing.Size(30, 50);
-            this.frog_bro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.frog_bro.Size = new System.Drawing.Size(30, 37);
+            this.frog_bro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.frog_bro.TabIndex = 50;
             this.frog_bro.TabStop = false;
             this.frog_bro.WaitOnLoad = true;
@@ -362,8 +353,8 @@
             this.frog.Image = global::p_frog.Properties.Resources.frog_up_stand;
             this.frog.Location = new System.Drawing.Point(414, 431);
             this.frog.Name = "frog";
-            this.frog.Size = new System.Drawing.Size(30, 50);
-            this.frog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.frog.Size = new System.Drawing.Size(30, 37);
+            this.frog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.frog.TabIndex = 0;
             this.frog.TabStop = false;
             this.frog.WaitOnLoad = true;
@@ -564,12 +555,22 @@
             this.frog_coffin.TabStop = false;
             this.frog_coffin.Visible = false;
             // 
+            // bckg_lose
+            // 
+            this.bckg_lose.BackColor = System.Drawing.Color.Wheat;
+            this.bckg_lose.Location = new System.Drawing.Point(0, 356);
+            this.bckg_lose.Name = "bckg_lose";
+            this.bckg_lose.Size = new System.Drawing.Size(845, 125);
+            this.bckg_lose.TabIndex = 34;
+            this.bckg_lose.TabStop = false;
+            this.bckg_lose.Visible = false;
+            // 
             // plant_block2
             // 
             this.plant_block2.Image = ((System.Drawing.Image)(resources.GetObject("plant_block2.Image")));
             this.plant_block2.Location = new System.Drawing.Point(471, -21);
             this.plant_block2.Name = "plant_block2";
-            this.plant_block2.Size = new System.Drawing.Size(58, 70);
+            this.plant_block2.Size = new System.Drawing.Size(71, 70);
             this.plant_block2.TabIndex = 26;
             this.plant_block2.TabStop = false;
             // 
@@ -578,7 +579,7 @@
             this.plant_block1.Image = ((System.Drawing.Image)(resources.GetObject("plant_block1.Image")));
             this.plant_block1.Location = new System.Drawing.Point(291, -23);
             this.plant_block1.Name = "plant_block1";
-            this.plant_block1.Size = new System.Drawing.Size(58, 72);
+            this.plant_block1.Size = new System.Drawing.Size(71, 70);
             this.plant_block1.TabIndex = 25;
             this.plant_block1.TabStop = false;
             // 
@@ -596,27 +597,27 @@
             // frog_hideout_3
             // 
             this.frog_hideout_3.Image = ((System.Drawing.Image)(resources.GetObject("frog_hideout_3.Image")));
-            this.frog_hideout_3.Location = new System.Drawing.Point(558, -12);
+            this.frog_hideout_3.Location = new System.Drawing.Point(558, -14);
             this.frog_hideout_3.Name = "frog_hideout_3";
-            this.frog_hideout_3.Size = new System.Drawing.Size(59, 50);
+            this.frog_hideout_3.Size = new System.Drawing.Size(60, 50);
             this.frog_hideout_3.TabIndex = 18;
             this.frog_hideout_3.TabStop = false;
             // 
             // frog_hideout_2
             // 
             this.frog_hideout_2.Image = ((System.Drawing.Image)(resources.GetObject("frog_hideout_2.Image")));
-            this.frog_hideout_2.Location = new System.Drawing.Point(385, -12);
+            this.frog_hideout_2.Location = new System.Drawing.Point(385, -14);
             this.frog_hideout_2.Name = "frog_hideout_2";
-            this.frog_hideout_2.Size = new System.Drawing.Size(59, 50);
+            this.frog_hideout_2.Size = new System.Drawing.Size(60, 50);
             this.frog_hideout_2.TabIndex = 17;
             this.frog_hideout_2.TabStop = false;
             // 
             // frog_hideout_1
             // 
             this.frog_hideout_1.Image = ((System.Drawing.Image)(resources.GetObject("frog_hideout_1.Image")));
-            this.frog_hideout_1.Location = new System.Drawing.Point(197, -12);
+            this.frog_hideout_1.Location = new System.Drawing.Point(197, -14);
             this.frog_hideout_1.Name = "frog_hideout_1";
-            this.frog_hideout_1.Size = new System.Drawing.Size(58, 50);
+            this.frog_hideout_1.Size = new System.Drawing.Size(60, 50);
             this.frog_hideout_1.TabIndex = 16;
             this.frog_hideout_1.TabStop = false;
             // 
@@ -680,7 +681,7 @@
             this.label1.BackColor = System.Drawing.Color.SpringGreen;
             this.label1.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(25, 1);
+            this.label1.Location = new System.Drawing.Point(25, 2);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 12);
             this.label1.TabIndex = 2;
@@ -719,15 +720,14 @@
             this.timer6.Interval = 450;
             this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
             // 
-            // bckg_lose
+            // pictureBox1
             // 
-            this.bckg_lose.BackColor = System.Drawing.Color.Wheat;
-            this.bckg_lose.Location = new System.Drawing.Point(0, 0);
-            this.bckg_lose.Name = "bckg_lose";
-            this.bckg_lose.Size = new System.Drawing.Size(845, 481);
-            this.bckg_lose.TabIndex = 34;
-            this.bckg_lose.TabStop = false;
-            this.bckg_lose.Visible = false;
+            this.pictureBox1.BackColor = System.Drawing.Color.DarkOrchid;
+            this.pictureBox1.Location = new System.Drawing.Point(86, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 29);
+            this.pictureBox1.TabIndex = 54;
+            this.pictureBox1.TabStop = false;
             // 
             // Form3
             // 
@@ -744,7 +744,6 @@
             this.Text = "Projekt Frog";
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_border)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_bro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.escape_menu)).EndInit();
@@ -764,6 +763,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.frog_dead)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.win_box)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_coffin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bckg_lose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.plant_block2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.plant_block1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_hideout_3)).EndInit();
@@ -776,7 +776,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bckg_lose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -833,9 +833,9 @@
         protected System.Windows.Forms.Timer timer5;
         protected System.Windows.Forms.Timer timer6;
         private System.Windows.Forms.PictureBox frog_border;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ProgressBar fatigue;
         private System.Windows.Forms.ProgressBar fatigue_bro;
         private System.Windows.Forms.PictureBox bckg_lose;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

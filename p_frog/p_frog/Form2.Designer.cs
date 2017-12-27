@@ -560,9 +560,9 @@
             // frog_hideout_3
             // 
             this.frog_hideout_3.Image = ((System.Drawing.Image)(resources.GetObject("frog_hideout_3.Image")));
-            this.frog_hideout_3.Location = new System.Drawing.Point(558, -12);
+            this.frog_hideout_3.Location = new System.Drawing.Point(563, -12);
             this.frog_hideout_3.Name = "frog_hideout_3";
-            this.frog_hideout_3.Size = new System.Drawing.Size(59, 50);
+            this.frog_hideout_3.Size = new System.Drawing.Size(60, 50);
             this.frog_hideout_3.TabIndex = 18;
             this.frog_hideout_3.TabStop = false;
             // 
@@ -571,7 +571,7 @@
             this.frog_hideout_2.Image = ((System.Drawing.Image)(resources.GetObject("frog_hideout_2.Image")));
             this.frog_hideout_2.Location = new System.Drawing.Point(385, -12);
             this.frog_hideout_2.Name = "frog_hideout_2";
-            this.frog_hideout_2.Size = new System.Drawing.Size(59, 50);
+            this.frog_hideout_2.Size = new System.Drawing.Size(60, 50);
             this.frog_hideout_2.TabIndex = 17;
             this.frog_hideout_2.TabStop = false;
             // 
@@ -580,7 +580,7 @@
             this.frog_hideout_1.Image = ((System.Drawing.Image)(resources.GetObject("frog_hideout_1.Image")));
             this.frog_hideout_1.Location = new System.Drawing.Point(197, -12);
             this.frog_hideout_1.Name = "frog_hideout_1";
-            this.frog_hideout_1.Size = new System.Drawing.Size(58, 50);
+            this.frog_hideout_1.Size = new System.Drawing.Size(60, 50);
             this.frog_hideout_1.TabIndex = 16;
             this.frog_hideout_1.TabStop = false;
             // 
