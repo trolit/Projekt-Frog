@@ -25,7 +25,7 @@
 
 **kwestie nierozwiązane:**
 - ~~Jak wrzucić metodę, która ma KeyEvent do klasy?~~ 
-- Gdzie stworzyć obiekt klasy z metodą KeyEvent? (Nie do public form bo wtedy error..)
+- Gdzie stworzyć obiekt klasy z metodą KeyEvent? (Nie do public form bo wtedy nie działa..)
 - Jak odseparować dwa KeyDown'y aby działały niezależnie od siebie? (ale żeby ten drugi sprawdzał co do tego pierwszego trafia)
 
 **możliwości rozwinięcia projektu:**
