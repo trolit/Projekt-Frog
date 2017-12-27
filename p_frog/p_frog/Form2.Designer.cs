@@ -383,8 +383,8 @@
             this.frog.Image = global::p_frog.Properties.Resources.frog_up_stand;
             this.frog.Location = new System.Drawing.Point(434, 428);
             this.frog.Name = "frog";
-            this.frog.Size = new System.Drawing.Size(30, 50);
-            this.frog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.frog.Size = new System.Drawing.Size(30, 37);
+            this.frog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.frog.TabIndex = 0;
             this.frog.TabStop = false;
             this.frog.WaitOnLoad = true;
@@ -437,7 +437,7 @@
             // tree_11
             // 
             this.tree_11.Image = global::p_frog.Properties.Resources.tree_h_fxd;
-            this.tree_11.Location = new System.Drawing.Point(563, 137);
+            this.tree_11.Location = new System.Drawing.Point(563, 136);
             this.tree_11.Name = "tree_11";
             this.tree_11.Size = new System.Drawing.Size(80, 37);
             this.tree_11.TabIndex = 40;
@@ -544,16 +544,16 @@
             this.plant_block2.Image = ((System.Drawing.Image)(resources.GetObject("plant_block2.Image")));
             this.plant_block2.Location = new System.Drawing.Point(471, -21);
             this.plant_block2.Name = "plant_block2";
-            this.plant_block2.Size = new System.Drawing.Size(58, 70);
+            this.plant_block2.Size = new System.Drawing.Size(71, 70);
             this.plant_block2.TabIndex = 26;
             this.plant_block2.TabStop = false;
             // 
             // plant_block1
             // 
             this.plant_block1.Image = ((System.Drawing.Image)(resources.GetObject("plant_block1.Image")));
-            this.plant_block1.Location = new System.Drawing.Point(291, -23);
+            this.plant_block1.Location = new System.Drawing.Point(282, -20);
             this.plant_block1.Name = "plant_block1";
-            this.plant_block1.Size = new System.Drawing.Size(58, 72);
+            this.plant_block1.Size = new System.Drawing.Size(71, 72);
             this.plant_block1.TabIndex = 25;
             this.plant_block1.TabStop = false;
             // 

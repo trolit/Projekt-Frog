@@ -16,7 +16,7 @@
 
 > 18.12.17 - pozostałe rzeczy do rozmyślania na dłuugie wieczory ;-;
 
-- Pojazd policyjny zachacza o żabę - problem pictureboxa żaby
+- ~~Pojazd policyjny zachacza o żabę - problem pictureboxa żaby~~
 - Gdy żaby wchodzą na kłody, kłoda jest przezroczysta
 - Gdy przytrzyma się przycisk(dowolny) energia żaby szybciej się odnawia
 - Gdy aktywuje sie menu escape i kliknie co innego niz spacje, to timery wznawiaja dzialanie...
