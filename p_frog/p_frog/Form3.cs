@@ -411,16 +411,16 @@ namespace p_frog
             tre12 -= 3;
             tre13 -= 3;
             tre14 -= 3;
-            tree_1.Location = new Point(tre1, 135);
-            tree_2.Location = new Point(tre2, 89);
-            tree_3.Location = new Point(tre3, 67);
-            tree_4.Location = new Point(tre4, 45);
+            tree_1.Location = new Point(tre1, 142);
+            tree_2.Location = new Point(tre2, 110);
+            tree_3.Location = new Point(tre3, 63);
+            tree_4.Location = new Point(tre4, 82);
             tree_6.Location = new Point(tre6, 115);
             tree_8.Location = new Point(tre8, 82);
             tree_9.Location = new Point(tre9, 82);
             tree_11.Location = new Point(tre11, 143);
             tree_12.Location = new Point(tre12, 143);
-            tree_13.Location = new Point(tre13, 82);
+            tree_13.Location = new Point(tre13, 52);
             tree_14.Location = new Point(tre14, 55);
         }
         #endregion
@@ -526,19 +526,19 @@ namespace p_frog
         {
             if (tree_1.Location.X < -120)
             {
-                tree_1.Location = new Point(823, 133);
+                tree_1.Location = new Point(823, 142);
             }
             else if (tree_2.Location.X < -200)
             {
-                tree_2.Location = new Point(823, 90);
+                tree_2.Location = new Point(823, 110);
             }
             else if (tree_3.Location.X < -108)
             {
-                tree_3.Location = new Point(823, 64);
+                tree_3.Location = new Point(823, 63);
             }
             else if (tree_4.Location.X < -119)
             {
-                tree_4.Location = new Point(823, 55);
+                tree_4.Location = new Point(823, 82);
             }
             else if (tree_6.Location.X < -119)
             {
@@ -562,7 +562,7 @@ namespace p_frog
             }
             else if (tree_13.Location.X < -119)
             {
-                tree_13.Location = new Point(823, 82);
+                tree_13.Location = new Point(823, 52);
             }
             else if (tree_14.Location.X < -119)
             {

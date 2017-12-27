@@ -346,9 +346,9 @@
             this.escape_menu.BackColor = System.Drawing.Color.Indigo;
             this.escape_menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.escape_menu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.escape_menu.Location = new System.Drawing.Point(272, 44);
+            this.escape_menu.Location = new System.Drawing.Point(272, 158);
             this.escape_menu.Name = "escape_menu";
-            this.escape_menu.Size = new System.Drawing.Size(327, 380);
+            this.escape_menu.Size = new System.Drawing.Size(327, 266);
             this.escape_menu.TabIndex = 44;
             this.escape_menu.TabStop = false;
             this.escape_menu.Visible = false;
@@ -370,21 +370,21 @@
             // 
             // tree_1
             // 
-            this.tree_1.Image = global::p_frog.Properties.Resources.tree_medium1;
-            this.tree_1.Location = new System.Drawing.Point(729, 143);
+            this.tree_1.Image = global::p_frog.Properties.Resources.tree_h_fxd;
+            this.tree_1.Location = new System.Drawing.Point(741, 143);
             this.tree_1.Name = "tree_1";
-            this.tree_1.Size = new System.Drawing.Size(127, 31);
-            this.tree_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.tree_1.Size = new System.Drawing.Size(81, 31);
+            this.tree_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.tree_1.TabIndex = 27;
             this.tree_1.TabStop = false;
             // 
             // tree_4
             // 
-            this.tree_4.Image = ((System.Drawing.Image)(resources.GetObject("tree_4.Image")));
-            this.tree_4.Location = new System.Drawing.Point(729, 55);
+            this.tree_4.Image = global::p_frog.Properties.Resources.tree_h_fxd;
+            this.tree_4.Location = new System.Drawing.Point(621, 82);
             this.tree_4.Name = "tree_4";
-            this.tree_4.Size = new System.Drawing.Size(127, 30);
-            this.tree_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.tree_4.Size = new System.Drawing.Size(78, 31);
+            this.tree_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.tree_4.TabIndex = 30;
             this.tree_4.TabStop = false;
             // 
@@ -400,10 +400,10 @@
             // 
             // tree_13
             // 
-            this.tree_13.Image = ((System.Drawing.Image)(resources.GetObject("tree_13.Image")));
-            this.tree_13.Location = new System.Drawing.Point(385, 109);
+            this.tree_13.Image = global::p_frog.Properties.Resources.tree_small_fxd;
+            this.tree_13.Location = new System.Drawing.Point(678, 52);
             this.tree_13.Name = "tree_13";
-            this.tree_13.Size = new System.Drawing.Size(79, 31);
+            this.tree_13.Size = new System.Drawing.Size(54, 31);
             this.tree_13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tree_13.TabIndex = 42;
             this.tree_13.TabStop = false;
@@ -460,21 +460,21 @@
             // 
             // tree_2
             // 
-            this.tree_2.Image = ((System.Drawing.Image)(resources.GetObject("tree_2.Image")));
-            this.tree_2.Location = new System.Drawing.Point(729, 115);
+            this.tree_2.Image = global::p_frog.Properties.Resources.tree_small_fxd;
+            this.tree_2.Location = new System.Drawing.Point(729, 110);
             this.tree_2.Name = "tree_2";
-            this.tree_2.Size = new System.Drawing.Size(79, 31);
-            this.tree_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.tree_2.Size = new System.Drawing.Size(65, 32);
+            this.tree_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.tree_2.TabIndex = 28;
             this.tree_2.TabStop = false;
             // 
             // tree_3
             // 
-            this.tree_3.Image = ((System.Drawing.Image)(resources.GetObject("tree_3.Image")));
-            this.tree_3.Location = new System.Drawing.Point(729, 82);
+            this.tree_3.Image = global::p_frog.Properties.Resources.tree_normal_fxd;
+            this.tree_3.Location = new System.Drawing.Point(730, 65);
             this.tree_3.Name = "tree_3";
-            this.tree_3.Size = new System.Drawing.Size(127, 39);
-            this.tree_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.tree_3.Size = new System.Drawing.Size(92, 48);
+            this.tree_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.tree_3.TabIndex = 29;
             this.tree_3.TabStop = false;
             // 
