@@ -39,7 +39,7 @@
             this.no_choice_warn = new System.Windows.Forms.Label();
             this.button_info = new System.Windows.Forms.Button();
             this.help_key = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button_levels = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.help)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.help_key)).BeginInit();
             this.SuspendLayout();
@@ -139,30 +139,30 @@
             // 
             // too_much_warn
             // 
-            this.too_much_warn.AutoSize = true;
             this.too_much_warn.BackColor = System.Drawing.Color.Crimson;
             this.too_much_warn.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.too_much_warn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.too_much_warn.ForeColor = System.Drawing.Color.AliceBlue;
-            this.too_much_warn.Location = new System.Drawing.Point(47, 237);
+            this.too_much_warn.Location = new System.Drawing.Point(24, 236);
             this.too_much_warn.Name = "too_much_warn";
-            this.too_much_warn.Size = new System.Drawing.Size(213, 15);
+            this.too_much_warn.Size = new System.Drawing.Size(258, 15);
             this.too_much_warn.TabIndex = 8;
-            this.too_much_warn.Text = "Uwaga: Wybierz tylko jeden tryb.";
+            this.too_much_warn.Text = "Wybierz tylko jeden tryb.";
+            this.too_much_warn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.too_much_warn.Visible = false;
             // 
             // no_choice_warn
             // 
-            this.no_choice_warn.AutoSize = true;
             this.no_choice_warn.BackColor = System.Drawing.Color.Crimson;
             this.no_choice_warn.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.no_choice_warn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.no_choice_warn.ForeColor = System.Drawing.Color.AliceBlue;
-            this.no_choice_warn.Location = new System.Drawing.Point(34, 194);
+            this.no_choice_warn.Location = new System.Drawing.Point(24, 194);
             this.no_choice_warn.Name = "no_choice_warn";
-            this.no_choice_warn.Size = new System.Drawing.Size(239, 15);
+            this.no_choice_warn.Size = new System.Drawing.Size(258, 15);
             this.no_choice_warn.TabIndex = 9;
-            this.no_choice_warn.Text = "Uwaga: Nie wybrałeś żadnego trybu!";
+            this.no_choice_warn.Text = "Nie wybrałeś żadnego trybu!";
+            this.no_choice_warn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.no_choice_warn.Visible = false;
             // 
             // button_info
@@ -195,23 +195,24 @@
             this.help_key.TabStop = false;
             this.help_key.Visible = false;
             // 
-            // button3
+            // button_levels
             // 
-            this.button3.BackColor = System.Drawing.Color.Chartreuse;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.CausesValidation = false;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Lucida Console", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button3.Location = new System.Drawing.Point(288, 194);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(101, 58);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Etapy";
-            this.button3.UseVisualStyleBackColor = false;
+            this.button_levels.BackColor = System.Drawing.Color.Chartreuse;
+            this.button_levels.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button_levels.CausesValidation = false;
+            this.button_levels.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.button_levels.FlatAppearance.BorderSize = 2;
+            this.button_levels.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.button_levels.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.button_levels.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_levels.Font = new System.Drawing.Font("Lucida Console", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_levels.Location = new System.Drawing.Point(288, 194);
+            this.button_levels.Name = "button_levels";
+            this.button_levels.Size = new System.Drawing.Size(101, 58);
+            this.button_levels.TabIndex = 12;
+            this.button_levels.Text = "Etapy";
+            this.button_levels.UseVisualStyleBackColor = false;
+            this.button_levels.Click += new System.EventHandler(this.button_levels_Click);
             // 
             // Form1
             // 
@@ -220,7 +221,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(842, 481);
             this.ControlBox = false;
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button_levels);
             this.Controls.Add(this.help_key);
             this.Controls.Add(this.button_info);
             this.Controls.Add(this.no_choice_warn);
@@ -256,7 +257,7 @@
         private System.Windows.Forms.Label no_choice_warn;
         private System.Windows.Forms.Button button_info;
         private System.Windows.Forms.PictureBox help_key;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button_levels;
     }
 }
 

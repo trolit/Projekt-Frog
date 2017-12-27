@@ -84,6 +84,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -160,8 +169,7 @@
   <ItemGroup>
     <Content Include="frog_icon.ico" />
     <Content Include="Resources\main_page_fixed.jpg" />
-    <Content Include="Resources\main_page_fixed_nt.jpg" />
-    <None Include="Resources\main_page_fixed_nt1.jpg" />
+    <None Include="Resources\main_page_fixed1.jpg" />
     <None Include="Resources\frogbro_jump.wav" />
     <None Include="Resources\frog_bro_up_stand1.png" />
     <None Include="Resources\frog_bro_up.gif" />

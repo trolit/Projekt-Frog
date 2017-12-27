@@ -573,9 +573,9 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap main_page_fixed_nt {
+        internal static System.Drawing.Bitmap main_page_fixed {
             get {
-                object obj = ResourceManager.GetObject("main_page_fixed_nt", resourceCulture);
+                object obj = ResourceManager.GetObject("main_page_fixed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

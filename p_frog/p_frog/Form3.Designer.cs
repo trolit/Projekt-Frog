@@ -66,7 +66,6 @@
             this.win_text_2 = new System.Windows.Forms.Label();
             this.win_box = new System.Windows.Forms.PictureBox();
             this.frog_coffin = new System.Windows.Forms.PictureBox();
-            this.bckg_lose = new System.Windows.Forms.PictureBox();
             this.plant_block2 = new System.Windows.Forms.PictureBox();
             this.plant_block1 = new System.Windows.Forms.PictureBox();
             this.win_text = new System.Windows.Forms.Label();
@@ -85,6 +84,7 @@
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timer5 = new System.Windows.Forms.Timer(this.components);
             this.timer6 = new System.Windows.Forms.Timer(this.components);
+            this.bckg_lose = new System.Windows.Forms.PictureBox();
             this.screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_border)).BeginInit();
@@ -106,7 +106,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.frog_dead)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.win_box)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_coffin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bckg_lose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plant_block2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plant_block1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_hideout_3)).BeginInit();
@@ -119,6 +118,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bckg_lose)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -564,16 +564,6 @@
             this.frog_coffin.TabStop = false;
             this.frog_coffin.Visible = false;
             // 
-            // bckg_lose
-            // 
-            this.bckg_lose.BackColor = System.Drawing.Color.Wheat;
-            this.bckg_lose.Location = new System.Drawing.Point(0, 0);
-            this.bckg_lose.Name = "bckg_lose";
-            this.bckg_lose.Size = new System.Drawing.Size(845, 481);
-            this.bckg_lose.TabIndex = 34;
-            this.bckg_lose.TabStop = false;
-            this.bckg_lose.Visible = false;
-            // 
             // plant_block2
             // 
             this.plant_block2.Image = ((System.Drawing.Image)(resources.GetObject("plant_block2.Image")));
@@ -729,6 +719,16 @@
             this.timer6.Interval = 450;
             this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
             // 
+            // bckg_lose
+            // 
+            this.bckg_lose.BackColor = System.Drawing.Color.Wheat;
+            this.bckg_lose.Location = new System.Drawing.Point(0, 0);
+            this.bckg_lose.Name = "bckg_lose";
+            this.bckg_lose.Size = new System.Drawing.Size(845, 481);
+            this.bckg_lose.TabIndex = 34;
+            this.bckg_lose.TabStop = false;
+            this.bckg_lose.Visible = false;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -764,7 +764,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.frog_dead)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.win_box)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_coffin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bckg_lose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.plant_block2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.plant_block1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_hideout_3)).EndInit();
@@ -777,6 +776,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bckg_lose)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -812,7 +812,6 @@
         private System.Windows.Forms.PictureBox water_area;
         private System.Windows.Forms.PictureBox frog_coffin;
         private System.Windows.Forms.PictureBox frog_dead;
-        private System.Windows.Forms.PictureBox bckg_lose;
         private System.Windows.Forms.PictureBox tree_2;
         protected System.Windows.Forms.PictureBox tree_6;
         private System.Windows.Forms.PictureBox tree_8;
@@ -837,5 +836,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ProgressBar fatigue;
         private System.Windows.Forms.ProgressBar fatigue_bro;
+        private System.Windows.Forms.PictureBox bckg_lose;
     }
 }
