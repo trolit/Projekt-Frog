@@ -42,13 +42,6 @@
             this.escape_quit = new System.Windows.Forms.Button();
             this.escape_title = new System.Windows.Forms.Button();
             this.escape_restart = new System.Windows.Forms.Button();
-            this.lose_text = new System.Windows.Forms.Label();
-            this.win_no = new System.Windows.Forms.Button();
-            this.win_yes = new System.Windows.Forms.Button();
-            this.win_text_2 = new System.Windows.Forms.Label();
-            this.win_text = new System.Windows.Forms.Label();
-            this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.escape_menu = new System.Windows.Forms.PictureBox();
             this.frog = new System.Windows.Forms.PictureBox();
             this.tree_1 = new System.Windows.Forms.PictureBox();
@@ -64,11 +57,16 @@
             this.tree_3 = new System.Windows.Forms.PictureBox();
             this.water_area = new System.Windows.Forms.PictureBox();
             this.frog_dead = new System.Windows.Forms.PictureBox();
+            this.lose_text = new System.Windows.Forms.Label();
+            this.win_no = new System.Windows.Forms.Button();
+            this.win_yes = new System.Windows.Forms.Button();
+            this.win_text_2 = new System.Windows.Forms.Label();
             this.win_box = new System.Windows.Forms.PictureBox();
             this.frog_coffin = new System.Windows.Forms.PictureBox();
             this.bckg_lose = new System.Windows.Forms.PictureBox();
             this.plant_block2 = new System.Windows.Forms.PictureBox();
             this.plant_block1 = new System.Windows.Forms.PictureBox();
+            this.win_text = new System.Windows.Forms.Label();
             this.frog_hideout_3 = new System.Windows.Forms.PictureBox();
             this.frog_hideout_2 = new System.Windows.Forms.PictureBox();
             this.frog_hideout_1 = new System.Windows.Forms.PictureBox();
@@ -79,6 +77,8 @@
             this.car_column = new System.Windows.Forms.PictureBox();
             this.police_car = new System.Windows.Forms.PictureBox();
             this.background_box = new System.Windows.Forms.PictureBox();
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.escape_menu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog)).BeginInit();
@@ -126,9 +126,9 @@
             // fatigue_solo
             // 
             this.fatigue_solo.BackColor = System.Drawing.Color.Crimson;
-            this.fatigue_solo.Location = new System.Drawing.Point(12, 24);
+            this.fatigue_solo.Location = new System.Drawing.Point(5, 18);
             this.fatigue_solo.Name = "fatigue_solo";
-            this.fatigue_solo.Size = new System.Drawing.Size(136, 23);
+            this.fatigue_solo.Size = new System.Drawing.Size(123, 23);
             this.fatigue_solo.TabIndex = 1;
             this.fatigue_solo.Value = 100;
             // 
@@ -137,7 +137,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(3, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 12);
             this.label1.TabIndex = 2;
@@ -297,74 +297,6 @@
             this.escape_restart.Visible = false;
             this.escape_restart.Click += new System.EventHandler(this.escape_restart_Click);
             // 
-            // lose_text
-            // 
-            this.lose_text.AutoSize = true;
-            this.lose_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lose_text.Location = new System.Drawing.Point(359, 204);
-            this.lose_text.Name = "lose_text";
-            this.lose_text.Size = new System.Drawing.Size(170, 24);
-            this.lose_text.TabIndex = 24;
-            this.lose_text.Text = "PRZEGRAŁEŚ :( ";
-            this.lose_text.Visible = false;
-            // 
-            // win_no
-            // 
-            this.win_no.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.win_no.Location = new System.Drawing.Point(444, 264);
-            this.win_no.Name = "win_no";
-            this.win_no.Size = new System.Drawing.Size(85, 40);
-            this.win_no.TabIndex = 23;
-            this.win_no.Text = "NIE :( ";
-            this.win_no.UseVisualStyleBackColor = true;
-            this.win_no.Visible = false;
-            this.win_no.Click += new System.EventHandler(this.win_no_Click);
-            // 
-            // win_yes
-            // 
-            this.win_yes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.win_yes.Location = new System.Drawing.Point(349, 264);
-            this.win_yes.Name = "win_yes";
-            this.win_yes.Size = new System.Drawing.Size(85, 40);
-            this.win_yes.TabIndex = 22;
-            this.win_yes.Text = "TAK :)";
-            this.win_yes.UseVisualStyleBackColor = true;
-            this.win_yes.Visible = false;
-            this.win_yes.Click += new System.EventHandler(this.win_yes_Click);
-            // 
-            // win_text_2
-            // 
-            this.win_text_2.AutoSize = true;
-            this.win_text_2.Location = new System.Drawing.Point(346, 228);
-            this.win_text_2.Name = "win_text_2";
-            this.win_text_2.Size = new System.Drawing.Size(196, 13);
-            this.win_text_2.TabIndex = 21;
-            this.win_text_2.Text = "Czy chcesz wrócić do menu głównego?";
-            this.win_text_2.Visible = false;
-            // 
-            // win_text
-            // 
-            this.win_text.AutoSize = true;
-            this.win_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.win_text.Location = new System.Drawing.Point(358, 204);
-            this.win_text.Name = "win_text";
-            this.win_text.Size = new System.Drawing.Size(126, 24);
-            this.win_text.TabIndex = 20;
-            this.win_text.Text = "WYGRANA !";
-            this.win_text.Visible = false;
-            // 
-            // timer3
-            // 
-            this.timer3.Enabled = true;
-            this.timer3.Interval = 70;
-            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
-            // 
-            // timer4
-            // 
-            this.timer4.Enabled = true;
-            this.timer4.Interval = 70;
-            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
-            // 
             // escape_menu
             // 
             this.escape_menu.BackColor = System.Drawing.Color.Indigo;
@@ -508,6 +440,51 @@
             this.frog_dead.TabStop = false;
             this.frog_dead.Visible = false;
             // 
+            // lose_text
+            // 
+            this.lose_text.AutoSize = true;
+            this.lose_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lose_text.Location = new System.Drawing.Point(359, 204);
+            this.lose_text.Name = "lose_text";
+            this.lose_text.Size = new System.Drawing.Size(170, 24);
+            this.lose_text.TabIndex = 24;
+            this.lose_text.Text = "PRZEGRAŁEŚ :( ";
+            this.lose_text.Visible = false;
+            // 
+            // win_no
+            // 
+            this.win_no.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.win_no.Location = new System.Drawing.Point(444, 264);
+            this.win_no.Name = "win_no";
+            this.win_no.Size = new System.Drawing.Size(85, 40);
+            this.win_no.TabIndex = 23;
+            this.win_no.Text = "NIE :( ";
+            this.win_no.UseVisualStyleBackColor = true;
+            this.win_no.Visible = false;
+            this.win_no.Click += new System.EventHandler(this.win_no_Click);
+            // 
+            // win_yes
+            // 
+            this.win_yes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.win_yes.Location = new System.Drawing.Point(349, 264);
+            this.win_yes.Name = "win_yes";
+            this.win_yes.Size = new System.Drawing.Size(85, 40);
+            this.win_yes.TabIndex = 22;
+            this.win_yes.Text = "TAK :)";
+            this.win_yes.UseVisualStyleBackColor = true;
+            this.win_yes.Visible = false;
+            this.win_yes.Click += new System.EventHandler(this.win_yes_Click);
+            // 
+            // win_text_2
+            // 
+            this.win_text_2.AutoSize = true;
+            this.win_text_2.Location = new System.Drawing.Point(346, 228);
+            this.win_text_2.Name = "win_text_2";
+            this.win_text_2.Size = new System.Drawing.Size(196, 13);
+            this.win_text_2.TabIndex = 21;
+            this.win_text_2.Text = "Czy chcesz wrócić do menu głównego?";
+            this.win_text_2.Visible = false;
+            // 
             // win_box
             // 
             this.win_box.BackColor = System.Drawing.Color.Transparent;
@@ -542,7 +519,7 @@
             // plant_block2
             // 
             this.plant_block2.Image = ((System.Drawing.Image)(resources.GetObject("plant_block2.Image")));
-            this.plant_block2.Location = new System.Drawing.Point(471, -21);
+            this.plant_block2.Location = new System.Drawing.Point(477, -21);
             this.plant_block2.Name = "plant_block2";
             this.plant_block2.Size = new System.Drawing.Size(71, 70);
             this.plant_block2.TabIndex = 26;
@@ -551,16 +528,27 @@
             // plant_block1
             // 
             this.plant_block1.Image = ((System.Drawing.Image)(resources.GetObject("plant_block1.Image")));
-            this.plant_block1.Location = new System.Drawing.Point(282, -20);
+            this.plant_block1.Location = new System.Drawing.Point(275, -20);
             this.plant_block1.Name = "plant_block1";
             this.plant_block1.Size = new System.Drawing.Size(71, 72);
             this.plant_block1.TabIndex = 25;
             this.plant_block1.TabStop = false;
             // 
+            // win_text
+            // 
+            this.win_text.AutoSize = true;
+            this.win_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.win_text.Location = new System.Drawing.Point(358, 204);
+            this.win_text.Name = "win_text";
+            this.win_text.Size = new System.Drawing.Size(126, 24);
+            this.win_text.TabIndex = 20;
+            this.win_text.Text = "WYGRANA !";
+            this.win_text.Visible = false;
+            // 
             // frog_hideout_3
             // 
             this.frog_hideout_3.Image = ((System.Drawing.Image)(resources.GetObject("frog_hideout_3.Image")));
-            this.frog_hideout_3.Location = new System.Drawing.Point(563, -12);
+            this.frog_hideout_3.Location = new System.Drawing.Point(588, -12);
             this.frog_hideout_3.Name = "frog_hideout_3";
             this.frog_hideout_3.Size = new System.Drawing.Size(60, 50);
             this.frog_hideout_3.TabIndex = 18;
@@ -569,7 +557,7 @@
             // frog_hideout_2
             // 
             this.frog_hideout_2.Image = ((System.Drawing.Image)(resources.GetObject("frog_hideout_2.Image")));
-            this.frog_hideout_2.Location = new System.Drawing.Point(385, -12);
+            this.frog_hideout_2.Location = new System.Drawing.Point(382, -12);
             this.frog_hideout_2.Name = "frog_hideout_2";
             this.frog_hideout_2.Size = new System.Drawing.Size(60, 50);
             this.frog_hideout_2.TabIndex = 17;
@@ -578,7 +566,7 @@
             // frog_hideout_1
             // 
             this.frog_hideout_1.Image = ((System.Drawing.Image)(resources.GetObject("frog_hideout_1.Image")));
-            this.frog_hideout_1.Location = new System.Drawing.Point(197, -12);
+            this.frog_hideout_1.Location = new System.Drawing.Point(176, -12);
             this.frog_hideout_1.Name = "frog_hideout_1";
             this.frog_hideout_1.Size = new System.Drawing.Size(60, 50);
             this.frog_hideout_1.TabIndex = 16;
@@ -648,6 +636,18 @@
             this.background_box.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.background_box.TabIndex = 5;
             this.background_box.TabStop = false;
+            // 
+            // timer3
+            // 
+            this.timer3.Enabled = true;
+            this.timer3.Interval = 70;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
+            // timer4
+            // 
+            this.timer4.Enabled = true;
+            this.timer4.Interval = 70;
+            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
             // Form2
             // 
