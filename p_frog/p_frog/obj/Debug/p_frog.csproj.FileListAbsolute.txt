@@ -11,3 +11,4 @@ D:\Git\bin\Projekt-Frog\p_frog\p_frog\obj\Debug\p_frog.pdb
 D:\Git\bin\Projekt-Frog\p_frog\p_frog\obj\Debug\p_frog.Form2.resources
 D:\Git\bin\Projekt-Frog\p_frog\p_frog\obj\Debug\p_frog.Form3.resources
 D:\Git\bin\Projekt-Frog\p_frog\p_frog\obj\Debug\p_frog.Form4.resources
+D:\Git\bin\Projekt-Frog\p_frog\p_frog\obj\Debug\p_frog.Form5.resources

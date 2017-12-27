@@ -12,9 +12,11 @@ namespace p_frog
 {
     public partial class Form4 : Form
     {
+        
         public Form4()
         {
             InitializeComponent();
+            
         }
 
         // przycisk powrotu
@@ -27,9 +29,31 @@ namespace p_frog
 
         private void level_1_Click(object sender, EventArgs e)
         {
-
+            if(singlefrog.Checked && !doublefrog.Checked)
+            {
+                Form2 przejscie = new Form2();
+                this.Hide();
+                przejscie.Show();
+            }
+            else if(!singlefrog.Checked && doublefrog.Checked)
+            {
+                Form3 przejscie = new Form3();
+                this.Hide();
+                przejscie.Show();
+            }
         }
 
+        private void level_2_Click(object sender, EventArgs e)
+        {
+            if (singlefrog.Checked && !doublefrog.Checked)
+            {
+                Form5 przejscie = new Form5();
+                this.Hide();
+                przejscie.Show();
+            }
+        }
+
+        #region 1. Zmiana kolorów kartonów
         private void switch_colors(object sender, EventArgs e)
         {
             if(doublefrog.Checked)
@@ -57,5 +81,6 @@ namespace p_frog
                 level_9.BackColor = Color.Chartreuse;
             }
         }
+        #endregion
     }
 }

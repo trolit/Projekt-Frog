@@ -40,13 +40,25 @@
             this.level_8 = new System.Windows.Forms.Button();
             this.level_9 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.padlock_lvl2 = new System.Windows.Forms.PictureBox();
-            this.padlock_lvl3 = new System.Windows.Forms.PictureBox();
             this.singlefrog = new System.Windows.Forms.CheckBox();
             this.doublefrog = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.padlock_lvl2 = new System.Windows.Forms.PictureBox();
+            this.padlock_lvl3 = new System.Windows.Forms.PictureBox();
+            this.padlock_lvl4 = new System.Windows.Forms.PictureBox();
+            this.padlock_lvl5 = new System.Windows.Forms.PictureBox();
+            this.padlock_lvl7 = new System.Windows.Forms.PictureBox();
+            this.padlock_lvl8 = new System.Windows.Forms.PictureBox();
+            this.padlock_lvl9 = new System.Windows.Forms.PictureBox();
+            this.padlock_lvl6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl6)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -58,7 +70,7 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Location = new System.Drawing.Point(12, 25);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 40);
             this.button1.TabIndex = 0;
@@ -71,7 +83,7 @@
             this.level_1.BackColor = System.Drawing.Color.Chartreuse;
             this.level_1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.level_1.Font = new System.Drawing.Font("Lucida Console", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.level_1.Location = new System.Drawing.Point(13, 70);
+            this.level_1.Location = new System.Drawing.Point(13, 102);
             this.level_1.Name = "level_1";
             this.level_1.Size = new System.Drawing.Size(63, 55);
             this.level_1.TabIndex = 1;
@@ -84,19 +96,20 @@
             this.level_2.BackColor = System.Drawing.Color.Chartreuse;
             this.level_2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.level_2.Font = new System.Drawing.Font("Lucida Console", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.level_2.Location = new System.Drawing.Point(82, 70);
+            this.level_2.Location = new System.Drawing.Point(82, 102);
             this.level_2.Name = "level_2";
             this.level_2.Size = new System.Drawing.Size(63, 55);
             this.level_2.TabIndex = 2;
             this.level_2.Text = "2";
             this.level_2.UseVisualStyleBackColor = false;
+            this.level_2.Click += new System.EventHandler(this.level_2_Click);
             // 
             // level_3
             // 
             this.level_3.BackColor = System.Drawing.Color.Chartreuse;
             this.level_3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.level_3.Font = new System.Drawing.Font("Lucida Console", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.level_3.Location = new System.Drawing.Point(151, 70);
+            this.level_3.Location = new System.Drawing.Point(151, 102);
             this.level_3.Name = "level_3";
             this.level_3.Size = new System.Drawing.Size(63, 55);
             this.level_3.TabIndex = 3;
@@ -108,7 +121,7 @@
             this.level_4.BackColor = System.Drawing.Color.Chartreuse;
             this.level_4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.level_4.Font = new System.Drawing.Font("Lucida Console", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.level_4.Location = new System.Drawing.Point(220, 70);
+            this.level_4.Location = new System.Drawing.Point(220, 102);
             this.level_4.Name = "level_4";
             this.level_4.Size = new System.Drawing.Size(63, 55);
             this.level_4.TabIndex = 4;
@@ -120,7 +133,7 @@
             this.level_5.BackColor = System.Drawing.Color.Chartreuse;
             this.level_5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.level_5.Font = new System.Drawing.Font("Lucida Console", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.level_5.Location = new System.Drawing.Point(289, 70);
+            this.level_5.Location = new System.Drawing.Point(289, 102);
             this.level_5.Name = "level_5";
             this.level_5.Size = new System.Drawing.Size(63, 55);
             this.level_5.TabIndex = 5;
@@ -132,7 +145,7 @@
             this.level_6.BackColor = System.Drawing.Color.Chartreuse;
             this.level_6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.level_6.Font = new System.Drawing.Font("Lucida Console", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.level_6.Location = new System.Drawing.Point(358, 70);
+            this.level_6.Location = new System.Drawing.Point(358, 102);
             this.level_6.Name = "level_6";
             this.level_6.Size = new System.Drawing.Size(63, 55);
             this.level_6.TabIndex = 6;
@@ -144,7 +157,7 @@
             this.level_7.BackColor = System.Drawing.Color.Chartreuse;
             this.level_7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.level_7.Font = new System.Drawing.Font("Lucida Console", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.level_7.Location = new System.Drawing.Point(13, 172);
+            this.level_7.Location = new System.Drawing.Point(13, 199);
             this.level_7.Name = "level_7";
             this.level_7.Size = new System.Drawing.Size(63, 55);
             this.level_7.TabIndex = 7;
@@ -156,7 +169,7 @@
             this.level_8.BackColor = System.Drawing.Color.Chartreuse;
             this.level_8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.level_8.Font = new System.Drawing.Font("Lucida Console", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.level_8.Location = new System.Drawing.Point(82, 172);
+            this.level_8.Location = new System.Drawing.Point(82, 199);
             this.level_8.Name = "level_8";
             this.level_8.Size = new System.Drawing.Size(63, 55);
             this.level_8.TabIndex = 8;
@@ -168,7 +181,7 @@
             this.level_9.BackColor = System.Drawing.Color.Chartreuse;
             this.level_9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.level_9.Font = new System.Drawing.Font("Lucida Console", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.level_9.Location = new System.Drawing.Point(151, 172);
+            this.level_9.Location = new System.Drawing.Point(151, 199);
             this.level_9.Name = "level_9";
             this.level_9.Size = new System.Drawing.Size(63, 55);
             this.level_9.TabIndex = 9;
@@ -179,31 +192,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Console", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(146, 22);
+            this.label1.Location = new System.Drawing.Point(146, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(252, 27);
             this.label1.TabIndex = 10;
             this.label1.Text = "Wybierz poziom:";
-            // 
-            // padlock_lvl2
-            // 
-            this.padlock_lvl2.BackColor = System.Drawing.Color.Transparent;
-            this.padlock_lvl2.Image = global::p_frog.Properties.Resources.padlock_fxd2;
-            this.padlock_lvl2.Location = new System.Drawing.Point(82, 52);
-            this.padlock_lvl2.Name = "padlock_lvl2";
-            this.padlock_lvl2.Size = new System.Drawing.Size(65, 87);
-            this.padlock_lvl2.TabIndex = 11;
-            this.padlock_lvl2.TabStop = false;
-            // 
-            // padlock_lvl3
-            // 
-            this.padlock_lvl3.BackColor = System.Drawing.Color.Transparent;
-            this.padlock_lvl3.Image = global::p_frog.Properties.Resources.padlock_fxd2;
-            this.padlock_lvl3.Location = new System.Drawing.Point(151, 52);
-            this.padlock_lvl3.Name = "padlock_lvl3";
-            this.padlock_lvl3.Size = new System.Drawing.Size(65, 87);
-            this.padlock_lvl3.TabIndex = 12;
-            this.padlock_lvl3.TabStop = false;
             // 
             // singlefrog
             // 
@@ -248,6 +241,86 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Wybierz tryb gry:";
             // 
+            // padlock_lvl2
+            // 
+            this.padlock_lvl2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.padlock_lvl2.Image = global::p_frog.Properties.Resources.padlock_fxd2;
+            this.padlock_lvl2.Location = new System.Drawing.Point(80, 84);
+            this.padlock_lvl2.Name = "padlock_lvl2";
+            this.padlock_lvl2.Size = new System.Drawing.Size(65, 87);
+            this.padlock_lvl2.TabIndex = 16;
+            this.padlock_lvl2.TabStop = false;
+            // 
+            // padlock_lvl3
+            // 
+            this.padlock_lvl3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.padlock_lvl3.Image = global::p_frog.Properties.Resources.padlock_fxd2;
+            this.padlock_lvl3.Location = new System.Drawing.Point(151, 84);
+            this.padlock_lvl3.Name = "padlock_lvl3";
+            this.padlock_lvl3.Size = new System.Drawing.Size(65, 87);
+            this.padlock_lvl3.TabIndex = 17;
+            this.padlock_lvl3.TabStop = false;
+            // 
+            // padlock_lvl4
+            // 
+            this.padlock_lvl4.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.padlock_lvl4.Image = global::p_frog.Properties.Resources.padlock_fxd2;
+            this.padlock_lvl4.Location = new System.Drawing.Point(218, 84);
+            this.padlock_lvl4.Name = "padlock_lvl4";
+            this.padlock_lvl4.Size = new System.Drawing.Size(65, 87);
+            this.padlock_lvl4.TabIndex = 18;
+            this.padlock_lvl4.TabStop = false;
+            // 
+            // padlock_lvl5
+            // 
+            this.padlock_lvl5.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.padlock_lvl5.Image = global::p_frog.Properties.Resources.padlock_fxd2;
+            this.padlock_lvl5.Location = new System.Drawing.Point(287, 84);
+            this.padlock_lvl5.Name = "padlock_lvl5";
+            this.padlock_lvl5.Size = new System.Drawing.Size(65, 87);
+            this.padlock_lvl5.TabIndex = 19;
+            this.padlock_lvl5.TabStop = false;
+            // 
+            // padlock_lvl7
+            // 
+            this.padlock_lvl7.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.padlock_lvl7.Image = global::p_frog.Properties.Resources.padlock_fxd2;
+            this.padlock_lvl7.Location = new System.Drawing.Point(11, 181);
+            this.padlock_lvl7.Name = "padlock_lvl7";
+            this.padlock_lvl7.Size = new System.Drawing.Size(65, 87);
+            this.padlock_lvl7.TabIndex = 20;
+            this.padlock_lvl7.TabStop = false;
+            // 
+            // padlock_lvl8
+            // 
+            this.padlock_lvl8.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.padlock_lvl8.Image = global::p_frog.Properties.Resources.padlock_fxd2;
+            this.padlock_lvl8.Location = new System.Drawing.Point(82, 181);
+            this.padlock_lvl8.Name = "padlock_lvl8";
+            this.padlock_lvl8.Size = new System.Drawing.Size(65, 87);
+            this.padlock_lvl8.TabIndex = 21;
+            this.padlock_lvl8.TabStop = false;
+            // 
+            // padlock_lvl9
+            // 
+            this.padlock_lvl9.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.padlock_lvl9.Image = global::p_frog.Properties.Resources.padlock_fxd2;
+            this.padlock_lvl9.Location = new System.Drawing.Point(151, 181);
+            this.padlock_lvl9.Name = "padlock_lvl9";
+            this.padlock_lvl9.Size = new System.Drawing.Size(65, 87);
+            this.padlock_lvl9.TabIndex = 22;
+            this.padlock_lvl9.TabStop = false;
+            // 
+            // padlock_lvl6
+            // 
+            this.padlock_lvl6.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.padlock_lvl6.Image = global::p_frog.Properties.Resources.padlock_fxd2;
+            this.padlock_lvl6.Location = new System.Drawing.Point(356, 84);
+            this.padlock_lvl6.Name = "padlock_lvl6";
+            this.padlock_lvl6.Size = new System.Drawing.Size(65, 87);
+            this.padlock_lvl6.TabIndex = 23;
+            this.padlock_lvl6.TabStop = false;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,11 +328,17 @@
             this.BackColor = System.Drawing.Color.LimeGreen;
             this.ClientSize = new System.Drawing.Size(436, 379);
             this.ControlBox = false;
+            this.Controls.Add(this.padlock_lvl6);
+            this.Controls.Add(this.padlock_lvl9);
+            this.Controls.Add(this.padlock_lvl8);
+            this.Controls.Add(this.padlock_lvl7);
+            this.Controls.Add(this.padlock_lvl5);
+            this.Controls.Add(this.padlock_lvl4);
+            this.Controls.Add(this.padlock_lvl3);
+            this.Controls.Add(this.padlock_lvl2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.doublefrog);
             this.Controls.Add(this.singlefrog);
-            this.Controls.Add(this.padlock_lvl3);
-            this.Controls.Add(this.padlock_lvl2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.level_9);
             this.Controls.Add(this.level_8);
@@ -279,6 +358,12 @@
             this.Text = "Projekt Frog";
             ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,10 +382,16 @@
         private System.Windows.Forms.Button level_8;
         private System.Windows.Forms.Button level_9;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox padlock_lvl2;
-        private System.Windows.Forms.PictureBox padlock_lvl3;
         private System.Windows.Forms.CheckBox singlefrog;
         private System.Windows.Forms.CheckBox doublefrog;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox padlock_lvl2;
+        private System.Windows.Forms.PictureBox padlock_lvl3;
+        private System.Windows.Forms.PictureBox padlock_lvl4;
+        private System.Windows.Forms.PictureBox padlock_lvl5;
+        private System.Windows.Forms.PictureBox padlock_lvl7;
+        private System.Windows.Forms.PictureBox padlock_lvl8;
+        private System.Windows.Forms.PictureBox padlock_lvl9;
+        private System.Windows.Forms.PictureBox padlock_lvl6;
     }
 }
