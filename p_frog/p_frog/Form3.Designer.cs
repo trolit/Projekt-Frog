@@ -170,17 +170,25 @@
             // screen
             // 
             this.screen.BackColor = System.Drawing.Color.Transparent;
+            this.screen.Controls.Add(this.lose_text);
+            this.screen.Controls.Add(this.win_no);
+            this.screen.Controls.Add(this.win_yes);
+            this.screen.Controls.Add(this.win_text_2);
+            this.screen.Controls.Add(this.win_box);
+            this.screen.Controls.Add(this.frog_dead);
+            this.screen.Controls.Add(this.frog_coffin);
+            this.screen.Controls.Add(this.bckg_lose);
+            this.screen.Controls.Add(this.escape_text1);
+            this.screen.Controls.Add(this.escape_quit);
+            this.screen.Controls.Add(this.escape_title);
+            this.screen.Controls.Add(this.escape_restart);
+            this.screen.Controls.Add(this.escape_menu);
             this.screen.Controls.Add(this.fatigue_bro);
             this.screen.Controls.Add(this.pictureBox1);
             this.screen.Controls.Add(this.fatigue);
             this.screen.Controls.Add(this.frog_border);
             this.screen.Controls.Add(this.frog_bro);
             this.screen.Controls.Add(this.escape_text2);
-            this.screen.Controls.Add(this.escape_text1);
-            this.screen.Controls.Add(this.escape_quit);
-            this.screen.Controls.Add(this.escape_title);
-            this.screen.Controls.Add(this.escape_restart);
-            this.screen.Controls.Add(this.escape_menu);
             this.screen.Controls.Add(this.frog);
             this.screen.Controls.Add(this.tree_1);
             this.screen.Controls.Add(this.tree_4);
@@ -194,14 +202,6 @@
             this.screen.Controls.Add(this.tree_2);
             this.screen.Controls.Add(this.tree_3);
             this.screen.Controls.Add(this.water_area);
-            this.screen.Controls.Add(this.frog_dead);
-            this.screen.Controls.Add(this.lose_text);
-            this.screen.Controls.Add(this.win_no);
-            this.screen.Controls.Add(this.win_yes);
-            this.screen.Controls.Add(this.win_text_2);
-            this.screen.Controls.Add(this.win_box);
-            this.screen.Controls.Add(this.frog_coffin);
-            this.screen.Controls.Add(this.bckg_lose);
             this.screen.Controls.Add(this.plant_block2);
             this.screen.Controls.Add(this.plant_block1);
             this.screen.Controls.Add(this.win_text);
@@ -346,9 +346,9 @@
             this.escape_menu.BackColor = System.Drawing.Color.Indigo;
             this.escape_menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.escape_menu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.escape_menu.Location = new System.Drawing.Point(272, 158);
+            this.escape_menu.Location = new System.Drawing.Point(272, 55);
             this.escape_menu.Name = "escape_menu";
-            this.escape_menu.Size = new System.Drawing.Size(327, 266);
+            this.escape_menu.Size = new System.Drawing.Size(327, 323);
             this.escape_menu.TabIndex = 44;
             this.escape_menu.TabStop = false;
             this.escape_menu.Visible = false;
@@ -567,9 +567,9 @@
             // bckg_lose
             // 
             this.bckg_lose.BackColor = System.Drawing.Color.Wheat;
-            this.bckg_lose.Location = new System.Drawing.Point(0, 356);
+            this.bckg_lose.Location = new System.Drawing.Point(0, 0);
             this.bckg_lose.Name = "bckg_lose";
-            this.bckg_lose.Size = new System.Drawing.Size(845, 125);
+            this.bckg_lose.Size = new System.Drawing.Size(845, 481);
             this.bckg_lose.TabIndex = 34;
             this.bckg_lose.TabStop = false;
             this.bckg_lose.Visible = false;

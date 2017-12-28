@@ -302,9 +302,9 @@
             this.escape_menu.BackColor = System.Drawing.Color.Indigo;
             this.escape_menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.escape_menu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.escape_menu.Location = new System.Drawing.Point(272, 190);
+            this.escape_menu.Location = new System.Drawing.Point(272, 54);
             this.escape_menu.Name = "escape_menu";
-            this.escape_menu.Size = new System.Drawing.Size(327, 234);
+            this.escape_menu.Size = new System.Drawing.Size(327, 370);
             this.escape_menu.TabIndex = 44;
             this.escape_menu.TabStop = false;
             this.escape_menu.Visible = false;
@@ -509,9 +509,9 @@
             // bckg_lose
             // 
             this.bckg_lose.BackColor = System.Drawing.Color.Wheat;
-            this.bckg_lose.Location = new System.Drawing.Point(0, 231);
+            this.bckg_lose.Location = new System.Drawing.Point(0, 0);
             this.bckg_lose.Name = "bckg_lose";
-            this.bckg_lose.Size = new System.Drawing.Size(845, 250);
+            this.bckg_lose.Size = new System.Drawing.Size(845, 481);
             this.bckg_lose.TabIndex = 34;
             this.bckg_lose.TabStop = false;
             this.bckg_lose.Visible = false;
