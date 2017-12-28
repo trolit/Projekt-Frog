@@ -178,6 +178,8 @@
   <ItemGroup>
     <Content Include="frog_icon.ico" />
     <Content Include="Resources\main_page_fixed.jpg" />
+    <None Include="Resources\pepe_frog2.png" />
+    <None Include="Resources\pepe_frog1.png" />
     <None Include="Resources\tree_h_fxd.png" />
     <None Include="Resources\tree_tiny_fxd.png" />
     <None Include="Resources\tree_small_fxd.png" />
@@ -194,9 +196,6 @@
     <None Include="Resources\frog_bro_down_stand.png" />
     <None Include="Resources\frog_bro_down.gif" />
     <None Include="Resources\frog_bro_up_stand.png" />
-    <None Include="Resources\tree_small.png" />
-    <None Include="Resources\tree_long.png" />
-    <None Include="Resources\tree_medium.png" />
     <None Include="Resources\plant.png" />
     <None Include="Resources\car_2_fxd.png" />
     <None Include="Resources\car_1_fxd.png" />
@@ -204,7 +203,6 @@
     <None Include="Resources\frog_escape.png" />
     <None Include="Resources\frog_play_background.png" />
     <None Include="Resources\frog_life_fxd2.png" />
-    <None Include="Resources\frog_dead.png" />
     <None Include="Resources\coffin_frog.png" />
     <None Include="Resources\lose_sound_fxd.wav" />
     <None Include="Resources\win_sound.wav" />

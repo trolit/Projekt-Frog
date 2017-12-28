@@ -384,17 +384,6 @@
             this.water_area.TabStop = false;
             this.water_area.Visible = false;
             // 
-            // frog_dead
-            // 
-            this.frog_dead.BackColor = System.Drawing.Color.Wheat;
-            this.frog_dead.Image = global::p_frog.Properties.Resources.frog_dead;
-            this.frog_dead.Location = new System.Drawing.Point(637, 228);
-            this.frog_dead.Name = "frog_dead";
-            this.frog_dead.Size = new System.Drawing.Size(114, 94);
-            this.frog_dead.TabIndex = 33;
-            this.frog_dead.TabStop = false;
-            this.frog_dead.Visible = false;
-            // 
             // lose_text
             // 
             this.lose_text.AutoSize = true;

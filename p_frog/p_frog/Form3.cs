@@ -248,7 +248,8 @@ namespace p_frog
             frog_lose.Play();
 
             frog_coffin.Visible = true;
-            frog_dead.Visible = true;
+            pepe_1.Visible = true;
+            pepe_2.Visible = true;
             lose_text.Visible = true;
             win_text_2.Visible = true;
             win_yes.Visible = true;
