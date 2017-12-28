@@ -35,6 +35,20 @@
             this.escape_quit = new System.Windows.Forms.Button();
             this.escape_title = new System.Windows.Forms.Button();
             this.escape_restart = new System.Windows.Forms.Button();
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.screen = new System.Windows.Forms.Panel();
+            this.lose_text = new System.Windows.Forms.Label();
+            this.win_no = new System.Windows.Forms.Button();
+            this.win_yes = new System.Windows.Forms.Button();
+            this.win_text_2 = new System.Windows.Forms.Label();
+            this.win_text = new System.Windows.Forms.Label();
+            this.warning2 = new System.Windows.Forms.Label();
+            this.warning1 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.fatigue_solo = new System.Windows.Forms.ProgressBar();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.escape_menu = new System.Windows.Forms.PictureBox();
             this.frog = new System.Windows.Forms.PictureBox();
             this.tree_1 = new System.Windows.Forms.PictureBox();
@@ -42,28 +56,18 @@
             this.tree_14 = new System.Windows.Forms.PictureBox();
             this.tree_13 = new System.Windows.Forms.PictureBox();
             this.tree_12 = new System.Windows.Forms.PictureBox();
+            this.tree_11 = new System.Windows.Forms.PictureBox();
             this.tree_9 = new System.Windows.Forms.PictureBox();
             this.tree_8 = new System.Windows.Forms.PictureBox();
             this.tree_6 = new System.Windows.Forms.PictureBox();
             this.tree_2 = new System.Windows.Forms.PictureBox();
-            this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.tree_11 = new System.Windows.Forms.PictureBox();
-            this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.tree_3 = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.screen = new System.Windows.Forms.Panel();
             this.water_area = new System.Windows.Forms.PictureBox();
-            this.frog_dead = new System.Windows.Forms.PictureBox();
-            this.lose_text = new System.Windows.Forms.Label();
-            this.win_no = new System.Windows.Forms.Button();
-            this.win_yes = new System.Windows.Forms.Button();
-            this.win_text_2 = new System.Windows.Forms.Label();
             this.win_box = new System.Windows.Forms.PictureBox();
             this.frog_coffin = new System.Windows.Forms.PictureBox();
             this.bckg_lose = new System.Windows.Forms.PictureBox();
             this.plant_block2 = new System.Windows.Forms.PictureBox();
             this.plant_block1 = new System.Windows.Forms.PictureBox();
-            this.win_text = new System.Windows.Forms.Label();
             this.frog_hideout_3 = new System.Windows.Forms.PictureBox();
             this.frog_hideout_2 = new System.Windows.Forms.PictureBox();
             this.frog_hideout_1 = new System.Windows.Forms.PictureBox();
@@ -73,12 +77,8 @@
             this.truck_car = new System.Windows.Forms.PictureBox();
             this.car_column = new System.Windows.Forms.PictureBox();
             this.police_car = new System.Windows.Forms.PictureBox();
-            this.warning2 = new System.Windows.Forms.Label();
-            this.warning1 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.fatigue_solo = new System.Windows.Forms.ProgressBar();
             this.background_box = new System.Windows.Forms.PictureBox();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.escape_menu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_1)).BeginInit();
@@ -86,15 +86,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.tree_14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tree_11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tree_11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_3)).BeginInit();
-            this.screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.water_area)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frog_dead)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.win_box)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_coffin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bckg_lose)).BeginInit();
@@ -183,14 +181,186 @@
             this.escape_restart.UseVisualStyleBackColor = false;
             this.escape_restart.Visible = false;
             // 
+            // timer3
+            // 
+            this.timer3.Enabled = true;
+            this.timer3.Interval = 70;
+            // 
+            // timer4
+            // 
+            this.timer4.Enabled = true;
+            this.timer4.Interval = 70;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 600;
+            // 
+            // screen
+            // 
+            this.screen.BackColor = System.Drawing.Color.Transparent;
+            this.screen.Controls.Add(this.escape_text2);
+            this.screen.Controls.Add(this.escape_text1);
+            this.screen.Controls.Add(this.escape_quit);
+            this.screen.Controls.Add(this.escape_title);
+            this.screen.Controls.Add(this.escape_restart);
+            this.screen.Controls.Add(this.escape_menu);
+            this.screen.Controls.Add(this.frog);
+            this.screen.Controls.Add(this.tree_1);
+            this.screen.Controls.Add(this.tree_4);
+            this.screen.Controls.Add(this.tree_14);
+            this.screen.Controls.Add(this.tree_13);
+            this.screen.Controls.Add(this.tree_12);
+            this.screen.Controls.Add(this.tree_11);
+            this.screen.Controls.Add(this.tree_9);
+            this.screen.Controls.Add(this.tree_8);
+            this.screen.Controls.Add(this.tree_6);
+            this.screen.Controls.Add(this.tree_2);
+            this.screen.Controls.Add(this.tree_3);
+            this.screen.Controls.Add(this.water_area);
+            this.screen.Controls.Add(this.lose_text);
+            this.screen.Controls.Add(this.win_no);
+            this.screen.Controls.Add(this.win_yes);
+            this.screen.Controls.Add(this.win_text_2);
+            this.screen.Controls.Add(this.win_box);
+            this.screen.Controls.Add(this.frog_coffin);
+            this.screen.Controls.Add(this.bckg_lose);
+            this.screen.Controls.Add(this.plant_block2);
+            this.screen.Controls.Add(this.plant_block1);
+            this.screen.Controls.Add(this.win_text);
+            this.screen.Controls.Add(this.frog_hideout_3);
+            this.screen.Controls.Add(this.frog_hideout_2);
+            this.screen.Controls.Add(this.frog_hideout_1);
+            this.screen.Controls.Add(this.frog_life_3);
+            this.screen.Controls.Add(this.frog_life_2);
+            this.screen.Controls.Add(this.frog_life_1);
+            this.screen.Controls.Add(this.truck_car);
+            this.screen.Controls.Add(this.car_column);
+            this.screen.Controls.Add(this.police_car);
+            this.screen.Controls.Add(this.warning2);
+            this.screen.Controls.Add(this.warning1);
+            this.screen.Controls.Add(this.label1);
+            this.screen.Controls.Add(this.fatigue_solo);
+            this.screen.Controls.Add(this.background_box);
+            this.screen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.screen.ForeColor = System.Drawing.Color.DarkBlue;
+            this.screen.Location = new System.Drawing.Point(0, 0);
+            this.screen.Name = "screen";
+            this.screen.Size = new System.Drawing.Size(842, 481);
+            this.screen.TabIndex = 1;
+            // 
+            // lose_text
+            // 
+            this.lose_text.AutoSize = true;
+            this.lose_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lose_text.Location = new System.Drawing.Point(359, 204);
+            this.lose_text.Name = "lose_text";
+            this.lose_text.Size = new System.Drawing.Size(170, 24);
+            this.lose_text.TabIndex = 24;
+            this.lose_text.Text = "PRZEGRAŁEŚ :( ";
+            this.lose_text.Visible = false;
+            // 
+            // win_no
+            // 
+            this.win_no.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.win_no.Location = new System.Drawing.Point(444, 264);
+            this.win_no.Name = "win_no";
+            this.win_no.Size = new System.Drawing.Size(85, 40);
+            this.win_no.TabIndex = 23;
+            this.win_no.Text = "NIE :( ";
+            this.win_no.UseVisualStyleBackColor = true;
+            this.win_no.Visible = false;
+            // 
+            // win_yes
+            // 
+            this.win_yes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.win_yes.Location = new System.Drawing.Point(349, 264);
+            this.win_yes.Name = "win_yes";
+            this.win_yes.Size = new System.Drawing.Size(85, 40);
+            this.win_yes.TabIndex = 22;
+            this.win_yes.Text = "TAK :)";
+            this.win_yes.UseVisualStyleBackColor = true;
+            this.win_yes.Visible = false;
+            // 
+            // win_text_2
+            // 
+            this.win_text_2.AutoSize = true;
+            this.win_text_2.Location = new System.Drawing.Point(346, 228);
+            this.win_text_2.Name = "win_text_2";
+            this.win_text_2.Size = new System.Drawing.Size(196, 13);
+            this.win_text_2.TabIndex = 21;
+            this.win_text_2.Text = "Czy chcesz wrócić do menu głównego?";
+            this.win_text_2.Visible = false;
+            // 
+            // win_text
+            // 
+            this.win_text.AutoSize = true;
+            this.win_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.win_text.Location = new System.Drawing.Point(358, 204);
+            this.win_text.Name = "win_text";
+            this.win_text.Size = new System.Drawing.Size(126, 24);
+            this.win_text.TabIndex = 20;
+            this.win_text.Text = "WYGRANA !";
+            this.win_text.Visible = false;
+            // 
+            // warning2
+            // 
+            this.warning2.AutoSize = true;
+            this.warning2.BackColor = System.Drawing.Color.Yellow;
+            this.warning2.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.warning2.ForeColor = System.Drawing.Color.Black;
+            this.warning2.Location = new System.Drawing.Point(383, 155);
+            this.warning2.Name = "warning2";
+            this.warning2.Size = new System.Drawing.Size(85, 11);
+            this.warning2.TabIndex = 4;
+            this.warning2.Text = "Odpocznij!";
+            this.warning2.Visible = false;
+            // 
+            // warning1
+            // 
+            this.warning1.AutoSize = true;
+            this.warning1.BackColor = System.Drawing.Color.Yellow;
+            this.warning1.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.warning1.ForeColor = System.Drawing.Color.Black;
+            this.warning1.Location = new System.Drawing.Point(367, 143);
+            this.warning1.Name = "warning1";
+            this.warning1.Size = new System.Drawing.Size(117, 12);
+            this.warning1.TabIndex = 3;
+            this.warning1.Text = "Zmęczyłeś się!";
+            this.warning1.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(125, 12);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Poziom energii:";
+            // 
+            // fatigue_solo
+            // 
+            this.fatigue_solo.BackColor = System.Drawing.Color.Crimson;
+            this.fatigue_solo.Location = new System.Drawing.Point(12, 24);
+            this.fatigue_solo.Name = "fatigue_solo";
+            this.fatigue_solo.Size = new System.Drawing.Size(136, 23);
+            this.fatigue_solo.TabIndex = 1;
+            this.fatigue_solo.Value = 100;
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1000;
+            // 
             // escape_menu
             // 
             this.escape_menu.BackColor = System.Drawing.Color.Indigo;
             this.escape_menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.escape_menu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.escape_menu.Location = new System.Drawing.Point(272, 190);
+            this.escape_menu.Location = new System.Drawing.Point(272, 335);
             this.escape_menu.Name = "escape_menu";
-            this.escape_menu.Size = new System.Drawing.Size(327, 234);
+            this.escape_menu.Size = new System.Drawing.Size(327, 89);
             this.escape_menu.TabIndex = 44;
             this.escape_menu.TabStop = false;
             this.escape_menu.Visible = false;
@@ -252,6 +422,15 @@
             this.tree_12.TabIndex = 41;
             this.tree_12.TabStop = false;
             // 
+            // tree_11
+            // 
+            this.tree_11.Image = global::p_frog.Properties.Resources.tree_h_fxd;
+            this.tree_11.Location = new System.Drawing.Point(563, 136);
+            this.tree_11.Name = "tree_11";
+            this.tree_11.Size = new System.Drawing.Size(80, 37);
+            this.tree_11.TabIndex = 40;
+            this.tree_11.TabStop = false;
+            // 
             // tree_9
             // 
             this.tree_9.Image = global::p_frog.Properties.Resources.tree_h_fxd;
@@ -288,25 +467,6 @@
             this.tree_2.TabIndex = 28;
             this.tree_2.TabStop = false;
             // 
-            // timer3
-            // 
-            this.timer3.Enabled = true;
-            this.timer3.Interval = 70;
-            // 
-            // tree_11
-            // 
-            this.tree_11.Image = global::p_frog.Properties.Resources.tree_h_fxd;
-            this.tree_11.Location = new System.Drawing.Point(563, 136);
-            this.tree_11.Name = "tree_11";
-            this.tree_11.Size = new System.Drawing.Size(80, 37);
-            this.tree_11.TabIndex = 40;
-            this.tree_11.TabStop = false;
-            // 
-            // timer4
-            // 
-            this.timer4.Enabled = true;
-            this.timer4.Interval = 70;
-            // 
             // tree_3
             // 
             this.tree_3.Image = global::p_frog.Properties.Resources.tree_small_fxd;
@@ -316,65 +476,6 @@
             this.tree_3.TabIndex = 29;
             this.tree_3.TabStop = false;
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 600;
-            // 
-            // screen
-            // 
-            this.screen.BackColor = System.Drawing.Color.Transparent;
-            this.screen.Controls.Add(this.escape_text2);
-            this.screen.Controls.Add(this.escape_text1);
-            this.screen.Controls.Add(this.escape_quit);
-            this.screen.Controls.Add(this.escape_title);
-            this.screen.Controls.Add(this.escape_restart);
-            this.screen.Controls.Add(this.escape_menu);
-            this.screen.Controls.Add(this.frog);
-            this.screen.Controls.Add(this.tree_1);
-            this.screen.Controls.Add(this.tree_4);
-            this.screen.Controls.Add(this.tree_14);
-            this.screen.Controls.Add(this.tree_13);
-            this.screen.Controls.Add(this.tree_12);
-            this.screen.Controls.Add(this.tree_11);
-            this.screen.Controls.Add(this.tree_9);
-            this.screen.Controls.Add(this.tree_8);
-            this.screen.Controls.Add(this.tree_6);
-            this.screen.Controls.Add(this.tree_2);
-            this.screen.Controls.Add(this.tree_3);
-            this.screen.Controls.Add(this.water_area);
-            this.screen.Controls.Add(this.frog_dead);
-            this.screen.Controls.Add(this.lose_text);
-            this.screen.Controls.Add(this.win_no);
-            this.screen.Controls.Add(this.win_yes);
-            this.screen.Controls.Add(this.win_text_2);
-            this.screen.Controls.Add(this.win_box);
-            this.screen.Controls.Add(this.frog_coffin);
-            this.screen.Controls.Add(this.bckg_lose);
-            this.screen.Controls.Add(this.plant_block2);
-            this.screen.Controls.Add(this.plant_block1);
-            this.screen.Controls.Add(this.win_text);
-            this.screen.Controls.Add(this.frog_hideout_3);
-            this.screen.Controls.Add(this.frog_hideout_2);
-            this.screen.Controls.Add(this.frog_hideout_1);
-            this.screen.Controls.Add(this.frog_life_3);
-            this.screen.Controls.Add(this.frog_life_2);
-            this.screen.Controls.Add(this.frog_life_1);
-            this.screen.Controls.Add(this.truck_car);
-            this.screen.Controls.Add(this.car_column);
-            this.screen.Controls.Add(this.police_car);
-            this.screen.Controls.Add(this.warning2);
-            this.screen.Controls.Add(this.warning1);
-            this.screen.Controls.Add(this.label1);
-            this.screen.Controls.Add(this.fatigue_solo);
-            this.screen.Controls.Add(this.background_box);
-            this.screen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.screen.ForeColor = System.Drawing.Color.DarkBlue;
-            this.screen.Location = new System.Drawing.Point(0, 0);
-            this.screen.Name = "screen";
-            this.screen.Size = new System.Drawing.Size(842, 481);
-            this.screen.TabIndex = 1;
-            // 
             // water_area
             // 
             this.water_area.Location = new System.Drawing.Point(-3, 65);
@@ -383,49 +484,6 @@
             this.water_area.TabIndex = 31;
             this.water_area.TabStop = false;
             this.water_area.Visible = false;
-            // 
-            // lose_text
-            // 
-            this.lose_text.AutoSize = true;
-            this.lose_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lose_text.Location = new System.Drawing.Point(359, 204);
-            this.lose_text.Name = "lose_text";
-            this.lose_text.Size = new System.Drawing.Size(170, 24);
-            this.lose_text.TabIndex = 24;
-            this.lose_text.Text = "PRZEGRAŁEŚ :( ";
-            this.lose_text.Visible = false;
-            // 
-            // win_no
-            // 
-            this.win_no.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.win_no.Location = new System.Drawing.Point(444, 264);
-            this.win_no.Name = "win_no";
-            this.win_no.Size = new System.Drawing.Size(85, 40);
-            this.win_no.TabIndex = 23;
-            this.win_no.Text = "NIE :( ";
-            this.win_no.UseVisualStyleBackColor = true;
-            this.win_no.Visible = false;
-            // 
-            // win_yes
-            // 
-            this.win_yes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.win_yes.Location = new System.Drawing.Point(349, 264);
-            this.win_yes.Name = "win_yes";
-            this.win_yes.Size = new System.Drawing.Size(85, 40);
-            this.win_yes.TabIndex = 22;
-            this.win_yes.Text = "TAK :)";
-            this.win_yes.UseVisualStyleBackColor = true;
-            this.win_yes.Visible = false;
-            // 
-            // win_text_2
-            // 
-            this.win_text_2.AutoSize = true;
-            this.win_text_2.Location = new System.Drawing.Point(346, 228);
-            this.win_text_2.Name = "win_text_2";
-            this.win_text_2.Size = new System.Drawing.Size(196, 13);
-            this.win_text_2.TabIndex = 21;
-            this.win_text_2.Text = "Czy chcesz wrócić do menu głównego?";
-            this.win_text_2.Visible = false;
             // 
             // win_box
             // 
@@ -451,9 +509,9 @@
             // bckg_lose
             // 
             this.bckg_lose.BackColor = System.Drawing.Color.Wheat;
-            this.bckg_lose.Location = new System.Drawing.Point(0, 231);
+            this.bckg_lose.Location = new System.Drawing.Point(0, 459);
             this.bckg_lose.Name = "bckg_lose";
-            this.bckg_lose.Size = new System.Drawing.Size(845, 250);
+            this.bckg_lose.Size = new System.Drawing.Size(845, 22);
             this.bckg_lose.TabIndex = 34;
             this.bckg_lose.TabStop = false;
             this.bckg_lose.Visible = false;
@@ -475,17 +533,6 @@
             this.plant_block1.Size = new System.Drawing.Size(71, 72);
             this.plant_block1.TabIndex = 25;
             this.plant_block1.TabStop = false;
-            // 
-            // win_text
-            // 
-            this.win_text.AutoSize = true;
-            this.win_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.win_text.Location = new System.Drawing.Point(358, 204);
-            this.win_text.Name = "win_text";
-            this.win_text.Size = new System.Drawing.Size(126, 24);
-            this.win_text.TabIndex = 20;
-            this.win_text.Text = "WYGRANA !";
-            this.win_text.Visible = false;
             // 
             // frog_hideout_3
             // 
@@ -561,58 +608,12 @@
             // 
             // police_car
             // 
-            this.police_car.Image = global::p_frog.Properties.Resources.car_3_fxd;
-            this.police_car.Location = new System.Drawing.Point(823, 220);
+            this.police_car.Image = global::p_frog.Properties.Resources.car4_fxd;
+            this.police_car.Location = new System.Drawing.Point(823, 214);
             this.police_car.Name = "police_car";
-            this.police_car.Size = new System.Drawing.Size(107, 52);
+            this.police_car.Size = new System.Drawing.Size(97, 45);
             this.police_car.TabIndex = 6;
             this.police_car.TabStop = false;
-            // 
-            // warning2
-            // 
-            this.warning2.AutoSize = true;
-            this.warning2.BackColor = System.Drawing.Color.Yellow;
-            this.warning2.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.warning2.ForeColor = System.Drawing.Color.Black;
-            this.warning2.Location = new System.Drawing.Point(383, 155);
-            this.warning2.Name = "warning2";
-            this.warning2.Size = new System.Drawing.Size(85, 11);
-            this.warning2.TabIndex = 4;
-            this.warning2.Text = "Odpocznij!";
-            this.warning2.Visible = false;
-            // 
-            // warning1
-            // 
-            this.warning1.AutoSize = true;
-            this.warning1.BackColor = System.Drawing.Color.Yellow;
-            this.warning1.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.warning1.ForeColor = System.Drawing.Color.Black;
-            this.warning1.Location = new System.Drawing.Point(367, 143);
-            this.warning1.Name = "warning1";
-            this.warning1.Size = new System.Drawing.Size(117, 12);
-            this.warning1.TabIndex = 3;
-            this.warning1.Text = "Zmęczyłeś się!";
-            this.warning1.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 12);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Poziom energii:";
-            // 
-            // fatigue_solo
-            // 
-            this.fatigue_solo.BackColor = System.Drawing.Color.Crimson;
-            this.fatigue_solo.Location = new System.Drawing.Point(12, 24);
-            this.fatigue_solo.Name = "fatigue_solo";
-            this.fatigue_solo.Size = new System.Drawing.Size(136, 23);
-            this.fatigue_solo.TabIndex = 1;
-            this.fatigue_solo.Value = 100;
             // 
             // background_box
             // 
@@ -624,10 +625,6 @@
             this.background_box.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.background_box.TabIndex = 5;
             this.background_box.TabStop = false;
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 1000;
             // 
             // Form5
             // 
@@ -642,6 +639,8 @@
             this.Name = "Form5";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Projekt Frog";
+            this.screen.ResumeLayout(false);
+            this.screen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.escape_menu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_1)).EndInit();
@@ -649,16 +648,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.tree_14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tree_11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tree_11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tree_3)).EndInit();
-            this.screen.ResumeLayout(false);
-            this.screen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.water_area)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frog_dead)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.win_box)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_coffin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bckg_lose)).EndInit();
@@ -703,7 +699,6 @@
         protected System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel screen;
         private System.Windows.Forms.PictureBox water_area;
-        private System.Windows.Forms.PictureBox frog_dead;
         private System.Windows.Forms.Label lose_text;
         private System.Windows.Forms.Button win_no;
         private System.Windows.Forms.Button win_yes;

@@ -177,6 +177,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="frog_icon.ico" />
+    <None Include="Resources\car4_fxd.png" />
     <Content Include="Resources\main_page_fixed.jpg" />
     <None Include="Resources\pepe_frog2.png" />
     <None Include="Resources\pepe_frog1.png" />

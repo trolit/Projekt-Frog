@@ -93,6 +93,16 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap car4_fxd {
+            get {
+                object obj = ResourceManager.GetObject("car4_fxd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap coffin_frog {
             get {
                 object obj = ResourceManager.GetObject("coffin_frog", resourceCulture);

@@ -51,6 +51,9 @@
             this.padlock_lvl8 = new System.Windows.Forms.PictureBox();
             this.padlock_lvl9 = new System.Windows.Forms.PictureBox();
             this.padlock_lvl6 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pass_checker = new System.Windows.Forms.RichTextBox();
+            this.confirm = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl4)).BeginInit();
@@ -69,6 +72,7 @@
             this.button1.FlatAppearance.BorderSize = 10;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(12, 25);
             this.button1.Name = "button1";
@@ -82,7 +86,7 @@
             // 
             this.level_1.BackColor = System.Drawing.Color.Chartreuse;
             this.level_1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.level_1.Font = new System.Drawing.Font("Lucida Console", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.level_1.Font = new System.Drawing.Font("Bahnschrift", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.level_1.Location = new System.Drawing.Point(13, 102);
             this.level_1.Name = "level_1";
             this.level_1.Size = new System.Drawing.Size(63, 55);
@@ -95,7 +99,7 @@
             // 
             this.level_2.BackColor = System.Drawing.Color.Chartreuse;
             this.level_2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.level_2.Font = new System.Drawing.Font("Lucida Console", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.level_2.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.level_2.Location = new System.Drawing.Point(82, 102);
             this.level_2.Name = "level_2";
             this.level_2.Size = new System.Drawing.Size(63, 55);
@@ -108,7 +112,7 @@
             // 
             this.level_3.BackColor = System.Drawing.Color.Chartreuse;
             this.level_3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.level_3.Font = new System.Drawing.Font("Lucida Console", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.level_3.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.level_3.Location = new System.Drawing.Point(151, 102);
             this.level_3.Name = "level_3";
             this.level_3.Size = new System.Drawing.Size(63, 55);
@@ -120,7 +124,7 @@
             // 
             this.level_4.BackColor = System.Drawing.Color.Chartreuse;
             this.level_4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.level_4.Font = new System.Drawing.Font("Lucida Console", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.level_4.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.level_4.Location = new System.Drawing.Point(220, 102);
             this.level_4.Name = "level_4";
             this.level_4.Size = new System.Drawing.Size(63, 55);
@@ -132,7 +136,7 @@
             // 
             this.level_5.BackColor = System.Drawing.Color.Chartreuse;
             this.level_5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.level_5.Font = new System.Drawing.Font("Lucida Console", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.level_5.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.level_5.Location = new System.Drawing.Point(289, 102);
             this.level_5.Name = "level_5";
             this.level_5.Size = new System.Drawing.Size(63, 55);
@@ -144,7 +148,7 @@
             // 
             this.level_6.BackColor = System.Drawing.Color.Chartreuse;
             this.level_6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.level_6.Font = new System.Drawing.Font("Lucida Console", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.level_6.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.level_6.Location = new System.Drawing.Point(358, 102);
             this.level_6.Name = "level_6";
             this.level_6.Size = new System.Drawing.Size(63, 55);
@@ -156,7 +160,7 @@
             // 
             this.level_7.BackColor = System.Drawing.Color.Chartreuse;
             this.level_7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.level_7.Font = new System.Drawing.Font("Lucida Console", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.level_7.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.level_7.Location = new System.Drawing.Point(13, 199);
             this.level_7.Name = "level_7";
             this.level_7.Size = new System.Drawing.Size(63, 55);
@@ -168,7 +172,7 @@
             // 
             this.level_8.BackColor = System.Drawing.Color.Chartreuse;
             this.level_8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.level_8.Font = new System.Drawing.Font("Lucida Console", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.level_8.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.level_8.Location = new System.Drawing.Point(82, 199);
             this.level_8.Name = "level_8";
             this.level_8.Size = new System.Drawing.Size(63, 55);
@@ -180,7 +184,7 @@
             // 
             this.level_9.BackColor = System.Drawing.Color.Chartreuse;
             this.level_9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.level_9.Font = new System.Drawing.Font("Lucida Console", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.level_9.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.level_9.Location = new System.Drawing.Point(151, 199);
             this.level_9.Name = "level_9";
             this.level_9.Size = new System.Drawing.Size(63, 55);
@@ -191,10 +195,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Console", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(146, 30);
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(165, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(252, 27);
+            this.label1.Size = new System.Drawing.Size(212, 33);
             this.label1.TabIndex = 10;
             this.label1.Text = "Wybierz poziom:";
             // 
@@ -206,7 +210,7 @@
             this.singlefrog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.singlefrog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.singlefrog.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.singlefrog.Location = new System.Drawing.Point(12, 299);
+            this.singlefrog.Location = new System.Drawing.Point(15, 309);
             this.singlefrog.Name = "singlefrog";
             this.singlefrog.Size = new System.Drawing.Size(174, 31);
             this.singlefrog.TabIndex = 13;
@@ -222,7 +226,7 @@
             this.doublefrog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.doublefrog.ForeColor = System.Drawing.SystemColors.ControlText;
             this.doublefrog.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.doublefrog.Location = new System.Drawing.Point(12, 336);
+            this.doublefrog.Location = new System.Drawing.Point(15, 346);
             this.doublefrog.Name = "doublefrog";
             this.doublefrog.Size = new System.Drawing.Size(174, 31);
             this.doublefrog.TabIndex = 14;
@@ -234,10 +238,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(10, 280);
+            this.label2.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(13, 284);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(178, 16);
+            this.label2.Size = new System.Drawing.Size(161, 24);
             this.label2.TabIndex = 15;
             this.label2.Text = "Wybierz tryb gry:";
             // 
@@ -255,7 +259,7 @@
             // 
             this.padlock_lvl3.BackColor = System.Drawing.SystemColors.ControlDark;
             this.padlock_lvl3.Image = global::p_frog.Properties.Resources.padlock_fxd2;
-            this.padlock_lvl3.Location = new System.Drawing.Point(151, 84);
+            this.padlock_lvl3.Location = new System.Drawing.Point(150, 84);
             this.padlock_lvl3.Name = "padlock_lvl3";
             this.padlock_lvl3.Size = new System.Drawing.Size(65, 87);
             this.padlock_lvl3.TabIndex = 17;
@@ -295,7 +299,7 @@
             // 
             this.padlock_lvl8.BackColor = System.Drawing.SystemColors.ControlDark;
             this.padlock_lvl8.Image = global::p_frog.Properties.Resources.padlock_fxd2;
-            this.padlock_lvl8.Location = new System.Drawing.Point(82, 181);
+            this.padlock_lvl8.Location = new System.Drawing.Point(80, 181);
             this.padlock_lvl8.Name = "padlock_lvl8";
             this.padlock_lvl8.Size = new System.Drawing.Size(65, 87);
             this.padlock_lvl8.TabIndex = 21;
@@ -305,7 +309,7 @@
             // 
             this.padlock_lvl9.BackColor = System.Drawing.SystemColors.ControlDark;
             this.padlock_lvl9.Image = global::p_frog.Properties.Resources.padlock_fxd2;
-            this.padlock_lvl9.Location = new System.Drawing.Point(151, 181);
+            this.padlock_lvl9.Location = new System.Drawing.Point(149, 181);
             this.padlock_lvl9.Name = "padlock_lvl9";
             this.padlock_lvl9.Size = new System.Drawing.Size(65, 87);
             this.padlock_lvl9.TabIndex = 22;
@@ -321,6 +325,45 @@
             this.padlock_lvl6.TabIndex = 23;
             this.padlock_lvl6.TabStop = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(283, 285);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(144, 24);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Miejsce na kod:";
+            // 
+            // pass_checker
+            // 
+            this.pass_checker.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.pass_checker.Location = new System.Drawing.Point(282, 311);
+            this.pass_checker.Multiline = false;
+            this.pass_checker.Name = "pass_checker";
+            this.pass_checker.Size = new System.Drawing.Size(145, 38);
+            this.pass_checker.TabIndex = 26;
+            this.pass_checker.Text = "";
+            // 
+            // confirm
+            // 
+            this.confirm.BackColor = System.Drawing.Color.Chartreuse;
+            this.confirm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.confirm.CausesValidation = false;
+            this.confirm.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.confirm.FlatAppearance.BorderSize = 2;
+            this.confirm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.confirm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.confirm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.confirm.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirm.Location = new System.Drawing.Point(282, 348);
+            this.confirm.Name = "confirm";
+            this.confirm.Size = new System.Drawing.Size(145, 28);
+            this.confirm.TabIndex = 27;
+            this.confirm.Text = "Zatwierdź";
+            this.confirm.UseVisualStyleBackColor = false;
+            this.confirm.Click += new System.EventHandler(this.confirm_Click);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,6 +371,9 @@
             this.BackColor = System.Drawing.Color.LimeGreen;
             this.ClientSize = new System.Drawing.Size(436, 379);
             this.ControlBox = false;
+            this.Controls.Add(this.confirm);
+            this.Controls.Add(this.pass_checker);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.padlock_lvl6);
             this.Controls.Add(this.padlock_lvl9);
             this.Controls.Add(this.padlock_lvl8);
@@ -393,5 +439,8 @@
         private System.Windows.Forms.PictureBox padlock_lvl8;
         private System.Windows.Forms.PictureBox padlock_lvl9;
         private System.Windows.Forms.PictureBox padlock_lvl6;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.RichTextBox pass_checker;
+        private System.Windows.Forms.Button confirm;
     }
 }
