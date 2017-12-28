@@ -43,25 +43,25 @@
             this.singlefrog = new System.Windows.Forms.CheckBox();
             this.doublefrog = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.padlock_lvl2 = new System.Windows.Forms.PictureBox();
-            this.padlock_lvl3 = new System.Windows.Forms.PictureBox();
-            this.padlock_lvl4 = new System.Windows.Forms.PictureBox();
-            this.padlock_lvl5 = new System.Windows.Forms.PictureBox();
-            this.padlock_lvl7 = new System.Windows.Forms.PictureBox();
-            this.padlock_lvl8 = new System.Windows.Forms.PictureBox();
-            this.padlock_lvl9 = new System.Windows.Forms.PictureBox();
-            this.padlock_lvl6 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pass_checker = new System.Windows.Forms.RichTextBox();
             this.confirm = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl9)).BeginInit();
+            this.padlock_lvl6 = new System.Windows.Forms.PictureBox();
+            this.padlock_lvl9 = new System.Windows.Forms.PictureBox();
+            this.padlock_lvl8 = new System.Windows.Forms.PictureBox();
+            this.padlock_lvl7 = new System.Windows.Forms.PictureBox();
+            this.padlock_lvl5 = new System.Windows.Forms.PictureBox();
+            this.padlock_lvl4 = new System.Windows.Forms.PictureBox();
+            this.padlock_lvl3 = new System.Windows.Forms.PictureBox();
+            this.padlock_lvl2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl2)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -245,86 +245,6 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Wybierz tryb gry:";
             // 
-            // padlock_lvl2
-            // 
-            this.padlock_lvl2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.padlock_lvl2.Image = global::p_frog.Properties.Resources.padlock_fxd2;
-            this.padlock_lvl2.Location = new System.Drawing.Point(80, 84);
-            this.padlock_lvl2.Name = "padlock_lvl2";
-            this.padlock_lvl2.Size = new System.Drawing.Size(65, 87);
-            this.padlock_lvl2.TabIndex = 16;
-            this.padlock_lvl2.TabStop = false;
-            // 
-            // padlock_lvl3
-            // 
-            this.padlock_lvl3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.padlock_lvl3.Image = global::p_frog.Properties.Resources.padlock_fxd2;
-            this.padlock_lvl3.Location = new System.Drawing.Point(150, 84);
-            this.padlock_lvl3.Name = "padlock_lvl3";
-            this.padlock_lvl3.Size = new System.Drawing.Size(65, 87);
-            this.padlock_lvl3.TabIndex = 17;
-            this.padlock_lvl3.TabStop = false;
-            // 
-            // padlock_lvl4
-            // 
-            this.padlock_lvl4.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.padlock_lvl4.Image = global::p_frog.Properties.Resources.padlock_fxd2;
-            this.padlock_lvl4.Location = new System.Drawing.Point(218, 84);
-            this.padlock_lvl4.Name = "padlock_lvl4";
-            this.padlock_lvl4.Size = new System.Drawing.Size(65, 87);
-            this.padlock_lvl4.TabIndex = 18;
-            this.padlock_lvl4.TabStop = false;
-            // 
-            // padlock_lvl5
-            // 
-            this.padlock_lvl5.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.padlock_lvl5.Image = global::p_frog.Properties.Resources.padlock_fxd2;
-            this.padlock_lvl5.Location = new System.Drawing.Point(287, 84);
-            this.padlock_lvl5.Name = "padlock_lvl5";
-            this.padlock_lvl5.Size = new System.Drawing.Size(65, 87);
-            this.padlock_lvl5.TabIndex = 19;
-            this.padlock_lvl5.TabStop = false;
-            // 
-            // padlock_lvl7
-            // 
-            this.padlock_lvl7.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.padlock_lvl7.Image = global::p_frog.Properties.Resources.padlock_fxd2;
-            this.padlock_lvl7.Location = new System.Drawing.Point(11, 181);
-            this.padlock_lvl7.Name = "padlock_lvl7";
-            this.padlock_lvl7.Size = new System.Drawing.Size(65, 87);
-            this.padlock_lvl7.TabIndex = 20;
-            this.padlock_lvl7.TabStop = false;
-            // 
-            // padlock_lvl8
-            // 
-            this.padlock_lvl8.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.padlock_lvl8.Image = global::p_frog.Properties.Resources.padlock_fxd2;
-            this.padlock_lvl8.Location = new System.Drawing.Point(80, 181);
-            this.padlock_lvl8.Name = "padlock_lvl8";
-            this.padlock_lvl8.Size = new System.Drawing.Size(65, 87);
-            this.padlock_lvl8.TabIndex = 21;
-            this.padlock_lvl8.TabStop = false;
-            // 
-            // padlock_lvl9
-            // 
-            this.padlock_lvl9.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.padlock_lvl9.Image = global::p_frog.Properties.Resources.padlock_fxd2;
-            this.padlock_lvl9.Location = new System.Drawing.Point(149, 181);
-            this.padlock_lvl9.Name = "padlock_lvl9";
-            this.padlock_lvl9.Size = new System.Drawing.Size(65, 87);
-            this.padlock_lvl9.TabIndex = 22;
-            this.padlock_lvl9.TabStop = false;
-            // 
-            // padlock_lvl6
-            // 
-            this.padlock_lvl6.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.padlock_lvl6.Image = global::p_frog.Properties.Resources.padlock_fxd2;
-            this.padlock_lvl6.Location = new System.Drawing.Point(356, 84);
-            this.padlock_lvl6.Name = "padlock_lvl6";
-            this.padlock_lvl6.Size = new System.Drawing.Size(65, 87);
-            this.padlock_lvl6.TabIndex = 23;
-            this.padlock_lvl6.TabStop = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -364,6 +284,86 @@
             this.confirm.UseVisualStyleBackColor = false;
             this.confirm.Click += new System.EventHandler(this.confirm_Click);
             // 
+            // padlock_lvl6
+            // 
+            this.padlock_lvl6.BackColor = System.Drawing.Color.LimeGreen;
+            this.padlock_lvl6.Image = global::p_frog.Properties.Resources.padlock_fxd2;
+            this.padlock_lvl6.Location = new System.Drawing.Point(356, 84);
+            this.padlock_lvl6.Name = "padlock_lvl6";
+            this.padlock_lvl6.Size = new System.Drawing.Size(65, 87);
+            this.padlock_lvl6.TabIndex = 23;
+            this.padlock_lvl6.TabStop = false;
+            // 
+            // padlock_lvl9
+            // 
+            this.padlock_lvl9.BackColor = System.Drawing.Color.LimeGreen;
+            this.padlock_lvl9.Image = global::p_frog.Properties.Resources.padlock_fxd2;
+            this.padlock_lvl9.Location = new System.Drawing.Point(149, 181);
+            this.padlock_lvl9.Name = "padlock_lvl9";
+            this.padlock_lvl9.Size = new System.Drawing.Size(65, 87);
+            this.padlock_lvl9.TabIndex = 22;
+            this.padlock_lvl9.TabStop = false;
+            // 
+            // padlock_lvl8
+            // 
+            this.padlock_lvl8.BackColor = System.Drawing.Color.LimeGreen;
+            this.padlock_lvl8.Image = global::p_frog.Properties.Resources.padlock_fxd2;
+            this.padlock_lvl8.Location = new System.Drawing.Point(80, 181);
+            this.padlock_lvl8.Name = "padlock_lvl8";
+            this.padlock_lvl8.Size = new System.Drawing.Size(65, 87);
+            this.padlock_lvl8.TabIndex = 21;
+            this.padlock_lvl8.TabStop = false;
+            // 
+            // padlock_lvl7
+            // 
+            this.padlock_lvl7.BackColor = System.Drawing.Color.LimeGreen;
+            this.padlock_lvl7.Image = global::p_frog.Properties.Resources.padlock_fxd2;
+            this.padlock_lvl7.Location = new System.Drawing.Point(11, 181);
+            this.padlock_lvl7.Name = "padlock_lvl7";
+            this.padlock_lvl7.Size = new System.Drawing.Size(65, 87);
+            this.padlock_lvl7.TabIndex = 20;
+            this.padlock_lvl7.TabStop = false;
+            // 
+            // padlock_lvl5
+            // 
+            this.padlock_lvl5.BackColor = System.Drawing.Color.LimeGreen;
+            this.padlock_lvl5.Image = global::p_frog.Properties.Resources.padlock_fxd2;
+            this.padlock_lvl5.Location = new System.Drawing.Point(287, 84);
+            this.padlock_lvl5.Name = "padlock_lvl5";
+            this.padlock_lvl5.Size = new System.Drawing.Size(65, 87);
+            this.padlock_lvl5.TabIndex = 19;
+            this.padlock_lvl5.TabStop = false;
+            // 
+            // padlock_lvl4
+            // 
+            this.padlock_lvl4.BackColor = System.Drawing.Color.LimeGreen;
+            this.padlock_lvl4.Image = global::p_frog.Properties.Resources.padlock_fxd2;
+            this.padlock_lvl4.Location = new System.Drawing.Point(218, 84);
+            this.padlock_lvl4.Name = "padlock_lvl4";
+            this.padlock_lvl4.Size = new System.Drawing.Size(65, 87);
+            this.padlock_lvl4.TabIndex = 18;
+            this.padlock_lvl4.TabStop = false;
+            // 
+            // padlock_lvl3
+            // 
+            this.padlock_lvl3.BackColor = System.Drawing.Color.LimeGreen;
+            this.padlock_lvl3.Image = global::p_frog.Properties.Resources.padlock_fxd2;
+            this.padlock_lvl3.Location = new System.Drawing.Point(150, 84);
+            this.padlock_lvl3.Name = "padlock_lvl3";
+            this.padlock_lvl3.Size = new System.Drawing.Size(65, 87);
+            this.padlock_lvl3.TabIndex = 17;
+            this.padlock_lvl3.TabStop = false;
+            // 
+            // padlock_lvl2
+            // 
+            this.padlock_lvl2.BackColor = System.Drawing.Color.LimeGreen;
+            this.padlock_lvl2.Image = global::p_frog.Properties.Resources.padlock_fxd2;
+            this.padlock_lvl2.Location = new System.Drawing.Point(80, 84);
+            this.padlock_lvl2.Name = "padlock_lvl2";
+            this.padlock_lvl2.Size = new System.Drawing.Size(65, 87);
+            this.padlock_lvl2.TabIndex = 16;
+            this.padlock_lvl2.TabStop = false;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -396,20 +396,21 @@
             this.Controls.Add(this.level_2);
             this.Controls.Add(this.level_1);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Projekt Frog";
-            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padlock_lvl2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

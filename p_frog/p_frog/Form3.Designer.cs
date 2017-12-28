@@ -36,6 +36,8 @@
             this.warning1 = new System.Windows.Forms.Label();
             this.warning2 = new System.Windows.Forms.Label();
             this.screen = new System.Windows.Forms.Panel();
+            this.pepe_2 = new System.Windows.Forms.PictureBox();
+            this.pepe_1 = new System.Windows.Forms.PictureBox();
             this.lose_text = new System.Windows.Forms.Label();
             this.win_no = new System.Windows.Forms.Button();
             this.win_yes = new System.Windows.Forms.Button();
@@ -84,9 +86,9 @@
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timer5 = new System.Windows.Forms.Timer(this.components);
             this.timer6 = new System.Windows.Forms.Timer(this.components);
-            this.pepe_1 = new System.Windows.Forms.PictureBox();
-            this.pepe_2 = new System.Windows.Forms.PictureBox();
             this.screen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pepe_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pepe_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.win_box)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_coffin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bckg_lose)).BeginInit();
@@ -119,8 +121,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pepe_1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pepe_2)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -227,6 +227,28 @@
             this.screen.Name = "screen";
             this.screen.Size = new System.Drawing.Size(842, 481);
             this.screen.TabIndex = 0;
+            // 
+            // pepe_2
+            // 
+            this.pepe_2.BackColor = System.Drawing.Color.Wheat;
+            this.pepe_2.Image = global::p_frog.Properties.Resources.pepe_frog2;
+            this.pepe_2.Location = new System.Drawing.Point(605, 264);
+            this.pepe_2.Name = "pepe_2";
+            this.pepe_2.Size = new System.Drawing.Size(114, 76);
+            this.pepe_2.TabIndex = 55;
+            this.pepe_2.TabStop = false;
+            this.pepe_2.Visible = false;
+            // 
+            // pepe_1
+            // 
+            this.pepe_1.BackColor = System.Drawing.Color.Wheat;
+            this.pepe_1.Image = global::p_frog.Properties.Resources.pepe_frog1;
+            this.pepe_1.Location = new System.Drawing.Point(605, 172);
+            this.pepe_1.Name = "pepe_1";
+            this.pepe_1.Size = new System.Drawing.Size(114, 76);
+            this.pepe_1.TabIndex = 34;
+            this.pepe_1.TabStop = false;
+            this.pepe_1.Visible = false;
             // 
             // lose_text
             // 
@@ -721,28 +743,6 @@
             this.timer6.Interval = 450;
             this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
             // 
-            // pepe_1
-            // 
-            this.pepe_1.BackColor = System.Drawing.Color.Wheat;
-            this.pepe_1.Image = global::p_frog.Properties.Resources.pepe_frog1;
-            this.pepe_1.Location = new System.Drawing.Point(605, 172);
-            this.pepe_1.Name = "pepe_1";
-            this.pepe_1.Size = new System.Drawing.Size(114, 76);
-            this.pepe_1.TabIndex = 34;
-            this.pepe_1.TabStop = false;
-            this.pepe_1.Visible = false;
-            // 
-            // pepe_2
-            // 
-            this.pepe_2.BackColor = System.Drawing.Color.Wheat;
-            this.pepe_2.Image = global::p_frog.Properties.Resources.pepe_frog2;
-            this.pepe_2.Location = new System.Drawing.Point(605, 264);
-            this.pepe_2.Name = "pepe_2";
-            this.pepe_2.Size = new System.Drawing.Size(114, 76);
-            this.pepe_2.TabIndex = 55;
-            this.pepe_2.TabStop = false;
-            this.pepe_2.Visible = false;
-            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -750,6 +750,7 @@
             this.ClientSize = new System.Drawing.Size(842, 481);
             this.ControlBox = false;
             this.Controls.Add(this.screen);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -758,6 +759,8 @@
             this.Text = "Projekt Frog";
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pepe_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pepe_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.win_box)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog_coffin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bckg_lose)).EndInit();
@@ -790,8 +793,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pepe_1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pepe_2)).EndInit();
             this.ResumeLayout(false);
 
         }
