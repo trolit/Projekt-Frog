@@ -415,11 +415,11 @@ namespace p_frog
             tree_2.Location = new Point(tre2, 110);
             tree_3.Location = new Point(tre3, 63);
             tree_4.Location = new Point(tre4, 82);
-            tree_6.Location = new Point(tre6, 115);
-            tree_8.Location = new Point(tre8, 82);
+            tree_6.Location = new Point(tre6, 131);
+            tree_8.Location = new Point(tre8, 96);
             tree_9.Location = new Point(tre9, 82);
-            tree_11.Location = new Point(tre11, 143);
-            tree_12.Location = new Point(tre12, 143);
+            tree_11.Location = new Point(tre11, 139);
+            tree_12.Location = new Point(tre12, 149);
             tree_13.Location = new Point(tre13, 52);
             tree_14.Location = new Point(tre14, 55);
         }
@@ -542,11 +542,11 @@ namespace p_frog
             }
             else if (tree_6.Location.X < -119)
             {
-                tree_6.Location = new Point(823, 115);
+                tree_6.Location = new Point(823, 131);
             }
             else if (tree_8.Location.X < -119)
             {
-                tree_8.Location = new Point(823, 82);
+                tree_8.Location = new Point(823, 96);
             }
             else if (tree_9.Location.X < -119)
             {
@@ -554,11 +554,11 @@ namespace p_frog
             }
             else if (tree_11.Location.X < -119)
             {
-                tree_11.Location = new Point(823, 143);
+                tree_11.Location = new Point(823, 139);
             }
             else if (tree_12.Location.X < -119)
             {
-                tree_12.Location = new Point(823, 143);
+                tree_12.Location = new Point(823, 149);
             }
             else if (tree_13.Location.X < -119)
             {
