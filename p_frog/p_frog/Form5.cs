@@ -254,7 +254,7 @@ namespace p_frog
             int t = truck_car.Location.X;  // lokalizacja ciezarkowki
 
             p -= 10;
-            police_car.Location = new Point(p, 214);
+            police_car.Location = new Point(p, 220);
             Check_police_car();
 
             c += 12;
@@ -321,7 +321,7 @@ namespace p_frog
         {
             if (police_car.Location.X < -107)
             {
-                police_car.Location = new Point(823, 214);
+                police_car.Location = new Point(823, 220);
             }
         }
 

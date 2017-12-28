@@ -188,10 +188,10 @@
             // help_key
             // 
             this.help_key.Image = global::p_frog.Properties.Resources.keys_info;
-            this.help_key.Location = new System.Drawing.Point(420, 12);
+            this.help_key.Location = new System.Drawing.Point(420, 11);
             this.help_key.Name = "help_key";
-            this.help_key.Size = new System.Drawing.Size(408, 220);
-            this.help_key.TabIndex = 11;
+            this.help_key.Size = new System.Drawing.Size(408, 221);
+            this.help_key.TabIndex = 13;
             this.help_key.TabStop = false;
             this.help_key.Visible = false;
             // 

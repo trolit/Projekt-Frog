@@ -801,8 +801,6 @@
         private System.Windows.Forms.Panel screen;
         public System.Windows.Forms.PictureBox police_car;
         protected System.Windows.Forms.PictureBox frog;
-        protected System.Windows.Forms.Timer timer1;
-        protected System.Windows.Forms.Timer timer2;
         protected System.Windows.Forms.Label warning1;
         protected System.Windows.Forms.Label warning2;
         protected System.Windows.Forms.PictureBox background_box;
@@ -845,8 +843,6 @@
         private System.Windows.Forms.Button escape_restart;
         protected System.Windows.Forms.PictureBox frog_bro;
         protected System.Windows.Forms.Label label1;
-        protected System.Windows.Forms.Timer timer5;
-        protected System.Windows.Forms.Timer timer6;
         private System.Windows.Forms.PictureBox frog_border;
         private System.Windows.Forms.ProgressBar fatigue;
         private System.Windows.Forms.ProgressBar fatigue_bro;
@@ -854,5 +850,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pepe_2;
         private System.Windows.Forms.PictureBox pepe_1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer timer5;
+        private System.Windows.Forms.Timer timer6;
     }
 }

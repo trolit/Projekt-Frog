@@ -133,8 +133,8 @@
   <data name="frog_life_fxd2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frog_life_fxd2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tree_normal_fxd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tree_normal_fxd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="plant1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="frog_left2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frog_left.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,8 +142,8 @@
   <data name="frog_car_hit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frog_car_hit.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="pepe_frog1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pepe_frog1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="frog_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\frog_up.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="frogbro_jump" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frogbro_jump.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -151,14 +151,14 @@
   <data name="win_sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win_sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="plant1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\plant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ambulance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambulance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="frog_up2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frog_up.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="frog_down1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\frog_down.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="frog_escape" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frog_escape.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="audi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="car_2_fxd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\car_2_fxd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,8 +169,14 @@
   <data name="frog_down2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frog_down.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="frog_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\frog_up.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="frog_effect_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frog_effect_1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="frog_up_stand1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frog_up_stand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frog_escape" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frog_escape.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="frog_bro_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frog_bro_left.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,17 +187,17 @@
   <data name="frog_splash_water" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frog_splash_water.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="frog_effect_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frog_effect_1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="keys_info" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\keys_info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frog_bro_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frog_bro_right.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="car4_fxd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\car4_fxd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="frog_jump" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frog_jump.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="frog_down1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\frog_down.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="frog_right_stand" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\frog_right_stand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,17 +208,14 @@
   <data name="frog_bro_right_stand" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frog_bro_right_stand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="frog_right_stand1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frog_right_stand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="car_1_fxd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\car_1_fxd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="frog_right1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\frog_right.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="keys_info" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\keys_info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="frog_up_stand1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frog_up_stand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tree_small_fxd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tree_small_fxd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="main_page_fixed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\main_page_fixed1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,8 +226,8 @@
   <data name="frog_bro_up_stand1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frog_bro_up_stand1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="frog_bro_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frog_bro_down.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="frog_up1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\frog_up.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="frog_left_stand1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frog_left_stand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,23 +238,20 @@
   <data name="frog_left1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\frog_left.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dialog_box" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dialog_box.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tree_small_fxd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tree_small_fxd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tree_normal_fxd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tree_normal_fxd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="car_3_fxd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\car_3_fxd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dialog_box1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dialog_box.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pepe_frog1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pepe_frog1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="coffin_frog" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coffin_frog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="car_1_fxd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\car_1_fxd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="level2_bckg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\level2_bckg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="frog_bro_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frog_bro_up.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -292,11 +292,14 @@
   <data name="frog_play_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frog_play_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="frog_up1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\frog_up.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="frog_bro_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frog_bro_down.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="frog_bro_left_stand" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frog_bro_left_stand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frog_right_stand1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frog_right_stand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="frog_left_stand" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\frog_left_stand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -304,10 +307,10 @@
   <data name="tree_tiny_fxd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tree_tiny_fxd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="frog_bro_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frog_bro_right.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="frog_up2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frog_up.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="level2_bckg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\level2_bckg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="keys_info1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\keys_info1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

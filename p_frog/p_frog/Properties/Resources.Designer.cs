@@ -22,7 +22,7 @@ namespace p_frog.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace p_frog.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("p_frog.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace p_frog.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,27 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap car_1_fxd {
+        public static System.Drawing.Bitmap ambulance {
+            get {
+                object obj = ResourceManager.GetObject("ambulance", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap audi {
+            get {
+                object obj = ResourceManager.GetObject("audi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap car_1_fxd {
             get {
                 object obj = ResourceManager.GetObject("car_1_fxd", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -73,7 +93,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap car_2_fxd {
+        public static System.Drawing.Bitmap car_2_fxd {
             get {
                 object obj = ResourceManager.GetObject("car_2_fxd", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -83,7 +103,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap car_3_fxd {
+        public static System.Drawing.Bitmap car_3_fxd {
             get {
                 object obj = ResourceManager.GetObject("car_3_fxd", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -93,7 +113,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap car4_fxd {
+        public static System.Drawing.Bitmap car4_fxd {
             get {
                 object obj = ResourceManager.GetObject("car4_fxd", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -103,7 +123,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap coffin_frog {
+        public static System.Drawing.Bitmap coffin_frog {
             get {
                 object obj = ResourceManager.GetObject("coffin_frog", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -113,27 +133,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap dialog_box {
-            get {
-                object obj = ResourceManager.GetObject("dialog_box", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap dialog_box1 {
-            get {
-                object obj = ResourceManager.GetObject("dialog_box1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap frog_bro_down {
+        public static System.Drawing.Bitmap frog_bro_down {
             get {
                 object obj = ResourceManager.GetObject("frog_bro_down", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -143,7 +143,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_bro_down_stand {
+        public static System.Drawing.Bitmap frog_bro_down_stand {
             get {
                 object obj = ResourceManager.GetObject("frog_bro_down_stand", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -153,7 +153,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_bro_left {
+        public static System.Drawing.Bitmap frog_bro_left {
             get {
                 object obj = ResourceManager.GetObject("frog_bro_left", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -163,7 +163,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_bro_left_stand {
+        public static System.Drawing.Bitmap frog_bro_left_stand {
             get {
                 object obj = ResourceManager.GetObject("frog_bro_left_stand", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -173,7 +173,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_bro_right {
+        public static System.Drawing.Bitmap frog_bro_right {
             get {
                 object obj = ResourceManager.GetObject("frog_bro_right", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -183,7 +183,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_bro_right_stand {
+        public static System.Drawing.Bitmap frog_bro_right_stand {
             get {
                 object obj = ResourceManager.GetObject("frog_bro_right_stand", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -193,7 +193,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_bro_up {
+        public static System.Drawing.Bitmap frog_bro_up {
             get {
                 object obj = ResourceManager.GetObject("frog_bro_up", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -203,7 +203,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_bro_up_stand {
+        public static System.Drawing.Bitmap frog_bro_up_stand {
             get {
                 object obj = ResourceManager.GetObject("frog_bro_up_stand", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -213,7 +213,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_bro_up_stand1 {
+        public static System.Drawing.Bitmap frog_bro_up_stand1 {
             get {
                 object obj = ResourceManager.GetObject("frog_bro_up_stand1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -223,7 +223,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream frog_car_hit {
+        public static System.IO.UnmanagedMemoryStream frog_car_hit {
             get {
                 return ResourceManager.GetStream("frog_car_hit", resourceCulture);
             }
@@ -232,7 +232,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_down {
+        public static System.Drawing.Bitmap frog_down {
             get {
                 object obj = ResourceManager.GetObject("frog_down", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -242,7 +242,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_down_stand {
+        public static System.Drawing.Bitmap frog_down_stand {
             get {
                 object obj = ResourceManager.GetObject("frog_down_stand", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -252,7 +252,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_down_stand1 {
+        public static System.Drawing.Bitmap frog_down_stand1 {
             get {
                 object obj = ResourceManager.GetObject("frog_down_stand1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -262,7 +262,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_down1 {
+        public static System.Drawing.Bitmap frog_down1 {
             get {
                 object obj = ResourceManager.GetObject("frog_down1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -272,7 +272,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_down2 {
+        public static System.Drawing.Bitmap frog_down2 {
             get {
                 object obj = ResourceManager.GetObject("frog_down2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -282,7 +282,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream frog_effect_1 {
+        public static System.IO.UnmanagedMemoryStream frog_effect_1 {
             get {
                 return ResourceManager.GetStream("frog_effect_1", resourceCulture);
             }
@@ -291,7 +291,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream frog_effect_2 {
+        public static System.IO.UnmanagedMemoryStream frog_effect_2 {
             get {
                 return ResourceManager.GetStream("frog_effect_2", resourceCulture);
             }
@@ -300,7 +300,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream frog_effect_3 {
+        public static System.IO.UnmanagedMemoryStream frog_effect_3 {
             get {
                 return ResourceManager.GetStream("frog_effect_3", resourceCulture);
             }
@@ -309,7 +309,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream frog_effect_4 {
+        public static System.IO.UnmanagedMemoryStream frog_effect_4 {
             get {
                 return ResourceManager.GetStream("frog_effect_4", resourceCulture);
             }
@@ -318,7 +318,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_escape {
+        public static System.Drawing.Bitmap frog_escape {
             get {
                 object obj = ResourceManager.GetObject("frog_escape", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -328,7 +328,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream frog_jump {
+        public static System.IO.UnmanagedMemoryStream frog_jump {
             get {
                 return ResourceManager.GetStream("frog_jump", resourceCulture);
             }
@@ -337,7 +337,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_left {
+        public static System.Drawing.Bitmap frog_left {
             get {
                 object obj = ResourceManager.GetObject("frog_left", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -347,7 +347,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_left_stand {
+        public static System.Drawing.Bitmap frog_left_stand {
             get {
                 object obj = ResourceManager.GetObject("frog_left_stand", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -357,7 +357,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_left_stand1 {
+        public static System.Drawing.Bitmap frog_left_stand1 {
             get {
                 object obj = ResourceManager.GetObject("frog_left_stand1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -367,7 +367,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_left1 {
+        public static System.Drawing.Bitmap frog_left1 {
             get {
                 object obj = ResourceManager.GetObject("frog_left1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -377,7 +377,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_left2 {
+        public static System.Drawing.Bitmap frog_left2 {
             get {
                 object obj = ResourceManager.GetObject("frog_left2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -387,7 +387,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_life_fxd2 {
+        public static System.Drawing.Bitmap frog_life_fxd2 {
             get {
                 object obj = ResourceManager.GetObject("frog_life_fxd2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -397,7 +397,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_play_background {
+        public static System.Drawing.Bitmap frog_play_background {
             get {
                 object obj = ResourceManager.GetObject("frog_play_background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -407,7 +407,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_right {
+        public static System.Drawing.Bitmap frog_right {
             get {
                 object obj = ResourceManager.GetObject("frog_right", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -417,7 +417,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_right_stand {
+        public static System.Drawing.Bitmap frog_right_stand {
             get {
                 object obj = ResourceManager.GetObject("frog_right_stand", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -427,7 +427,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_right_stand1 {
+        public static System.Drawing.Bitmap frog_right_stand1 {
             get {
                 object obj = ResourceManager.GetObject("frog_right_stand1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -437,7 +437,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_right1 {
+        public static System.Drawing.Bitmap frog_right1 {
             get {
                 object obj = ResourceManager.GetObject("frog_right1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -447,7 +447,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_right2 {
+        public static System.Drawing.Bitmap frog_right2 {
             get {
                 object obj = ResourceManager.GetObject("frog_right2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -457,7 +457,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream frog_saved_sound {
+        public static System.IO.UnmanagedMemoryStream frog_saved_sound {
             get {
                 return ResourceManager.GetStream("frog_saved_sound", resourceCulture);
             }
@@ -466,7 +466,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream frog_splash_water {
+        public static System.IO.UnmanagedMemoryStream frog_splash_water {
             get {
                 return ResourceManager.GetStream("frog_splash_water", resourceCulture);
             }
@@ -475,7 +475,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_stand {
+        public static System.Drawing.Bitmap frog_stand {
             get {
                 object obj = ResourceManager.GetObject("frog_stand", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -485,7 +485,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_stand1 {
+        public static System.Drawing.Bitmap frog_stand1 {
             get {
                 object obj = ResourceManager.GetObject("frog_stand1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -495,7 +495,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_up {
+        public static System.Drawing.Bitmap frog_up {
             get {
                 object obj = ResourceManager.GetObject("frog_up", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -505,7 +505,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_up_stand {
+        public static System.Drawing.Bitmap frog_up_stand {
             get {
                 object obj = ResourceManager.GetObject("frog_up_stand", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -515,7 +515,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_up_stand1 {
+        public static System.Drawing.Bitmap frog_up_stand1 {
             get {
                 object obj = ResourceManager.GetObject("frog_up_stand1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -525,7 +525,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_up1 {
+        public static System.Drawing.Bitmap frog_up1 {
             get {
                 object obj = ResourceManager.GetObject("frog_up1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -535,7 +535,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap frog_up2 {
+        public static System.Drawing.Bitmap frog_up2 {
             get {
                 object obj = ResourceManager.GetObject("frog_up2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -545,7 +545,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream frogbro_jump {
+        public static System.IO.UnmanagedMemoryStream frogbro_jump {
             get {
                 return ResourceManager.GetStream("frogbro_jump", resourceCulture);
             }
@@ -554,7 +554,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap keys_info {
+        public static System.Drawing.Bitmap keys_info {
             get {
                 object obj = ResourceManager.GetObject("keys_info", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -564,7 +564,17 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap level2_bckg {
+        public static System.Drawing.Bitmap keys_info1 {
+            get {
+                object obj = ResourceManager.GetObject("keys_info1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap level2_bckg {
             get {
                 object obj = ResourceManager.GetObject("level2_bckg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -574,7 +584,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream lose_sound_fxd {
+        public static System.IO.UnmanagedMemoryStream lose_sound_fxd {
             get {
                 return ResourceManager.GetStream("lose_sound_fxd", resourceCulture);
             }
@@ -583,7 +593,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap main_page_fixed {
+        public static System.Drawing.Bitmap main_page_fixed {
             get {
                 object obj = ResourceManager.GetObject("main_page_fixed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -593,7 +603,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap padlock_fxd2 {
+        public static System.Drawing.Bitmap padlock_fxd2 {
             get {
                 object obj = ResourceManager.GetObject("padlock_fxd2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -603,7 +613,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pepe_frog1 {
+        public static System.Drawing.Bitmap pepe_frog1 {
             get {
                 object obj = ResourceManager.GetObject("pepe_frog1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -613,7 +623,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pepe_frog2 {
+        public static System.Drawing.Bitmap pepe_frog2 {
             get {
                 object obj = ResourceManager.GetObject("pepe_frog2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -623,7 +633,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap plant {
+        public static System.Drawing.Bitmap plant {
             get {
                 object obj = ResourceManager.GetObject("plant", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -633,7 +643,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap plant1 {
+        public static System.Drawing.Bitmap plant1 {
             get {
                 object obj = ResourceManager.GetObject("plant1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -643,7 +653,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tree_h_fxd {
+        public static System.Drawing.Bitmap tree_h_fxd {
             get {
                 object obj = ResourceManager.GetObject("tree_h_fxd", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -653,7 +663,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tree_normal_fxd {
+        public static System.Drawing.Bitmap tree_normal_fxd {
             get {
                 object obj = ResourceManager.GetObject("tree_normal_fxd", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -663,7 +673,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tree_small_fxd {
+        public static System.Drawing.Bitmap tree_small_fxd {
             get {
                 object obj = ResourceManager.GetObject("tree_small_fxd", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -673,7 +683,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tree_tiny_fxd {
+        public static System.Drawing.Bitmap tree_tiny_fxd {
             get {
                 object obj = ResourceManager.GetObject("tree_tiny_fxd", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -683,7 +693,7 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream win_sound {
+        public static System.IO.UnmanagedMemoryStream win_sound {
             get {
                 return ResourceManager.GetStream("win_sound", resourceCulture);
             }
