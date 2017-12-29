@@ -4,13 +4,13 @@
 # Projekt FROG
 ## Projekt oparty na arcade'owej grze -> 'Frogger'.
 
-![alt text](https://image.ibb.co/n3KiGb/ww1.png)
+![alt text](https://image.ibb.co/n3KiGb/ww1.png = 250x20)
 ![alt text](https://image.ibb.co/dbYDhG/ww2.png)
 ![alt text](https://image.ibb.co/iQK8Gb/ww3.png)
 
 ###########################################################################
-* Data rozpoczęcia: 18.11.17
-* Data zakończenia(mechanika): 25.11.17 
+* Data rozpoczęcia: **18.11.17**
+* Data zakończenia(wstępna mechanika gry): **25.11.17** 
 * Instrukcja zamieszczona w grze.
 * Wykonanie w: WinForms, Visual Studio 2017 
 
