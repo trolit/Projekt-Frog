@@ -39,6 +39,7 @@
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.screen = new System.Windows.Forms.Panel();
+            this.audi_2 = new System.Windows.Forms.PictureBox();
             this.leaf = new System.Windows.Forms.PictureBox();
             this.tortolian4 = new System.Windows.Forms.PictureBox();
             this.tortolian3 = new System.Windows.Forms.PictureBox();
@@ -78,9 +79,9 @@
             this.timer8 = new System.Windows.Forms.Timer(this.components);
             this.timer9 = new System.Windows.Forms.Timer(this.components);
             this.timer10 = new System.Windows.Forms.Timer(this.components);
-            this.audi_2 = new System.Windows.Forms.PictureBox();
             this.timer11 = new System.Windows.Forms.Timer(this.components);
             this.screen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.audi_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leaf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tortolian4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tortolian3)).BeginInit();
@@ -104,7 +105,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.audi_2)).BeginInit();
             this.SuspendLayout();
             // 
             // escape_text2
@@ -246,6 +246,16 @@
             this.screen.Name = "screen";
             this.screen.Size = new System.Drawing.Size(842, 481);
             this.screen.TabIndex = 1;
+            // 
+            // audi_2
+            // 
+            this.audi_2.Image = global::p_frog.Properties.Resources.audi;
+            this.audi_2.Location = new System.Drawing.Point(515, 305);
+            this.audi_2.Name = "audi_2";
+            this.audi_2.Size = new System.Drawing.Size(68, 35);
+            this.audi_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.audi_2.TabIndex = 55;
+            this.audi_2.TabStop = false;
             // 
             // leaf
             // 
@@ -555,10 +565,11 @@
             // 
             this.fatigue_solo.BackColor = System.Drawing.Color.Crimson;
             this.fatigue_solo.Location = new System.Drawing.Point(12, 24);
+            this.fatigue_solo.Maximum = 150;
             this.fatigue_solo.Name = "fatigue_solo";
             this.fatigue_solo.Size = new System.Drawing.Size(136, 23);
             this.fatigue_solo.TabIndex = 1;
-            this.fatigue_solo.Value = 100;
+            this.fatigue_solo.Value = 150;
             // 
             // background_box
             // 
@@ -608,16 +619,6 @@
             this.timer10.Interval = 70;
             this.timer10.Tick += new System.EventHandler(this.timer10_Tick);
             // 
-            // audi_2
-            // 
-            this.audi_2.Image = global::p_frog.Properties.Resources.audi;
-            this.audi_2.Location = new System.Drawing.Point(515, 305);
-            this.audi_2.Name = "audi_2";
-            this.audi_2.Size = new System.Drawing.Size(68, 35);
-            this.audi_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.audi_2.TabIndex = 55;
-            this.audi_2.TabStop = false;
-            // 
             // timer11
             // 
             this.timer11.Enabled = true;
@@ -640,6 +641,7 @@
             this.Text = "Projekt Frog";
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.audi_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.leaf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tortolian4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tortolian3)).EndInit();
@@ -663,7 +665,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.audi_2)).EndInit();
             this.ResumeLayout(false);
 
         }
