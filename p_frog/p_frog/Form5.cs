@@ -16,7 +16,6 @@ namespace p_frog
         #region Zmienne froga
         private int count_timer1 = 0;           // licznik czasu dla timer1
         private int count_timer2 = 0;           // licznik czasu dla timer2
-        private int count_timer5 = 0;           // licznik czasu dla timer5 (tortolian1)
         private int count_timer6 = 0;           // licznik czasu dla timer6 (tortolian2)
         private int count_timer7 = 0;           // licznik czasu dla timer7 (platforma na wodzie)
         private int count_timer8 = 0;           // licznik czasu dla timer8 (tortolian4)
@@ -46,7 +45,6 @@ namespace p_frog
         bool leaf_right = false;
         bool leaf_left = true;
 
-        bool can_move_turtle1 = true;
         bool can_move_turtle2 = true;
         bool can_move_turtle4 = true;
         #endregion
@@ -355,8 +353,6 @@ namespace p_frog
         {
             int tort1 = tortolian1.Location.Y;
 
-            if (can_move_turtle1 == true)
-            {
                 if (tortolian1_moveup == true && tortolian1_movedown == false)
                 {
                     Check_tortolian1_pos();
@@ -371,7 +367,6 @@ namespace p_frog
                     tortolian1.Location = new Point(138, tort1);
                     tortolian1.Image = Image.FromFile("tortoise_backwards.png");
                 }
-            }
         }
 
         private void timer9_Tick(object sender, EventArgs e)
@@ -440,19 +435,6 @@ namespace p_frog
         }
         #endregion
         #region 6. Timery stopujace zolwie
-        private void timer5_Tick(object sender, EventArgs e)        // tortolian1
-        {
-            can_move_turtle1 = false;
-            count_timer5++;
-
-            if (count_timer5 == 3)
-            {
-                can_move_turtle1 = true;
-                count_timer5 = 0;
-                timer5.Stop();
-            }
-        }
-
         private void timer6_Tick(object sender, EventArgs e)        // tortolian2
         {
             can_move_turtle2 = false;
@@ -514,18 +496,16 @@ namespace p_frog
             }
         }
         #endregion
-        #region 2. Sprawdź lokalizacje ruchomych tortolianek
+        #region 2. Sprawdź lokalizacje żółwi
         private void Check_tortolian1_pos()
         {
-            if (tortolian1.Location.Y <= 39)
+            if (tortolian1.Location.Y <= 50)
             {
-                timer5.Start();
                 tortolian1_moveup = false;
                 tortolian1_movedown = true;
             }
-            else if(tortolian1.Location.Y >= 164)
+            else if(tortolian1.Location.Y >= 158)
             {
-                timer5.Start();
                 tortolian1_moveup = true;
                 tortolian1_movedown = false;
             }
@@ -539,7 +519,7 @@ namespace p_frog
                 tortolian2_moveup = true;
                 tortolian2_movedown = false;
             }
-            else if (tortolian2.Location.Y <= 40)
+            else if (tortolian2.Location.Y <= 41)
             {
                 timer6.Start();
                 tortolian2_moveup = false;
@@ -877,7 +857,7 @@ namespace p_frog
         }
 
 
-
+        // nieuzywany TIMER7 (ma byc do liscia)
         private void timer7_Tick(object sender, EventArgs e)
         {
             count_timer7++;

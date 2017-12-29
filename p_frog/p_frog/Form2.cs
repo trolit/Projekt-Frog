@@ -706,6 +706,6 @@ namespace p_frog
             Form2 graj = new Form2();
             graj.Show();
         }
+        #endregion
     }
-    #endregion
 }

@@ -73,7 +73,6 @@
             this.fatigue_solo = new System.Windows.Forms.ProgressBar();
             this.background_box = new System.Windows.Forms.PictureBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.timer5 = new System.Windows.Forms.Timer(this.components);
             this.timer6 = new System.Windows.Forms.Timer(this.components);
             this.timer7 = new System.Windows.Forms.Timer(this.components);
             this.timer8 = new System.Windows.Forms.Timer(this.components);
@@ -190,7 +189,6 @@
             // timer4
             // 
             this.timer4.Enabled = true;
-            this.timer4.Interval = 70;
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
             // timer1
@@ -279,7 +277,7 @@
             // tortolian3
             // 
             this.tortolian3.Image = global::p_frog.Properties.Resources.tortoise_forward;
-            this.tortolian3.Location = new System.Drawing.Point(304, 165);
+            this.tortolian3.Location = new System.Drawing.Point(304, 164);
             this.tortolian3.Name = "tortolian3";
             this.tortolian3.Size = new System.Drawing.Size(47, 48);
             this.tortolian3.TabIndex = 52;
@@ -288,16 +286,16 @@
             // tortolian2
             // 
             this.tortolian2.Image = global::p_frog.Properties.Resources.tortoise_backwards;
-            this.tortolian2.Location = new System.Drawing.Point(618, 40);
+            this.tortolian2.Location = new System.Drawing.Point(618, 41);
             this.tortolian2.Name = "tortolian2";
-            this.tortolian2.Size = new System.Drawing.Size(47, 48);
+            this.tortolian2.Size = new System.Drawing.Size(47, 47);
             this.tortolian2.TabIndex = 51;
             this.tortolian2.TabStop = false;
             // 
             // tortolian1
             // 
             this.tortolian1.Image = global::p_frog.Properties.Resources.tortoise_forward;
-            this.tortolian1.Location = new System.Drawing.Point(138, 164);
+            this.tortolian1.Location = new System.Drawing.Point(138, 158);
             this.tortolian1.Name = "tortolian1";
             this.tortolian1.Size = new System.Drawing.Size(47, 48);
             this.tortolian1.TabIndex = 50;
@@ -587,11 +585,6 @@
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // timer5
-            // 
-            this.timer5.Interval = 1000;
-            this.timer5.Tick += new System.EventHandler(this.timer5_Tick);
-            // 
             // timer6
             // 
             this.timer6.Interval = 1000;
@@ -713,7 +706,6 @@
         private System.Windows.Forms.PictureBox tortolian4;
         private System.Windows.Forms.PictureBox tortolian3;
         private System.Windows.Forms.PictureBox leaf;
-        private System.Windows.Forms.Timer timer5;
         private System.Windows.Forms.Timer timer6;
         private System.Windows.Forms.Timer timer7;
         private System.Windows.Forms.Timer timer8;
