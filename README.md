@@ -6,8 +6,11 @@
 
 
 ![pic_1](https://image.ibb.co/n3KiGb/ww1.png "Główne menu" | width=250 height=136)
-![pic_2](https://image.ibb.co/dbYDhG/ww2.png "Okno gry 1" | width=250 height=142)
+
+![pic_2](https://image.ibb.co/dbYDhG/ww2.png "Okno gry 1" |  width=250 height=142)
+
 ![pic_3](https://image.ibb.co/iQK8Gb/ww3.png "Okno gry 2" | width=250 height=143)
+
 ###########################################################################
 * Data rozpoczęcia: 18.11.17
 * Data zakończenia(mechanika): 25.11.17 
