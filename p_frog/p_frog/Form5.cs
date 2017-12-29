@@ -129,19 +129,52 @@ namespace p_frog
             }
         }
         #endregion
-        #region 5. Frog - Turtle Collision
-        public void Check_if_frog_on_tree()
+        #region 5. Frog - Turtle/Leaf Collision
+        public void Check_if_frog_on_turtle_leaf()
         {
             int c = frog.Location.X;
             int d = frog.Location.Y;
 
-            if (frog.Bounds.IntersectsWith(tortolian1.Bounds) || frog.Bounds.IntersectsWith(tortolian2.Bounds) || frog.Bounds.IntersectsWith(tortolian3.Bounds) || frog.Bounds.IntersectsWith(tortolian4.Bounds) || frog.Bounds.IntersectsWith(leaf.Bounds))
+            if (frog.Bounds.IntersectsWith(tortolian1.Bounds) && tortolian1_moveup == true && tortolian1_movedown == false)
             {
                 is_on_tree = true;
-                //  c -= 10;  gdy drzewa plywaly, ale animacje wolniejsze
                 c -= 3;
-                frog.Location = new Point(c, d);
+                frog.Location = new Point(d, c);
                 Frog_screen_Collision();
+            }
+            else if (frog.Bounds.IntersectsWith(tortolian1.Bounds) && tortolian1_moveup == false && tortolian1_movedown == true)
+            {
+                is_on_tree = true;
+                c += 3;
+                frog.Location = new Point(d, c);
+            }
+            else if (frog.Bounds.IntersectsWith(tortolian2.Bounds) && tortolian2_moveup == false && tortolian2_movedown == true)
+            {
+                is_on_tree = true;
+                c += 3;
+                frog.Location = new Point(d, c);
+            }
+            else if (frog.Bounds.IntersectsWith(tortolian2.Bounds) && tortolian2_moveup == true && tortolian2_movedown == false)
+            {
+                is_on_tree = true;
+                c -= 3;
+                frog.Location = new Point(d, c);
+            }
+            else if (frog.Bounds.IntersectsWith(tortolian4.Bounds) && tortolian4_moveup == false && tortolian4_movedown == true)
+            {
+                is_on_tree = true;
+                c += 3;
+                frog.Location = new Point(d, c);
+            }
+            else if (frog.Bounds.IntersectsWith(tortolian4.Bounds) && tortolian4_moveup == true && tortolian4_movedown == false)
+            {
+                is_on_tree = true;
+                c -= 3;
+                frog.Location = new Point(d, c);
+            }
+            else if(frog.Bounds.IntersectsWith(tortolian3.Bounds))
+            {
+                is_on_tree = true;
             }
             else
             {
@@ -292,8 +325,8 @@ namespace p_frog
             truck_car.Location = new Point(t, 379);
             Check_truck_car();
 
-            timer4.Start();                             
-            Check_if_frog_on_tree();
+            timer4.Start();
+            Check_if_frog_on_turtle_leaf();
             Frog_plant_Collision();
             Frog_vehicle_Collision();
             Confirm_hideout();
