@@ -138,10 +138,11 @@
             // 
             this.fatigue.BackColor = System.Drawing.Color.Crimson;
             this.fatigue.Location = new System.Drawing.Point(7, 18);
+            this.fatigue.Maximum = 150;
             this.fatigue.Name = "fatigue";
             this.fatigue.Size = new System.Drawing.Size(72, 23);
             this.fatigue.TabIndex = 1;
-            this.fatigue.Value = 100;
+            this.fatigue.Value = 150;
             // 
             // warning1
             // 
@@ -403,10 +404,11 @@
             // 
             this.fatigue_bro.BackColor = System.Drawing.Color.Crimson;
             this.fatigue_bro.Location = new System.Drawing.Point(90, 18);
+            this.fatigue_bro.Maximum = 150;
             this.fatigue_bro.Name = "fatigue_bro";
             this.fatigue_bro.Size = new System.Drawing.Size(72, 23);
             this.fatigue_bro.TabIndex = 51;
-            this.fatigue_bro.Value = 100;
+            this.fatigue_bro.Value = 150;
             // 
             // pictureBox1
             // 

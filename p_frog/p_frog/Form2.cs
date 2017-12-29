@@ -245,7 +245,7 @@ namespace p_frog
 
             if (count_timer2 == 10)
             {
-                fatigue_solo.Value = 100;           // odzyskanie energii
+                fatigue_solo.Value = 150;           // odzyskanie energii
                 count_timer2 = 0;              // zresetowanie licznika
                 can_move = true;               // mogę chodzić
                 warning1.Visible = false;

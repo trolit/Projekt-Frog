@@ -342,7 +342,7 @@ namespace p_frog
 
             if (count_timer2 == 9)
             {
-                fatigue.Value = 100;
+                fatigue.Value = 150;
                 count_timer2 = 0;
                 can_move = true;
                 warning1.Visible = false;
@@ -432,7 +432,7 @@ namespace p_frog
 
             if (count_timer5 == 9)
             {
-                fatigue.Value = 100;
+                fatigue.Value = 150;
                 count_timer5 = 0;
                 can_move_bro = true;
                 warning1.Visible = false;

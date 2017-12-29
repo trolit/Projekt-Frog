@@ -127,10 +127,11 @@
             // 
             this.fatigue_solo.BackColor = System.Drawing.Color.Crimson;
             this.fatigue_solo.Location = new System.Drawing.Point(5, 18);
+            this.fatigue_solo.Maximum = 150;
             this.fatigue_solo.Name = "fatigue_solo";
             this.fatigue_solo.Size = new System.Drawing.Size(123, 23);
             this.fatigue_solo.TabIndex = 1;
-            this.fatigue_solo.Value = 100;
+            this.fatigue_solo.Value = 150;
             // 
             // label1
             // 
