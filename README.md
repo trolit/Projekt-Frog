@@ -1,12 +1,13 @@
 ###########################################################################
 
-
+<p align="center">
 # Projekt FROG
 ## Projekt oparty na arcade'owej grze -> 'Frogger'.
 
 ![alt text](https://image.ibb.co/n3KiGb/ww1.png)
 ![alt text](https://image.ibb.co/dbYDhG/ww2.png)
 ![alt text](https://image.ibb.co/iQK8Gb/ww3.png)
+</p> 
 
 ###########################################################################
 * Data rozpoczęcia: **18.11.17**
