@@ -42,6 +42,9 @@ namespace p_frog
 
         bool tortolian4_moveup = false;
         bool tortolian4_movedown = true;
+
+        bool leaf_right = false;
+        bool leaf_left = true;
         #endregion
 
         public Form5()
@@ -83,6 +86,12 @@ namespace p_frog
                 timer3.Stop();
             }
             else if (frog.Bounds.IntersectsWith(truck_car.Bounds))
+            {
+                car_hit.Play();
+                Frog_Life();
+                timer3.Stop();
+            }
+            else if (frog.Bounds.IntersectsWith(audi_2.Bounds))
             {
                 car_hit.Play();
                 Frog_Life();
@@ -265,10 +274,15 @@ namespace p_frog
             int p = police_car.Location.X; // lokalizacja radiowozu
             int c = car_column.Location.X; // lokalizacja kolumny samochodow
             int t = truck_car.Location.X;  // lokalizacja ciezarkowki
+            int a = audi_2.Location.X;     
 
             p -= 10;
             police_car.Location = new Point(p, 220);
             Check_police_car();
+
+            a -= 12;
+            audi_2.Location = new Point(a, 305);
+            Check_audi2();
 
             c -= 12;
             car_column.Location = new Point(c, 305);
@@ -348,6 +362,25 @@ namespace p_frog
             }
         }
         #endregion
+        #region 5. Timer 11 (odpowiedzialny za ruch lisciem)
+        private void timer11_Tick(object sender, EventArgs e)
+        {
+            int leaf1 = leaf.Location.X;
+
+            if(leaf_right == true && leaf_left == false)
+            {
+                leaf1 += 3;
+                leaf.Location = new Point(leaf1, 117);
+                Check_leaf_Pos();
+            }
+            else if(leaf_right == false && leaf_left == true)
+            {
+                leaf1 -= 3;
+                leaf.Location = new Point(leaf1, 117);
+                Check_leaf_Pos();
+            }
+        }
+        #endregion
 
         // KONTROLOWANIE LOKALIZACJI PICTUREBOXOW(zapętlanie ruchu)
         #region 1. Sprawdź lokalizacje pojazdów
@@ -356,6 +389,14 @@ namespace p_frog
             if (police_car.Location.X < -107)
             {
                 police_car.Location = new Point(823, 220);
+            }
+        }
+
+        private void Check_audi2()
+        {
+            if (audi_2.Location.X < -70)
+            {
+                audi_2.Location = new Point(839, 305);
             }
         }
 
@@ -421,6 +462,21 @@ namespace p_frog
                 timer8.Start();
                 tortolian4_moveup = true;
                 tortolian4_movedown = false;
+            }
+        }
+        #endregion
+        #region 3. Sprawdź lokalizacje liscia
+        private void Check_leaf_Pos()
+        {
+            if(leaf.Location.X >= 444)
+            {
+                leaf_right = false;
+                leaf_left = true;
+            }
+            else if(leaf.Location.X <= 305)
+            {
+                leaf_right = true;
+                leaf_left = false;
             }
         }
         #endregion
@@ -614,6 +670,7 @@ namespace p_frog
             police_car.Parent = background_box;
             car_column.Parent = background_box;
             truck_car.Parent = background_box;
+            audi_2.Parent = background_box;
             frog_life_1.Parent = background_box;
             frog_life_2.Parent = background_box;
             frog_life_3.Parent = background_box;
@@ -645,6 +702,7 @@ namespace p_frog
             label1.BackColor = Color.Transparent;
             car_column.BackColor = Color.Transparent;
             police_car.BackColor = Color.Transparent;
+            audi_2.BackColor = Color.Transparent;
             frog.Location = new Point(392, 428); // tu zaba zaczyna
         }
 
@@ -763,6 +821,8 @@ namespace p_frog
                 timer8.Stop();
             }
         }
+
+
     }
     #endregion
 }

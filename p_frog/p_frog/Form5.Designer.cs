@@ -78,6 +78,8 @@
             this.timer8 = new System.Windows.Forms.Timer(this.components);
             this.timer9 = new System.Windows.Forms.Timer(this.components);
             this.timer10 = new System.Windows.Forms.Timer(this.components);
+            this.audi_2 = new System.Windows.Forms.PictureBox();
+            this.timer11 = new System.Windows.Forms.Timer(this.components);
             this.screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.leaf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tortolian4)).BeginInit();
@@ -102,6 +104,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.audi_2)).BeginInit();
             this.SuspendLayout();
             // 
             // escape_text2
@@ -199,6 +202,7 @@
             // screen
             // 
             this.screen.BackColor = System.Drawing.Color.Transparent;
+            this.screen.Controls.Add(this.audi_2);
             this.screen.Controls.Add(this.leaf);
             this.screen.Controls.Add(this.tortolian4);
             this.screen.Controls.Add(this.tortolian3);
@@ -246,7 +250,7 @@
             // leaf
             // 
             this.leaf.Image = global::p_frog.Properties.Resources.leaf;
-            this.leaf.Location = new System.Drawing.Point(444, 117);
+            this.leaf.Location = new System.Drawing.Point(446, 117);
             this.leaf.Name = "leaf";
             this.leaf.Size = new System.Drawing.Size(47, 49);
             this.leaf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -604,6 +608,22 @@
             this.timer10.Interval = 70;
             this.timer10.Tick += new System.EventHandler(this.timer10_Tick);
             // 
+            // audi_2
+            // 
+            this.audi_2.Image = global::p_frog.Properties.Resources.audi;
+            this.audi_2.Location = new System.Drawing.Point(515, 305);
+            this.audi_2.Name = "audi_2";
+            this.audi_2.Size = new System.Drawing.Size(68, 35);
+            this.audi_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.audi_2.TabIndex = 55;
+            this.audi_2.TabStop = false;
+            // 
+            // timer11
+            // 
+            this.timer11.Enabled = true;
+            this.timer11.Interval = 70;
+            this.timer11.Tick += new System.EventHandler(this.timer11_Tick);
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -643,6 +663,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.audi_2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -697,5 +718,7 @@
         private System.Windows.Forms.Timer timer8;
         private System.Windows.Forms.Timer timer9;
         private System.Windows.Forms.Timer timer10;
+        protected System.Windows.Forms.PictureBox audi_2;
+        private System.Windows.Forms.Timer timer11;
     }
 }
