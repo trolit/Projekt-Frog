@@ -4,7 +4,7 @@
 # Projekt FROG
 ## Projekt oparty na arcade'owej grze -> 'Frogger'.
 
-![alt text](https://image.ibb.co/n3KiGb/ww1.png = 250x20)
+![alt text](https://image.ibb.co/n3KiGb/ww1.png | width = 10)
 ![alt text](https://image.ibb.co/dbYDhG/ww2.png)
 ![alt text](https://image.ibb.co/iQK8Gb/ww3.png)
 
