@@ -5,6 +5,7 @@
 ## Projekt oparty na arcade'owej grze -> 'Frogger'.
 
 
+![alt tag](https://image.ibb.co/n3KiGb/ww1.png "Główne menu")
 ###########################################################################
 * Data rozpoczęcia: 18.11.17
 * Data zakończenia(mechanika): 25.11.17 
