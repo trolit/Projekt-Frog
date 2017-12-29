@@ -16,6 +16,10 @@ namespace p_frog
         #region Zmienne froga
         private int count_timer1 = 0;           // licznik czasu dla timer1
         private int count_timer2 = 0;           // licznik czasu dla timer2
+        private int count_timer5 = 0;           // licznik czasu dla timer5 (tortolian1)
+        private int count_timer6 = 0;           // licznik czasu dla timer6 (tortolian2)
+        private int count_timer7 = 0;           // licznik czasu dla timer7 (platforma na wodzie)
+        private int count_timer8 = 0;           // licznik czasu dla timer8 (tortolian4)
         int life = 3;                           // liczba żyć froga
         bool right;                             // zmienne boolowskie do kontrolowania animacji         
         bool left;
@@ -29,6 +33,15 @@ namespace p_frog
 
         bool can_move_right = true;             // do krzaków zmienne boolowskie
         bool can_move_left = true;
+
+        bool tortolian1_moveup = true;
+        bool tortolian1_movedown = false;
+
+        bool tortolian2_moveup = false;
+        bool tortolian2_movedown = true;
+
+        bool tortolian4_moveup = false;
+        bool tortolian4_movedown = true;
         #endregion
 
         public Form5()
@@ -107,13 +120,13 @@ namespace p_frog
             }
         }
         #endregion
-        #region 5. Frog - Tree Collision
+        #region 5. Frog - Turtle Collision
         public void Check_if_frog_on_tree()
         {
             int c = frog.Location.X;
             int d = frog.Location.Y;
 
-            if (frog.Bounds.IntersectsWith(tree_1.Bounds) || frog.Bounds.IntersectsWith(tree_2.Bounds) || frog.Bounds.IntersectsWith(tree_3.Bounds) || frog.Bounds.IntersectsWith(tree_4.Bounds) || frog.Bounds.IntersectsWith(tree_6.Bounds) || frog.Bounds.IntersectsWith(tree_8.Bounds) || frog.Bounds.IntersectsWith(tree_9.Bounds) || frog.Bounds.IntersectsWith(tree_11.Bounds) || frog.Bounds.IntersectsWith(tree_12.Bounds) || frog.Bounds.IntersectsWith(tree_13.Bounds) || frog.Bounds.IntersectsWith(tree_14.Bounds))
+            if (frog.Bounds.IntersectsWith(tortolian1.Bounds) || frog.Bounds.IntersectsWith(tortolian2.Bounds) || frog.Bounds.IntersectsWith(tortolian3.Bounds) || frog.Bounds.IntersectsWith(tortolian4.Bounds) || frog.Bounds.IntersectsWith(leaf.Bounds))
             {
                 is_on_tree = true;
                 //  c -= 10;  gdy drzewa plywaly, ale animacje wolniejsze
@@ -257,61 +270,82 @@ namespace p_frog
             police_car.Location = new Point(p, 220);
             Check_police_car();
 
-            c += 12;
-            car_column.Location = new Point(c, 297);
+            c -= 12;
+            car_column.Location = new Point(c, 305);
             Check_car_column();
 
             t += 9;
-            truck_car.Location = new Point(t, 375);
+            truck_car.Location = new Point(t, 379);
             Check_truck_car();
 
-            timer4.Start();                             // rozpoczecie ruchu kłód
+            timer4.Start();                             
             Check_if_frog_on_tree();
             Frog_plant_Collision();
-            Check_tree_move();
             Frog_vehicle_Collision();
             Confirm_hideout();
             Frog_water_Collision();
         }
         #endregion
-        #region 4. Timer4(odpowiedzialny za ruch drzew)
+        #region 4. Timery 4, 9, 10(odpowiedzialne za ruch turtolianek)
         private void timer4_Tick(object sender, EventArgs e)
         {
-            // zakomentuj ciało żeby zobaczyć jak płynnie poruszają się samochody
-            int tre1 = tree_1.Location.X;
-            int tre2 = tree_2.Location.X;
-            int tre3 = tree_3.Location.X;
-            int tre4 = tree_4.Location.X;
-            int tre6 = tree_6.Location.X;
-            int tre8 = tree_8.Location.X;
-            int tre9 = tree_9.Location.X;
-            int tre11 = tree_11.Location.X;
-            int tre12 = tree_12.Location.X;
-            int tre13 = tree_13.Location.X;
-            int tre14 = tree_14.Location.X;
+            int tort1 = tortolian1.Location.Y;
 
-            tre1 -= 3;                      // prędkość przesuwania kłód
-            tre2 -= 3;
-            tre3 -= 3;
-            tre4 -= 3;
-            tre6 -= 3;
-            tre8 -= 3;
-            tre9 -= 3;
-            tre11 -= 3;
-            tre12 -= 3;
-            tre13 -= 3;
-            tre14 -= 3;
-            tree_1.Location = new Point(tre1, 125);
-            tree_2.Location = new Point(tre2, 54);
-            tree_3.Location = new Point(tre3, 109);
-            tree_4.Location = new Point(tre4, 82);
-            tree_6.Location = new Point(tre6, 115);
-            tree_8.Location = new Point(tre8, 66);
-            tree_9.Location = new Point(tre9, 78);
-            tree_11.Location = new Point(tre11, 137);
-            tree_12.Location = new Point(tre12, 143);
-            tree_13.Location = new Point(tre13, 55);
-            tree_14.Location = new Point(tre14, 98);
+
+            if(tortolian1_moveup == true && tortolian1_movedown == false)
+            {
+                tort1 -= 3;
+                tortolian1.Location = new Point(138, tort1);
+                Check_tortolian1_pos();
+                tortolian1.Image = Image.FromFile("tortoise_forward.png");
+            }
+            else if(tortolian1_movedown == true && tortolian1_moveup == false)
+            {
+                tort1 += 3;
+                tortolian1.Location = new Point(138, tort1);
+                Check_tortolian1_pos();
+                tortolian1.Image = Image.FromFile("tortoise_backwards.png");
+            }
+        }
+
+        private void timer9_Tick(object sender, EventArgs e)
+        {
+            int tort2 = tortolian2.Location.Y;
+
+            if (tortolian2_movedown == true && tortolian2_moveup == false)
+            {
+                tort2 += 3;
+                tortolian2.Location = new Point(618, tort2);
+                Check_tortolian2_pos();
+                tortolian2.Image = Image.FromFile("tortoise_backwards.png");
+            }
+            else if (tortolian2_movedown == false && tortolian2_moveup == true)
+            {
+                tort2 -= 3;
+                tortolian2.Location = new Point(618, tort2);
+                Check_tortolian2_pos();
+                tortolian2.Image = Image.FromFile("tortoise_forward.png");
+            }
+        }
+
+        private void timer10_Tick(object sender, EventArgs e)
+        {
+            int tort4 = tortolian4.Location.Y;
+
+            if (tortolian4_movedown == true && tortolian4_moveup == false)
+            {
+                tort4 += 3;
+                tortolian4.Location = new Point(444, tort4);
+                Check_tortolian4_pos();
+                tortolian4.Image = Image.FromFile("tortoise_backwards.png");
+            }
+            else if (tortolian4_movedown == false && tortolian4_moveup == true)
+            {
+                tort4 -= 3;
+                tortolian4.Location = new Point(444, tort4);
+                Check_tortolian4_pos();
+                tortolian4.Image = Image.FromFile("tortoise_forward.png");
+            }
         }
         #endregion
 
@@ -329,64 +363,64 @@ namespace p_frog
         {
             if (truck_car.Location.X > 897)
             {
-                truck_car.Location = new Point(-269, 384);
+                truck_car.Location = new Point(-269, 379);
             }
         }
 
         private void Check_car_column()
         {
-            if (car_column.Location.X > 1000)
+            if (car_column.Location.X < -70)
             {
-                car_column.Location = new Point(-269, 297);
+                car_column.Location = new Point(839, 305);
             }
         }
         #endregion
-        #region 2. Sprawdź lokalizacje drzew
-        private void Check_tree_move()
+        #region 2. Sprawdź lokalizacje ruchomych tortolianek
+        private void Check_tortolian1_pos()
         {
-            if (tree_1.Location.X < -120)
+            if (tortolian1.Location.Y <= 39)
             {
-                tree_1.Location = new Point(823, 125);
+                timer5.Start();
+                tortolian1_moveup = false;
+                tortolian1_movedown = true;
             }
-            else if (tree_2.Location.X < -200)
+            else if(tortolian1.Location.Y >= 164)
             {
-                tree_2.Location = new Point(823, 54);
+                timer5.Start();
+                tortolian1_moveup = true;
+                tortolian1_movedown = false;
             }
-            else if (tree_3.Location.X < -108)
+        }
+
+        private void Check_tortolian2_pos()
+        {
+            if (tortolian2.Location.Y >= 164)
             {
-                tree_3.Location = new Point(823, 109);
+                timer6.Start();
+                tortolian2_moveup = true;
+                tortolian2_movedown = false;
             }
-            else if (tree_4.Location.X < -119)
+            else if (tortolian2.Location.Y <= 40)
             {
-                tree_4.Location = new Point(823, 82);
+                timer6.Start();
+                tortolian2_moveup = false;
+                tortolian2_movedown = true;
             }
-            else if (tree_6.Location.X < -119)
+        }
+
+        private void Check_tortolian4_pos()
+        {
+            if (tortolian4.Location.Y <= 40)
             {
-                tree_6.Location = new Point(823, 115);
+                timer8.Start();
+                tortolian4_moveup = false;
+                tortolian4_movedown = true;
             }
-            else if (tree_8.Location.X < -119)
+            else if (tortolian4.Location.Y >= 69)
             {
-                tree_8.Location = new Point(823, 66);
-            }
-            else if (tree_9.Location.X < -119)
-            {
-                tree_9.Location = new Point(823, 78);
-            }
-            else if (tree_11.Location.X < -119)
-            {
-                tree_11.Location = new Point(823, 137);
-            }
-            else if (tree_12.Location.X < -119)
-            {
-                tree_12.Location = new Point(823, 143);
-            }
-            else if (tree_13.Location.X < -119)
-            {
-                tree_13.Location = new Point(823, 55);
-            }
-            else if (tree_14.Location.X < -119)
-            {
-                tree_14.Location = new Point(823, 98);
+                timer8.Start();
+                tortolian4_moveup = true;
+                tortolian4_movedown = false;
             }
         }
         #endregion
@@ -576,17 +610,6 @@ namespace p_frog
         {
             frog.Parent = background_box;
             frog.BackColor = Color.Transparent;
-            tree_1.Parent = background_box;
-            tree_2.Parent = background_box;
-            tree_3.Parent = background_box;
-            tree_4.Parent = background_box;
-            tree_6.Parent = background_box;
-            tree_8.Parent = background_box;
-            tree_9.Parent = background_box;
-            tree_11.Parent = background_box;
-            tree_12.Parent = background_box;
-            tree_13.Parent = background_box;
-            tree_14.Parent = background_box;
             label1.Parent = background_box;
             police_car.Parent = background_box;
             car_column.Parent = background_box;
@@ -594,6 +617,16 @@ namespace p_frog
             frog_life_1.Parent = background_box;
             frog_life_2.Parent = background_box;
             frog_life_3.Parent = background_box;
+            tortolian1.Parent = background_box;
+            tortolian2.Parent = background_box;
+            tortolian3.Parent = background_box;
+            tortolian4.Parent = background_box;
+            leaf.Parent = background_box;
+            leaf.BackColor = Color.Transparent;
+            tortolian1.BackColor = Color.Transparent;
+            tortolian2.BackColor = Color.Transparent;
+            tortolian3.BackColor = Color.Transparent;
+            tortolian4.BackColor = Color.Transparent;
             frog_life_1.BackColor = Color.Transparent;
             frog_life_2.BackColor = Color.Transparent;
             frog_life_3.BackColor = Color.Transparent;
@@ -604,17 +637,6 @@ namespace p_frog
             frog_hideout_2.BackColor = Color.Transparent;
             frog_hideout_3.Parent = background_box;
             frog_hideout_3.BackColor = Color.Transparent;
-            tree_1.BackColor = Color.Transparent;
-            tree_2.BackColor = Color.Transparent;
-            tree_3.BackColor = Color.Transparent;
-            tree_4.BackColor = Color.Transparent;
-            tree_6.BackColor = Color.Transparent;
-            tree_8.BackColor = Color.Transparent;
-            tree_9.BackColor = Color.Transparent;
-            tree_11.BackColor = Color.Transparent;
-            tree_12.BackColor = Color.Transparent;
-            tree_13.BackColor = Color.Transparent;
-            tree_14.BackColor = Color.Transparent;
             plant_block1.Parent = background_box;
             plant_block1.BackColor = Color.Transparent;
             plant_block2.Parent = background_box;
@@ -696,6 +718,50 @@ namespace p_frog
             this.Close();
             Form2 graj = new Form2();
             graj.Show();
+        }
+
+        private void timer5_Tick(object sender, EventArgs e)
+        {
+            count_timer5++;
+            
+            if(count_timer5 == 3)
+            {
+                count_timer5 = 0;
+                timer5.Stop();
+            }
+        }
+
+        private void timer6_Tick(object sender, EventArgs e)
+        {
+            count_timer6++;
+
+            if (count_timer6 == 3)
+            {
+                count_timer6 = 0;
+                timer6.Stop();
+            }
+        }
+
+        private void timer7_Tick(object sender, EventArgs e)
+        {
+            count_timer7++;
+
+            if (count_timer7 == 3)
+            {
+                count_timer7 = 0;
+                timer7.Stop();
+            }
+        }
+
+        private void timer8_Tick(object sender, EventArgs e)
+        {
+            count_timer8++;
+
+            if (count_timer8 == 3)
+            {
+                count_timer8 = 0;
+                timer8.Stop();
+            }
         }
     }
     #endregion

@@ -49,8 +49,9 @@ namespace p_frog
         {
             if (singlefrog.Checked && !doublefrog.Checked)
             {
-                Form5 przejscie = new Form5();
                 this.Hide();
+
+                Form5 przejscie = new Form5();
                 przejscie.Show();
             }
         }

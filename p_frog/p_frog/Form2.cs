@@ -17,7 +17,6 @@ namespace p_frog
         void Frog_vehicle_Collision();
         void Frog_plant_Collision();
         void Frog_water_Collision();
-        void Check_if_frog_on_tree();
     }
 
     public partial class Form2 : Form, IFrog_Collisions

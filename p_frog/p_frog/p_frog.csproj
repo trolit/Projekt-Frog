@@ -177,11 +177,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="frog_icon.ico" />
+    <None Include="Resources\tortoise_backwards.png" />
+    <None Include="Resources\tortoise_forward.png" />
     <None Include="Resources\car4_fxd.png" />
     <None Include="Resources\level2_bckg.png" />
     <None Include="Resources\ambulance.png" />
     <None Include="Resources\audi.png" />
     <None Include="Resources\keys_info1.png" />
+    <None Include="Resources\leaf.png" />
     <Content Include="Resources\main_page_fixed.jpg" />
     <None Include="Resources\pepe_frog2.png" />
     <None Include="Resources\pepe_frog1.png" />

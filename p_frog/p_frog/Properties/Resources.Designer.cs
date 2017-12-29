@@ -574,6 +574,16 @@ namespace p_frog.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap leaf {
+            get {
+                object obj = ResourceManager.GetObject("leaf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap level2_bckg {
             get {
                 object obj = ResourceManager.GetObject("level2_bckg", resourceCulture);
@@ -646,6 +656,26 @@ namespace p_frog.Properties {
         public static System.Drawing.Bitmap plant1 {
             get {
                 object obj = ResourceManager.GetObject("plant1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap tortoise_backwards {
+            get {
+                object obj = ResourceManager.GetObject("tortoise_backwards", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap tortoise_forward {
+            get {
+                object obj = ResourceManager.GetObject("tortoise_forward", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
