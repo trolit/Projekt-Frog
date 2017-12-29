@@ -45,6 +45,10 @@ namespace p_frog
 
         bool leaf_right = false;
         bool leaf_left = true;
+
+        bool can_move_turtle1 = true;
+        bool can_move_turtle2 = true;
+        bool can_move_turtle4 = true;
         #endregion
 
         public Form5()
@@ -132,15 +136,14 @@ namespace p_frog
         #region 5. Frog - Turtle/Leaf Collision
         public void Check_if_frog_on_turtle_leaf()
         {
-            int c = frog.Location.X;
-            int d = frog.Location.Y;
+            int d = frog.Location.X;
+            int c = frog.Location.Y;
 
             if (frog.Bounds.IntersectsWith(tortolian1.Bounds) && tortolian1_moveup == true && tortolian1_movedown == false)
             {
                 is_on_tree = true;
                 c -= 3;
                 frog.Location = new Point(d, c);
-                Frog_screen_Collision();
             }
             else if (frog.Bounds.IntersectsWith(tortolian1.Bounds) && tortolian1_moveup == false && tortolian1_movedown == true)
             {
@@ -171,6 +174,20 @@ namespace p_frog
                 is_on_tree = true;
                 c -= 3;
                 frog.Location = new Point(d, c);
+            }
+            else if (frog.Bounds.IntersectsWith(leaf.Bounds) && leaf_left == true && leaf_right == false)
+            {
+                int w = frog.Location.X;
+                is_on_tree = true;
+                w -= 3;
+                frog.Location = new Point(w, c);
+            }
+            else if (frog.Bounds.IntersectsWith(leaf.Bounds) && leaf_left == false && leaf_right == true)
+            {
+                int w = frog.Location.X;
+                is_on_tree = true;
+                w += 3;
+                frog.Location = new Point(w, c);
             }
             else if(frog.Bounds.IntersectsWith(tortolian3.Bounds))
             {
@@ -338,20 +355,22 @@ namespace p_frog
         {
             int tort1 = tortolian1.Location.Y;
 
-
-            if(tortolian1_moveup == true && tortolian1_movedown == false)
+            if (can_move_turtle1 == true)
             {
-                tort1 -= 3;
-                tortolian1.Location = new Point(138, tort1);
-                Check_tortolian1_pos();
-                tortolian1.Image = Image.FromFile("tortoise_forward.png");
-            }
-            else if(tortolian1_movedown == true && tortolian1_moveup == false)
-            {
-                tort1 += 3;
-                tortolian1.Location = new Point(138, tort1);
-                Check_tortolian1_pos();
-                tortolian1.Image = Image.FromFile("tortoise_backwards.png");
+                if (tortolian1_moveup == true && tortolian1_movedown == false)
+                {
+                    Check_tortolian1_pos();
+                    tort1 -= 3;
+                    tortolian1.Location = new Point(138, tort1);
+                    tortolian1.Image = Image.FromFile("tortoise_forward.png");
+                }
+                else if (tortolian1_movedown == true && tortolian1_moveup == false)
+                {
+                    Check_tortolian1_pos();
+                    tort1 += 3;
+                    tortolian1.Location = new Point(138, tort1);
+                    tortolian1.Image = Image.FromFile("tortoise_backwards.png");
+                }
             }
         }
 
@@ -359,19 +378,22 @@ namespace p_frog
         {
             int tort2 = tortolian2.Location.Y;
 
-            if (tortolian2_movedown == true && tortolian2_moveup == false)
+            if (can_move_turtle2 == true)
             {
-                tort2 += 3;
-                tortolian2.Location = new Point(618, tort2);
-                Check_tortolian2_pos();
-                tortolian2.Image = Image.FromFile("tortoise_backwards.png");
-            }
-            else if (tortolian2_movedown == false && tortolian2_moveup == true)
-            {
-                tort2 -= 3;
-                tortolian2.Location = new Point(618, tort2);
-                Check_tortolian2_pos();
-                tortolian2.Image = Image.FromFile("tortoise_forward.png");
+                if (tortolian2_movedown == true && tortolian2_moveup == false)
+                {
+                    Check_tortolian2_pos();
+                    tort2 += 3;
+                    tortolian2.Location = new Point(618, tort2);
+                    tortolian2.Image = Image.FromFile("tortoise_backwards.png");
+                }
+                else if (tortolian2_movedown == false && tortolian2_moveup == true)
+                {
+                    Check_tortolian2_pos();
+                    tort2 -= 3;
+                    tortolian2.Location = new Point(618, tort2);
+                    tortolian2.Image = Image.FromFile("tortoise_forward.png");
+                }
             }
         }
 
@@ -379,19 +401,22 @@ namespace p_frog
         {
             int tort4 = tortolian4.Location.Y;
 
-            if (tortolian4_movedown == true && tortolian4_moveup == false)
+            if (can_move_turtle4 == true)
             {
-                tort4 += 3;
-                tortolian4.Location = new Point(444, tort4);
-                Check_tortolian4_pos();
-                tortolian4.Image = Image.FromFile("tortoise_backwards.png");
-            }
-            else if (tortolian4_movedown == false && tortolian4_moveup == true)
-            {
-                tort4 -= 3;
-                tortolian4.Location = new Point(444, tort4);
-                Check_tortolian4_pos();
-                tortolian4.Image = Image.FromFile("tortoise_forward.png");
+                if (tortolian4_movedown == true && tortolian4_moveup == false)
+                {
+                    Check_tortolian4_pos();
+                    tort4 += 3;
+                    tortolian4.Location = new Point(444, tort4);
+                    tortolian4.Image = Image.FromFile("tortoise_backwards.png");
+                }
+                else if (tortolian4_movedown == false && tortolian4_moveup == true)
+                {
+                    Check_tortolian4_pos();
+                    tort4 -= 3;
+                    tortolian4.Location = new Point(444, tort4);
+                    tortolian4.Image = Image.FromFile("tortoise_forward.png");
+                }
             }
         }
         #endregion
@@ -411,6 +436,46 @@ namespace p_frog
                 leaf1 -= 3;
                 leaf.Location = new Point(leaf1, 117);
                 Check_leaf_Pos();
+            }
+        }
+        #endregion
+        #region 6. Timery stopujace zolwie
+        private void timer5_Tick(object sender, EventArgs e)        // tortolian1
+        {
+            can_move_turtle1 = false;
+            count_timer5++;
+
+            if (count_timer5 == 3)
+            {
+                can_move_turtle1 = true;
+                count_timer5 = 0;
+                timer5.Stop();
+            }
+        }
+
+        private void timer6_Tick(object sender, EventArgs e)        // tortolian2
+        {
+            can_move_turtle2 = false;
+            count_timer6++;
+
+            if (count_timer6 == 3)
+            {
+                can_move_turtle2 = true;
+                count_timer6 = 0;
+                timer6.Stop();
+            }
+        }
+
+        private void timer8_Tick(object sender, EventArgs e)        // tortolian4
+        {
+            can_move_turtle4 = false;
+            count_timer8++;
+
+            if (count_timer8 == 3)
+            {
+                can_move_turtle4 = true;
+                count_timer8 = 0;
+                timer8.Stop();
             }
         }
         #endregion
@@ -807,31 +872,11 @@ namespace p_frog
         private void escape_restart_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form2 graj = new Form2();
+            Form5 graj = new Form5();
             graj.Show();
         }
 
-        private void timer5_Tick(object sender, EventArgs e)
-        {
-            count_timer5++;
-            
-            if(count_timer5 == 3)
-            {
-                count_timer5 = 0;
-                timer5.Stop();
-            }
-        }
 
-        private void timer6_Tick(object sender, EventArgs e)
-        {
-            count_timer6++;
-
-            if (count_timer6 == 3)
-            {
-                count_timer6 = 0;
-                timer6.Stop();
-            }
-        }
 
         private void timer7_Tick(object sender, EventArgs e)
         {
@@ -844,18 +889,6 @@ namespace p_frog
             }
         }
 
-        private void timer8_Tick(object sender, EventArgs e)
-        {
-            count_timer8++;
-
-            if (count_timer8 == 3)
-            {
-                count_timer8 = 0;
-                timer8.Stop();
-            }
-        }
-
-
+        #endregion
     }
-    #endregion
 }
