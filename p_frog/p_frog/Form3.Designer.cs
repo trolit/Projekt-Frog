@@ -139,11 +139,11 @@
             // 
             this.fatigue.BackColor = System.Drawing.Color.Crimson;
             this.fatigue.Location = new System.Drawing.Point(7, 18);
-            this.fatigue.Maximum = 150;
+            this.fatigue.Maximum = 200;
             this.fatigue.Name = "fatigue";
             this.fatigue.Size = new System.Drawing.Size(72, 23);
             this.fatigue.TabIndex = 1;
-            this.fatigue.Value = 150;
+            this.fatigue.Value = 200;
             // 
             // warning1
             // 
@@ -174,6 +174,7 @@
             // screen
             // 
             this.screen.BackColor = System.Drawing.Color.Transparent;
+            this.screen.Controls.Add(this.lvl1_wincode);
             this.screen.Controls.Add(this.pepe_2);
             this.screen.Controls.Add(this.pepe_1);
             this.screen.Controls.Add(this.lose_text);
@@ -405,11 +406,11 @@
             // 
             this.fatigue_bro.BackColor = System.Drawing.Color.Crimson;
             this.fatigue_bro.Location = new System.Drawing.Point(90, 18);
-            this.fatigue_bro.Maximum = 150;
+            this.fatigue_bro.Maximum = 200;
             this.fatigue_bro.Name = "fatigue_bro";
             this.fatigue_bro.Size = new System.Drawing.Size(72, 23);
             this.fatigue_bro.TabIndex = 51;
-            this.fatigue_bro.Value = 150;
+            this.fatigue_bro.Value = 200;
             // 
             // pictureBox1
             // 
@@ -749,12 +750,13 @@
             // lvl1_wincode
             // 
             this.lvl1_wincode.AutoSize = true;
-            this.lvl1_wincode.BackColor = System.Drawing.Color.DarkViolet;
+            this.lvl1_wincode.BackColor = System.Drawing.SystemColors.InfoText;
+            this.lvl1_wincode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lvl1_wincode.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lvl1_wincode.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.lvl1_wincode.Location = new System.Drawing.Point(232, 196);
+            this.lvl1_wincode.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lvl1_wincode.Location = new System.Drawing.Point(248, 320);
             this.lvl1_wincode.Name = "lvl1_wincode";
-            this.lvl1_wincode.Size = new System.Drawing.Size(378, 88);
+            this.lvl1_wincode.Size = new System.Drawing.Size(380, 90);
             this.lvl1_wincode.TabIndex = 51;
             this.lvl1_wincode.Text = "Kod do odblokowania następnego poziomu:\r\nAF^@!\r\n(jeśli chcesz grać dalej, wróć do" +
     " menu, przejdź\r\ndo zakładki \'etapy\' i wpisz poprawnie kod)";
@@ -767,7 +769,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(842, 481);
             this.ControlBox = false;
-            this.Controls.Add(this.lvl1_wincode);
             this.Controls.Add(this.screen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -813,7 +814,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

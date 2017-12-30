@@ -251,7 +251,7 @@ namespace p_frog
 
             if (count_timer2 == 10)
             {
-                fatigue_solo.Value = 150;           // odzyskanie energii
+                fatigue_solo.Value = 190;           // odzyskanie energii
                 count_timer2 = 0;              // zresetowanie licznika
                 can_move = true;               // mogę chodzić
                 warning1.Visible = false;
@@ -537,7 +537,7 @@ namespace p_frog
             // odzyskiwanie kondycji
             if (fatigue_solo.Value <= 98)
             {
-                fatigue_solo.Value += 4;
+                fatigue_solo.Value += 2;
             }
 
             frog.Location = new Point(x, y);

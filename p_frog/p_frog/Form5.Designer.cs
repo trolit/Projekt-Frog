@@ -79,6 +79,7 @@
             this.timer9 = new System.Windows.Forms.Timer(this.components);
             this.timer10 = new System.Windows.Forms.Timer(this.components);
             this.timer11 = new System.Windows.Forms.Timer(this.components);
+            this.frog_dead = new System.Windows.Forms.PictureBox();
             this.screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.audi_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leaf)).BeginInit();
@@ -104,6 +105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frog_dead)).BeginInit();
             this.SuspendLayout();
             // 
             // escape_text2
@@ -112,7 +114,7 @@
             this.escape_text2.BackColor = System.Drawing.Color.Indigo;
             this.escape_text2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.escape_text2.ForeColor = System.Drawing.Color.Crimson;
-            this.escape_text2.Location = new System.Drawing.Point(316, 401);
+            this.escape_text2.Location = new System.Drawing.Point(302, 401);
             this.escape_text2.Name = "escape_text2";
             this.escape_text2.Size = new System.Drawing.Size(239, 18);
             this.escape_text2.TabIndex = 46;
@@ -125,7 +127,7 @@
             this.escape_text1.BackColor = System.Drawing.Color.Indigo;
             this.escape_text1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.escape_text1.ForeColor = System.Drawing.Color.Crimson;
-            this.escape_text1.Location = new System.Drawing.Point(509, 216);
+            this.escape_text1.Location = new System.Drawing.Point(294, 100);
             this.escape_text1.Name = "escape_text1";
             this.escape_text1.Size = new System.Drawing.Size(255, 33);
             this.escape_text1.TabIndex = 45;
@@ -139,7 +141,7 @@
             this.escape_quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.escape_quit.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.escape_quit.ForeColor = System.Drawing.Color.Crimson;
-            this.escape_quit.Location = new System.Drawing.Point(357, 310);
+            this.escape_quit.Location = new System.Drawing.Point(343, 310);
             this.escape_quit.Name = "escape_quit";
             this.escape_quit.Size = new System.Drawing.Size(157, 68);
             this.escape_quit.TabIndex = 49;
@@ -155,7 +157,7 @@
             this.escape_title.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.escape_title.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.escape_title.ForeColor = System.Drawing.Color.Crimson;
-            this.escape_title.Location = new System.Drawing.Point(357, 214);
+            this.escape_title.Location = new System.Drawing.Point(343, 228);
             this.escape_title.Name = "escape_title";
             this.escape_title.Size = new System.Drawing.Size(157, 66);
             this.escape_title.TabIndex = 48;
@@ -171,7 +173,7 @@
             this.escape_restart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.escape_restart.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.escape_restart.ForeColor = System.Drawing.Color.Crimson;
-            this.escape_restart.Location = new System.Drawing.Point(629, 238);
+            this.escape_restart.Location = new System.Drawing.Point(343, 146);
             this.escape_restart.Name = "escape_restart";
             this.escape_restart.Size = new System.Drawing.Size(157, 66);
             this.escape_restart.TabIndex = 47;
@@ -200,18 +202,20 @@
             // screen
             // 
             this.screen.BackColor = System.Drawing.Color.Transparent;
+            this.screen.Controls.Add(this.frog_dead);
+            this.screen.Controls.Add(this.frog_coffin);
+            this.screen.Controls.Add(this.escape_text2);
+            this.screen.Controls.Add(this.escape_text1);
+            this.screen.Controls.Add(this.escape_restart);
+            this.screen.Controls.Add(this.escape_title);
+            this.screen.Controls.Add(this.escape_quit);
+            this.screen.Controls.Add(this.escape_menu);
             this.screen.Controls.Add(this.audi_2);
             this.screen.Controls.Add(this.leaf);
             this.screen.Controls.Add(this.tortolian4);
             this.screen.Controls.Add(this.tortolian3);
             this.screen.Controls.Add(this.tortolian2);
             this.screen.Controls.Add(this.tortolian1);
-            this.screen.Controls.Add(this.escape_text2);
-            this.screen.Controls.Add(this.escape_text1);
-            this.screen.Controls.Add(this.escape_quit);
-            this.screen.Controls.Add(this.escape_title);
-            this.screen.Controls.Add(this.escape_restart);
-            this.screen.Controls.Add(this.escape_menu);
             this.screen.Controls.Add(this.frog);
             this.screen.Controls.Add(this.water_area);
             this.screen.Controls.Add(this.lose_text);
@@ -219,7 +223,6 @@
             this.screen.Controls.Add(this.win_yes);
             this.screen.Controls.Add(this.win_text_2);
             this.screen.Controls.Add(this.win_box);
-            this.screen.Controls.Add(this.frog_coffin);
             this.screen.Controls.Add(this.bckg_lose);
             this.screen.Controls.Add(this.plant_block2);
             this.screen.Controls.Add(this.plant_block1);
@@ -306,9 +309,9 @@
             this.escape_menu.BackColor = System.Drawing.Color.Indigo;
             this.escape_menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.escape_menu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.escape_menu.Location = new System.Drawing.Point(272, 335);
+            this.escape_menu.Location = new System.Drawing.Point(258, 100);
             this.escape_menu.Name = "escape_menu";
-            this.escape_menu.Size = new System.Drawing.Size(327, 89);
+            this.escape_menu.Size = new System.Drawing.Size(327, 324);
             this.escape_menu.TabIndex = 44;
             this.escape_menu.TabStop = false;
             this.escape_menu.Visible = false;
@@ -392,9 +395,10 @@
             // frog_coffin
             // 
             this.frog_coffin.BackColor = System.Drawing.Color.Wheat;
-            this.frog_coffin.Location = new System.Drawing.Point(12, 238);
+            this.frog_coffin.Image = global::p_frog.Properties.Resources.coffin_frog;
+            this.frog_coffin.Location = new System.Drawing.Point(3, 173);
             this.frog_coffin.Name = "frog_coffin";
-            this.frog_coffin.Size = new System.Drawing.Size(254, 160);
+            this.frog_coffin.Size = new System.Drawing.Size(254, 231);
             this.frog_coffin.TabIndex = 32;
             this.frog_coffin.TabStop = false;
             this.frog_coffin.Visible = false;
@@ -402,9 +406,9 @@
             // bckg_lose
             // 
             this.bckg_lose.BackColor = System.Drawing.Color.Wheat;
-            this.bckg_lose.Location = new System.Drawing.Point(0, 459);
+            this.bckg_lose.Location = new System.Drawing.Point(0, 0);
             this.bckg_lose.Name = "bckg_lose";
-            this.bckg_lose.Size = new System.Drawing.Size(845, 22);
+            this.bckg_lose.Size = new System.Drawing.Size(845, 481);
             this.bckg_lose.TabIndex = 34;
             this.bckg_lose.TabStop = false;
             this.bckg_lose.Visible = false;
@@ -563,11 +567,11 @@
             // 
             this.fatigue_solo.BackColor = System.Drawing.Color.Crimson;
             this.fatigue_solo.Location = new System.Drawing.Point(12, 24);
-            this.fatigue_solo.Maximum = 150;
+            this.fatigue_solo.Maximum = 200;
             this.fatigue_solo.Name = "fatigue_solo";
             this.fatigue_solo.Size = new System.Drawing.Size(136, 23);
             this.fatigue_solo.TabIndex = 1;
-            this.fatigue_solo.Value = 150;
+            this.fatigue_solo.Value = 200;
             // 
             // background_box
             // 
@@ -618,6 +622,17 @@
             this.timer11.Interval = 70;
             this.timer11.Tick += new System.EventHandler(this.timer11_Tick);
             // 
+            // frog_dead
+            // 
+            this.frog_dead.BackColor = System.Drawing.Color.Wheat;
+            this.frog_dead.Image = global::p_frog.Properties.Resources.pepe_frog1;
+            this.frog_dead.Location = new System.Drawing.Point(637, 243);
+            this.frog_dead.Name = "frog_dead";
+            this.frog_dead.Size = new System.Drawing.Size(114, 76);
+            this.frog_dead.TabIndex = 56;
+            this.frog_dead.TabStop = false;
+            this.frog_dead.Visible = false;
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -658,6 +673,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.car_column)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frog_dead)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -713,5 +729,6 @@
         private System.Windows.Forms.Timer timer10;
         protected System.Windows.Forms.PictureBox audi_2;
         private System.Windows.Forms.Timer timer11;
+        private System.Windows.Forms.PictureBox frog_dead;
     }
 }

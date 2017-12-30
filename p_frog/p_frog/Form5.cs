@@ -212,6 +212,7 @@ namespace p_frog
             frog_lose.Play();  // odtwarza dźwięk
 
             frog_coffin.Visible = true;
+            frog_dead.Visible = true;
             lose_text.Visible = true;
             win_text_2.Visible = true;
             win_yes.Visible = true;
@@ -819,7 +820,10 @@ namespace p_frog
                 can_move = false;    // stopujemy froga      
                 timer2.Stop();       // zatrzymujemy licznik kondycji
                 timer3.Stop();       // zatrzymujemy pojazdy
-                timer4.Stop();       // zatrzymujemy klody
+                timer4.Stop();       // zatrzymujemy zolwie
+                timer9.Stop();
+                timer10.Stop();
+                timer11.Stop();
             }
             else if (e.KeyCode == Keys.Space)
             {
@@ -829,7 +833,11 @@ namespace p_frog
                 escape_quit.Visible = false;
                 escape_title.Visible = false;
                 escape_menu.Visible = false;
-
+                // wznawiamy ruch zolwi
+                timer4.Start();       
+                timer9.Start();
+                timer10.Start();
+                timer11.Start();
                 can_move = true;
             }
         }
