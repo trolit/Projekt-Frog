@@ -79,6 +79,7 @@
             this.background_box = new System.Windows.Forms.PictureBox();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.lvl1_wincode = new System.Windows.Forms.Label();
             this.screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.escape_menu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frog)).BeginInit();
@@ -130,6 +131,7 @@
             this.fatigue_solo.Maximum = 150;
             this.fatigue_solo.Name = "fatigue_solo";
             this.fatigue_solo.Size = new System.Drawing.Size(123, 23);
+            this.fatigue_solo.Step = 50;
             this.fatigue_solo.TabIndex = 1;
             this.fatigue_solo.Value = 150;
             // 
@@ -202,7 +204,6 @@
             this.screen.Controls.Add(this.bckg_lose);
             this.screen.Controls.Add(this.plant_block2);
             this.screen.Controls.Add(this.plant_block1);
-            this.screen.Controls.Add(this.win_text);
             this.screen.Controls.Add(this.frog_hideout_3);
             this.screen.Controls.Add(this.frog_hideout_2);
             this.screen.Controls.Add(this.frog_hideout_1);
@@ -217,6 +218,8 @@
             this.screen.Controls.Add(this.label1);
             this.screen.Controls.Add(this.fatigue_solo);
             this.screen.Controls.Add(this.background_box);
+            this.screen.Controls.Add(this.lvl1_wincode);
+            this.screen.Controls.Add(this.win_text);
             this.screen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.screen.ForeColor = System.Drawing.Color.DarkBlue;
             this.screen.Location = new System.Drawing.Point(0, 0);
@@ -273,7 +276,7 @@
             this.escape_title.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.escape_title.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.escape_title.ForeColor = System.Drawing.Color.Crimson;
-            this.escape_title.Location = new System.Drawing.Point(357, 214);
+            this.escape_title.Location = new System.Drawing.Point(357, 218);
             this.escape_title.Name = "escape_title";
             this.escape_title.Size = new System.Drawing.Size(157, 66);
             this.escape_title.TabIndex = 48;
@@ -303,7 +306,7 @@
             this.escape_menu.BackColor = System.Drawing.Color.Indigo;
             this.escape_menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.escape_menu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.escape_menu.Location = new System.Drawing.Point(272, 54);
+            this.escape_menu.Location = new System.Drawing.Point(272, 52);
             this.escape_menu.Name = "escape_menu";
             this.escape_menu.Size = new System.Drawing.Size(327, 370);
             this.escape_menu.TabIndex = 44;
@@ -445,7 +448,7 @@
             // 
             this.lose_text.AutoSize = true;
             this.lose_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lose_text.Location = new System.Drawing.Point(359, 204);
+            this.lose_text.Location = new System.Drawing.Point(337, 220);
             this.lose_text.Name = "lose_text";
             this.lose_text.Size = new System.Drawing.Size(170, 24);
             this.lose_text.TabIndex = 24;
@@ -455,7 +458,7 @@
             // win_no
             // 
             this.win_no.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.win_no.Location = new System.Drawing.Point(444, 264);
+            this.win_no.Location = new System.Drawing.Point(429, 264);
             this.win_no.Name = "win_no";
             this.win_no.Size = new System.Drawing.Size(85, 40);
             this.win_no.TabIndex = 23;
@@ -467,7 +470,7 @@
             // win_yes
             // 
             this.win_yes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.win_yes.Location = new System.Drawing.Point(349, 264);
+            this.win_yes.Location = new System.Drawing.Point(323, 264);
             this.win_yes.Name = "win_yes";
             this.win_yes.Size = new System.Drawing.Size(85, 40);
             this.win_yes.TabIndex = 22;
@@ -479,7 +482,7 @@
             // win_text_2
             // 
             this.win_text_2.AutoSize = true;
-            this.win_text_2.Location = new System.Drawing.Point(346, 228);
+            this.win_text_2.Location = new System.Drawing.Point(320, 248);
             this.win_text_2.Name = "win_text_2";
             this.win_text_2.Size = new System.Drawing.Size(196, 13);
             this.win_text_2.TabIndex = 21;
@@ -489,7 +492,7 @@
             // win_box
             // 
             this.win_box.BackColor = System.Drawing.Color.Transparent;
-            this.win_box.Location = new System.Drawing.Point(312, 192);
+            this.win_box.Location = new System.Drawing.Point(296, 219);
             this.win_box.Name = "win_box";
             this.win_box.Size = new System.Drawing.Size(252, 127);
             this.win_box.TabIndex = 19;
@@ -500,7 +503,7 @@
             // 
             this.frog_coffin.BackColor = System.Drawing.Color.Wheat;
             this.frog_coffin.Image = global::p_frog.Properties.Resources.coffin_frog;
-            this.frog_coffin.Location = new System.Drawing.Point(12, 172);
+            this.frog_coffin.Location = new System.Drawing.Point(0, 163);
             this.frog_coffin.Name = "frog_coffin";
             this.frog_coffin.Size = new System.Drawing.Size(254, 226);
             this.frog_coffin.TabIndex = 32;
@@ -539,7 +542,7 @@
             // 
             this.win_text.AutoSize = true;
             this.win_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.win_text.Location = new System.Drawing.Point(358, 204);
+            this.win_text.Location = new System.Drawing.Point(359, 220);
             this.win_text.Name = "win_text";
             this.win_text.Size = new System.Drawing.Size(126, 24);
             this.win_text.TabIndex = 20;
@@ -631,7 +634,7 @@
             // 
             this.background_box.BackColor = System.Drawing.Color.Transparent;
             this.background_box.Image = global::p_frog.Properties.Resources.frog_play_background;
-            this.background_box.Location = new System.Drawing.Point(-3, 0);
+            this.background_box.Location = new System.Drawing.Point(0, 0);
             this.background_box.Name = "background_box";
             this.background_box.Size = new System.Drawing.Size(842, 481);
             this.background_box.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -649,6 +652,21 @@
             this.timer4.Enabled = true;
             this.timer4.Interval = 70;
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
+            // 
+            // lvl1_wincode
+            // 
+            this.lvl1_wincode.AutoSize = true;
+            this.lvl1_wincode.BackColor = System.Drawing.Color.Gray;
+            this.lvl1_wincode.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lvl1_wincode.ForeColor = System.Drawing.Color.Gold;
+            this.lvl1_wincode.Location = new System.Drawing.Point(233, 347);
+            this.lvl1_wincode.Name = "lvl1_wincode";
+            this.lvl1_wincode.Size = new System.Drawing.Size(378, 88);
+            this.lvl1_wincode.TabIndex = 50;
+            this.lvl1_wincode.Text = "Kod do odblokowania następnego poziomu:\r\nAF^@!\r\n(jeśli chcesz grać dalej, wróć do" +
+    " menu, przejdź\r\ndo zakładki \'etapy\' i wpisz poprawnie kod)";
+            this.lvl1_wincode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lvl1_wincode.Visible = false;
             // 
             // Form2
             // 
@@ -750,5 +768,6 @@
         private System.Windows.Forms.ProgressBar fatigue_solo;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label lvl1_wincode;
     }
 }

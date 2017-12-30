@@ -86,6 +86,7 @@
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timer5 = new System.Windows.Forms.Timer(this.components);
             this.timer6 = new System.Windows.Forms.Timer(this.components);
+            this.lvl1_wincode = new System.Windows.Forms.Label();
             this.screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pepe_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pepe_1)).BeginInit();
@@ -745,12 +746,28 @@
             this.timer6.Interval = 450;
             this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
             // 
+            // lvl1_wincode
+            // 
+            this.lvl1_wincode.AutoSize = true;
+            this.lvl1_wincode.BackColor = System.Drawing.Color.DarkViolet;
+            this.lvl1_wincode.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lvl1_wincode.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.lvl1_wincode.Location = new System.Drawing.Point(232, 196);
+            this.lvl1_wincode.Name = "lvl1_wincode";
+            this.lvl1_wincode.Size = new System.Drawing.Size(378, 88);
+            this.lvl1_wincode.TabIndex = 51;
+            this.lvl1_wincode.Text = "Kod do odblokowania następnego poziomu:\r\nAF^@!\r\n(jeśli chcesz grać dalej, wróć do" +
+    " menu, przejdź\r\ndo zakładki \'etapy\' i wpisz poprawnie kod)";
+            this.lvl1_wincode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lvl1_wincode.Visible = false;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(842, 481);
             this.ControlBox = false;
+            this.Controls.Add(this.lvl1_wincode);
             this.Controls.Add(this.screen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -796,6 +813,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.police_car)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_box)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -856,5 +874,6 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer timer5;
         private System.Windows.Forms.Timer timer6;
+        private System.Windows.Forms.Label lvl1_wincode;
     }
 }

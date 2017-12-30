@@ -157,6 +157,8 @@ namespace p_frog
             win_no.Visible = true;
             win_box.Visible = true;
             bckg_lose.Visible = true;
+            lose_text.BringToFront();
+            win_text_2.BringToFront();
         }
         #endregion
         #region 2. Gdy wygrana
@@ -169,11 +171,15 @@ namespace p_frog
 
             SoundPlayer win_sound = new SoundPlayer(Properties.Resources.win_sound);
             win_sound.Play();
+            lvl1_wincode.Visible = true;
             win_text.Visible = true;
             win_text_2.Visible = true;
             win_yes.Visible = true;
             win_no.Visible = true;
             win_box.Visible = true;
+            lvl1_wincode.BringToFront();
+            win_text.BringToFront();
+            win_text_2.BringToFront();
         }
         #endregion
 
@@ -531,7 +537,7 @@ namespace p_frog
             // odzyskiwanie kondycji
             if (fatigue_solo.Value <= 98)
             {
-                fatigue_solo.Value += 2;
+                fatigue_solo.Value += 4;
             }
 
             frog.Location = new Point(x, y);

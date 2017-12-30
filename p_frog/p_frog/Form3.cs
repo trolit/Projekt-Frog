@@ -716,7 +716,7 @@ namespace p_frog
             // odzyskiwanie kondycji
             if (fatigue_bro.Value <= 98)
             {
-                fatigue_bro.Value += 2;
+                fatigue_bro.Value += 4;
             }
 
             frog_bro.Location = new Point(s, o);
@@ -900,7 +900,7 @@ namespace p_frog
             // odzyskiwanie kondycji
             if (fatigue.Value <= 98)
             {
-                fatigue.Value += 2;
+                fatigue.Value += 4;
             }
             
             frog.Location = new Point(x, y);
