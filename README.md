@@ -19,7 +19,11 @@
 > 18.12.17 - pozostałe rzeczy na które mimo wielu prób nie znalazłem rozwiazania ;-;
 
 - ~~Pojazd policyjny zachacza o żabę - problem pictureboxa żaby~~
-- Gdy żaby wchodzą na kłody, kłoda jest przezroczysta 
+- ~~Gdy żaby wchodzą na kłody, kłoda jest przezroczysta~~ 
+
+Pomysł na naprawdę tego problemu jest, jednak.. zastosowanie go powoduje, że przy poruszaniu się obiektu, generuje się za nim
+białe tło, które jest irytujące dla oka...
+
 - Gdy przytrzyma się przycisk(dowolny) energia żaby szybciej się odnawia
 - Gdy aktywuje sie menu escape i kliknie co innego niz spacje, to timery wznawiaja dzialanie...
 - ~~Doprecyzować/Stworzyć lepszy algorytm wykrywania czy żaba jest na kłodzie~~
