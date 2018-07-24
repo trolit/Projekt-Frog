@@ -6,7 +6,7 @@
 # Projekt FROG
 ## Projekt oparty na arcade'owej grze -> 'Frogger'.
 
-![Error](https://github.com/trolit/Projekt-Frog/images/mainmenu.png)
+![Error](https://github.com/trolit/Projekt-Frog/blob/master/images/mainmenu.png)
 ![alt text](https://image.ibb.co/dbYDhG/ww2.png)
 ![alt text](https://image.ibb.co/iQK8Gb/ww3.png)
 
