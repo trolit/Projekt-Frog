@@ -7,8 +7,8 @@
 ## Projekt oparty na arcade'owej grze -> 'Frogger'.
 
 ![Error](https://github.com/trolit/Projekt-Frog/blob/master/images/mainmenu.png)
-![alt text](https://image.ibb.co/dbYDhG/ww2.png)
-![alt text](https://image.ibb.co/iQK8Gb/ww3.png)
+![Error](https://github.com/trolit/Projekt-Frog/blob/master/images/game1.png)
+![Error](https://github.com/trolit/Projekt-Frog/blob/master/images/game2.png)
 
 ###########################################################################
 * Data rozpoczęcia: **18.11.17**
