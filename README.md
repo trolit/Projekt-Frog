@@ -13,6 +13,7 @@
 ###########################################################################
 * Data rozpoczęcia: **18.11.17**
 * Data zakończenia(wstępna mechanika gry): **25.11.17** 
+* Data zakończenia(polerowanie): **13.01.2018** 
 * Instrukcja zamieszczona w grze.
 * Wykonanie w: WinForms, Visual Studio 2017 
 
